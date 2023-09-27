@@ -1,0 +1,29 @@
+name: Build on Multiple Platforms
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        compiler: [gcc, clang]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up CMake
+        uses: lukka/run-cmake@v4
+
+      - name: Build on ${{ matrix.os }} with ${{ matrix.compiler }}
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} ..
+          cmake --build . --config Release
