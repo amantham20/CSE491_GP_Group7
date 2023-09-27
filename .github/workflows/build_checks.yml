@@ -3,7 +3,10 @@ name: Build on Multiple Platforms
 on:
   push:
     branches:
-      - main
+      - '*'
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
