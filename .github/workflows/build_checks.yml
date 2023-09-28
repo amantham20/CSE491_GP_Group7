@@ -18,15 +18,27 @@ jobs:
         compiler: [gcc, clang]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
-      - name: Set up CMake
-        uses: lukka/run-cmake@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v3.5.3
 
-      - name: Build on ${{ matrix.os }} with ${{ matrix.compiler }}
-        run: |
-          mkdir build
-          cd build
-          cmake -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} ..
-          cmake --build . --config Release
+      - name: Configure the project
+        uses: threeal/cmake-action@v1.3.0
+
+      - name: Build the project
+        runs: cmake --build build
+
+      - name: Test the project
+        runs: ctest --test-dir build
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
+
+      # - name: Set up CMake
+      #   uses: lukka/run-cmake@v4
+
+      # - name: Build on ${{ matrix.os }} with ${{ matrix.compiler }}
+      #   run: |
+      #     mkdir build
+      #     cd build
+      #     cmake -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} ..
+      #     cmake --build . --config Release
