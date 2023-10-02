@@ -26,14 +26,14 @@ jobs:
         if: matrix.os == 'windows-latest' && matrix.compiler == 'gcc'
         run: |
           choco install mingw
-          echo "::add-path::C:\\tools\\mingw64\\bin"
+          echo "C:\\tools\\mingw64\\bin" >> $GITHUB_PATH
         shell: powershell
 
       - name: Install GCC and Clang on Windows
         if: matrix.os == 'windows-latest' && matrix.compiler == 'clang'
         run: |
           choco install llvm
-          echo "::add-path::C:\\Program Files\\LLVM\\bin"
+          echo "C:\\Program Files\\LLVM\\bin" >> $GITHUB_PATH
         shell: powershell
 
       - name: Configure the project
@@ -44,16 +44,3 @@ jobs:
 
       - name: Test the project
         run: ctest --test-dir build
-
-      # - name: Checkout code
-      #   uses: actions/checkout@v2
-
-      # - name: Set up CMake
-      #   uses: lukka/run-cmake@v4
-
-      # - name: Build on ${{ matrix.os }} with ${{ matrix.compiler }}
-      #   run: |
-      #     mkdir build
-      #     cd build
-      #     cmake -DCMAKE_CXX_COMPILER=${{ matrix.compiler }} ..
-      #     cmake --build . --config Release
