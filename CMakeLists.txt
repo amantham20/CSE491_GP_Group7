@@ -7,14 +7,15 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wcast-align -Winfinite-recursion -Wnon-virtual-dtor -Wnull-dereference -Woverloaded-virtual -pedantic")
 
-if (MSVC)
-#    add_compile_options(/W4 /WX /sdl)
-#    set(CMAKE_CXX_FLAGS "/W4 /WX /sdl /analyze /w44265")
-    set(CMAKE_CXX_FLAGS "/W4 /sdl /analyze /w44265")
-#else()
-##    add_compile_options(-Wall -Wextra -Wpedantic -Werror)
-#    set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wcast-align -Winfinite-recursion -Wnon-virtual-dtor -Wnull-dereference -Woverloaded-virtual -pedantic")
-endif ()
+#if (MSVC)
+##    add_compile_options(/W4 /WX /sdl)
+##    set(CMAKE_CXX_FLAGS "/W4 /WX /sdl /analyze /w44265")
+#
+##    added compile flags MSVC for windows systems
+##    /W4 might be way too high for parity with gcc
+#    set(CMAKE_CXX_FLAGS "/W3 /WX /sdl /analyze /w44265")
+#
+#endif ()
 
 
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
