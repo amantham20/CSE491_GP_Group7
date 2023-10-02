@@ -22,22 +22,13 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3.5.3
 
-      - name: Install GCC and Clang on Windows
-        if: matrix.os == 'windows-latest' && matrix.compiler == 'gcc'
-        run: |
-          choco install mingw
-          echo "C:\\tools\\mingw64\\bin" >> $GITHUB_PATH
-        shell: powershell
-
-      - name: Install GCC and Clang on Windows
-        if: matrix.os == 'windows-latest' && matrix.compiler == 'clang'
-        run: |
-          choco install llvm
-          echo "C:\\Program Files\\LLVM\\bin" >> $GITHUB_PATH
-        shell: powershell
+      - name: Set up CMake
+        uses: martinlindhe/cmake-action@v1
 
       - name: Configure the project
-        uses: threeal/cmake-action@v1.3.0
+        run: cmake -S . -B build -DCMAKE_CXX_COMPILER=$CXX_COMPILER
+        env:
+          CXX_COMPILER: ${{ matrix.compiler }}
 
       - name: Build the project
         run: cmake --build build
