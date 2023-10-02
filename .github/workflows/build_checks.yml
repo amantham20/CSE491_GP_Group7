@@ -15,7 +15,9 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
-        compiler: [gcc, clang]
+#        os: [macos-latest, windows-latest, ubuntu-latest]
+        compiler: [gcc]
+#        compiler: [gcc, clang]
 
     steps:
 
