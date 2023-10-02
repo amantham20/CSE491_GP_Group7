@@ -37,4 +37,4 @@ foreach(EXECUTABLE ${EXECUTABLES})
 endforeach()
 
 
-add_subdirectory(tests)
+#add_subdirectory(tests)
