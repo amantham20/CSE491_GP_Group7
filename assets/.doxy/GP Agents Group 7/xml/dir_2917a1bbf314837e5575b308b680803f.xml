@@ -3,6 +3,9 @@
   <compounddef id="dir_2917a1bbf314837e5575b308b680803f" kind="dir">
     <compoundname>source/Group7_GP_Agent</compoundname>
     <innerfile refid="agent_8hpp">agent.hpp</innerfile>
+    <innerfile refid="_g_p_agent_sensors_8hpp">GPAgentSensors.hpp</innerfile>
+    <innerfile refid="_g_p_agents_registers_8hpp">GPAgentsRegisters.hpp</innerfile>
+    <innerfile refid="_l_g_p_agent_8hpp">LGPAgent.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -443,6 +443,86 @@
   
   
     <li class="md-nav__item">
+      <a href="../classcowboys_1_1_g_p_agent_registers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentRegisters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classcowboys_1_1_g_p_agent_registers_1_1iterator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentRegisters::iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classcowboys_1_1_l_g_p_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::LGPAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classcowboys_1_1_sensors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::Sensors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../namespacecse491/" class="md-nav__link">
         
   
@@ -488,6 +568,126 @@
   
   <span class="md-ellipsis">
     Dir source/Group7_GP_Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_g_p_agent_sensors_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentSensors.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_g_p_agent_sensors_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentSensors.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_g_p_agents_registers_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentsRegisters.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_g_p_agents_registers_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentsRegisters.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_l_g_p_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File LGPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_l_g_p_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File LGPAgent.hpp
   </span>
   
 
@@ -975,56 +1175,60 @@
 #pragma once
 
 #include &lt;cassert&gt;
-#include &lt;map&gt;
-#include &lt;string&gt;
 #include &lt;iostream&gt;
-
+#include &lt;map&gt;
 #include &lt;random&gt;
+#include &lt;string&gt;
 
 #include &quot;../core/AgentBase.hpp&quot;
+#include &quot;./GPAgentSensors.hpp&quot;
 
-namespace cowboys
-{
+namespace cowboys {
 
+class GPAgent : public cse491::AgentBase {
+ protected:
+  const std::vector&lt;std::string&gt; predefinedMovement = {
+      &quot;down&quot;,  &quot;down&quot;,  &quot;down&quot;,  &quot;down&quot;,  &quot;right&quot;, &quot;right&quot;, &quot;up&quot;,    &quot;up&quot;,
+      &quot;up&quot;,    &quot;up&quot;,    &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;right&quot;,
+      &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;right&quot;, &quot;left&quot;,  &quot;left&quot;,  &quot;left&quot;};
 
-    class GPAgent : public cse491::AgentBase
-    {
-    protected:
-        const std::vector&lt;std::string&gt; predefinedMovement = {&quot;down&quot;, &quot;down&quot;,&quot;down&quot;,&quot;down&quot;, &quot;right&quot;, &quot;right&quot;, &quot;up&quot;, &quot;up&quot;, &quot;up&quot;,&quot;up&quot;, &quot;right&quot;, &quot;right&quot;,  &quot;right&quot;,  &quot;right&quot;,  &quot;right&quot;,  &quot;right&quot;,  &quot;right&quot;, &quot;right&quot;, &quot;right&quot;,  &quot;right&quot;, &quot;right&quot;, &quot;left&quot;, &quot;left&quot;, &quot;left&quot;};
+  size_t movementIndex = 0;  
 
-        size_t movementIndex = 0; // current move of the agent
+ public:
+  GPAgent(size_t id, const std::string &amp;name) : AgentBase(id, name) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
 
-    public:
-        GPAgent(size_t id, const std::string &amp;name) : AgentBase(id, name) {
-            std::random_device rd;
-            std::mt19937 gen(rd());
+    std::uniform_int_distribution&lt;int&gt; dist(
+        0,
+        3);  // size of the random set to 3 as we only have 4 actions initally
+  }
+  ~GPAgent() override = default;
 
+  bool Initialize() override { return true; }
 
-            std::uniform_int_distribution&lt;int&gt; dist(0, 3); // size of the random set to 3 as we only have 4 actions initally
-        }
-        ~GPAgent() override = default;
+  size_t SelectAction(
+      [[maybe_unused]] const cse491::WorldGrid &amp;grid,
+      [[maybe_unused]] const cse491::type_options_t &amp;type_options,
+      [[maybe_unused]] const cse491::item_set_t &amp;item_set,
+      [[maybe_unused]] const cse491::agent_set_t &amp;agent_set) override {
+#ifndef NDEBUG
+    Sensors::wallDistance(grid, *this, SensorDirection::LEFT);
+    Sensors::wallDistance(grid, *this, SensorDirection::RIGHT);
+    Sensors::wallDistance(grid, *this, SensorDirection::ABOVE);
+    Sensors::wallDistance(grid, *this, SensorDirection::BELOW);
+#endif
 
-        bool Initialize() override
-        {
-            return true;
-        }
+    if (movementIndex &gt;= predefinedMovement.size()) {
+      return 0;  // do nothing if it is out of bound for defined movement
+    }
 
+    auto action = action_map[predefinedMovement[movementIndex++]];
+    return action;
+  }
+};
 
-        size_t SelectAction(const cse491::WorldGrid &amp;grid,
-                            const cse491::type_options_t &amp;type_options,
-                            const cse491::item_set_t &amp;item_set,
-                            const cse491::agent_set_t &amp;agent_set) override
-        {
-            if (movementIndex &gt;= predefinedMovement.size()){
-                return action_map[&quot;right&quot;]; // do nothing if it is out of bound for defined movement
-            }
-
-            auto action = action_map[predefinedMovement[movementIndex++]];
-            return action;
-        }
-    };
-
-}
+}  // namespace cowboys
 
 </code></pre>
 

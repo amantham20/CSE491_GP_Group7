@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_l_g_p_agent" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::LGPAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a159231c5a8199064b214509ffa9c7aaa" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; possibleInstructionsList</definition>
+        <argsstring></argsstring>
+        <name>possibleInstructionsList</name>
+        <qualifiedname>cowboys::LGPAgent::possibleInstructionsList</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="51" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a9e7dd1c5cc2cf8b4eea5b39ac5d06f1d" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; actionsList</definition>
+        <argsstring></argsstring>
+        <name>actionsList</name>
+        <qualifiedname>cowboys::LGPAgent::actionsList</qualifiedname>
+        <initializer>= {&quot;up&quot;, &quot;down&quot;, &quot;left&quot;, &quot;right&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="52" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a85d6a086f2ef4f63ad26b20ab789cb44" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; operationsList</definition>
+        <argsstring></argsstring>
+        <name>operationsList</name>
+        <qualifiedname>cowboys::LGPAgent::operationsList</qualifiedname>
+        <initializer>= {&quot;lessthan&quot;, &quot;greaterthan&quot;,
+                                             &quot;equals&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="53" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="53" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a9c2c0a457589dcc1c00ba221c769cf0e" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; resultsList</definition>
+        <argsstring></argsstring>
+        <name>resultsList</name>
+        <qualifiedname>cowboys::LGPAgent::resultsList</qualifiedname>
+        <initializer>= std::vector&lt;int&gt;(LISTSIZE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="55" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a4e1b31a8794089fc296a5b5db8a281b6" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::tuple&lt; std::string, int, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;std::string, int, int&gt; &gt; instructionsList</definition>
+        <argsstring></argsstring>
+        <name>instructionsList</name>
+        <qualifiedname>cowboys::LGPAgent::instructionsList</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="57" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1ab8ad3ce76bcb5edf8751ff41917ec4fb" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t currentInstructionIndex</definition>
+        <argsstring></argsstring>
+        <name>currentInstructionIndex</name>
+        <qualifiedname>cowboys::LGPAgent::currentInstructionIndex</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="58" column="10" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a11915340a5b81f6a90d7872fb16dd2cb" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classcowboys_1_1_sensors" kindref="compound">cowboys::Sensors</ref> &gt;</type>
+        <definition>std::vector&lt;cowboys::Sensors&gt; sensorsList</definition>
+        <argsstring></argsstring>
+        <name>sensorsList</name>
+        <qualifiedname>cowboys::LGPAgent::sensorsList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="60" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a2b676897c7ad08872d82a574a2145d7b" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; sensorsNamesList</definition>
+        <argsstring></argsstring>
+        <name>sensorsNamesList</name>
+        <qualifiedname>cowboys::LGPAgent::sensorsNamesList</qualifiedname>
+        <initializer>= {&quot;getLeft&quot;, &quot;getRight&quot;, &quot;getUp&quot;,
+                                               &quot;getDown&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="61" column="15" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a815c4ec62a66bf4e320c86b3f9dea694" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hasActionOccured</definition>
+        <argsstring></argsstring>
+        <name>hasActionOccured</name>
+        <qualifiedname>cowboys::LGPAgent::hasActionOccured</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="64" column="8" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1a7071b0092ad8c5b57d6cc40c5f803df5" prot="protected" static="no" mutable="no">
+        <type>std::random_device</type>
+        <definition>std::random_device rd</definition>
+        <argsstring></argsstring>
+        <name>rd</name>
+        <qualifiedname>cowboys::LGPAgent::rd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="66" column="22" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_l_g_p_agent_1ab577cbc7a7051e1bcf60c2c1797a0feb" prot="protected" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 gen</definition>
+        <argsstring></argsstring>
+        <name>gen</name>
+        <qualifiedname>cowboys::LGPAgent::gen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="67" column="16" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1aac68304d357dfc24e2c30b5e7d0487d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>EXPERIMENTAL_FUNCTION</type>
+        <definition>EXPERIMENTAL_FUNCTION LGPAgent</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>LGPAgent</name>
+        <qualifiedname>cowboys::LGPAgent::LGPAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="70" column="25" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1adc24c21d15b23b38c1ed4423f636df0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~LGPAgent</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~LGPAgent</name>
+        <qualifiedname>cowboys::LGPAgent::~LGPAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="76" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1ae371671966a9b00f76f6294c5d67e401" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>EXPERIMENTAL_FUNCTION bool</type>
+        <definition>EXPERIMENTAL_FUNCTION bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>cowboys::LGPAgent::Initialize</qualifiedname>
+        <briefdescription>
+<para>This agent needs a specific set of actions to function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="80" column="30" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1ad29c4b809040bd2b290c0f12bca257d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>EXPERIMENTAL_FUNCTION void</type>
+        <definition>EXPERIMENTAL_FUNCTION void GenerateRandomActionList</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateRandomActionList</name>
+        <qualifiedname>cowboys::LGPAgent::GenerateRandomActionList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="86" column="30" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1a442fde93addba37b5161644e8802cb87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>EXPERIMENTAL_FUNCTION size_t</type>
+        <definition>EXPERIMENTAL_FUNCTION size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;type_options, const cse491::item_set_t &amp;item_set, const cse491::agent_set_t &amp;agent_set) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>cowboys::LGPAgent::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const cse491::item_set_t &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_set_t &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="120" column="3" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="120" bodyend="205"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcowboys_1_1_l_g_p_agent_1a2eebec8783c473bd46bb5cd4140efcb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>EXPERIMENTAL_FUNCTION std::vector&lt; std::string &gt;</type>
+        <definition>static EXPERIMENTAL_FUNCTION std::vector&lt; std::string &gt; EncodeActions</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, size_t &gt; &amp;action_map, const std::vector&lt; std::string &gt; &amp;sensorsNamesList)</argsstring>
+        <name>EncodeActions</name>
+        <qualifiedname>cowboys::LGPAgent::EncodeActions</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, size_t &gt; &amp;</type>
+          <declname>action_map</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>sensorsNamesList</declname>
+        </param>
+        <briefdescription>
+<para>Encodes the actions from an agent&apos;s action map into a vector of string, representing action names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action map from the agent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of strings, representing action names. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="101" column="44" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="101" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LGPAgent</label>
+        <link refid="classcowboys_1_1_l_g_p_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LGPAgent</label>
+        <link refid="classcowboys_1_1_l_g_p_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Group7_GP_Agent/LGPAgent.hpp" line="42" column="19" bodyfile="source/Group7_GP_Agent/LGPAgent.hpp" bodystart="42" bodyend="206"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a9e7dd1c5cc2cf8b4eea5b39ac5d06f1d" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>actionsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1ab8ad3ce76bcb5edf8751ff41917ec4fb" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>currentInstructionIndex</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a2eebec8783c473bd46bb5cd4140efcb6" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>EncodeActions</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1ab577cbc7a7051e1bcf60c2c1797a0feb" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>gen</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1ad29c4b809040bd2b290c0f12bca257d4" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>GenerateRandomActionList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a815c4ec62a66bf4e320c86b3f9dea694" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>hasActionOccured</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1ae371671966a9b00f76f6294c5d67e401" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>Initialize</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a4e1b31a8794089fc296a5b5db8a281b6" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>instructionsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1aac68304d357dfc24e2c30b5e7d0487d9" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>LGPAgent</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a85d6a086f2ef4f63ad26b20ab789cb44" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>operationsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a159231c5a8199064b214509ffa9c7aaa" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>possibleInstructionsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a7071b0092ad8c5b57d6cc40c5f803df5" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>rd</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a9c2c0a457589dcc1c00ba221c769cf0e" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>resultsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a442fde93addba37b5161644e8802cb87" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>SelectAction</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a11915340a5b81f6a90d7872fb16dd2cb" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>sensorsList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1a2b676897c7ad08872d82a574a2145d7b" prot="protected" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>sensorsNamesList</name></member>
+      <member refid="classcowboys_1_1_l_g_p_agent_1adc24c21d15b23b38c1ed4423f636df0d" prot="public" virt="non-virtual"><scope>cowboys::LGPAgent</scope><name>~LGPAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

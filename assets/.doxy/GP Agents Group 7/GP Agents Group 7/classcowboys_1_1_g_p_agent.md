@@ -68,8 +68,11 @@ Inherits the following classes: AgentBase
 
 | Type | Name |
 | ---: | :--- |
-|  size\_t | [**movementIndex**](#variable-movementindex)   = = 0<br> |
-|  const std::vector&lt; std::string &gt; | [**predefinedMovement**](#variable-predefinedmovement)   = = {"down", "down","down","down", "right", "right", "up", "up", "up","up", "right", "right",  "right",  "right",  "right",  "right",  "right", "right", "right",  "right", "right", "left", "left", "left"}<br> |
+|  size\_t | [**movementIndex**](#variable-movementindex)   = = 0<br>_current move of the agent_  |
+|  const std::vector&lt; std::string &gt; | [**predefinedMovement**](#variable-predefinedmovement)   = = {
+      "down",  "down",  "down",  "down",  "right", "right", "up",    "up",
+      "up",    "up",    "right", "right", "right", "right", "right", "right",
+      "right", "right", "right", "right", "right", "left",  "left",  "left"}<br> |
 
 
 

@@ -11,11 +11,12 @@
 _this will be our agent class can be created_ [More...](#detailed-description)
 
 * `#include <cassert>`
-* `#include <map>`
-* `#include <string>`
 * `#include <iostream>`
+* `#include <map>`
 * `#include <random>`
+* `#include <string>`
 * `#include "../core/AgentBase.hpp"`
+* `#include "./GPAgentSensors.hpp"`
 
 
 
@@ -33,7 +34,7 @@ _this will be our agent class can be created_ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| namespace | [**cowboys**](namespacecowboys.md) <br>_yeeeeeeeehaaaaaaaaa_  |
+| namespace | [**cowboys**](namespacecowboys.md) <br>_yeeeeeeeehaaaaaaaaa 🤠_  |
 
 
 ## Classes

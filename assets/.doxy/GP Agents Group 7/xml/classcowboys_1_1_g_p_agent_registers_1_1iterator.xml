@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_g_p_agent_registers_1_1iterator" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::GPAgentRegisters::iterator</compoundname>
+    <includes refid="_g_p_agents_registers_8hpp" local="no">GPAgentsRegisters.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a3f42f10d93f6edb91d7d3f6edad25921" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::index</qualifiedname>
+        <briefdescription>
+<para>Index of the iterator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="89" column="12" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a67f44267fbda13f9bdac71d58c7cba0e" prot="private" static="no" mutable="no">
+        <type><ref refid="classcowboys_1_1_g_p_agent_registers" kindref="compound">GPAgentRegisters</ref> &amp;</type>
+        <definition>GPAgentRegisters&amp; registers</definition>
+        <argsstring></argsstring>
+        <name>registers</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::registers</qualifiedname>
+        <briefdescription>
+<para>Reference to the registers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="92" column="22" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a45ff0b06f224610081d056a7c231aab9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>iterator</definition>
+        <argsstring>(size_t index, GPAgentRegisters &amp;regs)</argsstring>
+        <name>iterator</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::iterator</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_registers" kindref="compound">GPAgentRegisters</ref> &amp;</type>
+          <declname>regs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for iterator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="100" column="5" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="100" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a02e763710c214108acaeabe832e864c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t &amp;</type>
+        <definition>size_t &amp; operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::operator*</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overload dereference operator <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="107" column="12" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1ac1325643077cb8adab448def94cf0743" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_g_p_agent_registers_1_1iterator" kindref="compound">iterator</ref> &amp;</type>
+        <definition>iterator &amp; operator++</definition>
+        <argsstring>()</argsstring>
+        <name>operator++</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::operator++</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overload pre-increment operator <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="113" column="14" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a63d0e3db2d00378d96905bff89bd9ea4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const iterator &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_g_p_agent_registers_1_1iterator" kindref="compound">iterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Overload post-increment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="123" column="10" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a1251251e13f9f43f150a6567e761b433" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const iterator &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>cowboys::GPAgentRegisters::iterator::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_g_p_agent_registers_1_1iterator" kindref="compound">iterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Overload not equal operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="132" column="10" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Iterator class for <ref refid="classcowboys_1_1_g_p_agent_registers" kindref="compound">GPAgentRegisters</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Group7_GP_Agent/GPAgentsRegisters.hpp" line="86" column="3" bodyfile="source/Group7_GP_Agent/GPAgentsRegisters.hpp" bodystart="86" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a3f42f10d93f6edb91d7d3f6edad25921" prot="private" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>index</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a45ff0b06f224610081d056a7c231aab9" prot="public" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>iterator</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a1251251e13f9f43f150a6567e761b433" prot="public" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>operator!=</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a02e763710c214108acaeabe832e864c8" prot="public" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>operator*</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1ac1325643077cb8adab448def94cf0743" prot="public" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>operator++</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a63d0e3db2d00378d96905bff89bd9ea4" prot="public" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>operator==</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_registers_1_1iterator_1a67f44267fbda13f9bdac71d58c7cba0e" prot="private" virt="non-virtual"><scope>cowboys::GPAgentRegisters::iterator</scope><name>registers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
