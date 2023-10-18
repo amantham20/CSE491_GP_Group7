@@ -22,8 +22,18 @@
 
 #include "core/GridPosition.hpp"
 
+#include <filesystem>
+
 TEST_CASE("Agent Position", "[gp_agents]")
 {
+    // Setup for correct working directory so /assets is where the program expects it to be
+    auto old_path = std::filesystem::current_path();
+    auto test_path = old_path;
+    // Find the folder that neighbors the assets folder
+    while (!std::filesystem::exists(test_path / "../assets"))
+        test_path = test_path.parent_path();
+    // Set the current working directory to the root of the project
+    std::filesystem::current_path(test_path);
 
     cse491::MazeWorld world;
     world.AddAgent<cse491::PacingAgent>("Pacer 1").SetPosition(3, 1);
@@ -76,5 +86,7 @@ TEST_CASE("Agent Position", "[gp_agents]")
     }
 
 
+    // Tear down
+    std::filesystem::current_path(old_path);
 
 }
