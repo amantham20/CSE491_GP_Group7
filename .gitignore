@@ -16,4 +16,9 @@ cmake-build-release
 *.swp
 *.swo
 
+
 site
+
+# executable files
+*.exe
+*.out
