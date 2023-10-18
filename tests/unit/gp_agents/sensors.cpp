@@ -30,7 +30,7 @@ TEST_CASE("Agent Position", "[gp_agents]")
     auto old_path = std::filesystem::current_path();
     auto test_path = old_path;
     // Find the folder that neighbors the assets folder
-    while (!std::filesystem::exists(test_path / "../assets"))
+    while (!std::filesystem::exists(test_path / "../assets") && test_path.has_parent_path())
         test_path = test_path.parent_path();
     // Set the current working directory to the root of the project
     std::filesystem::current_path(test_path);
