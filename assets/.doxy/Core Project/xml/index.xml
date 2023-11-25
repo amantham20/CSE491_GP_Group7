@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classcse491_1_1_agent_base" kind="class"><name>cse491::AgentBase</name>
+    <member refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kind="variable"><name>action_map</name></member>
+    <member refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kind="variable"><name>action_result</name></member>
+    <member refid="classcse491_1_1_agent_base_1ad6fd3fc811fb54aaf89e6a10b6c5e4f5" kind="function"><name>AgentBase</name></member>
+    <member refid="classcse491_1_1_agent_base_1aa100ff07022da1ca78f2f31163f9790f" kind="function"><name>~AgentBase</name></member>
+    <member refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" kind="function"><name>Initialize</name></member>
+    <member refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" kind="function"><name>IsAgent</name></member>
+    <member refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" kind="function"><name>HasAction</name></member>
+    <member refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" kind="function"><name>GetActionID</name></member>
+    <member refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" kind="function"><name>AddAction</name></member>
+    <member refid="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" kind="function"><name>SelectAction</name></member>
+    <member refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" kind="function"><name>GetActionResult</name></member>
+    <member refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" kind="function"><name>SetActionResult</name></member>
+  </compound>
+  <compound refid="structcse491_1_1_cell_type" kind="struct"><name>cse491::CellType</name>
+    <member refid="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" kind="variable"><name>name</name></member>
+    <member refid="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" kind="variable"><name>desc</name></member>
+    <member refid="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" kind="variable"><name>symbol</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_core_object" kind="class"><name>cse491::CoreObject</name>
+    <member refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" kind="function"><name>GetTypeName_impl</name></member>
+    <member refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" kind="function"><name>Serialize_impl</name></member>
+    <member refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31" kind="function"><name>Deserialize_impl</name></member>
+    <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" kind="function"><name>StartSerialize</name></member>
+    <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" kind="function"><name>EndSerialize</name></member>
+    <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" kind="function"><name>StartDeserialize</name></member>
+    <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" kind="function"><name>EndDeserialize</name></member>
+    <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" kind="function"><name>~CoreObject</name></member>
+    <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" kind="function"><name>GetTypeName</name></member>
+    <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" kind="function"><name>Serialize</name></member>
+    <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" kind="function"><name>Deserialize</name></member>
+    <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" kind="function"><name>Serialize</name></member>
+    <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" kind="function"><name>Deserialize</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_entity" kind="class"><name>cse491::Entity</name>
+    <member refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" kind="variable"><name>id</name></member>
+    <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kind="variable"><name>name</name></member>
+    <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" kind="variable"><name>position</name></member>
+    <member refid="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" kind="variable"><name>property_map</name></member>
+    <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" kind="function"><name>AsProperty</name></member>
+    <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" kind="function"><name>Entity</name></member>
+    <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" kind="function"><name>Entity</name></member>
+    <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" kind="function"><name>Entity</name></member>
+    <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" kind="function"><name>~Entity</name></member>
+    <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" kind="function"><name>operator=</name></member>
+    <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" kind="function"><name>operator=</name></member>
+    <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" kind="function"><name>GetID</name></member>
+    <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" kind="function"><name>GetName</name></member>
+    <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" kind="function"><name>GetPosition</name></member>
+    <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" kind="function"><name>SetName</name></member>
+    <member refid="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" kind="function"><name>SetPosition</name></member>
+    <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" kind="function"><name>SetPosition</name></member>
+    <member refid="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" kind="function"><name>IsAgent</name></member>
+    <member refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" kind="function"><name>IsInterface</name></member>
+    <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" kind="function"><name>HasProperty</name></member>
+    <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kind="function"><name>GetProperty</name></member>
+    <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" kind="function"><name>SetProperty</name></member>
+    <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" kind="function"><name>SetProperties</name></member>
+    <member refid="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" kind="function"><name>SetProperties</name></member>
+    <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" kind="function"><name>RemoveProperty</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_grid_position" kind="class"><name>cse491::GridPosition</name>
+    <member refid="classcse491_1_1_grid_position_1af88b946fb90d5f08b5fb740c70e98c10" kind="variable"><name>x</name></member>
+    <member refid="classcse491_1_1_grid_position_1ab927965981178aa1fba979a37168db2a" kind="variable"><name>y</name></member>
+    <member refid="classcse491_1_1_grid_position_1a5f914195c71dfdb02d941e38ca858649" kind="function"><name>GridPosition</name></member>
+    <member refid="classcse491_1_1_grid_position_1ac891df5fbea2948a4ff6f3dd8376a392" kind="function"><name>GridPosition</name></member>
+    <member refid="classcse491_1_1_grid_position_1a6f88731ef95119626e9170aa82bf7575" kind="function"><name>GridPosition</name></member>
+    <member refid="classcse491_1_1_grid_position_1a781ba113b38478bc40db5e202fed1479" kind="function"><name>operator=</name></member>
+    <member refid="classcse491_1_1_grid_position_1ac302cda48a4a650a3f8cf1dfe9a0cb1e" kind="function"><name>GetX</name></member>
+    <member refid="classcse491_1_1_grid_position_1a2c302e1e24ca25bc362746dc51c22510" kind="function"><name>GetY</name></member>
+    <member refid="classcse491_1_1_grid_position_1a86fdfb1559d519664a8c86e5fafa1401" kind="function"><name>CellX</name></member>
+    <member refid="classcse491_1_1_grid_position_1a9a4599d367dfd44642b823309768ff39" kind="function"><name>CellY</name></member>
+    <member refid="classcse491_1_1_grid_position_1a1dc77bce08532dcf6ef18ee22585a595" kind="function"><name>operator&lt;=&gt;</name></member>
+    <member refid="classcse491_1_1_grid_position_1a6038bdee1207c3624933a24c174c5e92" kind="function"><name>Set</name></member>
+    <member refid="classcse491_1_1_grid_position_1a1da1d1b6de9c1321f4d56d75dbafb4b0" kind="function"><name>Shift</name></member>
+    <member refid="classcse491_1_1_grid_position_1a030bea496155fb8658adac5a10ad84f8" kind="function"><name>operator+=</name></member>
+    <member refid="classcse491_1_1_grid_position_1a5cf2b8a9835128a2144bab2c9ef32c33" kind="function"><name>operator-=</name></member>
+    <member refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kind="function"><name>GetOffset</name></member>
+    <member refid="classcse491_1_1_grid_position_1a1122f21ad6af4f79068df50bf27c1eee" kind="function"><name>Above</name></member>
+    <member refid="classcse491_1_1_grid_position_1a733d8134d924230e305f84bdfbc974aa" kind="function"><name>Below</name></member>
+    <member refid="classcse491_1_1_grid_position_1af1192bae7fa2ab154b700b40d4d8b63f" kind="function"><name>ToLeft</name></member>
+    <member refid="classcse491_1_1_grid_position_1aa12c34149d2cde81c881fd40a30ee3e4" kind="function"><name>ToRight</name></member>
+    <member refid="classcse491_1_1_grid_position_1a6e36c7ecfce04449155ca244b71e3920" kind="function"><name>operator+</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_interface_base" kind="class"><name>cse491::InterfaceBase</name>
+    <member refid="classcse491_1_1_interface_base_1a2db78b99709e40487542768af715617e" kind="function"><name>InterfaceBase</name></member>
+    <member refid="classcse491_1_1_interface_base_1ab9ee926e228d227ed72baf09fd5a11cf" kind="function"><name>~InterfaceBase</name></member>
+    <member refid="classcse491_1_1_interface_base_1a4afb8c12fa7634510af645142be1ce16" kind="function"><name>IsInterface</name></member>
+  </compound>
+  <compound refid="structcse491_1_1_entity_1_1_property" kind="struct"><name>cse491::Entity::Property</name>
+    <member refid="structcse491_1_1_entity_1_1_property_1a4fc7f59e3113e19697159919a5aad095" kind="variable"><name>value</name></member>
+    <member refid="structcse491_1_1_entity_1_1_property_1a5fe7cccc2796041da1630e545bb9719e" kind="function"><name>Property</name></member>
+    <member refid="structcse491_1_1_entity_1_1_property_1a399bdf060fe19b56d85eba444cfe4a5a" kind="function"><name>Property</name></member>
+  </compound>
+  <compound refid="structcse491_1_1_entity_1_1_property_base" kind="struct"><name>cse491::Entity::PropertyBase</name>
+    <member refid="structcse491_1_1_entity_1_1_property_base_1a84ef0cd74a52ca2be38035fab4897ded" kind="function"><name>~PropertyBase</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_world_base" kind="class"><name>cse491::WorldBase</name>
+    <member refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" kind="variable"><name>main_grid</name></member>
+    <member refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kind="variable"><name>type_options</name></member>
+    <member refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kind="variable"><name>item_set</name></member>
+    <member refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kind="variable"><name>agent_set</name></member>
+    <member refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" kind="variable"><name>run_over</name></member>
+    <member refid="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" kind="function"><name>ConfigAgent</name></member>
+    <member refid="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" kind="function"><name>AddCellType</name></member>
+    <member refid="classcse491_1_1_world_base_1af1cd677b4bcd6f6680dfa15a3e90ec6b" kind="function"><name>WorldBase</name></member>
+    <member refid="classcse491_1_1_world_base_1a0762e0e05c2e4642db9bb4dcb19c1d90" kind="function"><name>~WorldBase</name></member>
+    <member refid="classcse491_1_1_world_base_1ad5a41d3ffe157a9280f59b6fd335e6d7" kind="function"><name>GetNumItems</name></member>
+    <member refid="classcse491_1_1_world_base_1a7288055da3e261d7a9b384c47190826c" kind="function"><name>GetNumAgents</name></member>
+    <member refid="classcse491_1_1_world_base_1a2013c828e851496fb1dad5458a73e391" kind="function"><name>GetItem</name></member>
+    <member refid="classcse491_1_1_world_base_1a363d2fc8ba1d692f54740e68c98d3c27" kind="function"><name>GetAgent</name></member>
+    <member refid="classcse491_1_1_world_base_1a214c2efc8296e32909fe590dd9b38f9b" kind="function"><name>GetGrid</name></member>
+    <member refid="classcse491_1_1_world_base_1aded59564d46c4db7f2a0b8471742ade4" kind="function"><name>GetGrid</name></member>
+    <member refid="classcse491_1_1_world_base_1a070d49184a7f98e6b9a223d96de81cb6" kind="function"><name>GetRunOver</name></member>
+    <member refid="classcse491_1_1_world_base_1a29624d90a61802f19a2348ed1a4eedc1" kind="function"><name>AddAgent</name></member>
+    <member refid="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" kind="function"><name>DoAction</name></member>
+    <member refid="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" kind="function"><name>RunAgents</name></member>
+    <member refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" kind="function"><name>UpdateWorld</name></member>
+    <member refid="classcse491_1_1_world_base_1ae468c1feb28eb3650062bd36b81a4dc4" kind="function"><name>Run</name></member>
+    <member refid="classcse491_1_1_world_base_1a3cad8204e8250fb9ca6e7975c734f78c" kind="function"><name>GetCellTypes</name></member>
+    <member refid="classcse491_1_1_world_base_1af4d3959da2ad73c22a787e84b916df45" kind="function"><name>GetCellTypeID</name></member>
+    <member refid="classcse491_1_1_world_base_1a5161678164e9427721b22f55f39319b6" kind="function"><name>GetCellTypeName</name></member>
+    <member refid="classcse491_1_1_world_base_1a6ed2bf1f38b9c6fe0e2e3c07f3fd50cb" kind="function"><name>GetCellTypeSymbol</name></member>
+  </compound>
+  <compound refid="classcse491_1_1_world_grid" kind="class"><name>cse491::WorldGrid</name>
+    <member refid="classcse491_1_1_world_grid_1a02bed8590a9ddf520e58a060059518ec" kind="variable"><name>width</name></member>
+    <member refid="classcse491_1_1_world_grid_1a02afeaaf8574e7a78d6b466ff2695052" kind="variable"><name>height</name></member>
+    <member refid="classcse491_1_1_world_grid_1a88f2b351f7f183946b0edf46fb6eff30" kind="variable"><name>cells</name></member>
+    <member refid="classcse491_1_1_world_grid_1a8c4aa52cfa2bbd01c821107d7f1b832d" kind="function"><name>ToIndex</name></member>
+    <member refid="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f" kind="function"><name>GetTypeName_impl</name></member>
+    <member refid="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf" kind="function"><name>Serialize_impl</name></member>
+    <member refid="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b" kind="function"><name>Deserialize_impl</name></member>
+    <member refid="classcse491_1_1_world_grid_1ad11645bdecaa5c54b68e284b30da9707" kind="function"><name>WorldGrid</name></member>
+    <member refid="classcse491_1_1_world_grid_1a88e903f7e1335f357e695b14e0c72ce7" kind="function"><name>WorldGrid</name></member>
+    <member refid="classcse491_1_1_world_grid_1aac4144659814c88df6c2796ba3ca0566" kind="function"><name>WorldGrid</name></member>
+    <member refid="classcse491_1_1_world_grid_1a8673510c7433d4ff9f733bec565cb334" kind="function"><name>WorldGrid</name></member>
+    <member refid="classcse491_1_1_world_grid_1ac541afd2d8a7fe453f1d911c70b79bb3" kind="function"><name>operator=</name></member>
+    <member refid="classcse491_1_1_world_grid_1a82d93fad3c399f362195dba560438622" kind="function"><name>operator=</name></member>
+    <member refid="classcse491_1_1_world_grid_1abddb4150d08d2bd14cad00bdaef260c0" kind="function"><name>GetWidth</name></member>
+    <member refid="classcse491_1_1_world_grid_1af4175cbd21f5ed763be8be4977ad1193" kind="function"><name>GetHeight</name></member>
+    <member refid="classcse491_1_1_world_grid_1a8a0f0e89e490a267b4456f192779aaee" kind="function"><name>GetNumCells</name></member>
+    <member refid="classcse491_1_1_world_grid_1a0724bff847ffa1064dfa7b88d532cab3" kind="function"><name>IsValid</name></member>
+    <member refid="classcse491_1_1_world_grid_1a1468f2b2afd8c3a24cb81e979e9505ff" kind="function"><name>IsValid</name></member>
+    <member refid="classcse491_1_1_world_grid_1a4480b68044590f7bf96908d80ebea04b" kind="function"><name>At</name></member>
+    <member refid="classcse491_1_1_world_grid_1a89687135e78162940ad3777aa1246c40" kind="function"><name>At</name></member>
+    <member refid="classcse491_1_1_world_grid_1a05c94b74cccc8a3769b2dc6cf44f21e0" kind="function"><name>At</name></member>
+    <member refid="classcse491_1_1_world_grid_1a911097e808e2217d8d07ed446260fe7c" kind="function"><name>At</name></member>
+    <member refid="classcse491_1_1_world_grid_1a2e7da9b313e80296247a44f9ac63b239" kind="function"><name>operator[]</name></member>
+    <member refid="classcse491_1_1_world_grid_1ad7d8213b830fa920dcac83bd24624100" kind="function"><name>operator[]</name></member>
+    <member refid="classcse491_1_1_world_grid_1a61fac8062fe0b55b4257f96a36252842" kind="function"><name>Resize</name></member>
+    <member refid="classcse491_1_1_world_grid_1a55e072b48f61cf7bdade9848e4fe5e4c" kind="function"><name>Write</name></member>
+    <member refid="classcse491_1_1_world_grid_1a43b51ef0443aa6271c3e43d43a9b3d9e" kind="function"><name>Write</name></member>
+    <member refid="classcse491_1_1_world_grid_1ad6443e6e955defa20aec1b743a115213" kind="function"><name>Read</name></member>
+    <member refid="classcse491_1_1_world_grid_1aa92489ac98cba91a7384847ae92b5aa3" kind="function"><name>Read</name></member>
+  </compound>
+  <compound refid="namespacecse491" kind="namespace"><name>cse491</name>
+    <member refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kind="typedef"><name>type_options_t</name></member>
+    <member refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kind="typedef"><name>item_set_t</name></member>
+    <member refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kind="typedef"><name>agent_set_t</name></member>
+  </compound>
+  <compound refid="_agent_base_8hpp" kind="file"><name>AgentBase.hpp</name>
+  </compound>
+  <compound refid="_core_object_8hpp" kind="file"><name>CoreObject.hpp</name>
+  </compound>
+  <compound refid="_data_8hpp" kind="file"><name>Data.hpp</name>
+  </compound>
+  <compound refid="_entity_8hpp" kind="file"><name>Entity.hpp</name>
+  </compound>
+  <compound refid="_grid_position_8hpp" kind="file"><name>GridPosition.hpp</name>
+  </compound>
+  <compound refid="_interface_base_8hpp" kind="file"><name>InterfaceBase.hpp</name>
+  </compound>
+  <compound refid="_world_base_8hpp" kind="file"><name>WorldBase.hpp</name>
+  </compound>
+  <compound refid="_world_grid_8hpp" kind="file"><name>WorldGrid.hpp</name>
+  </compound>
+  <compound refid="dir_0d27ce74e9bd514c31e1d63efab6b388" kind="dir"><name>source/core</name>
+  </compound>
+  <compound refid="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir"><name>source</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcse491_1_1_cell_type" kind="struct" language="C++" prot="public">
+    <compoundname>cse491::CellType</compoundname>
+    <includes refid="_data_8hpp" local="no">Data.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>cse491::CellType::name</qualifiedname>
+        <briefdescription>
+<para>Unique name for this type of cell (e.g., &quot;wall&quot;, &quot;tree&quot;, &quot;moon&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="17" column="17" bodyfile="source/core/Data.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string desc</definition>
+        <argsstring></argsstring>
+        <name>desc</name>
+        <qualifiedname>cse491::CellType::desc</qualifiedname>
+        <briefdescription>
+<para>Full description of what this type of cell is. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="18" column="17" bodyfile="source/core/Data.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <qualifiedname>cse491::CellType::symbol</qualifiedname>
+        <briefdescription>
+<para>Symbol for text representations (files or interface) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="19" column="10" bodyfile="source/core/Data.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Simple data structure to hold info about a TYPE of cell in the world. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/core/Data.hpp" line="16" column="3" bodyfile="source/core/Data.hpp" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>desc</name></member>
+      <member refid="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>name</name></member>
+      <member refid="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>symbol</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

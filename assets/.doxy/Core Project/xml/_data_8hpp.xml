@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_data_8hpp" kind="file" language="C++">
+    <compoundname>Data.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_agent_base_8hpp" local="yes">source/core/AgentBase.hpp</includedby>
+    <includedby refid="_world_base_8hpp" local="yes">source/core/WorldBase.hpp</includedby>
+    <includedby refid="_world_grid_8hpp" local="yes">source/core/WorldGrid.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/core/Data.hpp</label>
+        <link refid="_data_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/core/AgentBase.hpp</label>
+        <link refid="_agent_base_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/core/Data.hpp</label>
+        <link refid="_data_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>source/core/InterfaceBase.hpp</label>
+        <link refid="_interface_base_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>source/core/WorldBase.hpp</label>
+        <link refid="_world_base_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>source/core/WorldGrid.hpp</label>
+        <link refid="_world_grid_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structcse491_1_1_cell_type" prot="public">cse491::CellType</innerclass>
+    <innernamespace refid="namespacecse491">cse491</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="structcse491_1_1_cell_type" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" kindref="member">desc</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" kindref="member">symbol</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref><sp/>=<sp/>std::vector&lt;CellType&gt;;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>;</highlight></codeline>
+<codeline lineno="27" refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kindref="member">item_set_t</ref><sp/>=<sp/>std::vector&lt;std::unique_ptr&lt;Entity&gt;&gt;;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref>;</highlight></codeline>
+<codeline lineno="31" refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kindref="member">agent_set_t</ref><sp/>=<sp/>std::vector&lt;std::unique_ptr&lt;AgentBase&gt;&gt;;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="source/core/Data.hpp"/>
+  </compounddef>
+</doxygen>

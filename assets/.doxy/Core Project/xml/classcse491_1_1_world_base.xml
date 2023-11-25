@@ -1,0 +1,602 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_world_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>cse491::WorldBase</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" prot="protected" static="no" mutable="no">
+        <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref></type>
+        <definition>WorldGrid main_grid</definition>
+        <argsstring></argsstring>
+        <name>main_grid</name>
+        <qualifiedname>cse491::WorldBase::main_grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the main grid for this world; derived worlds may choose to have more than one grid. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="25" column="15" bodyfile="source/core/WorldBase.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref></type>
+        <definition>type_options_t type_options</definition>
+        <argsstring></argsstring>
+        <name>type_options</name>
+        <qualifiedname>cse491::WorldBase::type_options</qualifiedname>
+        <briefdescription>
+<para>Vector of types of cells in grids for this world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="26" column="20" bodyfile="source/core/WorldBase.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kindref="member">item_set_t</ref></type>
+        <definition>item_set_t item_set</definition>
+        <argsstring></argsstring>
+        <name>item_set</name>
+        <qualifiedname>cse491::WorldBase::item_set</qualifiedname>
+        <briefdescription>
+<para>Vector of pointers to non-agent entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="28" column="16" bodyfile="source/core/WorldBase.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kindref="member">agent_set_t</ref></type>
+        <definition>agent_set_t agent_set</definition>
+        <argsstring></argsstring>
+        <name>agent_set</name>
+        <qualifiedname>cse491::WorldBase::agent_set</qualifiedname>
+        <briefdescription>
+<para>Vector of pointers to agent entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="29" column="17" bodyfile="source/core/WorldBase.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool run_over</definition>
+        <argsstring></argsstring>
+        <name>run_over</name>
+        <qualifiedname>cse491::WorldBase::run_over</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Should the run end? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="31" column="10" bodyfile="source/core/WorldBase.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ConfigAgent</definition>
+        <argsstring>(AgentBase &amp;)</argsstring>
+        <name>ConfigAgent</name>
+        <qualifiedname>cse491::WorldBase::ConfigAgent</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function that is run whenever a new agent is created. <simplesect kind="note"><para>Override this function to provide agents with actions or other setup. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="35" column="18" bodyfile="source/core/WorldBase.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t AddCellType</definition>
+        <argsstring>(const std::string &amp;name, const std::string &amp;desc=&quot;&quot;, char symbol=&apos;\0&apos;)</argsstring>
+        <name>AddCellType</name>
+        <qualifiedname>cse491::WorldBase::AddCellType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>desc</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>symbol</declname>
+          <defval>&apos;\0&apos;</defval>
+        </param>
+        <briefdescription>
+<para>Add a new type of cell to this world. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique name for this cell type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A longer description of the cell type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An (optional) unique symbol for text IO (files, command line) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A unique ID associated with this cell type (position in type_options vector) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="42" column="12" bodyfile="source/core/WorldBase.hpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_world_base_1af1cd677b4bcd6f6680dfa15a3e90ec6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WorldBase</definition>
+        <argsstring>()</argsstring>
+        <name>WorldBase</name>
+        <qualifiedname>cse491::WorldBase::WorldBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="49" column="5" bodyfile="source/core/WorldBase.hpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a0762e0e05c2e4642db9bb4dcb19c1d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~WorldBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~WorldBase</name>
+        <qualifiedname>cse491::WorldBase::~WorldBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="53" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1ad5a41d3ffe157a9280f59b6fd335e6d7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumItems</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumItems</name>
+        <qualifiedname>cse491::WorldBase::GetNumItems</qualifiedname>
+        <briefdescription>
+<para>Get the total number of NON-agent entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="58" column="13" bodyfile="source/core/WorldBase.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a7288055da3e261d7a9b384c47190826c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumAgents</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumAgents</name>
+        <qualifiedname>cse491::WorldBase::GetNumAgents</qualifiedname>
+        <briefdescription>
+<para>Get the total number of AGENT entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="61" column="13" bodyfile="source/core/WorldBase.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a2013c828e851496fb1dad5458a73e391" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; GetItem</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>GetItem</name>
+        <qualifiedname>cse491::WorldBase::GetItem</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return a reference to an agent with a given ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="64" column="14" bodyfile="source/core/WorldBase.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a363d2fc8ba1d692f54740e68c98d3c27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &amp;</type>
+        <definition>AgentBase &amp; GetAgent</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>GetAgent</name>
+        <qualifiedname>cse491::WorldBase::GetAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return a reference to an agent with a given ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="70" column="17" bodyfile="source/core/WorldBase.hpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a214c2efc8296e32909fe590dd9b38f9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        <definition>virtual WorldGrid &amp; GetGrid</definition>
+        <argsstring>()</argsstring>
+        <name>GetGrid</name>
+        <qualifiedname>cse491::WorldBase::GetGrid</qualifiedname>
+        <briefdescription>
+<para>Return an editable version of the current grid for this world (main_grid by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="76" column="24" bodyfile="source/core/WorldBase.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1aded59564d46c4db7f2a0b8471742ade4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        <definition>virtual const WorldGrid &amp; GetGrid</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGrid</name>
+        <qualifiedname>cse491::WorldBase::GetGrid</qualifiedname>
+        <briefdescription>
+<para>Return the current grid for this world (main_grid by default) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="79" column="30" bodyfile="source/core/WorldBase.hpp" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a070d49184a7f98e6b9a223d96de81cb6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool GetRunOver</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRunOver</name>
+        <qualifiedname>cse491::WorldBase::GetRunOver</qualifiedname>
+        <briefdescription>
+<para>Determine if the run has ended. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="82" column="18" bodyfile="source/core/WorldBase.hpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a29624d90a61802f19a2348ed1a4eedc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename AGENT_T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>PROPERTY_Ts</declname>
+            <defname>PROPERTY_Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &amp;</type>
+        <definition>AgentBase &amp; AddAgent</definition>
+        <argsstring>(std::string agent_name=&quot;None&quot;, PROPERTY_Ts... properties)</argsstring>
+        <name>AddAgent</name>
+        <qualifiedname>cse491::WorldBase::AddAgent</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>agent_name</declname>
+          <defval>&quot;None&quot;</defval>
+        </param>
+        <param>
+          <type>PROPERTY_Ts...</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Build a new agent of the specified type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>AGENT_T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of agent to build </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PROPERTY_Ts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Types for any properties to set at creation (automatic) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of this agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name/value pairs for any properties set at creation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to the newly created agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="93" column="16" bodyfile="source/core/WorldBase.hpp" bodystart="93" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int DoAction</definition>
+        <argsstring>(AgentBase &amp;agent, size_t action_id)=0</argsstring>
+        <name>DoAction</name>
+        <qualifiedname>cse491::WorldBase::DoAction</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+<para>Central function for an agent to take any action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specific agent taking the action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the action to take </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of this action (usually 0/1 to indicate success) </para>
+</simplesect>
+<simplesect kind="note"><para>Thus function must be overridden in any derived world. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="112" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RunAgents</definition>
+        <argsstring>()</argsstring>
+        <name>RunAgents</name>
+        <qualifiedname>cse491::WorldBase::RunAgents</qualifiedname>
+        <briefdescription>
+<para>Step through each agent giving them a chance to take an action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Override this function if you want to control which grid the agents receive. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="116" column="18" bodyfile="source/core/WorldBase.hpp" bodystart="116" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void UpdateWorld</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateWorld</name>
+        <qualifiedname>cse491::WorldBase::UpdateWorld</qualifiedname>
+        <briefdescription>
+<para><ref refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" kindref="member">UpdateWorld()</ref> is run after every agent has a turn. Override this function to manage background events for a world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="127" column="18" bodyfile="source/core/WorldBase.hpp" bodystart="127" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1ae468c1feb28eb3650062bd36b81a4dc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <qualifiedname>cse491::WorldBase::Run</qualifiedname>
+        <briefdescription>
+<para>Run all agents repeatedly until an end condition is met. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="130" column="18" bodyfile="source/core/WorldBase.hpp" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a3cad8204e8250fb9ca6e7975c734f78c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref> &amp;</type>
+        <definition>const type_options_t &amp; GetCellTypes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCellTypes</name>
+        <qualifiedname>cse491::WorldBase::GetCellTypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="141" column="28" bodyfile="source/core/WorldBase.hpp" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1af4d3959da2ad73c22a787e84b916df45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetCellTypeID</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>GetCellTypeID</name>
+        <qualifiedname>cse491::WorldBase::GetCellTypeID</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Return the ID associated with the cell type name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique name of the cell type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The unique ID of the cell type (or 0 if it doesn&apos;t exist.) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="147" column="13" bodyfile="source/core/WorldBase.hpp" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a5161678164e9427721b22f55f39319b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; GetCellTypeName</definition>
+        <argsstring>(size_t id) const</argsstring>
+        <name>GetCellTypeName</name>
+        <qualifiedname>cse491::WorldBase::GetCellTypeName</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="154" column="25" bodyfile="source/core/WorldBase.hpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_base_1a6ed2bf1f38b9c6fe0e2e3c07f3fd50cb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>char GetCellTypeSymbol</definition>
+        <argsstring>(size_t id) const</argsstring>
+        <name>GetCellTypeSymbol</name>
+        <qualifiedname>cse491::WorldBase::GetCellTypeSymbol</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldBase.hpp" line="159" column="11" bodyfile="source/core/WorldBase.hpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>WorldBase</label>
+        <link refid="classcse491_1_1_world_base"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>main_grid</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>WorldGrid</label>
+        <link refid="classcse491_1_1_world_grid"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/WorldBase.hpp" line="21" column="3" bodyfile="source/core/WorldBase.hpp" bodystart="21" bodyend="163"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_world_base_1a29624d90a61802f19a2348ed1a4eedc1" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>AddAgent</name></member>
+      <member refid="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>AddCellType</name></member>
+      <member refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>agent_set</name></member>
+      <member refid="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" prot="protected" virt="virtual"><scope>cse491::WorldBase</scope><name>ConfigAgent</name></member>
+      <member refid="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" prot="public" virt="pure-virtual"><scope>cse491::WorldBase</scope><name>DoAction</name></member>
+      <member refid="classcse491_1_1_world_base_1a363d2fc8ba1d692f54740e68c98d3c27" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetAgent</name></member>
+      <member refid="classcse491_1_1_world_base_1af4d3959da2ad73c22a787e84b916df45" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetCellTypeID</name></member>
+      <member refid="classcse491_1_1_world_base_1a5161678164e9427721b22f55f39319b6" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetCellTypeName</name></member>
+      <member refid="classcse491_1_1_world_base_1a3cad8204e8250fb9ca6e7975c734f78c" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetCellTypes</name></member>
+      <member refid="classcse491_1_1_world_base_1a6ed2bf1f38b9c6fe0e2e3c07f3fd50cb" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetCellTypeSymbol</name></member>
+      <member refid="classcse491_1_1_world_base_1a214c2efc8296e32909fe590dd9b38f9b" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>GetGrid</name></member>
+      <member refid="classcse491_1_1_world_base_1aded59564d46c4db7f2a0b8471742ade4" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>GetGrid</name></member>
+      <member refid="classcse491_1_1_world_base_1a2013c828e851496fb1dad5458a73e391" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetItem</name></member>
+      <member refid="classcse491_1_1_world_base_1a7288055da3e261d7a9b384c47190826c" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetNumAgents</name></member>
+      <member refid="classcse491_1_1_world_base_1ad5a41d3ffe157a9280f59b6fd335e6d7" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>GetNumItems</name></member>
+      <member refid="classcse491_1_1_world_base_1a070d49184a7f98e6b9a223d96de81cb6" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>GetRunOver</name></member>
+      <member refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>item_set</name></member>
+      <member refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>main_grid</name></member>
+      <member refid="classcse491_1_1_world_base_1ae468c1feb28eb3650062bd36b81a4dc4" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>Run</name></member>
+      <member refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>run_over</name></member>
+      <member refid="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>RunAgents</name></member>
+      <member refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" prot="protected" virt="non-virtual"><scope>cse491::WorldBase</scope><name>type_options</name></member>
+      <member refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>UpdateWorld</name></member>
+      <member refid="classcse491_1_1_world_base_1af1cd677b4bcd6f6680dfa15a3e90ec6b" prot="public" virt="non-virtual"><scope>cse491::WorldBase</scope><name>WorldBase</name></member>
+      <member refid="classcse491_1_1_world_base_1a0762e0e05c2e4642db9bb4dcb19c1d90" prot="public" virt="virtual"><scope>cse491::WorldBase</scope><name>~WorldBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

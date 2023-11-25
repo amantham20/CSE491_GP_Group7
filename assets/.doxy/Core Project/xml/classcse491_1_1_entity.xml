@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_entity" kind="class" language="C++" prot="public">
+    <compoundname>cse491::Entity</compoundname>
+    <derivedcompoundref refid="classcse491_1_1_agent_base" prot="public" virt="non-virtual">AgentBase</derivedcompoundref>
+    <innerclass refid="structcse491_1_1_entity_1_1_property" prot="protected">cse491::Entity::Property</innerclass>
+    <innerclass refid="structcse491_1_1_entity_1_1_property_base" prot="protected">cse491::Entity::PropertyBase</innerclass>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>cse491::Entity::id</qualifiedname>
+        <briefdescription>
+<para>Unique ID for this entity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="19" column="18" bodyfile="source/core/Entity.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>cse491::Entity::name</qualifiedname>
+        <briefdescription>
+<para>Name for this entity (E.g., &quot;Player 1&quot; or &quot;+2 Sword&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="20" column="17" bodyfile="source/core/Entity.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" static="no" mutable="no">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+        <definition>GridPosition position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>cse491::Entity::position</qualifiedname>
+        <briefdescription>
+<para>Where on the grid is this entity? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="21" column="18" bodyfile="source/core/Entity.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::unique_ptr&lt; <ref refid="structcse491_1_1_entity_1_1_property_base" kindref="compound">PropertyBase</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::unique_ptr&lt;PropertyBase&gt; &gt; property_map</definition>
+        <argsstring></argsstring>
+        <name>property_map</name>
+        <qualifiedname>cse491::Entity::property_map</qualifiedname>
+        <briefdescription>
+<para>Every entity can have a simple set of properties (with values) associated with it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="35" column="24" bodyfile="source/core/Entity.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structcse491_1_1_entity_1_1_property" kindref="compound">Property</ref>&lt; T &gt; &amp;</type>
+        <definition>Property&lt; T &gt; &amp; AsProperty</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>AsProperty</name>
+        <qualifiedname>cse491::Entity::AsProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="40" column="15" bodyfile="source/core/Entity.hpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Entity</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>Entity</name>
+        <qualifiedname>cse491::Entity::Entity</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="49" column="5" bodyfile="source/core/Entity.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity</definition>
+        <argsstring>(const Entity &amp;)=delete</argsstring>
+        <name>Entity</name>
+        <qualifiedname>cse491::Entity::Entity</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity</definition>
+        <argsstring>(Entity &amp;&amp;)=default</argsstring>
+        <name>Entity</name>
+        <qualifiedname>cse491::Entity::Entity</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="51" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~Entity</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Entity</name>
+        <qualifiedname>cse491::Entity::~Entity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="52" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; operator=</definition>
+        <argsstring>(const Entity &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cse491::Entity::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="54" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; operator=</definition>
+        <argsstring>(Entity &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cse491::Entity::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="55" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetID</name>
+        <qualifiedname>cse491::Entity::GetID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="58" column="13" bodyfile="source/core/Entity.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; GetName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetName</name>
+        <qualifiedname>cse491::Entity::GetName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="59" column="25" bodyfile="source/core/Entity.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+        <definition>GridPosition GetPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPosition</name>
+        <qualifiedname>cse491::Entity::GetPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="60" column="19" bodyfile="source/core/Entity.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetName</definition>
+        <argsstring>(const std::string in_name)</argsstring>
+        <name>SetName</name>
+        <qualifiedname>cse491::Entity::SetName</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>in_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="62" column="13" bodyfile="source/core/Entity.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetPosition</definition>
+        <argsstring>(GridPosition in_pos)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>cse491::Entity::SetPosition</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>in_pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="63" column="13" bodyfile="source/core/Entity.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetPosition</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>cse491::Entity::SetPosition</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="64" column="13" bodyfile="source/core/Entity.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool IsAgent</definition>
+        <argsstring>() const</argsstring>
+        <name>IsAgent</name>
+        <qualifiedname>cse491::Entity::IsAgent</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2">IsAgent</reimplementedby>
+        <briefdescription>
+<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually an autonomous agent? (Overridden in <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> to return true) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="67" column="18" bodyfile="source/core/Entity.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool IsInterface</definition>
+        <argsstring>() const</argsstring>
+        <name>IsInterface</name>
+        <qualifiedname>cse491::Entity::IsInterface</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_interface_base_1a4afb8c12fa7634510af645142be1ce16">IsInterface</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually a specialty Agent that&apos;s an Interface for a human player? (Overridden in <ref refid="classcse491_1_1_interface_base" kindref="compound">InterfaceBase</ref> to return true) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="71" column="18" bodyfile="source/core/Entity.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HasProperty</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>HasProperty</name>
+        <qualifiedname>cse491::Entity::HasProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Does this agent have a property with the specified name? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="77" column="11" bodyfile="source/core/Entity.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>double</defval>
+          </param>
+        </templateparamlist>
+        <type>const T &amp;</type>
+        <definition>const T &amp; GetProperty</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>GetProperty</name>
+        <qualifiedname>cse491::Entity::GetProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Return the current value of the specified property. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="83" column="15" bodyfile="source/core/Entity.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetProperty</definition>
+        <argsstring>(const std::string &amp;name, const T &amp;value)</argsstring>
+        <name>SetProperty</name>
+        <qualifiedname>cse491::Entity::SetProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Change the value of the specified property (will create if needed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="90" column="13" bodyfile="source/core/Entity.hpp" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetProperties</definition>
+        <argsstring>()</argsstring>
+        <name>SetProperties</name>
+        <qualifiedname>cse491::Entity::SetProperties</qualifiedname>
+        <briefdescription>
+<para>Allow for setting multiple properties at once. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="100" column="13" bodyfile="source/core/Entity.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename VALUE_T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>EXTRA_Ts</declname>
+            <defname>EXTRA_Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; SetProperties</definition>
+        <argsstring>(const std::string &amp;name, VALUE_T &amp;&amp;value, EXTRA_Ts &amp;&amp;... extras)</argsstring>
+        <name>SetProperties</name>
+        <qualifiedname>cse491::Entity::SetProperties</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>VALUE_T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>EXTRA_Ts &amp;&amp;...</type>
+          <declname>extras</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="103" column="13" bodyfile="source/core/Entity.hpp" bodystart="103" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; RemoveProperty</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>RemoveProperty</name>
+        <qualifiedname>cse491::Entity::RemoveProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Completely remove a property from an <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="109" column="13" bodyfile="source/core/Entity.hpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Entity</label>
+        <link refid="classcse491_1_1_entity"/>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+        <link refid="classcse491_1_1_agent_base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InterfaceBase</label>
+        <link refid="classcse491_1_1_interface_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Entity</label>
+        <link refid="classcse491_1_1_entity"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GridPosition</label>
+        <link refid="classcse491_1_1_grid_position"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/Entity.hpp" line="17" column="3" bodyfile="source/core/Entity.hpp" bodystart="17" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>AsProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetID</name></member>
+      <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetName</name></member>
+      <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>HasProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>IsAgent</name></member>
+      <member refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>IsInterface</name></member>
+      <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>name</name></member>
+      <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>position</name></member>
+      <member refid="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>RemoveProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetName</name></member>
+      <member refid="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>~Entity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

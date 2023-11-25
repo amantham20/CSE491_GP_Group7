@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_world_base_8hpp" kind="file" language="C++">
+    <compoundname>WorldBase.hpp</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_agent_base_8hpp" local="yes">AgentBase.hpp</includes>
+    <includes refid="_data_8hpp" local="yes">Data.hpp</includes>
+    <includes refid="_entity_8hpp" local="yes">Entity.hpp</includes>
+    <includes refid="_world_grid_8hpp" local="yes">WorldGrid.hpp</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>AgentBase.hpp</label>
+        <link refid="_agent_base_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>CoreObject.hpp</label>
+        <link refid="_core_object_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Data.hpp</label>
+        <link refid="_data_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Entity.hpp</label>
+        <link refid="_entity_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GridPosition.hpp</label>
+        <link refid="_grid_position_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/core/WorldBase.hpp</label>
+        <link refid="_world_base_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>WorldGrid.hpp</label>
+        <link refid="_world_grid_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cassert</label>
+      </node>
+      <node id="11">
+        <label>compare</label>
+      </node>
+      <node id="12">
+        <label>cstddef</label>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>unordered_map</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcse491_1_1_world_base" prot="public">cse491::WorldBase</innerclass>
+    <innernamespace refid="namespacecse491">cse491</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AgentBase.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WorldGrid.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classcse491_1_1_world_base" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_world_base" kindref="compound">WorldBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref><sp/><ref refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" kindref="member">main_grid</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>;<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kindref="member">item_set_t</ref><sp/><ref refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kindref="member">item_set</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kindref="member">agent_set_t</ref><sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" kindref="member">run_over</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" kindref="member">ConfigAgent</ref>(<ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<sp/></highlight><highlight class="comment">/*<sp/>agent<sp/>*/</highlight><highlight class="normal">)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" kindref="member">AddCellType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>desc=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbol=</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>.push_back(<ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref>{name,<sp/>desc,<sp/>symbol});</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>.size()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base" kindref="compound">WorldBase</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>cell<sp/>type<sp/>(ID<sp/>0)<sp/>should<sp/>be<sp/>reserved<sp/>for<sp/>errors<sp/>or<sp/>empty<sp/>spots<sp/>in<sp/>a<sp/>grid.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1ab11fd38e99219a28df2795cafbf15159" kindref="member">AddCellType</ref>(</highlight><highlight class="stringliteral">&quot;Unknown&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;This<sp/>is<sp/>an<sp/>invalid<sp/>cell<sp/>type<sp/>and<sp/>should<sp/>not<sp/>be<sp/>reachable.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~WorldBase()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Accessors<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classcse491_1_1_world_base_1ad5a41d3ffe157a9280f59b6fd335e6d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1ad5a41d3ffe157a9280f59b6fd335e6d7" kindref="member">GetNumItems</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kindref="member">item_set</ref>.size();<sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classcse491_1_1_world_base_1a7288055da3e261d7a9b384c47190826c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a7288055da3e261d7a9b384c47190826c" kindref="member">GetNumAgents</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>.size();<sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classcse491_1_1_world_base_1a2013c828e851496fb1dad5458a73e391" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_world_base_1a2013c828e851496fb1dad5458a73e391" kindref="member">GetItem</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kindref="member">item_set</ref>.size());</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kindref="member">item_set</ref>[id];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classcse491_1_1_world_base_1a363d2fc8ba1d692f54740e68c98d3c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_world_base_1a363d2fc8ba1d692f54740e68c98d3c27" kindref="member">GetAgent</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>.size());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>[id];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classcse491_1_1_world_base_1a214c2efc8296e32909fe590dd9b38f9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_world_base_1a214c2efc8296e32909fe590dd9b38f9b" kindref="member">GetGrid</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" kindref="member">main_grid</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classcse491_1_1_world_base_1aded59564d46c4db7f2a0b8471742ade4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_world_base_1aded59564d46c4db7f2a0b8471742ade4" kindref="member">GetGrid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" kindref="member">main_grid</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classcse491_1_1_world_base_1a070d49184a7f98e6b9a223d96de81cb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a070d49184a7f98e6b9a223d96de81cb6" kindref="member">GetRunOver</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" kindref="member">run_over</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Agent<sp/>Management<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>AGENT_T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">...<sp/>PROPERTY_Ts&gt;</highlight></codeline>
+<codeline lineno="93" refid="classcse491_1_1_world_base_1a29624d90a61802f19a2348ed1a4eedc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_world_base_1a29624d90a61802f19a2348ed1a4eedc1" kindref="member">AddAgent</ref>(std::string<sp/>agent_name=</highlight><highlight class="stringliteral">&quot;None&quot;</highlight><highlight class="normal">,<sp/>PROPERTY_Ts...<sp/>properties)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>agent_ptr<sp/>=<sp/>std::make_unique&lt;AGENT_T&gt;(<ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>.size(),<sp/>agent_name);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>agent_ptr-&gt;SetProperties(std::forward&lt;PROPERTY_Ts&gt;(properties)...);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1acdea49068c94d472be824c95f139acf3" kindref="member">ConfigAgent</ref>(*agent_ptr);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent_ptr-&gt;Initialize()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>initialize<sp/>agent<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>agent_name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>.emplace_back(std::move(agent_ptr));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*<ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>.back();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Action<sp/>Management<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" kindref="member">DoAction</ref>(<ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<sp/>agent,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>action_id)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" kindref="member">RunAgents</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>agent_ptr<sp/>:<sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>action_id<sp/>=</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent_ptr-&gt;SelectAction(<ref refid="classcse491_1_1_world_base_1a36a1bdd995177be0820991a002ebfc6d" kindref="member">main_grid</ref>,<sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>,<sp/><ref refid="classcse491_1_1_world_base_1a383590836f3526cfd4e8d969206b8b5e" kindref="member">item_set</ref>,<sp/><ref refid="classcse491_1_1_world_base_1a664e11c21ba4a859af0dda2ee8725540" kindref="member">agent_set</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/><ref refid="classcse491_1_1_world_base_1aeffa77194a20c75474ca3bff22b48f3a" kindref="member">DoAction</ref>(*agent_ptr,<sp/>action_id);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent_ptr-&gt;SetActionResult(result);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" kindref="member">UpdateWorld</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classcse491_1_1_world_base_1ae468c1feb28eb3650062bd36b81a4dc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1ae468c1feb28eb3650062bd36b81a4dc4" kindref="member">Run</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" kindref="member">run_over</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<ref refid="classcse491_1_1_world_base_1aff35f724eb8f02b1a774ef2b9648dcb1" kindref="member">run_over</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1aefdce156972421919dd8b3b2bcafe838" kindref="member">RunAgents</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_world_base_1afa055ff2a75cefc13af2e67bfaa1daed" kindref="member">UpdateWorld</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CellType<sp/>management.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>a<sp/>const<sp/>vector<sp/>of<sp/>all<sp/>of<sp/>the<sp/>possible<sp/>cell<sp/>types.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref><sp/>&amp;<sp/>GetCellTypes()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classcse491_1_1_world_base_1af4d3959da2ad73c22a787e84b916df45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1af4d3959da2ad73c22a787e84b916df45" kindref="member">GetCellTypeID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=1;<sp/>i<sp/>&lt;<sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>[i].name<sp/>==<sp/>name)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>GetCellTypeName(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;=<sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>[0].name;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>[id].name;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>GetCellTypeSymbol(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&gt;=<sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>.size())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>[0].symbol;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_base_1a2f5b66a21ad6da1be1ac6646c980660b" kindref="member">type_options</ref>[id].symbol;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>cse491</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/core/WorldBase.hpp"/>
+  </compounddef>
+</doxygen>

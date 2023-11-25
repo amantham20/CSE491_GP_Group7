@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_0d27ce74e9bd514c31e1d63efab6b388" kind="dir">
+    <compoundname>source/core</compoundname>
+    <innerfile refid="_agent_base_8hpp">AgentBase.hpp</innerfile>
+    <innerfile refid="_core_object_8hpp">CoreObject.hpp</innerfile>
+    <innerfile refid="_data_8hpp">Data.hpp</innerfile>
+    <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
+    <innerfile refid="_grid_position_8hpp">GridPosition.hpp</innerfile>
+    <innerfile refid="_interface_base_8hpp">InterfaceBase.hpp</innerfile>
+    <innerfile refid="_world_base_8hpp">WorldBase.hpp</innerfile>
+    <innerfile refid="_world_grid_8hpp">WorldGrid.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/core/"/>
+  </compounddef>
+</doxygen>

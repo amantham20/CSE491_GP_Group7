@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_core_object" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>cse491::CoreObject</compoundname>
+    <derivedcompoundref refid="classcse491_1_1_world_grid" prot="public" virt="non-virtual">WorldGrid</derivedcompoundref>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string GetTypeName_impl</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::CoreObject::GetTypeName_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="37" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;) const =0</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::CoreObject::Serialize_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to store the current state of this object for later extraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">output_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ostream that the required information should be stored in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="41" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;)=0</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::CoreObject::Deserialize_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <param>
+          <type>std::istream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to restore the state of this object from the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">input_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The istream with full details about this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="45" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartSerialize</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>StartSerialize</name>
+        <qualifiedname>cse491::CoreObject::StartSerialize</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Set up beginning of the serialization for this class (allows checking later) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to serialize into. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="53" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndSerialize</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>EndSerialize</name>
+        <qualifiedname>cse491::CoreObject::EndSerialize</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Set up end of the serialization for this class (allows checking later) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to serialize into. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="59" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool StartDeserialize</definition>
+        <argsstring>(std::istream &amp;is)</argsstring>
+        <name>StartDeserialize</name>
+        <qualifiedname>cse491::CoreObject::StartDeserialize</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Set up beginning of the deserialization for this class (does type checking) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to deserialize from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>success (true/false) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="66" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="66" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EndDeserialize</definition>
+        <argsstring>(std::istream &amp;is)</argsstring>
+        <name>EndDeserialize</name>
+        <qualifiedname>cse491::CoreObject::EndDeserialize</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Set up end of the deserialization for this class (does type checking) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to deserialize from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>success (true/false) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="81" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="81" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~CoreObject</definition>
+        <argsstring>()</argsstring>
+        <name>~CoreObject</name>
+        <qualifiedname>cse491::CoreObject::~CoreObject</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="94" column="13" bodyfile="source/core/CoreObject.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTypeName</name>
+        <qualifiedname>cse491::CoreObject::GetTypeName</qualifiedname>
+        <briefdescription>
+<para>Access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="100" column="17" bodyfile="source/core/CoreObject.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Serialize</definition>
+        <argsstring>(std::ostream &amp;os) const</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>cse491::CoreObject::Serialize</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Store the current state of this object for later extraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">output_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ostream that the required information should be stored in. A derived class is required to store all information about itself in <ref refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" kindref="member">Serialize()</ref> and clearly note the end of storage to simplify de-serializing the data. This function will automatic add a start line that reads &quot;:::START&quot; followed by the typename, and an end line with &quot;:::END&quot; followed by the typename again. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="108" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Deserialize</definition>
+        <argsstring>(std::istream &amp;is)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>cse491::CoreObject::Deserialize</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Restore the state of this object, extracting it from the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">input_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The istream with full details about this object. This function takes in an istream that was previously written using the paired <ref refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" kindref="member">Serialize()</ref> function and restores the associated class. It should stop loading when all data is finished; this may be signalled by the &quot;:::END&quot; directive. The stream should end ready for the next extraction. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="120" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Serialize</definition>
+        <argsstring>(std::string filename) const</argsstring>
+        <name>Serialize</name>
+        <qualifiedname>cse491::CoreObject::Serialize</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>A version of Serialize that accepts a filename for saving just this object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to create for storing this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success (true/false) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="129" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="129" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Deserialize</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>Deserialize</name>
+        <qualifiedname>cse491::CoreObject::Deserialize</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>A version of Deserialize that accepts a filename to read this object from. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to open to load this object from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success (true/false) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="142" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="142" bodyend="150"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>WorldGrid</label>
+        <link refid="classcse491_1_1_world_grid"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="source/core/CoreObject.hpp" line="27" column="3" bodyfile="source/core/CoreObject.hpp" bodystart="27" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31" prot="protected" virt="pure-virtual"><scope>cse491::CoreObject</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::CoreObject</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::CoreObject</scope><name>EndSerialize</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" virt="pure-virtual"><scope>cse491::CoreObject</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" prot="protected" virt="pure-virtual"><scope>cse491::CoreObject</scope><name>Serialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::CoreObject</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::CoreObject</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::CoreObject</scope><name>~CoreObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

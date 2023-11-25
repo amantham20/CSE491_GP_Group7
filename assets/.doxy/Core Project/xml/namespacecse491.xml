@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecse491" kind="namespace" language="C++">
+    <compoundname>cse491</compoundname>
+    <innerclass refid="classcse491_1_1_agent_base" prot="public">cse491::AgentBase</innerclass>
+    <innerclass refid="structcse491_1_1_cell_type" prot="public">cse491::CellType</innerclass>
+    <innerclass refid="classcse491_1_1_core_object" prot="public">cse491::CoreObject</innerclass>
+    <innerclass refid="classcse491_1_1_entity" prot="public">cse491::Entity</innerclass>
+    <innerclass refid="classcse491_1_1_grid_position" prot="public">cse491::GridPosition</innerclass>
+    <innerclass refid="classcse491_1_1_interface_base" prot="public">cse491::InterfaceBase</innerclass>
+    <innerclass refid="classcse491_1_1_world_base" prot="public">cse491::WorldBase</innerclass>
+    <innerclass refid="classcse491_1_1_world_grid" prot="public">cse491::WorldGrid</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref> &gt;</type>
+        <definition>using type_options_t =  std::vector&lt;CellType&gt;</definition>
+        <argsstring></argsstring>
+        <name>type_options_t</name>
+        <qualifiedname>cse491::type_options_t</qualifiedname>
+        <briefdescription>
+<para>Available CellTypes will be passed around as a vector of options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="23" column="3" bodyfile="source/core/Data.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" prot="public" static="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &gt; &gt;</type>
+        <definition>using item_set_t =  std::vector&lt;std::unique_ptr&lt;Entity&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>item_set_t</name>
+        <qualifiedname>cse491::item_set_t</qualifiedname>
+        <briefdescription>
+<para>Sets of items will be represented as vectors of pointers to the base class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="27" column="3" bodyfile="source/core/Data.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" prot="public" static="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &gt; &gt;</type>
+        <definition>using agent_set_t =  std::vector&lt;std::unique_ptr&lt;AgentBase&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>agent_set_t</name>
+        <qualifiedname>cse491::agent_set_t</qualifiedname>
+        <briefdescription>
+<para>Sets of agents will be represented as vectors of pointers to the base class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="31" column="3" bodyfile="source/core/Data.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A base class interface for all agent types. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A simple 2D Grid container.</para>
+<para>A base class for all World modules.</para>
+<para>A base class for all player-interface types.</para>
+<para>A mechanism of identifying a grid cell, as well as a position within the cell.</para>
+<para>A base class for all items or agents that can exist on the grid.</para>
+<para>Set of types used throughout the codebase.</para>
+<para>A common interface class for core objects that sets up required functionality.</para>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL</para>
+</simplesect>
+This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL</para>
+</simplesect>
+This <ref refid="classcse491_1_1_core_object" kindref="compound">CoreObject</ref> class builds an interface for all of the core object, ensuring that they can be properly serialized.</para>
+<para>Derived classes must implement: GetTypeName_impl() - To return the qualified type name. Serialize_impl() - To store the object in a stream. Deserialize_impl() - To restore the object from a stream. </para>
+    </detaileddescription>
+    <location file="source/core/AgentBase.hpp" line="18" column="1"/>
+  </compounddef>
+</doxygen>

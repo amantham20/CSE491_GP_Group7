@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcse491_1_1_entity_1_1_property" kind="struct" language="C++" prot="protected">
+    <compoundname>cse491::Entity::Property</compoundname>
+    <basecompoundref refid="structcse491_1_1_entity_1_1_property_base" prot="public" virt="non-virtual">Entity::PropertyBase</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcse491_1_1_entity_1_1_property_1a4fc7f59e3113e19697159919a5aad095" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>cse491::Entity::Property::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="29" column="9" bodyfile="source/core/Entity.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcse491_1_1_entity_1_1_property_1a5fe7cccc2796041da1630e545bb9719e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Property</definition>
+        <argsstring>(const T &amp;in)</argsstring>
+        <name>Property</name>
+        <qualifiedname>cse491::Entity::Property::Property</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="30" column="7" bodyfile="source/core/Entity.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_entity_1_1_property_1a399bdf060fe19b56d85eba444cfe4a5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Property</definition>
+        <argsstring>(T &amp;&amp;in)</argsstring>
+        <name>Property</name>
+        <qualifiedname>cse491::Entity::Property::Property</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="31" column="7" bodyfile="source/core/Entity.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Entity::Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_entity_1_1_property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_entity_1_1_property_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Entity::Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_entity_1_1_property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_entity_1_1_property_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/Entity.hpp" line="28" column="5" bodyfile="source/core/Entity.hpp" bodystart="28" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structcse491_1_1_entity_1_1_property_1a5fe7cccc2796041da1630e545bb9719e" prot="public" virt="non-virtual"><scope>cse491::Entity::Property</scope><name>Property</name></member>
+      <member refid="structcse491_1_1_entity_1_1_property_1a399bdf060fe19b56d85eba444cfe4a5a" prot="public" virt="non-virtual"><scope>cse491::Entity::Property</scope><name>Property</name></member>
+      <member refid="structcse491_1_1_entity_1_1_property_1a4fc7f59e3113e19697159919a5aad095" prot="public" virt="non-virtual"><scope>cse491::Entity::Property</scope><name>value</name></member>
+      <member refid="structcse491_1_1_entity_1_1_property_base_1a84ef0cd74a52ca2be38035fab4897ded" prot="public" virt="virtual"><scope>cse491::Entity::Property</scope><name>~PropertyBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

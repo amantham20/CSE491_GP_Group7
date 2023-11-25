@@ -1,0 +1,672 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_world_grid" kind="class" language="C++" prot="public">
+    <compoundname>cse491::WorldGrid</compoundname>
+    <basecompoundref refid="classcse491_1_1_core_object" prot="public" virt="non-virtual">CoreObject</basecompoundref>
+    <includes refid="_core_object_8hpp" local="no">CoreObject.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_world_grid_1a02bed8590a9ddf520e58a060059518ec" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>cse491::WorldGrid::width</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of cells in each row of the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="27" column="12" bodyfile="source/core/WorldGrid.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_grid_1a02afeaaf8574e7a78d6b466ff2695052" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>cse491::WorldGrid::height</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of rows of cells in the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="28" column="12" bodyfile="source/core/WorldGrid.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_world_grid_1a88f2b351f7f183946b0edf46fb6eff30" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; cells</definition>
+        <argsstring></argsstring>
+        <name>cells</name>
+        <qualifiedname>cse491::WorldGrid::cells</qualifiedname>
+        <briefdescription>
+<para>All cells, grouped by full rows, top to bottom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="29" column="17" bodyfile="source/core/WorldGrid.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a8c4aa52cfa2bbd01c821107d7f1b832d" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ToIndex</definition>
+        <argsstring>(size_t x, size_t y) const</argsstring>
+        <name>ToIndex</name>
+        <qualifiedname>cse491::WorldGrid::ToIndex</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Convert an X and a Y value to the index in the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="34" column="20" bodyfile="source/core/WorldGrid.hpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName_impl</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::WorldGrid::GetTypeName_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2">GetTypeName_impl</reimplements>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="43" column="17" bodyfile="source/core/WorldGrid.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::WorldGrid::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73">Serialize_impl</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Write the current state of this grid into the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="46" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::WorldGrid::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31">Deserialize_impl</reimplements>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Read the state of the grid out of the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="53" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1ad11645bdecaa5c54b68e284b30da9707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldGrid</definition>
+        <argsstring>()=default</argsstring>
+        <name>WorldGrid</name>
+        <qualifiedname>cse491::WorldGrid::WorldGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="60" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a88e903f7e1335f357e695b14e0c72ce7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WorldGrid</definition>
+        <argsstring>(size_t width, size_t height, size_t default_type=0)</argsstring>
+        <name>WorldGrid</name>
+        <qualifiedname>cse491::WorldGrid::WorldGrid</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>default_type</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="61" column="5" bodyfile="source/core/WorldGrid.hpp" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1aac4144659814c88df6c2796ba3ca0566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldGrid</definition>
+        <argsstring>(const WorldGrid &amp;)=default</argsstring>
+        <name>WorldGrid</name>
+        <qualifiedname>cse491::WorldGrid::WorldGrid</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="63" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a8673510c7433d4ff9f733bec565cb334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WorldGrid</definition>
+        <argsstring>(WorldGrid &amp;&amp;)=default</argsstring>
+        <name>WorldGrid</name>
+        <qualifiedname>cse491::WorldGrid::WorldGrid</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="64" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1ac541afd2d8a7fe453f1d911c70b79bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        <definition>WorldGrid &amp; operator=</definition>
+        <argsstring>(const WorldGrid &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cse491::WorldGrid::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="66" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a82d93fad3c399f362195dba560438622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
+        <definition>WorldGrid &amp; operator=</definition>
+        <argsstring>(WorldGrid &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cse491::WorldGrid::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="67" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1abddb4150d08d2bd14cad00bdaef260c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetWidth</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWidth</name>
+        <qualifiedname>cse491::WorldGrid::GetWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="70" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1af4175cbd21f5ed763be8be4977ad1193" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetHeight</definition>
+        <argsstring>() const</argsstring>
+        <name>GetHeight</name>
+        <qualifiedname>cse491::WorldGrid::GetHeight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="71" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a8a0f0e89e490a267b4456f192779aaee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumCells</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumCells</name>
+        <qualifiedname>cse491::WorldGrid::GetNumCells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="72" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a0724bff847ffa1064dfa7b88d532cab3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsValid</definition>
+        <argsstring>(double x, double y) const</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>cse491::WorldGrid::IsValid</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Test if specific coordinates are in range for this GridWorld. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="75" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a1468f2b2afd8c3a24cb81e979e9505ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsValid</definition>
+        <argsstring>(GridPosition pos) const</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>cse491::WorldGrid::IsValid</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Test if a <ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> is in range for this GridWorld. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="80" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a4480b68044590f7bf96908d80ebea04b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t At</definition>
+        <argsstring>(size_t x, size_t y) const</argsstring>
+        <name>At</name>
+        <qualifiedname>cse491::WorldGrid::At</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The grid state at the provided x and y coordinates </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="85" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a89687135e78162940ad3777aa1246c40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t &amp;</type>
+        <definition>size_t &amp; At</definition>
+        <argsstring>(size_t x, size_t y)</argsstring>
+        <name>At</name>
+        <qualifiedname>cse491::WorldGrid::At</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the grid state at the provided x and y coordinates </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="91" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a05c94b74cccc8a3769b2dc6cf44f21e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t At</definition>
+        <argsstring>(GridPosition p) const</argsstring>
+        <name>At</name>
+        <qualifiedname>cse491::WorldGrid::At</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The state at a given <ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="97" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a911097e808e2217d8d07ed446260fe7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t &amp;</type>
+        <definition>size_t &amp; At</definition>
+        <argsstring>(GridPosition p)</argsstring>
+        <name>At</name>
+        <qualifiedname>cse491::WorldGrid::At</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A reference to the state at a given <ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="100" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a2e7da9b313e80296247a44f9ac63b239" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t operator[]</definition>
+        <argsstring>(GridPosition p) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>cse491::WorldGrid::operator[]</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="102" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1ad7d8213b830fa920dcac83bd24624100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t &amp;</type>
+        <definition>size_t &amp; operator[]</definition>
+        <argsstring>(GridPosition p)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>cse491::WorldGrid::operator[]</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="103" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a61fac8062fe0b55b4257f96a36252842" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Resize</definition>
+        <argsstring>(size_t new_width, size_t new_height, size_t default_type=0)</argsstring>
+        <name>Resize</name>
+        <qualifiedname>cse491::WorldGrid::Resize</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>new_width</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>new_height</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>default_type</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="107" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="107" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a55e072b48f61cf7bdade9848e4fe5e4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Write</definition>
+        <argsstring>(std::ostream &amp;os, const type_options_t &amp;types) const</argsstring>
+        <name>Write</name>
+        <qualifiedname>cse491::WorldGrid::Write</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref> &amp;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para>Write out a human-readable version of the current <ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stream to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of CellTypes for symbol identification </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="134" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="134" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1a43b51ef0443aa6271c3e43d43a9b3d9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Write</definition>
+        <argsstring>(std::string filename, const type_options_t &amp;types) const</argsstring>
+        <name>Write</name>
+        <qualifiedname>cse491::WorldGrid::Write</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref> &amp;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to specify a file name to write the grid state to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="146" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="146" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1ad6443e6e955defa20aec1b743a115213" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Read</definition>
+        <argsstring>(std::istream &amp;is, const type_options_t &amp;types)</argsstring>
+        <name>Read</name>
+        <qualifiedname>cse491::WorldGrid::Read</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref> &amp;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="156" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="156" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_world_grid_1aa92489ac98cba91a7384847ae92b5aa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Read</definition>
+        <argsstring>(std::string filename, const type_options_t &amp;types)</argsstring>
+        <name>Read</name>
+        <qualifiedname>cse491::WorldGrid::Read</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref> &amp;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to specify a file name to read the grid state from. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/WorldGrid.hpp" line="186" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="186" bodyend="194"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A common interface class for core objects that sets up required functionality. This class ensures that objects can be serialized (saved), deserialized (restored) and provides helper functions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a 2D grid of cells. This class provides utilities to manage, access, and modify cells within a grid. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>WorldGrid</label>
+        <link refid="classcse491_1_1_world_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>WorldGrid</label>
+        <link refid="classcse491_1_1_world_grid"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/WorldGrid.hpp" line="25" column="3" bodyfile="source/core/WorldGrid.hpp" bodystart="25" bodyend="196"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_world_grid_1a4480b68044590f7bf96908d80ebea04b" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
+      <member refid="classcse491_1_1_world_grid_1a89687135e78162940ad3777aa1246c40" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
+      <member refid="classcse491_1_1_world_grid_1a05c94b74cccc8a3769b2dc6cf44f21e0" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
+      <member refid="classcse491_1_1_world_grid_1a911097e808e2217d8d07ed446260fe7c" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
+      <member refid="classcse491_1_1_world_grid_1a88f2b351f7f183946b0edf46fb6eff30" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>cells</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b" prot="protected" virt="virtual"><scope>cse491::WorldGrid</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>EndSerialize</name></member>
+      <member refid="classcse491_1_1_world_grid_1af4175cbd21f5ed763be8be4977ad1193" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>GetHeight</name></member>
+      <member refid="classcse491_1_1_world_grid_1a8a0f0e89e490a267b4456f192779aaee" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>GetNumCells</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f" prot="protected" virt="virtual"><scope>cse491::WorldGrid</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_world_grid_1abddb4150d08d2bd14cad00bdaef260c0" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>GetWidth</name></member>
+      <member refid="classcse491_1_1_world_grid_1a02afeaaf8574e7a78d6b466ff2695052" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>height</name></member>
+      <member refid="classcse491_1_1_world_grid_1a0724bff847ffa1064dfa7b88d532cab3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>IsValid</name></member>
+      <member refid="classcse491_1_1_world_grid_1a1468f2b2afd8c3a24cb81e979e9505ff" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>IsValid</name></member>
+      <member refid="classcse491_1_1_world_grid_1ac541afd2d8a7fe453f1d911c70b79bb3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_world_grid_1a82d93fad3c399f362195dba560438622" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_world_grid_1a2e7da9b313e80296247a44f9ac63b239" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator[]</name></member>
+      <member refid="classcse491_1_1_world_grid_1ad7d8213b830fa920dcac83bd24624100" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator[]</name></member>
+      <member refid="classcse491_1_1_world_grid_1ad6443e6e955defa20aec1b743a115213" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Read</name></member>
+      <member refid="classcse491_1_1_world_grid_1aa92489ac98cba91a7384847ae92b5aa3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Read</name></member>
+      <member refid="classcse491_1_1_world_grid_1a61fac8062fe0b55b4257f96a36252842" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Resize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf" prot="protected" virt="virtual"><scope>cse491::WorldGrid</scope><name>Serialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_world_grid_1a8c4aa52cfa2bbd01c821107d7f1b832d" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>ToIndex</name></member>
+      <member refid="classcse491_1_1_world_grid_1a02bed8590a9ddf520e58a060059518ec" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>width</name></member>
+      <member refid="classcse491_1_1_world_grid_1ad11645bdecaa5c54b68e284b30da9707" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>WorldGrid</name></member>
+      <member refid="classcse491_1_1_world_grid_1a88e903f7e1335f357e695b14e0c72ce7" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>WorldGrid</name></member>
+      <member refid="classcse491_1_1_world_grid_1aac4144659814c88df6c2796ba3ca0566" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>WorldGrid</name></member>
+      <member refid="classcse491_1_1_world_grid_1a8673510c7433d4ff9f733bec565cb334" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>WorldGrid</name></member>
+      <member refid="classcse491_1_1_world_grid_1a55e072b48f61cf7bdade9848e4fe5e4c" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Write</name></member>
+      <member refid="classcse491_1_1_world_grid_1a43b51ef0443aa6271c3e43d43a9b3d9e" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>Write</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::WorldGrid</scope><name>~CoreObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

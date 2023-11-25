@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_grid_position_8hpp" kind="file" language="C++">
+    <compoundname>GridPosition.hpp</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">compare</includes>
+    <includes local="no">cstddef</includes>
+    <includedby refid="_agent_base_8hpp" local="yes">source/core/AgentBase.hpp</includedby>
+    <includedby refid="_entity_8hpp" local="yes">source/core/Entity.hpp</includedby>
+    <includedby refid="_world_grid_8hpp" local="yes">source/core/WorldGrid.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/core/GridPosition.hpp</label>
+        <link refid="_grid_position_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cassert</label>
+      </node>
+      <node id="3">
+        <label>compare</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/core/AgentBase.hpp</label>
+        <link refid="_agent_base_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>source/core/Entity.hpp</label>
+        <link refid="_entity_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/core/GridPosition.hpp</label>
+        <link refid="_grid_position_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>source/core/InterfaceBase.hpp</label>
+        <link refid="_interface_base_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>source/core/WorldBase.hpp</label>
+        <link refid="_world_base_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>source/core/WorldGrid.hpp</label>
+        <link refid="_world_grid_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcse491_1_1_grid_position" prot="public">cse491::GridPosition</innerclass>
+    <innernamespace refid="namespacecse491">cse491</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;compare&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>operator&lt;=&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>size_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classcse491_1_1_grid_position" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y)<sp/>:<sp/>x(x),<sp/>y(y)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Accessors<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>GetX()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;<sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>GetY()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>y;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>CellX()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x);<sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>CellY()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(y);<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classcse491_1_1_grid_position_1a1dc77bce08532dcf6ef18ee22585a595" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1a1dc77bce08532dcf6ef18ee22585a595" kindref="member">operator&lt;=&gt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Modifiers<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;<sp/>Set(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>in_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>in_y)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x=in_x;<sp/>y=in_y;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>&amp;<sp/>Shift(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shift_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>shift_y)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>shift_x;<sp/>y<sp/>+=<sp/>shift_y;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>GridPosition<sp/>&amp;<sp/>operator+=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GridPosition<sp/>&amp;<sp/>in)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Shift(in.x,<sp/>in.y);<sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>GridPosition<sp/>&amp;<sp/>operator-=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GridPosition<sp/>&amp;<sp/>in)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Shift(-in.x,<sp/>-in.y);<sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Const<sp/>Operations<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>offset_x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>offset_y)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref>{x+offset_x,y+offset_y};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classcse491_1_1_grid_position_1a1122f21ad6af4f79068df50bf27c1eee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1a1122f21ad6af4f79068df50bf27c1eee" kindref="member">Above</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist=1.0)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(0.0,<sp/>-dist);<sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classcse491_1_1_grid_position_1a733d8134d924230e305f84bdfbc974aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1a733d8134d924230e305f84bdfbc974aa" kindref="member">Below</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist=1.0)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(0.0,<sp/>dist);<sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classcse491_1_1_grid_position_1af1192bae7fa2ab154b700b40d4d8b63f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1af1192bae7fa2ab154b700b40d4d8b63f" kindref="member">ToLeft</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist=1.0)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(-dist,<sp/>0.0);<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classcse491_1_1_grid_position_1aa12c34149d2cde81c881fd40a30ee3e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1aa12c34149d2cde81c881fd40a30ee3e4" kindref="member">ToRight</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist=1.0)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(dist,<sp/>0.0);<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classcse491_1_1_grid_position_1a6e36c7ecfce04449155ca244b71e3920" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_grid_position_1a6e36c7ecfce04449155ca244b71e3920" kindref="member">operator+</ref>(<ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/>in)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" kindref="member">GetOffset</ref>(in.x,<sp/>in.y);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>cse491</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/core/GridPosition.hpp"/>
+  </compounddef>
+</doxygen>
