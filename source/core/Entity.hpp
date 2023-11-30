@@ -12,6 +12,7 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+
 #include "GridPosition.hpp"
 
 namespace cse491 {
@@ -130,6 +131,9 @@ namespace cse491 {
 
     Entity & RemoveItem(size_t id);
     Entity & RemoveItem(Entity & item) { return RemoveItem(item.GetID()); }
+
+    [[nodiscard]] std::vector<size_t> GetInventory() const { return inventory; }
+
   };
 
 } // End of namespace cse491

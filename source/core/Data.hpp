@@ -38,8 +38,9 @@ namespace cse491 {
       return properties.count(property);
     }
 
-    constexpr static const char* CELL_WALL = "wall";
-    constexpr static const char* CELL_WATER = "water";
+    constexpr static char CELL_WALL[] = "wall";
+    constexpr static char CELL_WATER[] = "water";
+
   };
 
   /// @brief Available CellTypes will be passed around as a vector of options.

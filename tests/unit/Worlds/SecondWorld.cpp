@@ -26,6 +26,36 @@ TEST_CASE("SecondWorld Construction", "[World][SecondWorld]"){
     CHECK(grid.IsValid(22, 0));
     CHECK(!grid.IsValid(23, 0));
   }
+
+  SECTION("World with second_floor grid") {
+    group4::SecondWorld world("../assets/grids/second_floor.grid", "../assets/second_floor_input.json");
+    cse491::WorldGrid grid = world.GetGrid();
+    CHECK(grid.GetWidth() == 50);
+    CHECK(grid.GetHeight() == 44);
+    CHECK(grid.GetNumCells() == 2200);
+    CHECK(grid.IsValid(0, 0));
+    CHECK(grid.IsValid(0, 43));
+    CHECK(!grid.IsValid(0, 44));
+    CHECK(!grid.IsValid(-1, -1));
+
+    CHECK(grid.IsValid(49, 0));
+    CHECK(!grid.IsValid(50, 0));
+  }
+
+  SECTION("World with third_floor grid") {
+    group4::SecondWorld world("../assets/grids/third_floor.grid", "../assets/third_floor_input.json");
+    cse491::WorldGrid grid = world.GetGrid();
+    CHECK(grid.GetWidth() == 20);
+    CHECK(grid.GetHeight() == 20);
+    CHECK(grid.GetNumCells() == 400);
+    CHECK(grid.IsValid(0, 0));
+    CHECK(grid.IsValid(0, 19));
+    CHECK(!grid.IsValid(0, 20));
+    CHECK(!grid.IsValid(-1, -1));
+
+    CHECK(grid.IsValid(19, 0));
+    CHECK(!grid.IsValid(20, 0));
+  }
 }
 
 TEST_CASE("Item Test")
@@ -58,5 +88,37 @@ TEST_CASE("Item Test")
     world.RemoveItem(item.GetID());
 
     CHECK(world.GetNumItems() == 1);
+
+}
+
+TEST_CASE("Third floor agents") {
+  group4::SecondWorld world("../assets/grids/third_floor.grid", "../assets/third_floor_input.json");
+  CHECK(world.GetNumAgents() == 1);
+  std::vector<size_t> agents = world.FindAgentsAt(cse491::GridPosition(7.0, 8.0), 0);
+  CHECK(agents.size() == 1);
+}
+
+
+TEST_CASE("SecondWorld LoadFromFile", "[World][SecondWorld]") {
+  // Test loading agents from a JSON file
+  SECTION("Load Agents from Valid File") {
+    group4::SecondWorld world;
+    REQUIRE_NOTHROW(world.LoadFromFile("../assets/input.json"));
+  
+    REQUIRE(world.GetNumAgents() == 3);
+  }
+  SECTION("Load Agents from Valid File2") {
+    group4::SecondWorld world;
+    REQUIRE_NOTHROW(world.LoadFromFile("../assets/second_floor_input.json"));
+  
+    REQUIRE(world.GetNumAgents() == 2);
+  }
+  SECTION("Load Agents from Valid File3") {
+    group4::SecondWorld world;
+    REQUIRE_NOTHROW(world.LoadFromFile("../assets/third_floor_input.json"));
+  
+    REQUIRE(world.GetNumAgents() == 1);
+  }
+
 
 }

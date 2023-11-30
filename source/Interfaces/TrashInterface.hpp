@@ -41,8 +41,11 @@ namespace cse491 {
           if (item_ptr->HasProperty("symbol")) {
             c = item_ptr->GetProperty<char>("symbol");
           }
-          symbol_grid[pos.CellY()][pos.CellX()] = c;
+          if (grid.IsValid(pos)){
+            symbol_grid[pos.CellY()][pos.CellX()] = c;
+          }
         }
+
       }
 
       for (const auto & [id, agent_ptr] : agent_map) {
@@ -100,6 +103,7 @@ namespace cse491 {
         case 'a': case 'A': action_id = GetActionID("left");  break;
         case 's': case 'S': action_id = GetActionID("down");  break;
         case 'd': case 'D': action_id = GetActionID("right"); break;
+        case 't': case 'T': action_id = GetActionID("drop");  break;
         case 'q': case 'Q': exit(0); // Quit!
       }
 
