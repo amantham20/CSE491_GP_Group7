@@ -120,6 +120,10 @@ namespace cse491 {
     }    
 
 
+    /// return the property map for the entity
+    std::unordered_map<std::string, std::unique_ptr<cse491::Entity::PropertyBase>> & GetProprtyMap() { return property_map; }
+
+
     /// Inventory Management
     bool HasItem(size_t id) const {
       return std::find(inventory.begin(), inventory.end(), id) != inventory.end();
@@ -130,6 +134,7 @@ namespace cse491 {
 
     Entity & RemoveItem(size_t id);
     Entity & RemoveItem(Entity & item) { return RemoveItem(item.GetID()); }
+
   };
 
 } // End of namespace cse491
