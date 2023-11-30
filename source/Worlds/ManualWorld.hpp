@@ -32,6 +32,9 @@ namespace cse491_team8 {
     size_t portal_id_a; ///< Easy access to first portal CellType ID.
     size_t portal_id_b; ///< Easy access to second portal CellType ID.
 
+
+    std::set<size_t> delete_agents;
+
     /// Provide the agent with movement actions.
     void ConfigAgent(cse491::AgentBase & agent) override {
       agent.AddAction("up", MOVE_UP);
@@ -48,7 +51,7 @@ namespace cse491_team8 {
       agent.AddAction("buff", BUFF);
       agent.AddAction("debuff", DEBUFF);
       agent.AddAction("help", HELP);
-      agent.SetProperties("Strength", 10, "Health", 100, "Max_Health", 150, "Direction", 0);
+      agent.SetProperties("Strength", 10, "Health", 100, "Max_Health", 150, "Direction", 0, "Battling", false);
     }
 
   public:
@@ -415,25 +418,40 @@ namespace cse491_team8 {
           agent.SetProperty<bool>("Battling", false);
           other_agent.SetProperty<bool>("Battling", false);
           DropItems(agent, other_agent);
-          this->RemoveAgent(other_agent.GetName());
+//          this->RemoveAgent(other_agent.GetName());
+          auto killedagent = GetAgentID(other_agent.GetName());
+          delete_agents.insert(killedagent);
+
         }
     }
 
-    /// @brief Looks for adjacencies
-    void UpdateWorld() override
-    {
-      
-    }
+//    /// @brief Looks for adjacencies
+//    void UpdateWorld() override
+//    {
+//
+//    }
+//
+//    /// Runs agents, updates the world.
+//    void Run() override
+//    {
+//      run_over = false;
+//      while (!run_over) {
+//        RunAgents();
+//        UpdateWorld();
+//      }
+//    }
 
-    /// Runs agents, updates the world.
-    void Run() override
-    {
-      run_over = false;
-      while (!run_over) {
-        RunAgents();
-        UpdateWorld();
+      void RunAgents() override {
+        for (auto & [id, agent_ptr] : agent_map) {
+          if (delete_agents.find(id) != delete_agents.end()) {
+            continue;
+          }
+          size_t action_id = agent_ptr->SelectAction(main_grid, type_options, item_map, agent_map);
+          agent_ptr->storeActionMap(agent_ptr->GetName());
+          int result = DoAction(*agent_ptr, action_id);
+          agent_ptr->SetActionResult(result);
+        }
       }
-    }
 
     /// @brief Attempt to pick up an item for the agent.
     /// @param agent The agent that is picking up the item.
@@ -549,6 +567,8 @@ namespace cse491_team8 {
         {
             new_position = agent.GetPosition();
             look_position = LookAhead(agent);
+
+            if (!main_grid.IsValid(look_position)) { return agent.GetPosition(); }
             if (main_grid.At(look_position) == tree_id)
             {
                 DoActionTestNewPositionTree(agent, look_position);
@@ -560,12 +580,14 @@ namespace cse491_team8 {
         case USE_BOAT:
         {
             new_position = agent.GetPosition();
+            if (!main_grid.IsValid(new_position)) { return agent.GetPosition(); }
             if (main_grid.At(new_position) == water_id)
             {
               agent.Notify("Already on Water");
               break;
             }
             look_position = LookAhead(agent);
+            if (!main_grid.IsValid(look_position)) { return agent.GetPosition(); }
             if (main_grid.At(look_position) == water_id)
             {
                 if (DoActionTestNewPositionWater(agent))
@@ -586,6 +608,8 @@ namespace cse491_team8 {
         case HEAL:
         {
             new_position = agent.GetPosition();
+            if (!main_grid.IsValid(new_position)) { return agent.GetPosition(); }
+
             if (battling)
             {
                 move = 'h';

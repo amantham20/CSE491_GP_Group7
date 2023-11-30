@@ -7,6 +7,7 @@
 #include "Worlds/ManualWorld.hpp"
 
 
+
 #include <thread>
 
 
@@ -19,13 +20,15 @@ int main() {
 
 
     auto start_time = std::chrono::high_resolution_clock::now();
-//    for (size_t i = 0; i < 20; ++i){
-    cowboys::GPTrainingLoop <cowboys::LGPAgent, cse491::MazeWorld> loop;
+
+//    cowboys::GPTrainingLoop <cowboys::CGPAgent, cse491::MazeWorld> loop;
+    cowboys::GPTrainingLoop <cowboys::LGPAgent, cse491_team8::ManualWorld> loop;
 
 
-    loop.Initialize(200, 100);
+
+    loop.Initialize(50, 200);
     loop.Run(11, 100, num_threads, true);
-//    }
+
 
     auto end_time = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);

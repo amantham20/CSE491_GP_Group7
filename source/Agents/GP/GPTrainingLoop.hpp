@@ -22,6 +22,13 @@
 
 #include "tinyxml2.h"
 
+//#include "Worlds/MazeWorld.hpp"
+
+#include "../Worlds/ManualWorld.hpp"
+#include "../Worlds/GenerativeWorld.hpp"
+#include "../Worlds/BiomeGenerator.hpp"
+
+
 
 
 namespace cowboys {
@@ -32,7 +39,9 @@ namespace cowboys {
     class GPTrainingLoop {
     private:
 
-        std::vector<std::unique_ptr<cse491::WorldBase>> environments;
+//        std::vector<std::unique_ptr<cse491::WorldBase>> environments;
+        std::vector<std::unique_ptr<EnvironmentType>> environments;
+
         std::vector<std::vector<cowboys::GPAgentBase *>> agents;
         std::vector<std::vector<double>> TEMPAgentFitness;
 
@@ -54,7 +63,7 @@ namespace cowboys {
         /**
          * Default Grid
          */
-        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0), cse491::GridPosition(22,5) , cse491::GridPosition(22,1) , cse491::GridPosition(0,8), cse491::GridPosition(22,8)};
+//        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0), cse491::GridPosition(22,5) , cse491::GridPosition(22,1) , cse491::GridPosition(0,8), cse491::GridPosition(22,8)};
 //        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0), cse491::GridPosition(22,5) };
 //        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(22,5) };
 //        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0)};
@@ -69,8 +78,14 @@ namespace cowboys {
 /**
  * Default Grid    2
  */
-//        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0), cse491::GridPosition(50,0) , cse491::GridPosition(0,28) , cse491::GridPosition(50,28)};
+//        const std::vector<cse491::GridPosition> STARTPOSITIONS = {//        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,0), cse491::GridPosition(22,5) , cse491::GridPosition(22,1) , cse491::GridPosition(0,8), cse491::GridPosition(22,8)};cse491::GridPosition(50,0) , cse491::GridPosition(0,28) , cse491::GridPosition(50,28)};
 
+
+/**
+ * Group 8
+ */
+
+        const std::vector<cse491::GridPosition> STARTPOSITIONS = {cse491::GridPosition(0,2), cse491::GridPosition(48,2),};
         /// ArenaIDX, AgentIDX, EndPosition
         std::vector<std::vector<std::vector<cse491::GridPosition>>> endPositions = std::vector<std::vector<std::vector<cse491::GridPosition>>>();
         std::vector<std::vector<std::vector<double>>> independentAgentFitness = std::vector<std::vector<std::vector<double>>>();
@@ -117,7 +132,29 @@ namespace cowboys {
 
           for (size_t i = 0; i < numArenas; ++i) {
             // instantiate a new environment
-            environments.emplace_back(std::make_unique<EnvironmentType>(seed));
+
+            if constexpr (std::is_same<EnvironmentType, cse491_team8::ManualWorld>::value)
+            {
+              /// GROUP 8
+              environments.emplace_back( std::make_unique<EnvironmentType>());
+
+
+            }
+//            else if constexpr (std::is_same<EnvironmentType, group6::GenerativeWorld>::value)
+//            {
+//              /// GROUP 6
+//              static const unsigned int SEED = 5;
+//              auto biome = group6::BiomeType::Maze; // specify biome type here
+//
+//              environments.emplace_back( std::make_unique<EnvironmentType>(biome, 100, 20,TRAINING_SEED));
+//            }
+//            else if constexpr (std::is_same<EnvironmentType,  group4::SecondWorld>::value){
+//              environments.emplace_back( std::make_unique<EnvironmentType>());
+//            }
+            else
+            {
+              environments.emplace_back( std::make_unique<EnvironmentType>(TRAINING_SEED));
+            }
 
 
             agents.push_back(std::vector<cowboys::GPAgentBase *>());
@@ -144,6 +181,17 @@ namespace cowboys {
 
             }
 
+            if constexpr (std::is_same<EnvironmentType, cse491_team8::ManualWorld>::value)
+            {
+              /// GROUP 8
+
+              /// Static Cast to Manual World
+//              auto & manualWorld = static_cast<cse491_team8::ManualWorld&>(*environments[i]);
+//              manualWorld.GenerateMoveSets();
+                environments[i]->GenerateMoveSets();
+
+            }
+
           }
 
           Printgrid(STARTPOSITIONS);
@@ -166,13 +214,15 @@ namespace cowboys {
          * @param startPosition
          * @return
          */
-        double SimpleFitnessFunction(cse491::AgentBase &agent, cse491::GridPosition startPosition) {
+        double SimpleFitnessFunction(cowboys::GPAgentBase &agent, cse491::GridPosition startPosition) {
           double fitness = 0;
 
           // Euclidean distance
           cse491::GridPosition currentPosition = agent.GetPosition();
+
           double distance = std::sqrt(std::pow(currentPosition.GetX() - startPosition.GetX(), 2) +
                                       std::pow(currentPosition.GetY() - startPosition.GetY(), 2));
+
 
           double score = distance;
 

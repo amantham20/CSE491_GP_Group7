@@ -142,18 +142,6 @@ namespace cowboys
         }
 
 
-        /**
-         * @brief Get the action object
-         * @param grid
-         * @param type_options
-         * @param item_set
-         * @param agent_set
-         * @return
-         */
-        std::string Export() override {
-          return "";
-        }
-
 
         size_t GetAction([[maybe_unused]] const cse491::WorldGrid &grid,
                             [[maybe_unused]] const cse491::type_options_t &type_options,
@@ -253,7 +241,7 @@ namespace cowboys
          * @brief Export the agent to a string
          * @return
          */
-        std::string Export() {
+        std::string Export() override {
             std::string encodedLists = "";
 
             for (auto instruction : instructionsList)
