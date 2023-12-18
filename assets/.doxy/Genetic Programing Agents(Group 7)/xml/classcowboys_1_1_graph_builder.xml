@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_graph_builder" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::GraphBuilder</compoundname>
+    <includes refid="_graph_builder_8hpp" local="no">GraphBuilder.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_graph_builder_1ae377922f084739ac6952cd808b18c71c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GraphBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>GraphBuilder</name>
+        <qualifiedname>cowboys::GraphBuilder::GraphBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphBuilder.hpp" line="12" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_builder_1a07d7dad4fa96ff9675eaf02de47acc09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GraphBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GraphBuilder</name>
+        <qualifiedname>cowboys::GraphBuilder::~GraphBuilder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphBuilder.hpp" line="13" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classcowboys_1_1_graph" kindref="compound">Graph</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Graph &gt; CartesianGraph</definition>
+        <argsstring>(const CGPGenotype &amp;genotype, const std::vector&lt; InnerFunction &gt; &amp;function_set, const cse491::AgentBase *agent=nullptr)</argsstring>
+        <name>CartesianGraph</name>
+        <qualifiedname>cowboys::GraphBuilder::CartesianGraph</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+          <declname>genotype</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref> &gt; &amp;</type>
+          <declname>function_set</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase *</type>
+          <declname>agent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Creates a decision graph from a CGP genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>genotype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The genotype to create the decision graph from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The set of functions available to the decision graph. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that will be using the decision graph. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The decision graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphBuilder.hpp" line="20" column="21" bodyfile="source/Agents/GP/GraphBuilder.hpp" bodystart="20" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_builder_1a2d1cfc829b54061f6875e94bc61b695b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classcowboys_1_1_graph" kindref="compound">Graph</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Graph &gt; VerticalPacer</definition>
+        <argsstring>()</argsstring>
+        <name>VerticalPacer</name>
+        <qualifiedname>cowboys::GraphBuilder::VerticalPacer</qualifiedname>
+        <briefdescription>
+<para>Creates a decision graph for pacing up and down in a MazeWorld. Assumes that the inputs are in the format: prev_action, current_state, above_state, below_state, left_state, right_state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assumes that the action outputs are in the format: up, down, left, right </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The decision graph for a vertical pacer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphBuilder.hpp" line="95" column="21" bodyfile="source/Agents/GP/GraphBuilder.hpp" bodystart="95" bodyend="161"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A class for building graphs. Graphs are a generic representation, so this class is used to build the specific format of a Cartesian <ref refid="classcowboys_1_1_graph" kindref="compound">Graph</ref>, and also preset graphs. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/GraphBuilder.hpp" line="10" column="3" bodyfile="source/Agents/GP/GraphBuilder.hpp" bodystart="10" bodyend="162"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" prot="public" virt="non-virtual"><scope>cowboys::GraphBuilder</scope><name>CartesianGraph</name></member>
+      <member refid="classcowboys_1_1_graph_builder_1ae377922f084739ac6952cd808b18c71c" prot="public" virt="non-virtual"><scope>cowboys::GraphBuilder</scope><name>GraphBuilder</name></member>
+      <member refid="classcowboys_1_1_graph_builder_1a2d1cfc829b54061f6875e94bc61b695b" prot="public" virt="non-virtual"><scope>cowboys::GraphBuilder</scope><name>VerticalPacer</name></member>
+      <member refid="classcowboys_1_1_graph_builder_1a07d7dad4fa96ff9675eaf02de47acc09" prot="public" virt="non-virtual"><scope>cowboys::GraphBuilder</scope><name>~GraphBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

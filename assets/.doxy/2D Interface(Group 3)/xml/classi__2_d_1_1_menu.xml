@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_menu" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::Menu</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_menu_1a89493309f71907993c464844f2b6164f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classi__2_d_1_1_button" kindref="compound">Button</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;Button&gt; &gt; mMenuBar</definition>
+        <argsstring></argsstring>
+        <name>mMenuBar</name>
+        <qualifiedname>i_2D::Menu::mMenuBar</qualifiedname>
+        <briefdescription>
+<para>Top menubar on the window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="21" column="21" bodyfile="source/Interfaces/Menu.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_menu_1a74911e5061da5c2b8271c457ad9868f0" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classi__2_d_1_1_inventory" kindref="compound">Inventory</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Inventory&gt; mInventory</definition>
+        <argsstring></argsstring>
+        <name>mInventory</name>
+        <qualifiedname>i_2D::Menu::mInventory</qualifiedname>
+        <briefdescription>
+<para>Interface Entitiy&apos;s inventory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The interface to the inventory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="23" column="25" bodyfile="source/Interfaces/Menu.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_menu_1acbba0bc754e0430379ae7674511078bf" prot="private" static="no" mutable="no">
+        <type>sf::Font *</type>
+        <definition>sf::Font* mFont</definition>
+        <argsstring></argsstring>
+        <name>mFont</name>
+        <qualifiedname>i_2D::Menu::mFont</qualifiedname>
+        <briefdescription>
+<para>The Font used for the menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="24" column="19" bodyfile="source/Interfaces/Menu.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_menu_1a4ae4af1eb8fcbdeedc083a1299ab172e" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f mWorldSize</definition>
+        <argsstring></argsstring>
+        <name>mWorldSize</name>
+        <qualifiedname>i_2D::Menu::mWorldSize</qualifiedname>
+        <briefdescription>
+<para>The world size. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="25" column="22" bodyfile="source/Interfaces/Menu.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1ac232e2640d5fc3a088496e5c1064dc36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetInventoryItemDisplay</definition>
+        <argsstring>(sf::Texture &amp;texture)</argsstring>
+        <name>SetInventoryItemDisplay</name>
+        <qualifiedname>i_2D::Menu::SetInventoryItemDisplay</qualifiedname>
+        <param>
+          <type>sf::Texture &amp;</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="32" column="14" bodyfile="source/Interfaces/Menu.hpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a1b731b32969c56a56cdc9a304bf69be9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Initialize</definition>
+        <argsstring>(sf::Font &amp;font, sf::Vector2f size)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>i_2D::Menu::Initialize</qualifiedname>
+        <param>
+          <type>sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>initialize the buttons at the top of the window </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="35" column="14" bodyfile="source/Interfaces/Menu.cpp" bodystart="17" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTo</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>DrawTo</name>
+        <qualifiedname>i_2D::Menu::DrawTo</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>draws each menu button to the window </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the main window of the graphic interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="36" column="14" bodyfile="source/Interfaces/Menu.cpp" bodystart="46" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a574f90c6e3ac00ddb76445003bb23287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string HandleMouseMove</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>HandleMouseMove</name>
+        <qualifiedname>i_2D::Menu::HandleMouseMove</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>check for mouse hoovering over the menu buttons change button color accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the main window of the graphic interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="37" column="21" bodyfile="source/Interfaces/Menu.cpp" bodystart="61" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1ade49c588e2243723a7df76000eee77ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleMouseButtonPressed</definition>
+        <argsstring>(sf::RenderWindow &amp;window, const std::vector&lt; std::string &gt; &amp;interfaceAgentInventory)</argsstring>
+        <name>HandleMouseButtonPressed</name>
+        <qualifiedname>i_2D::Menu::HandleMouseButtonPressed</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>interfaceAgentInventory</declname>
+        </param>
+        <briefdescription>
+<para>check if the mouse click the exit button closes window accordingly </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the main window of the graphic interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="38" column="14" bodyfile="source/Interfaces/Menu.cpp" bodystart="81" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1ab1bf98f7e2d075914e0738682d17cca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classi__2_d_1_1_button" kindref="compound">Button</ref> &gt; &gt; &amp;</type>
+        <definition>std::vector&lt; std::unique_ptr&lt; Button &gt; &gt; &amp; GetMenu</definition>
+        <argsstring>()</argsstring>
+        <name>GetMenu</name>
+        <qualifiedname>i_2D::Menu::GetMenu</qualifiedname>
+        <briefdescription>
+<para>Getter for MenuBar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>MenuBar </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="44" column="21" bodyfile="source/Interfaces/Menu.hpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a0dd4cf81f08aa90abc6d7fa2730d2c4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetWorldSize</definition>
+        <argsstring>(sf::Vector2f size)</argsstring>
+        <name>SetWorldSize</name>
+        <qualifiedname>i_2D::Menu::SetWorldSize</qualifiedname>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Keep track of the world&apos;s size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the world </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="52" column="14" bodyfile="source/Interfaces/Menu.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a2893094d82e7a275cc54517840993c3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsInventoryOpen</definition>
+        <argsstring>()</argsstring>
+        <name>IsInventoryOpen</name>
+        <qualifiedname>i_2D::Menu::IsInventoryOpen</qualifiedname>
+        <briefdescription>
+<para>Check if the inventory interface is open. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if inventory interface is on, otherwise false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="60" column="14" bodyfile="source/Interfaces/Menu.hpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a977f0cad3887597fa0735f0a4575e66b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstructInventory</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;interfaceAgentInventory)</argsstring>
+        <name>ConstructInventory</name>
+        <qualifiedname>i_2D::Menu::ConstructInventory</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>interfaceAgentInventory</declname>
+        </param>
+        <briefdescription>
+<para>Builds an inventory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="69" column="14" bodyfile="source/Interfaces/Menu.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_menu_1a78eded8233fe3ace248f69ebce05b9e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeconstructInventory</definition>
+        <argsstring>()</argsstring>
+        <name>DeconstructInventory</name>
+        <qualifiedname>i_2D::Menu::DeconstructInventory</qualifiedname>
+        <briefdescription>
+<para>Destroy the inventory object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="77" column="14" bodyfile="source/Interfaces/Menu.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/Menu.hpp" line="18" column="5" bodyfile="source/Interfaces/Menu.hpp" bodystart="18" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_menu_1a977f0cad3887597fa0735f0a4575e66b" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>ConstructInventory</name></member>
+      <member refid="classi__2_d_1_1_menu_1a78eded8233fe3ace248f69ebce05b9e9" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>DeconstructInventory</name></member>
+      <member refid="classi__2_d_1_1_menu_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>DrawTo</name></member>
+      <member refid="classi__2_d_1_1_menu_1ab1bf98f7e2d075914e0738682d17cca3" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>GetMenu</name></member>
+      <member refid="classi__2_d_1_1_menu_1ade49c588e2243723a7df76000eee77ac" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>HandleMouseButtonPressed</name></member>
+      <member refid="classi__2_d_1_1_menu_1a574f90c6e3ac00ddb76445003bb23287" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>HandleMouseMove</name></member>
+      <member refid="classi__2_d_1_1_menu_1a1b731b32969c56a56cdc9a304bf69be9" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>Initialize</name></member>
+      <member refid="classi__2_d_1_1_menu_1a2893094d82e7a275cc54517840993c3d" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>IsInventoryOpen</name></member>
+      <member refid="classi__2_d_1_1_menu_1acbba0bc754e0430379ae7674511078bf" prot="private" virt="non-virtual"><scope>i_2D::Menu</scope><name>mFont</name></member>
+      <member refid="classi__2_d_1_1_menu_1a74911e5061da5c2b8271c457ad9868f0" prot="private" virt="non-virtual"><scope>i_2D::Menu</scope><name>mInventory</name></member>
+      <member refid="classi__2_d_1_1_menu_1a89493309f71907993c464844f2b6164f" prot="private" virt="non-virtual"><scope>i_2D::Menu</scope><name>mMenuBar</name></member>
+      <member refid="classi__2_d_1_1_menu_1a4ae4af1eb8fcbdeedc083a1299ab172e" prot="private" virt="non-virtual"><scope>i_2D::Menu</scope><name>mWorldSize</name></member>
+      <member refid="classi__2_d_1_1_menu_1ac232e2640d5fc3a088496e5c1064dc36" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>SetInventoryItemDisplay</name></member>
+      <member refid="classi__2_d_1_1_menu_1a0dd4cf81f08aa90abc6d7fa2730d2c4c" prot="public" virt="non-virtual"><scope>i_2D::Menu</scope><name>SetWorldSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

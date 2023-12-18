@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_damage_collector" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::DamageCollector</compoundname>
+    <includes refid="_damage_collector_8hpp" local="no">DamageCollector.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_damage_collector_1a73e80ec1aca5edfc7e3e69705c992e4b" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::vector&lt; double &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::vector&lt;double&gt; &gt; damageData</definition>
+        <argsstring></argsstring>
+        <name>damageData</name>
+        <qualifiedname>DataCollection::DamageCollector::damageData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="19" column="29" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_damage_collector_1a2072a1bcf2ccb999327c53e427853541" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DamageCollector</definition>
+        <argsstring>()=default</argsstring>
+        <name>DamageCollector</name>
+        <qualifiedname>DataCollection::DamageCollector::DamageCollector</qualifiedname>
+        <briefdescription>
+<para>Default constructor for <ref refid="class_data_collection_1_1_damage_collector" kindref="compound">DamageCollector</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_damage_collector_1a4e545a975a67491ef9bf1847b3344cb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecordDamageResult</definition>
+        <argsstring>(const std::string &amp;itemName, double damageAmt)</argsstring>
+        <name>RecordDamageResult</name>
+        <qualifiedname>DataCollection::DamageCollector::RecordDamageResult</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>itemName</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>damageAmt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store a damage amount for a certain item. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the item to store the damage for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>damageAmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of damage this item did </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="31" column="15" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_damage_collector_1ab5cbc627b49a379a80237a0676b8a3b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt; &amp;</type>
+        <definition>std::vector&lt; double &gt; &amp; GetDamageAmounts</definition>
+        <argsstring>(std::string itemName)</argsstring>
+        <name>GetDamageAmounts</name>
+        <qualifiedname>DataCollection::DamageCollector::GetDamageAmounts</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>itemName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the damage amounts for a certain item. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the item to get damage amounts for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the vector of damage amounts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="40" column="22" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_damage_collector_1aa7d9f5c531bdcf7ec96c614eddaa3af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double CalculateAverageDamage</definition>
+        <argsstring>(const std::string &amp;itemName)</argsstring>
+        <name>CalculateAverageDamage</name>
+        <qualifiedname>DataCollection::DamageCollector::CalculateAverageDamage</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>itemName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate average damage for a certain item <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item name to calculate average for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The average damage as a double, -1 if the item does not exist </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="55" column="16" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_damage_collector_1a13662e11ad88e46077fa0e5fd7b8b871" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToDamageFile</definition>
+        <argsstring>(std::string path)</argsstring>
+        <name>WriteToDamageFile</name>
+        <qualifiedname>DataCollection::DamageCollector::WriteToDamageFile</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageCollector.hpp" line="64" column="15" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="64" bodyend="73"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A data collector class for damage of game items. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Useful for setting up graphs for analysis of item balancing. </para>
+    </detaileddescription>
+    <location file="source/DataCollection/DamageCollector.hpp" line="17" column="6" bodyfile="source/DataCollection/DamageCollector.hpp" bodystart="17" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_damage_collector_1aa7d9f5c531bdcf7ec96c614eddaa3af5" prot="public" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>CalculateAverageDamage</name></member>
+      <member refid="class_data_collection_1_1_damage_collector_1a2072a1bcf2ccb999327c53e427853541" prot="public" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>DamageCollector</name></member>
+      <member refid="class_data_collection_1_1_damage_collector_1a73e80ec1aca5edfc7e3e69705c992e4b" prot="private" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>damageData</name></member>
+      <member refid="class_data_collection_1_1_damage_collector_1ab5cbc627b49a379a80237a0676b8a3b6" prot="public" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>GetDamageAmounts</name></member>
+      <member refid="class_data_collection_1_1_damage_collector_1a4e545a975a67491ef9bf1847b3344cb1" prot="public" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>RecordDamageResult</name></member>
+      <member refid="class_data_collection_1_1_damage_collector_1a13662e11ad88e46077fa0e5fd7b8b871" prot="public" virt="non-virtual"><scope>DataCollection::DamageCollector</scope><name>WriteToDamageFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

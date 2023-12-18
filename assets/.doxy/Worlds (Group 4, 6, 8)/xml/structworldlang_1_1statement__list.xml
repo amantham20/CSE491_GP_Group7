@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1statement__list" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::statement_list</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::sor&lt; pegtl::seq&lt; statement, statement_list &gt;, statement &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>statement_list</label>
+        <link refid="structworldlang_1_1statement__list"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; statement, statement_list &gt;, statement &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>statement_list</label>
+        <link refid="structworldlang_1_1statement__list"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; statement, statement_list &gt;, statement &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="278" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="285" bodyend="285"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

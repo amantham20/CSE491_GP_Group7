@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="27" column="12" bodyfile="source/core/WorldGrid.hpp" bodystart="27" bodyend="-1"/>
+        <location file="source/core/WorldGrid.hpp" line="26" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_world_grid_1a02afeaaf8574e7a78d6b466ff2695052" prot="protected" static="no" mutable="no">
         <type>size_t</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="28" column="12" bodyfile="source/core/WorldGrid.hpp" bodystart="28" bodyend="-1"/>
+        <location file="source/core/WorldGrid.hpp" line="27" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_world_grid_1a88f2b351f7f183946b0edf46fb6eff30" prot="protected" static="no" mutable="no">
         <type>std::vector&lt; size_t &gt;</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="29" column="17" bodyfile="source/core/WorldGrid.hpp" bodystart="29" bodyend="-1"/>
+        <location file="source/core/WorldGrid.hpp" line="28" column="15" bodyfile="source/core/WorldGrid.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="34" column="20" bodyfile="source/core/WorldGrid.hpp" bodystart="34" bodyend="36"/>
+        <location file="source/core/WorldGrid.hpp" line="33" column="18" bodyfile="source/core/WorldGrid.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>std::string</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="43" column="17" bodyfile="source/core/WorldGrid.hpp" bodystart="43" bodyend="43"/>
+        <location file="source/core/WorldGrid.hpp" line="40" column="15" bodyfile="source/core/WorldGrid.hpp" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="46" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="46" bodyend="50"/>
+        <location file="source/core/WorldGrid.hpp" line="43" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="43" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="53" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="53" bodyend="57"/>
+        <location file="source/core/WorldGrid.hpp" line="50" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="50" bodyend="55"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="60" column="5"/>
+        <location file="source/core/WorldGrid.hpp" line="58" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a88e903f7e1335f357e695b14e0c72ce7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="61" column="5" bodyfile="source/core/WorldGrid.hpp" bodystart="61" bodyend="62"/>
+        <location file="source/core/WorldGrid.hpp" line="59" column="3" bodyfile="source/core/WorldGrid.hpp" bodystart="59" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1aac4144659814c88df6c2796ba3ca0566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="63" column="5"/>
+        <location file="source/core/WorldGrid.hpp" line="61" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a8673510c7433d4ff9f733bec565cb334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="64" column="5"/>
+        <location file="source/core/WorldGrid.hpp" line="62" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1ac541afd2d8a7fe453f1d911c70b79bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="66" column="16"/>
+        <location file="source/core/WorldGrid.hpp" line="64" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a82d93fad3c399f362195dba560438622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref> &amp;</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="67" column="16"/>
+        <location file="source/core/WorldGrid.hpp" line="65" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1abddb4150d08d2bd14cad00bdaef260c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="70" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="70" bodyend="70"/>
+        <location file="source/core/WorldGrid.hpp" line="68" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="68" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1af4175cbd21f5ed763be8be4977ad1193" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -273,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="71" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="71" bodyend="71"/>
+        <location file="source/core/WorldGrid.hpp" line="69" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="69" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a8a0f0e89e490a267b4456f192779aaee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -287,7 +287,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="72" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="72" bodyend="72"/>
+        <location file="source/core/WorldGrid.hpp" line="70" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a0724bff847ffa1064dfa7b88d532cab3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="75" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="75" bodyend="77"/>
+        <location file="source/core/WorldGrid.hpp" line="73" column="9" bodyfile="source/core/WorldGrid.hpp" bodystart="73" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a1468f2b2afd8c3a24cb81e979e9505ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="80" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="80" bodyend="82"/>
+        <location file="source/core/WorldGrid.hpp" line="78" column="9" bodyfile="source/core/WorldGrid.hpp" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a4480b68044590f7bf96908d80ebea04b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="85" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="85" bodyend="88"/>
+        <location file="source/core/WorldGrid.hpp" line="81" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="81" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a89687135e78162940ad3777aa1246c40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t &amp;</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="91" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="91" bodyend="94"/>
+        <location file="source/core/WorldGrid.hpp" line="87" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="87" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a05c94b74cccc8a3769b2dc6cf44f21e0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="97" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="97" bodyend="97"/>
+        <location file="source/core/WorldGrid.hpp" line="93" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="93" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a911097e808e2217d8d07ed446260fe7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t &amp;</type>
@@ -421,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="100" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="100" bodyend="100"/>
+        <location file="source/core/WorldGrid.hpp" line="96" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a2e7da9b313e80296247a44f9ac63b239" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="102" column="13" bodyfile="source/core/WorldGrid.hpp" bodystart="102" bodyend="102"/>
+        <location file="source/core/WorldGrid.hpp" line="98" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="98" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1ad7d8213b830fa920dcac83bd24624100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t &amp;</type>
@@ -457,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="103" column="14" bodyfile="source/core/WorldGrid.hpp" bodystart="103" bodyend="103"/>
+        <location file="source/core/WorldGrid.hpp" line="99" column="11" bodyfile="source/core/WorldGrid.hpp" bodystart="99" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a61fac8062fe0b55b4257f96a36252842" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -484,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="107" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="107" bodyend="124"/>
+        <location file="source/core/WorldGrid.hpp" line="102" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="102" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a55e072b48f61cf7bdade9848e4fe5e4c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -525,7 +525,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="134" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="134" bodyend="143"/>
+        <location file="source/core/WorldGrid.hpp" line="128" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="128" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1a43b51ef0443aa6271c3e43d43a9b3d9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -548,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="146" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="146" bodyend="154"/>
+        <location file="source/core/WorldGrid.hpp" line="140" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="140" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1ad6443e6e955defa20aec1b743a115213" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -570,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="156" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="156" bodyend="183"/>
+        <location file="source/core/WorldGrid.hpp" line="150" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="150" bodyend="176"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_world_grid_1aa92489ac98cba91a7384847ae92b5aa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -593,7 +593,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/WorldGrid.hpp" line="186" column="10" bodyfile="source/core/WorldGrid.hpp" bodystart="186" bodyend="194"/>
+        <location file="source/core/WorldGrid.hpp" line="179" column="8" bodyfile="source/core/WorldGrid.hpp" bodystart="179" bodyend="187"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -626,7 +626,7 @@
         <link refid="classcse491_1_1_core_object"/>
       </node>
     </collaborationgraph>
-    <location file="source/core/WorldGrid.hpp" line="25" column="3" bodyfile="source/core/WorldGrid.hpp" bodystart="25" bodyend="196"/>
+    <location file="source/core/WorldGrid.hpp" line="24" column="1" bodyfile="source/core/WorldGrid.hpp" bodystart="24" bodyend="188"/>
     <listofallmembers>
       <member refid="classcse491_1_1_world_grid_1a4480b68044590f7bf96908d80ebea04b" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
       <member refid="classcse491_1_1_world_grid_1a89687135e78162940ad3777aa1246c40" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>At</name></member>
@@ -646,6 +646,7 @@
       <member refid="classcse491_1_1_world_grid_1a02afeaaf8574e7a78d6b466ff2695052" prot="protected" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>height</name></member>
       <member refid="classcse491_1_1_world_grid_1a0724bff847ffa1064dfa7b88d532cab3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>IsValid</name></member>
       <member refid="classcse491_1_1_world_grid_1a1468f2b2afd8c3a24cb81e979e9505ff" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>IsValid</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_world_grid_1ac541afd2d8a7fe453f1d911c70b79bb3" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_world_grid_1a82d93fad3c399f362195dba560438622" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_world_grid_1a2e7da9b313e80296247a44f9ac63b239" prot="public" virt="non-virtual"><scope>cse491::WorldGrid</scope><name>operator[]</name></member>

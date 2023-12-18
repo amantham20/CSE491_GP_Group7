@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1comp" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::comp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::sor&lt; pegtl::seq&lt; comp_a, op_prio_comp, comp &gt;, comp_a &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>comp</label>
+        <link refid="structworldlang_1_1comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; comp_a, op_prio_comp, comp &gt;, comp_a &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>comp</label>
+        <link refid="structworldlang_1_1comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; comp_a, op_prio_comp, comp &gt;, comp_a &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="200" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="208" bodyend="208"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

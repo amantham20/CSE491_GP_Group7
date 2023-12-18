@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecse491__team8" kind="namespace" language="C++">
+    <compoundname>cse491_team8</compoundname>
+    <innerclass refid="classcse491__team8_1_1_manual_world" prot="public">cse491_team8::ManualWorld</innerclass>
+    <briefdescription>
+<para>A World that consists of trees, water, and grass cells. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL </para>
+</simplesect>
+<simplesect kind="author"><para>Evan Orvis </para>
+</simplesect>
+<simplesect kind="author"><para>Grant Carr </para>
+</simplesect>
+<simplesect kind="author"><para>Lauren Garvey </para>
+</simplesect>
+<simplesect kind="author"><para>Nate Gu REVIEW UPDATES<itemizedlist>
+<listitem><para>Many functions that used to take item or agent pointers now take references! </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Worlds/ManualWorld.hpp" line="24" column="1"/>
+  </compounddef>
+</doxygen>

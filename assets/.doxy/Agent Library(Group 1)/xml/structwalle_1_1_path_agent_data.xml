@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_path_agent_data" kind="struct" language="C++" prot="public">
+    <compoundname>walle::PathAgentData</compoundname>
+    <basecompoundref refid="structwalle_1_1_base_agent_data" prot="public" virt="non-virtual">BaseAgentData</basecompoundref>
+    <includes refid="_agent_factory_8hpp" local="no">AgentFactory.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_path_agent_data_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>walle::PathAgentData::index</qualifiedname>
+        <briefdescription>
+<para>Starting index into the vector of GridPositions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="92" column="9" bodyfile="source/Agents/AgentFactory.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_path_agent_data_1aa2800d7c5ce7c510518526e8190edb05" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string string_path</definition>
+        <argsstring></argsstring>
+        <name>string_path</name>
+        <qualifiedname>walle::PathAgentData::string_path</qualifiedname>
+        <briefdescription>
+<para>String representation of the path traveled (e.g. &quot;n s e w&quot; for north south east west) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="95" column="17" bodyfile="source/Agents/AgentFactory.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_path_agent_data_1acb9d4acd4d84dd2ed3615f5b9bf91681" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; vector_path</definition>
+        <argsstring></argsstring>
+        <name>vector_path</name>
+        <qualifiedname>walle::PathAgentData::vector_path</qualifiedname>
+        <briefdescription>
+<para>Set of grid positions that are applied to the agent&apos;s position during one step (constructed from string_path) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="98" column="17" bodyfile="source/Agents/AgentFactory.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores data for a <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PathAgentData</label>
+        <link refid="structwalle_1_1_path_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PathAgentData</label>
+        <link refid="structwalle_1_1_path_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/AgentFactory.hpp" line="90" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="90" bodyend="99"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_path_agent_data_1a750b5d744c39a06bfb13e6eb010e35d0" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>index</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>name</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>position</name></member>
+      <member refid="structwalle_1_1_path_agent_data_1aa2800d7c5ce7c510518526e8190edb05" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>string_path</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>symbol</name></member>
+      <member refid="structwalle_1_1_path_agent_data_1acb9d4acd4d84dd2ed3615f5b9bf91681" prot="public" virt="non-virtual"><scope>walle::PathAgentData</scope><name>vector_path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

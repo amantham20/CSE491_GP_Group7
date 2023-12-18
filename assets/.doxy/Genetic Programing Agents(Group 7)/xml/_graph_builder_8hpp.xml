@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_graph_builder_8hpp" kind="file" language="C++">
+    <compoundname>GraphBuilder.hpp</compoundname>
+    <includes refid="_c_g_p_genotype_8hpp" local="yes">CGPGenotype.hpp</includes>
+    <includes refid="_graph_8hpp" local="yes">Graph.hpp</includes>
+    <includedby refid="_c_g_p_agent_8hpp" local="yes">source/Agents/GP/CGPAgent.hpp</includedby>
+    <incdepgraph>
+      <node id="18">
+        <label>../../core/AgentBase.hpp</label>
+      </node>
+      <node id="13">
+        <label>../../core/WorldBase.hpp</label>
+      </node>
+      <node id="28">
+        <label>../../core/WorldGrid.hpp</label>
+      </node>
+      <node id="26">
+        <label>../AgentLibary.hpp</label>
+      </node>
+      <node id="2">
+        <label>CGPGenotype.hpp</label>
+        <link refid="_c_g_p_genotype_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>GPAgentBase.hpp</label>
+        <link refid="_g_p_agent_base_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>GPAgentSensors.hpp</label>
+        <link refid="_g_p_agent_sensors_8hpp_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Graph.hpp</label>
+        <link refid="_graph_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/Agents/GP/GraphBuilder.hpp</label>
+        <link refid="_graph_builder_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>GraphNode.hpp</label>
+        <link refid="_graph_node_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>bitset</label>
+      </node>
+      <node id="5">
+        <label>cassert</label>
+      </node>
+      <node id="20">
+        <label>cmath</label>
+      </node>
+      <node id="21">
+        <label>execution</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="22">
+        <label>limits</label>
+      </node>
+      <node id="23">
+        <label>memory</label>
+      </node>
+      <node id="24">
+        <label>numeric</label>
+      </node>
+      <node id="25">
+        <label>optional</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="9">
+        <label>ranges</label>
+      </node>
+      <node id="10">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="17">
+        <label>tinyxml2.h</label>
+      </node>
+      <node id="16">
+        <label>unordered_map</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/Agents/GP/CGPAgent.hpp</label>
+        <link refid="_c_g_p_agent_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>source/Agents/GP/GPTrainingLoop.hpp</label>
+        <link refid="_g_p_training_loop_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>source/Agents/GP/GraphBuilder.hpp</label>
+        <link refid="_graph_builder_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcowboys_1_1_graph_builder" prot="public">cowboys::GraphBuilder</innerclass>
+    <innernamespace refid="namespacecowboys">cowboys</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;CGPGenotype.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Graph.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecowboys" kindref="compound">cowboys</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classcowboys_1_1_graph_builder" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcowboys_1_1_graph_builder" kindref="compound">GraphBuilder</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_graph_builder" kindref="compound">GraphBuilder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_graph_builder" kindref="compound">~GraphBuilder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Graph&gt;<sp/><ref refid="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" kindref="member">CartesianGraph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref><sp/>&amp;genotype,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;InnerFunction&gt;<sp/>&amp;function_set,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cse491::AgentBase<sp/>*agent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>decision_graph<sp/>=<sp/>std::make_unique&lt;Graph&gt;();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>all<sp/>the<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Input<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>input_layer;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a8d8179a4a0703602a5d7dbb6e92eaf69" kindref="member">GetNumInputs</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_layer.emplace_back(std::make_shared&lt;GraphNode&gt;(0));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(input_layer);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Middle<sp/>Layers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1afdf8eb85585a798ad0e936bde884d87b" kindref="member">GetNumLayers</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>layer;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a0b3a441e91f5f16b4a118d49dddcd9b3" kindref="member">GetNumNodesPerLayer</ref>();<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layer.emplace_back(std::make_shared&lt;GraphNode&gt;(0));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(layer);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Action<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>output_layer;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a604654b453ec291a503d62a0beb849d3" kindref="member">GetNumOutputs</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_layer.emplace_back(std::make_shared&lt;GraphNode&gt;(0));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(output_layer);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>graph<sp/>based<sp/>on<sp/>genotype</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>functional_nodes<sp/>=<sp/>decision_graph-&gt;GetFunctionalNodes();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>all_nodes<sp/>=<sp/>decision_graph-&gt;GetNodes();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nodes_it<sp/>=<sp/>functional_nodes.cbegin();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>genes_it<sp/>=<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1abd09b1758395af0e0f89f8eec79d287e" kindref="member">cbegin</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterator<sp/>distances<sp/>should<sp/>be<sp/>the<sp/>same</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(std::distance(functional_nodes.cend(),<sp/>functional_nodes.cbegin())<sp/>==</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::distance(genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a839c84fbbed3d6f8fea3acdcd47ef33f" kindref="member">cend</ref>(),<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1abd09b1758395af0e0f89f8eec79d287e" kindref="member">cbegin</ref>()));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>iterator<sp/>of<sp/>all<sp/>nodes<sp/>and<sp/>move<sp/>it<sp/>to<sp/>the<sp/>start<sp/>of<sp/>the<sp/>first<sp/>functional<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>all_nodes_it<sp/>=<sp/>all_nodes.cbegin()<sp/>+<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a8d8179a4a0703602a5d7dbb6e92eaf69" kindref="member">GetNumInputs</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>nodes_it<sp/>!=<sp/>functional_nodes.end()<sp/>&amp;&amp;<sp/>genes_it<sp/>!=<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a839c84fbbed3d6f8fea3acdcd47ef33f" kindref="member">cend</ref>();<sp/>++nodes_it,<sp/>++genes_it)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Advance<sp/>the<sp/>all<sp/>nodes<sp/>iterator<sp/>if<sp/>we<sp/>are<sp/>at<sp/>the<sp/>start<sp/>of<sp/>a<sp/>new<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>std::distance(functional_nodes.cbegin(),<sp/>nodes_it);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>dist<sp/>%<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a0b3a441e91f5f16b4a118d49dddcd9b3" kindref="member">GetNumNodesPerLayer</ref>()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::advance(all_nodes_it,<sp/>genotype.<ref refid="classcowboys_1_1_c_g_p_genotype_1a0b3a441e91f5f16b4a118d49dddcd9b3" kindref="member">GetNumNodesPerLayer</ref>());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[connections,<sp/>function_idx,<sp/>output]<sp/>=<sp/>*genes_it;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*nodes_it)-&gt;SetFunctionPointer(<ref refid="structcowboys_1_1_node_function" kindref="compound">NodeFunction</ref>{function_set.at(function_idx),<sp/>agent});</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*nodes_it)-&gt;SetDefaultOutput(output);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>the<sp/>all<sp/>nodes<sp/>iterator<sp/>and<sp/>move<sp/>it<sp/>backwards<sp/>by<sp/>the<sp/>number<sp/>of<sp/>connections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nodes_it_copy<sp/>=<sp/>all_nodes_it;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::advance(nodes_it_copy,<sp/>-connections.size());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>inputs<sp/>to<sp/>the<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;connection<sp/>:<sp/>connections)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(connection<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*nodes_it)-&gt;AddInput(*nodes_it_copy);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++nodes_it_copy;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>decision_graph;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classcowboys_1_1_graph_builder_1a2d1cfc829b54061f6875e94bc61b695b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Graph&gt;<sp/><ref refid="classcowboys_1_1_graph_builder_1a2d1cfc829b54061f6875e94bc61b695b" kindref="member">VerticalPacer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>decision_graph<sp/>=<sp/>std::make_unique&lt;Graph&gt;();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>input_layer;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>prev_action<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>current_state<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>above_state<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>below_state<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>left_state<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>right_state<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>input_layer.insert(input_layer.end(),</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{prev_action,<sp/>current_state,<sp/>above_state,<sp/>below_state,<sp/>left_state,<sp/>right_state});</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(input_layer);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>state<sp/>==<sp/>1<sp/>=&gt;<sp/>floor<sp/>which<sp/>is<sp/>walkable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>obstruction_layer;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>up_not_blocked<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" kindref="member">AnyEq</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>up_not_blocked-&gt;AddInputs(GraphLayer{above_state,<sp/>std::make_shared&lt;GraphNode&gt;(1)});</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>down_not_blocked<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" kindref="member">AnyEq</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>down_not_blocked-&gt;AddInputs(GraphLayer{below_state,<sp/>std::make_shared&lt;GraphNode&gt;(1)});</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>obstruction_layer.insert(obstruction_layer.end(),<sp/>{up_not_blocked,<sp/>down_not_blocked});</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(obstruction_layer);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Separate<sp/>previous<sp/>action<sp/>into<sp/>up<sp/>and<sp/>down<sp/>nodes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>prev_action_layer;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>up_prev_action<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" kindref="member">AnyEq</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>up_prev_action-&gt;AddInputs(GraphLayer{prev_action,<sp/>std::make_shared&lt;GraphNode&gt;(1)});</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>down_prev_action<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" kindref="member">AnyEq</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>down_prev_action-&gt;AddInputs(GraphLayer{prev_action,<sp/>std::make_shared&lt;GraphNode&gt;(2)});</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>prev_action_layer.insert(prev_action_layer.end(),<sp/>{up_prev_action,<sp/>down_prev_action});</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(prev_action_layer);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>moving_layer;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>up_not_blocked<sp/>and<sp/>up_prev_action<sp/>?<sp/>return<sp/>1<sp/>:<sp/>return<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>down_not_blocked<sp/>and<sp/>down_prev_action<sp/>?<sp/>return<sp/>1<sp/>:<sp/>return<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>keep_up<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1aba71998b80dfdf6f4ea2a7df48361cb5" kindref="member">And</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>keep_up-&gt;AddInputs(GraphLayer{up_not_blocked,<sp/>up_prev_action});</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>keep_down<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1aba71998b80dfdf6f4ea2a7df48361cb5" kindref="member">And</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>keep_down-&gt;AddInputs(GraphLayer{down_not_blocked,<sp/>down_prev_action});</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>moving_layer.insert(moving_layer.end(),<sp/>{keep_up,<sp/>keep_down});</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(moving_layer);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>down_blocked,<sp/>turn_up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>up_blocked,<sp/>turn_down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>turn_layer;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>turn_up<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1aa67f79467415e8b65a208e083d577b33" kindref="member">Not</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>turn_up-&gt;AddInputs(GraphLayer{down_not_blocked});</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>turn_down<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1aa67f79467415e8b65a208e083d577b33" kindref="member">Not</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>turn_down-&gt;AddInputs(GraphLayer{up_not_blocked});</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>turn_layer.insert(turn_layer.end(),<sp/>{turn_up,<sp/>turn_down});</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(turn_layer);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>layer,<sp/>up,<sp/>down,<sp/>left,<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>GraphLayer<sp/>action_layer;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>up<sp/>=<sp/>keep_up<sp/>+<sp/>turn_up,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>move<sp/>down<sp/>=<sp/>keep_down<sp/>+<sp/>turn_down,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>up<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a2f056f1a4aecb240d5332908fdb7b527" kindref="member">Sum</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>up-&gt;AddInputs(GraphLayer{keep_up,<sp/>turn_up});</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>down<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(<ref refid="namespacecowboys_1a2f056f1a4aecb240d5332908fdb7b527" kindref="member">Sum</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>down-&gt;AddInputs(GraphLayer{keep_down,<sp/>turn_down});</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>left<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;GraphNode&gt;<sp/>right<sp/>=<sp/>std::make_shared&lt;GraphNode&gt;(0);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>action_layer.insert(action_layer.end(),<sp/>{up,<sp/>down,<sp/>left,<sp/>right});</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>decision_graph-&gt;AddLayer(action_layer);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>decision_graph;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cowboys</highlight></codeline>
+    </programlisting>
+    <location file="source/Agents/GP/GraphBuilder.hpp"/>
+  </compounddef>
+</doxygen>

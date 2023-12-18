@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_button" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::Button</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_button_1ad39edd7a1d5bc1f586403856869d9e03" prot="private" static="no" mutable="no">
+        <type>sf::RectangleShape</type>
+        <definition>sf::RectangleShape button</definition>
+        <argsstring></argsstring>
+        <name>button</name>
+        <qualifiedname>i_2D::Button::button</qualifiedname>
+        <briefdescription>
+<para>The Rectangle that the button resides in. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="23" column="28" bodyfile="source/Interfaces/Button.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_button_1a50b36eb98df875ef21f0de6a19c27bec" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::Text &gt;</type>
+        <definition>std::unique_ptr&lt;sf::Text&gt; text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>i_2D::Button::text</qualifiedname>
+        <briefdescription>
+<para>The String printed onto the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="25" column="25" bodyfile="source/Interfaces/Button.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a18f191d88aaab52a889b8676e1f6e33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Button</definition>
+        <argsstring>(const std::string &amp;t, sf::Vector2f size, sf::Color bgColor, sf::Color textColor, const sf::Font &amp;font)</argsstring>
+        <name>Button</name>
+        <qualifiedname>i_2D::Button::Button</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>sf::Color</type>
+          <declname>bgColor</declname>
+        </param>
+        <param>
+          <type>sf::Color</type>
+          <declname>textColor</declname>
+        </param>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Construct the text with font. Then set text and shape properties with params. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the button</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to be displayed by button </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the rectangle shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bgColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the background color of the shape </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the color of the text </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the font style </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="29" column="9" bodyfile="source/Interfaces/Button.cpp" bodystart="19" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1ab8f16bc48cef1fc515752f4e0d3eb5bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetString</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>SetString</name>
+        <qualifiedname>i_2D::Button::SetString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>set the string of the button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>label of the button </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="36" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a672ea8ac468f691f7e99d373a0bb695f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetMFont</definition>
+        <argsstring>(const sf::Font &amp;font)</argsstring>
+        <name>SetMFont</name>
+        <qualifiedname>i_2D::Button::SetMFont</qualifiedname>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>set the font of the button </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="40" column="14" bodyfile="source/Interfaces/Button.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a1c2d939d8b8c039a9de9981ea8afbe81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFont</definition>
+        <argsstring>(const sf::Font &amp;font)</argsstring>
+        <name>SetFont</name>
+        <qualifiedname>i_2D::Button::SetFont</qualifiedname>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>set the font of the button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="46" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1acf50ad8749f3576bf029d3f5ec10c728" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetButtonSize</definition>
+        <argsstring>(sf::Vector2f size)</argsstring>
+        <name>SetButtonSize</name>
+        <qualifiedname>i_2D::Button::SetButtonSize</qualifiedname>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>set the button size </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="54" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a2d82665fb61aa09c4c15cc0bcfa91372" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetBackColor</definition>
+        <argsstring>(sf::Color color)</argsstring>
+        <name>SetBackColor</name>
+        <qualifiedname>i_2D::Button::SetBackColor</qualifiedname>
+        <param>
+          <type>sf::Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>set the background color of the button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="62" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a2a636ec6231ebc5083cebdc9c78ced6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetTextColor</definition>
+        <argsstring>(sf::Color color)</argsstring>
+        <name>SetTextColor</name>
+        <qualifiedname>i_2D::Button::SetTextColor</qualifiedname>
+        <param>
+          <type>sf::Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>set the text color of the string </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="70" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1af18021f4bef52a0152c6e873cc71a6fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetPosition</definition>
+        <argsstring>(sf::Vector2f pos)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>i_2D::Button::SetPosition</qualifiedname>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>set the position of the button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position on the window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="74" column="14" bodyfile="source/Interfaces/Button.cpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTo</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>DrawTo</name>
+        <qualifiedname>i_2D::Button::DrawTo</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>draws the button onto the window </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="80" column="14" bodyfile="source/Interfaces/Button.hpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_button_1aa12ba43680ea19256b5c598db57481a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsMouseOver</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>IsMouseOver</name>
+        <qualifiedname>i_2D::Button::IsMouseOver</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>checks if mouse position is in a button </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns turn if mouse position is in the button </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Button.hpp" line="85" column="14" bodyfile="source/Interfaces/Button.cpp" bodystart="53" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/Button.hpp" line="20" column="5" bodyfile="source/Interfaces/Button.hpp" bodystart="20" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_button_1ad39edd7a1d5bc1f586403856869d9e03" prot="private" virt="non-virtual"><scope>i_2D::Button</scope><name>button</name></member>
+      <member refid="classi__2_d_1_1_button_1a18f191d88aaab52a889b8676e1f6e33d" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>Button</name></member>
+      <member refid="classi__2_d_1_1_button_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>DrawTo</name></member>
+      <member refid="classi__2_d_1_1_button_1aa12ba43680ea19256b5c598db57481a8" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>IsMouseOver</name></member>
+      <member refid="classi__2_d_1_1_button_1a2d82665fb61aa09c4c15cc0bcfa91372" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetBackColor</name></member>
+      <member refid="classi__2_d_1_1_button_1acf50ad8749f3576bf029d3f5ec10c728" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetButtonSize</name></member>
+      <member refid="classi__2_d_1_1_button_1a1c2d939d8b8c039a9de9981ea8afbe81" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetFont</name></member>
+      <member refid="classi__2_d_1_1_button_1a672ea8ac468f691f7e99d373a0bb695f" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetMFont</name></member>
+      <member refid="classi__2_d_1_1_button_1af18021f4bef52a0152c6e873cc71a6fd" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetPosition</name></member>
+      <member refid="classi__2_d_1_1_button_1ab8f16bc48cef1fc515752f4e0d3eb5bc" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetString</name></member>
+      <member refid="classi__2_d_1_1_button_1a2a636ec6231ebc5083cebdc9c78ced6d" prot="public" virt="non-virtual"><scope>i_2D::Button</scope><name>SetTextColor</name></member>
+      <member refid="classi__2_d_1_1_button_1a50b36eb98df875ef21f0de6a19c27bec" prot="private" virt="non-virtual"><scope>i_2D::Button</scope><name>text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

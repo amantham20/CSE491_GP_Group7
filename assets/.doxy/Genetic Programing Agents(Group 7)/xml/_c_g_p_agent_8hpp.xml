@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_c_g_p_agent_8hpp" kind="file" language="C++">
+    <compoundname>CGPAgent.hpp</compoundname>
+    <includes local="no">cassert</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">random</includes>
+    <includes local="no">string</includes>
+    <includes refid="_g_p_agent_base_8hpp" local="yes">GPAgentBase.hpp</includes>
+    <includes refid="_graph_builder_8hpp" local="yes">GraphBuilder.hpp</includes>
+    <includedby refid="_g_p_training_loop_8hpp" local="yes">source/Agents/GP/GPTrainingLoop.hpp</includedby>
+    <incdepgraph>
+      <node id="11">
+        <label>../../core/AgentBase.hpp</label>
+      </node>
+      <node id="20">
+        <label>../../core/WorldBase.hpp</label>
+      </node>
+      <node id="30">
+        <label>../../core/WorldGrid.hpp</label>
+      </node>
+      <node id="28">
+        <label>../AgentLibary.hpp</label>
+      </node>
+      <node id="1">
+        <label>source/Agents/GP/CGPAgent.hpp</label>
+        <link refid="_c_g_p_agent_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>CGPGenotype.hpp</label>
+        <link refid="_c_g_p_genotype_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GPAgentBase.hpp</label>
+        <link refid="_g_p_agent_base_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>GPAgentSensors.hpp</label>
+        <link refid="_g_p_agent_sensors_8hpp_source"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Graph.hpp</label>
+        <link refid="_graph_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>GraphBuilder.hpp</label>
+        <link refid="_graph_builder_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>GraphNode.hpp</label>
+        <link refid="_graph_node_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>bitset</label>
+      </node>
+      <node id="2">
+        <label>cassert</label>
+      </node>
+      <node id="22">
+        <label>cmath</label>
+      </node>
+      <node id="23">
+        <label>execution</label>
+      </node>
+      <node id="16">
+        <label>functional</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="24">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="25">
+        <label>memory</label>
+      </node>
+      <node id="26">
+        <label>numeric</label>
+      </node>
+      <node id="27">
+        <label>optional</label>
+      </node>
+      <node id="5">
+        <label>random</label>
+      </node>
+      <node id="17">
+        <label>ranges</label>
+      </node>
+      <node id="18">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>tinyxml2.h</label>
+      </node>
+      <node id="9">
+        <label>unordered_map</label>
+      </node>
+      <node id="19">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>source/Agents/GP/CGPAgent.hpp</label>
+        <link refid="_c_g_p_agent_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>source/Agents/GP/GPTrainingLoop.hpp</label>
+        <link refid="_g_p_training_loop_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcowboys_1_1_c_g_p_agent" prot="public">cowboys::CGPAgent</innerclass>
+    <innernamespace refid="namespacecowboys">cowboys</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GPAgentBase.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GraphBuilder.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespacecowboys" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecowboys" kindref="compound">cowboys</ref><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="namespacecowboys_1a7c0cf9b32411d2258a70c1b78b156046" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacecowboys_1a7c0cf9b32411d2258a70c1b78b156046" kindref="member">INPUT_SIZE</ref><sp/>=<sp/>9;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacecowboys_1ac31731614fa61af123ff3ff1a2a42321" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacecowboys_1ac31731614fa61af123ff3ff1a2a42321" kindref="member">NUM_LAYERS</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="namespacecowboys_1aa53eee1d94dd977107c85305e205483d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacecowboys_1aa53eee1d94dd977107c85305e205483d" kindref="member">NUM_NODES_PER_LAYER</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespacecowboys_1a9b17a4368fdba52c54b5730947898fbd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="namespacecowboys_1a9b17a4368fdba52c54b5730947898fbd" kindref="member">LAYERS_BACK</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classcowboys_1_1_c_g_p_agent" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Graph&gt;<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" kindref="member">decision_graph</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name)<sp/>:<sp/><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref>(id,<sp/>name)<sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref><sp/>&amp;<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref>(id,<sp/>name),<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PrintAgent()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Genotype:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a1024751577eb89f4b010ce39069d8a47" kindref="member">Export</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classcowboys_1_1_c_g_p_agent_1af02b43436c26bd6a4845defc7d7e76b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1af02b43436c26bd6a4845defc7d7e76b1" kindref="member">MutateAgent</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mutation<sp/>=<sp/>0.8)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>graph_builder<sp/>=<sp/><ref refid="classcowboys_1_1_graph_builder" kindref="compound">GraphBuilder</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a556c8153ba820c50ea17d09d09c651b2" kindref="member">MutateDefault</ref>(mutation,<sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" kindref="member">decision_graph</ref><sp/>=<sp/>graph_builder.CartesianGraph(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>,<sp/>FUNCTION_SET,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60" refid="classcowboys_1_1_c_g_p_agent_1a54aa3db4e29fbab38a726bd91930b950" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a54aa3db4e29fbab38a726bd91930b950" kindref="member">Initialize</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>default<sp/>genotype<sp/>if<sp/>none<sp/>was<sp/>provided<sp/>in<sp/>the<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a8806fe37f66cd0f9d45e2ca424aa5d62" kindref="member">GetNumFunctionalNodes</ref>()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref><sp/>=<sp/><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref>({<ref refid="namespacecowboys_1a7c0cf9b32411d2258a70c1b78b156046" kindref="member">INPUT_SIZE</ref>,<sp/>action_map.size(),<sp/><ref refid="namespacecowboys_1ac31731614fa61af123ff3ff1a2a42321" kindref="member">NUM_LAYERS</ref>,<sp/><ref refid="namespacecowboys_1aa53eee1d94dd977107c85305e205483d" kindref="member">NUM_NODES_PER_LAYER</ref>,<sp/><ref refid="namespacecowboys_1a9b17a4368fdba52c54b5730947898fbd" kindref="member">LAYERS_BACK</ref>});</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mutate<sp/>the<sp/>beginning<sp/>genotype,<sp/>might<sp/>not<sp/>want<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1af02b43436c26bd6a4845defc7d7e76b1" kindref="member">MutateAgent</ref>(0.2);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>GetAction(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cse491::WorldGrid<sp/>&amp;grid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cse491::type_options_t<sp/>&amp;type_options,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cse491::item_map_t<sp/>&amp;item_set,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cse491::agent_map_t<sp/>&amp;agent_set)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputs<sp/>=<sp/><ref refid="namespacecowboys_1ae7613530678393876c118a78388fb251" kindref="member">EncodeState</ref>(grid,<sp/>type_options,<sp/>item_set,<sp/>agent_set,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="classcowboys_1_1_g_p_agent_base_1a0e7b2f0ffd1061b5551bd39f413c184f" kindref="member">extra_state</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>action_to_take<sp/>=<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" kindref="member">decision_graph</ref>-&gt;MakeDecision(inputs,<sp/><ref refid="namespacecowboys_1a4ae5e28c193596630be226394f791180" kindref="member">EncodeActions</ref>(action_map));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>action_to_take;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classcowboys_1_1_c_g_p_agent_1af890affa3a16014c7829157032b7c1d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1af890affa3a16014c7829157032b7c1d9" kindref="member">SerializeGP</ref>(tinyxml2::XMLDocument<sp/>&amp;doc,<sp/>tinyxml2::XMLElement<sp/>*parentElem,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fitness<sp/>=<sp/>-1)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>agentElem<sp/>=<sp/>doc.NewElement(</highlight><highlight class="stringliteral">&quot;CGPAgent&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parentElem-&gt;InsertEndChild(agentElem);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>genotypeElem<sp/>=<sp/>doc.NewElement(</highlight><highlight class="stringliteral">&quot;genotype&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>genotypeElem-&gt;SetText(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a1024751577eb89f4b010ce39069d8a47" kindref="member">Export</ref>().c_str());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitness<sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>genotypeElem-&gt;SetAttribute(</highlight><highlight class="stringliteral">&quot;fitness&quot;</highlight><highlight class="normal">,<sp/>fitness);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>genotypeElem-&gt;SetAttribute(</highlight><highlight class="stringliteral">&quot;seed&quot;</highlight><highlight class="normal"><sp/>,<sp/><ref refid="classcowboys_1_1_g_p_agent_base_1ae21f357c223957d36046a0d71cc6aed7" kindref="member">seed</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>agentElem-&gt;InsertEndChild(genotypeElem);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classcowboys_1_1_c_g_p_agent_1a579a50ca461adc28bc6f982ede35cf0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a579a50ca461adc28bc6f982ede35cf0b" kindref="member">Export</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a1024751577eb89f4b010ce39069d8a47" kindref="member">Export</ref>();<sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classcowboys_1_1_c_g_p_agent_1a5da8fcfd539d52d89e106189ec76c011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a5da8fcfd539d52d89e106189ec76c011" kindref="member">Import</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;genotype.Configure(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" kindref="member">decision_graph</ref><sp/>=<sp/><ref refid="classcowboys_1_1_graph_builder" kindref="compound">GraphBuilder</ref>().<ref refid="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" kindref="member">CartesianGraph</ref>(this-&gt;genotype,<sp/>FUNCTION_SET,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classcowboys_1_1_c_g_p_agent_1aa9037579dd88f67205adb799158c62ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref><sp/>&amp;<ref refid="classcowboys_1_1_c_g_p_agent_1aa9037579dd88f67205adb799158c62ba" kindref="member">GetGenotype</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classcowboys_1_1_c_g_p_agent_1a9b1e1e83c7962e2a4e800b2e9b78d057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a9b1e1e83c7962e2a4e800b2e9b78d057" kindref="member">Configure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref><sp/>&amp;other)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref><sp/>=<sp/>other.<ref refid="classcowboys_1_1_c_g_p_agent_1aa9037579dd88f67205adb799158c62ba" kindref="member">GetGenotype</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1ab11259a014cbf2d4aa5bafe81e5a7aec" kindref="member">decision_graph</ref><sp/>=<sp/><ref refid="classcowboys_1_1_graph_builder" kindref="compound">GraphBuilder</ref>().<ref refid="classcowboys_1_1_graph_builder_1aedce245edaf1f7c20da42c4544caf1c3" kindref="member">CartesianGraph</ref>(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>,<sp/>FUNCTION_SET,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classcowboys_1_1_c_g_p_agent_1aaee8c0f5bd37faf977b084acf57ea31c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1aaee8c0f5bd37faf977b084acf57ea31c" kindref="member">Copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref><sp/>&amp;other)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(</highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref><sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;other)<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a9b1e1e83c7962e2a4e800b2e9b78d057" kindref="member">Configure</ref>(</highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal"><ref refid="classcowboys_1_1_c_g_p_agent" kindref="compound">CGPAgent</ref><sp/>&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(other));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classcowboys_1_1_c_g_p_agent_1a60749621130e11456597ba2490415bfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a60749621130e11456597ba2490415bfe" kindref="member">GetComplexity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>connection_complexity<sp/>=</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a0d7a363fa9936c7a0547716f5327fd12" kindref="member">GetNumConnections</ref>())<sp/>/<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a65ca684573a0cd2c2e456f68d908ef9e" kindref="member">GetNumPossibleConnections</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>functional_nodes<sp/>=<sp/><ref refid="classcowboys_1_1_c_g_p_agent_1a696711e4ba8d5cbf5ab8db4e753f4ed3" kindref="member">genotype</ref>.<ref refid="classcowboys_1_1_c_g_p_genotype_1a8806fe37f66cd0f9d45e2ca424aa5d62" kindref="member">GetNumFunctionalNodes</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>needed<sp/>some<sp/>function<sp/>such<sp/>that<sp/>connection_complexity<sp/>+<sp/>node_complexity<sp/>grows<sp/>as<sp/>the<sp/>number<sp/>of<sp/>nodes<sp/>grows,<sp/>this<sp/>function<sp/>makes<sp/>the<sp/>increase<sp/>more<sp/>gradual.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>node_complexity<sp/>=<sp/>std::log(functional_nodes)<sp/>/<sp/>5;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>complexity<sp/>=<sp/>connection_complexity<sp/>+<sp/>node_complexity;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>complexity;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>cowboys</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/Agents/GP/CGPAgent.hpp"/>
+  </compounddef>
+</doxygen>

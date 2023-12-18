@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params" kind="struct" language="C++" prot="public">
+    <compoundname>cowboys::GPTrainingLoop::SaveDataParams</compoundname>
+    <includes refid="_g_p_training_loop_8hpp" local="no">GPTrainingLoop.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1ad460f618577fac5b63fb1a0f306f9941" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t generation</definition>
+        <argsstring></argsstring>
+        <name>generation</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::generation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="504" column="20" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2fbf6e53878d27027d879556d308486f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool save</definition>
+        <argsstring></argsstring>
+        <name>save</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::save</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="505" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a0f7a39a65c3a695bd7c72784901eaa46" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool saveAllAgentData</definition>
+        <argsstring></argsstring>
+        <name>saveAllAgentData</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::saveAllAgentData</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="506" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1aef136354f2bea921b61925e1935c2f3d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool saveMetaData</definition>
+        <argsstring></argsstring>
+        <name>saveMetaData</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::saveMetaData</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="507" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2a44f84c43de648fcacf6eef41e0e991" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool saveTopAgents</definition>
+        <argsstring></argsstring>
+        <name>saveTopAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::saveTopAgents</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="508" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a687dd390830b259334e43eba55debcbd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool saveLastGenerations</definition>
+        <argsstring></argsstring>
+        <name>saveLastGenerations</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::saveLastGenerations</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="509" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a60a992097d5bf351a9386e906e386697" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t countMaxAgents</definition>
+        <argsstring></argsstring>
+        <name>countMaxAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::countMaxAgents</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="511" column="20" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2cc6fe778094c83618064f7648f7152d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string dateTimeStr</definition>
+        <argsstring></argsstring>
+        <name>dateTimeStr</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::dateTimeStr</qualifiedname>
+        <initializer>= <ref refid="classcowboys_1_1_g_p_training_loop_1a1a5642b2af6599ae0b8a2f07ccce71af" kindref="member">getDateStr</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="513" column="25" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a8a60a091815bd4ee9dff44301066bb6f" prot="public" static="no" mutable="no">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path normalizedAbsolutePath</definition>
+        <argsstring></argsstring>
+        <name>normalizedAbsolutePath</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::normalizedAbsolutePath</qualifiedname>
+        <initializer>= <ref refid="classcowboys_1_1_g_p_training_loop_1ae3f725086e5f76be47cd823126b6d44a" kindref="member">getSystemPath</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="514" column="35" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="514" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a384318786d19fad8669c87761d11ebef" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t checkPointEvery</definition>
+        <argsstring></argsstring>
+        <name>checkPointEvery</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::checkPointEvery</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="516" column="20" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="516" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a614ad1ff4ae39b12a347db2428c74937" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SaveDataParams</definition>
+        <argsstring>(size_t gen)</argsstring>
+        <name>SaveDataParams</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::SaveDataParams</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="518" column="13" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="518" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a9204f2ab8854b53e77ba9a3990c58a0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateGeneration</definition>
+        <argsstring>(size_t gen)</argsstring>
+        <name>updateGeneration</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataParams::updateGeneration</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>gen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="520" column="18" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="520" bodyend="520"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params" kindref="compound">SaveDataParams</ref> for saving data in checkpoints </para>
+    </detaileddescription>
+    <location file="source/Agents/GP/GPTrainingLoop.hpp" line="503" column="9" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="503" bodyend="521"/>
+    <listofallmembers>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a384318786d19fad8669c87761d11ebef" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>checkPointEvery</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a60a992097d5bf351a9386e906e386697" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>countMaxAgents</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2cc6fe778094c83618064f7648f7152d" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>dateTimeStr</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1ad460f618577fac5b63fb1a0f306f9941" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>generation</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a8a60a091815bd4ee9dff44301066bb6f" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>normalizedAbsolutePath</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2fbf6e53878d27027d879556d308486f" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>save</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a0f7a39a65c3a695bd7c72784901eaa46" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>saveAllAgentData</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a614ad1ff4ae39b12a347db2428c74937" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>SaveDataParams</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a687dd390830b259334e43eba55debcbd" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>saveLastGenerations</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1aef136354f2bea921b61925e1935c2f3d" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>saveMetaData</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a2a44f84c43de648fcacf6eef41e0e991" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>saveTopAgents</name></member>
+      <member refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params_1a9204f2ab8854b53e77ba9a3990c58a0f" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop::SaveDataParams</scope><name>updateGeneration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

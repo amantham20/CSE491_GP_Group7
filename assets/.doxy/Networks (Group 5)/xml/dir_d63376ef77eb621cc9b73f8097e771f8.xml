@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d63376ef77eb621cc9b73f8097e771f8" kind="dir">
+    <compoundname>source/Interfaces/NetWorth/client</compoundname>
+    <innerfile refid="_client_interface_8hpp">ClientInterface.hpp</innerfile>
+    <innerfile refid="_client_manager_8hpp">ClientManager.hpp</innerfile>
+    <innerfile refid="_controlled_agent_8hpp">ControlledAgent.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/NetWorth/client/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_message_board" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::MessageBoard</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_message_board_1aa9f6dd4b24ced14f37f02ac8897dc7bd" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::Text &gt;</type>
+        <definition>std::unique_ptr&lt;sf::Text&gt; mText</definition>
+        <argsstring></argsstring>
+        <name>mText</name>
+        <qualifiedname>i_2D::MessageBoard::mText</qualifiedname>
+        <briefdescription>
+<para>The text displayed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MessageBoard.hpp" line="24" column="25" bodyfile="source/Interfaces/MessageBoard.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_message_board_1a21b50009af3a918ae02e3ddb40d1acb9" prot="private" static="no" mutable="no">
+        <type>std::chrono::time_point&lt; std::chrono::system_clock &gt;</type>
+        <definition>std::chrono::time_point&lt;std::chrono::system_clock&gt; mStartTime</definition>
+        <argsstring></argsstring>
+        <name>mStartTime</name>
+        <qualifiedname>i_2D::MessageBoard::mStartTime</qualifiedname>
+        <briefdescription>
+<para>The timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MessageBoard.hpp" line="26" column="33" bodyfile="source/Interfaces/MessageBoard.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_message_board_1a6d4692e804b7d38d4569a3b4cd44f7dc" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MessageBoard</definition>
+        <argsstring>(sf::Font &amp;font)</argsstring>
+        <name>MessageBoard</name>
+        <qualifiedname>i_2D::MessageBoard::MessageBoard</qualifiedname>
+        <param>
+          <type>sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Construct the message board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font used by message borad </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MessageBoard.hpp" line="29" column="18" bodyfile="source/Interfaces/MessageBoard.cpp" bodystart="17" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_message_board_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTo</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>DrawTo</name>
+        <qualifiedname>i_2D::MessageBoard::DrawTo</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Draws the message board onto the render window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The render window to be drawn on </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MessageBoard.hpp" line="31" column="14" bodyfile="source/Interfaces/MessageBoard.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_message_board_1a5448c4839b6b84fc6fd8180640d2b08e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Send</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>Send</name>
+        <qualifiedname>i_2D::MessageBoard::Send</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Set the text of the message board. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message to set the text to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MessageBoard.hpp" line="38" column="14" bodyfile="source/Interfaces/MessageBoard.hpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>is where the backend and users communicate by words </para>
+    </detaileddescription>
+    <location file="source/Interfaces/MessageBoard.hpp" line="20" column="5" bodyfile="source/Interfaces/MessageBoard.hpp" bodystart="20" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_message_board_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" virt="non-virtual"><scope>i_2D::MessageBoard</scope><name>DrawTo</name></member>
+      <member refid="classi__2_d_1_1_message_board_1a6d4692e804b7d38d4569a3b4cd44f7dc" prot="public" virt="non-virtual"><scope>i_2D::MessageBoard</scope><name>MessageBoard</name></member>
+      <member refid="classi__2_d_1_1_message_board_1a21b50009af3a918ae02e3ddb40d1acb9" prot="private" virt="non-virtual"><scope>i_2D::MessageBoard</scope><name>mStartTime</name></member>
+      <member refid="classi__2_d_1_1_message_board_1aa9f6dd4b24ced14f37f02ac8897dc7bd" prot="private" virt="non-virtual"><scope>i_2D::MessageBoard</scope><name>mText</name></member>
+      <member refid="classi__2_d_1_1_message_board_1a5448c4839b6b84fc6fd8180640d2b08e" prot="public" virt="non-virtual"><scope>i_2D::MessageBoard</scope><name>Send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

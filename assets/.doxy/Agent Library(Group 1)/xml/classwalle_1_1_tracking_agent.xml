@@ -1,0 +1,951 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_tracking_agent" kind="class" language="C++" prot="public">
+    <compoundname>walle::TrackingAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <includes refid="_tracking_agent_8hpp" local="no">TrackingAgent.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1ab5293039261e3a25a0d9dae3be1a461a" prot="private" static="no" mutable="no">
+        <type>std::variant&lt; <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref>, <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> &gt;</type>
+        <definition>std::variant&lt;PathAgent, AStarAgent&gt; inner_</definition>
+        <argsstring></argsstring>
+        <name>inner_</name>
+        <qualifiedname>walle::TrackingAgent::inner_</qualifiedname>
+        <briefdescription>
+<para>Internal agent whose type depends on the state of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="75" column="18" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1a49aa54834ea6afbe071fee08e3844e85" prot="private" static="no" mutable="no">
+        <type><ref refid="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8" kindref="member">TrackingState</ref></type>
+        <definition>TrackingState state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <qualifiedname>walle::TrackingAgent::state_</qualifiedname>
+        <initializer>= TrackingState::PATROLLING</initializer>
+        <briefdescription>
+<para>Internal state of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="78" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1aaaee4583464757ace4d7e8ac6d5a690a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; offsets_</definition>
+        <argsstring></argsstring>
+        <name>offsets_</name>
+        <qualifiedname>walle::TrackingAgent::offsets_</qualifiedname>
+        <briefdescription>
+<para>Patrol path when not tracking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="81" column="17" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1ac86d934812f228d0b8e4c1a77830c81c" prot="private" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition start_pos_</definition>
+        <argsstring></argsstring>
+        <name>start_pos_</name>
+        <qualifiedname>walle::TrackingAgent::start_pos_</qualifiedname>
+        <briefdescription>
+<para>Starting position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="84" column="26" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1af8197176faebd225ec08e3cbd3c57eb0" prot="private" static="no" mutable="no">
+        <type>Entity *</type>
+        <definition>Entity* target_</definition>
+        <argsstring></argsstring>
+        <name>target_</name>
+        <qualifiedname>walle::TrackingAgent::target_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Entity that the agent tracks and moves towards. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="87" column="12" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1a743946867c4a5437173bf5e8a195b681" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tracking_distance_</definition>
+        <argsstring></argsstring>
+        <name>tracking_distance_</name>
+        <qualifiedname>walle::TrackingAgent::tracking_distance_</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+<para>How close the goal_pos needs to be to begin tracking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="90" column="12" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_tracking_agent_1a887b3080ed10140f2f9b7cb952580158" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Alerter&gt; alerter_</definition>
+        <argsstring></argsstring>
+        <name>alerter_</name>
+        <qualifiedname>walle::TrackingAgent::alerter_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para><ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> that this tracking agent belongs to; Null implies that it&apos;s not associated with an alerter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="93" column="21" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1ab7d9fea30740b930793fb96737c2e20d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgent</definition>
+        <argsstring>()=delete</argsstring>
+        <name>TrackingAgent</name>
+        <qualifiedname>walle::TrackingAgent::TrackingAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="99" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1adfb5df41876f71d8b74250b2dbc07afe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name)</argsstring>
+        <name>TrackingAgent</name>
+        <qualifiedname>walle::TrackingAgent::TrackingAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (default) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="106" column="5" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1afa20348458ae3d00c8b7ce63b68399cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name, std::vector&lt; cse491::GridPosition &gt; &amp;&amp;offsets, std::shared_ptr&lt; Alerter &gt; &amp;&amp;alerter=nullptr)</argsstring>
+        <name>TrackingAgent</name>
+        <qualifiedname>walle::TrackingAgent::TrackingAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; cse491::GridPosition &gt; &amp;&amp;</type>
+          <declname>offsets</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt; &amp;&amp;</type>
+          <declname>alerter</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (vector) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection of offsets to move the agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alerter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>alerter network to add agent to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="attention"><para>The sequence of offsets must not be empty </para>
+</simplesect>
+<simplesect kind="attention"><para>alerter should be a nullptr if this tracker is not part of any group of tracking agents </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="119" column="5" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="119" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a8c2e27c42255276b0154f4e8d05ba114" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name, std::string_view commands, std::shared_ptr&lt; Alerter &gt; &amp;&amp;alerter=nullptr)</argsstring>
+        <name>TrackingAgent</name>
+        <qualifiedname>walle::TrackingAgent::TrackingAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>commands</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt; &amp;&amp;</type>
+          <declname>alerter</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (string view) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sequence of commands to be interpreted as offsets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alerter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>alerter network to add agent to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="attention"><para>The sequence of offsets must not be empty </para>
+</simplesect>
+<simplesect kind="attention"><para>alerter should be a nullptr if this tracker is not part of any group of tracking agents </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="137" column="5" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="137" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a83df1e79a799159a8bf7387a72f86bf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>~TrackingAgent</definition>
+        <argsstring>() override</argsstring>
+        <name>~TrackingAgent</name>
+        <qualifiedname>walle::TrackingAgent::~TrackingAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="149" column="5" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>walle::TrackingAgent::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure that the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref>&apos;s internal <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> is correctly initialized Verifies that it can currently index into a valid offset <simplesect kind="return"><para>true if so; false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="158" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="158" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a7347861672c87cd0bf0ac1e33b17f84b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MakeAlerter</definition>
+        <argsstring>()</argsstring>
+        <name>MakeAlerter</name>
+        <qualifiedname>walle::TrackingAgent::MakeAlerter</qualifiedname>
+        <briefdescription>
+<para>Creates an alerter network and adds this tracking agent to it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="177" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a46d609c26f268d5f2c58627c3a0a9880" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddToAlerter</definition>
+        <argsstring>(std::shared_ptr&lt; Alerter &gt; alerter)</argsstring>
+        <name>AddToAlerter</name>
+        <qualifiedname>walle::TrackingAgent::AddToAlerter</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt;</type>
+          <declname>alerter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds this tracking agent to an already-existing alerter network <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alerter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>alerter that this agent should be associated with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>alerter must not be null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="186" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="186" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1ab305c77b6d31b639fc183351e41f64fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemoveFromAlerter</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveFromAlerter</name>
+        <qualifiedname>walle::TrackingAgent::RemoveFromAlerter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes this tracking agent from it&apos;s own tracking network <simplesect kind="note"><para>called from the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> destructor </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="196" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="196" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6a015f6d96b58d5632e8292d67f7b156" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Alerter &gt; GetAlerter</definition>
+        <argsstring>() const</argsstring>
+        <name>GetAlerter</name>
+        <qualifiedname>walle::TrackingAgent::GetAlerter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to expand the alerter network by adding other tracking agents to it <simplesect kind="return"><para>a copy of this tracking agent&apos;s alerter </para>
+</simplesect>
+<simplesect kind="note"><para>it&apos;s expected that this function is used when calling AddToAlerter on a different tracking agent </para>
+</simplesect>
+<simplesect kind="note"><para>may be null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="209" column="22" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a370c3457f02c3f92a46963fa5a522550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CallAlerter</definition>
+        <argsstring>(size_t agent_id)</argsstring>
+        <name>CallAlerter</name>
+        <qualifiedname>walle::TrackingAgent::CallAlerter</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+<para>Tells the alerter to notify all other tracking agents in network. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="214" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1aa7fb32655d1e0ba4b2d0017c5c556c10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateState</definition>
+        <argsstring>(bool alerting=true)</argsstring>
+        <name>UpdateState</name>
+        <qualifiedname>walle::TrackingAgent::UpdateState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>alerting</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles focusing the agent onto a goal_pos, returning it to its original location, and patrolling <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alerting</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>determines whether this agent should alert all other TrackingAgents in its network when its goal_pos comes into range </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>the inner variant type will be <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> when tracking OR returning to a location, but <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> when patrolling </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="226" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="226" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition GetNextPosition</definition>
+        <argsstring>() override</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>walle::TrackingAgent::GetNextPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides the AgentBase getter to retrieve the next calculated position <simplesect kind="return"><para>inner <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref>&apos;s next position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="309" column="27" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="309" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a0de86ba9978973dd7669ba64957d86aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectInnerAction</definition>
+        <argsstring>(PathAgent &amp;agent, cse491::WorldGrid const &amp;grid, cse491::type_options_t const &amp;type, cse491::item_map_t const &amp;item_set, cse491::agent_map_t const &amp;agent_set)</argsstring>
+        <name>SelectInnerAction</name>
+        <qualifiedname>walle::TrackingAgent::SelectInnerAction</qualifiedname>
+        <param>
+          <type><ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>cse491::WorldGrid const &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>cse491::type_options_t const &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>cse491::item_map_t const &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>cse491::agent_map_t const &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+<para>Select action for <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> inner type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="316" column="12" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="316" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1ab573855f2ad62ee33886b0b4bd7aafb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectInnerAction</definition>
+        <argsstring>(AStarAgent &amp;agent, cse491::WorldGrid const &amp;grid, cse491::type_options_t const &amp;type, cse491::item_map_t const &amp;item_set, cse491::agent_map_t const &amp;agent_set)</argsstring>
+        <name>SelectInnerAction</name>
+        <qualifiedname>walle::TrackingAgent::SelectInnerAction</qualifiedname>
+        <param>
+          <type><ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>cse491::WorldGrid const &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>cse491::type_options_t const &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>cse491::item_map_t const &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>cse491::agent_map_t const &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+<para>Select action for <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> inner type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="325" column="12" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="325" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6d0fa9ff4b9aa468e90ca80788d81b51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(cse491::WorldGrid const &amp;grid, cse491::type_options_t const &amp;type, cse491::item_map_t const &amp;item_set, cse491::agent_map_t const &amp;agent_set) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>walle::TrackingAgent::SelectAction</qualifiedname>
+        <param>
+          <type>cse491::WorldGrid const &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>cse491::type_options_t const &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>cse491::item_map_t const &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>cse491::agent_map_t const &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+<para>Updates the internal state of the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> and calls the internal agent&apos;s select action method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="337" column="12" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="337" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6336888cf72dcc5032d8f6ee4bacdfa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetStartPosition</definition>
+        <argsstring>(cse491::GridPosition pos)</argsstring>
+        <name>SetStartPosition</name>
+        <qualifiedname>walle::TrackingAgent::SetStartPosition</qualifiedname>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set where this agent &quot;patrol area&quot; starts <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid position of position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="353" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="353" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6fc44ef444e53149c36c38769e78da59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetStartPosition</definition>
+        <argsstring>(double x, double y)</argsstring>
+        <name>SetStartPosition</name>
+        <qualifiedname>walle::TrackingAgent::SetStartPosition</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set where this agent &quot;patrol area&quot; starts <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate of start pos </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate of start pos </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="364" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="364" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a2730157306250a946b6831ba1c21a3e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetTarget</definition>
+        <argsstring>(Entity *agent)</argsstring>
+        <name>SetTarget</name>
+        <qualifiedname>walle::TrackingAgent::SetTarget</qualifiedname>
+        <param>
+          <type>Entity *</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set which agent we are following <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>we want to track </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="374" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1ad69848502ee4af609c21d353de632495" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetTrackingDistance</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTrackingDistance</name>
+        <qualifiedname>walle::TrackingAgent::GetTrackingDistance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the distance around this tracker that it surveys <simplesect kind="return"><para>tracking distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="383" column="13" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="383" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a3bbc69b32634a15062d20f5436e50089" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetTrackingDistance</definition>
+        <argsstring>(double dist)</argsstring>
+        <name>SetTrackingDistance</name>
+        <qualifiedname>walle::TrackingAgent::SetTrackingDistance</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>dist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set how close goal_pos has to be to start tracking <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to start tracking at </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>calling object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="390" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="390" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6e7bef85f3839a767119a9188255b9b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetWorld</definition>
+        <argsstring>(cse491::WorldBase &amp;in_world) override</argsstring>
+        <name>SetWorld</name>
+        <qualifiedname>walle::TrackingAgent::SetWorld</qualifiedname>
+        <param>
+          <type>cse491::WorldBase &amp;</type>
+          <declname>in_world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set both the world for the current agent and the agents it is a part of <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in_world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new world to associate the agent with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>calling agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="400" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="400" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a431f903646fe880dc010ddecdef18e7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8" kindref="member">TrackingState</ref></type>
+        <definition>TrackingState GetState</definition>
+        <argsstring>()</argsstring>
+        <name>GetState</name>
+        <qualifiedname>walle::TrackingAgent::GetState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the current internal state of the Tracking Agent <simplesect kind="return"><para>current state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="413" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="413" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1aa5832f5c5aed4ea8af3b533707677394" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetPath</definition>
+        <argsstring>(std::vector&lt; cse491::GridPosition &gt; offsets)</argsstring>
+        <name>SetPath</name>
+        <qualifiedname>walle::TrackingAgent::SetPath</qualifiedname>
+        <param>
+          <type>std::vector&lt; cse491::GridPosition &gt;</type>
+          <declname>offsets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the patrolling path of the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid position offsets creating the path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="422" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="422" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1add863299963d6b2e4e5ea85f9d351042" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; SetPath</definition>
+        <argsstring>(std::string_view offsets)</argsstring>
+        <name>SetPath</name>
+        <qualifiedname>walle::TrackingAgent::SetPath</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>offsets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the patrolling path of the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid position offsets creating the path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="437" column="19" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="437" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1afdc94fff9757a8f3a20f8f39443ebe4d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; cse491::GridPosition &gt; const &amp;</type>
+        <definition>std::vector&lt; cse491::GridPosition &gt; const  &amp; GetPath</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPath</name>
+        <qualifiedname>walle::TrackingAgent::GetPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an immutable reference to this agent&apos;s current path <simplesect kind="return"><para>sequence of offsets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="445" column="23" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="445" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_tracking_agent_1a6ecd156931234a9e2f6d049f68ce8f33" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::Entity const *</type>
+        <definition>cse491::Entity const  * GetTarget</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTarget</name>
+        <qualifiedname>walle::TrackingAgent::GetTarget</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an immutable pointer to this agent&apos;s target <simplesect kind="return"><para>ptr to entity </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="451" column="26" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="451" bodyend="451"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Agent that switches between user-defined custom movement pattern and tracking a given agent </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TrackingAgent</label>
+        <link refid="classwalle_1_1_tracking_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TrackingAgent</label>
+        <link refid="classwalle_1_1_tracking_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/TrackingAgent.hpp" line="72" column="1" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="72" bodyend="453"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_tracking_agent_1a46d609c26f268d5f2c58627c3a0a9880" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>AddToAlerter</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a887b3080ed10140f2f9b7cb952580158" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>alerter_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a370c3457f02c3f92a46963fa5a522550" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>CallAlerter</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6a015f6d96b58d5632e8292d67f7b156" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetAlerter</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetNextPosition</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1afdc94fff9757a8f3a20f8f39443ebe4d" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetPath</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a431f903646fe880dc010ddecdef18e7d" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetState</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6ecd156931234a9e2f6d049f68ce8f33" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetTarget</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ad69848502ee4af609c21d353de632495" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>GetTrackingDistance</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>Initialize</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ab5293039261e3a25a0d9dae3be1a461a" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>inner_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a7347861672c87cd0bf0ac1e33b17f84b" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>MakeAlerter</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1aaaee4583464757ace4d7e8ac6d5a690a" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>offsets_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ab305c77b6d31b639fc183351e41f64fe" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>RemoveFromAlerter</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6d0fa9ff4b9aa468e90ca80788d81b51" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SelectAction</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a0de86ba9978973dd7669ba64957d86aa" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SelectInnerAction</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ab573855f2ad62ee33886b0b4bd7aafb9" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SelectInnerAction</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1aa5832f5c5aed4ea8af3b533707677394" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetPath</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1add863299963d6b2e4e5ea85f9d351042" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetPath</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6336888cf72dcc5032d8f6ee4bacdfa4" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetStartPosition</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6fc44ef444e53149c36c38769e78da59" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetStartPosition</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a2730157306250a946b6831ba1c21a3e8" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetTarget</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a3bbc69b32634a15062d20f5436e50089" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetTrackingDistance</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a6e7bef85f3839a767119a9188255b9b9" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>SetWorld</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ac86d934812f228d0b8e4c1a77830c81c" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>start_pos_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a49aa54834ea6afbe071fee08e3844e85" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>state_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1af8197176faebd225ec08e3cbd3c57eb0" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>target_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a743946867c4a5437173bf5e8a195b681" prot="private" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>tracking_distance_</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1ab7d9fea30740b930793fb96737c2e20d" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>TrackingAgent</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1adfb5df41876f71d8b74250b2dbc07afe" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>TrackingAgent</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1afa20348458ae3d00c8b7ce63b68399cd" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>TrackingAgent</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a8c2e27c42255276b0154f4e8d05ba114" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>TrackingAgent</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1aa7fb32655d1e0ba4b2d0017c5c556c10" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>UpdateState</name></member>
+      <member refid="classwalle_1_1_tracking_agent_1a83df1e79a799159a8bf7387a72f86bf2" prot="public" virt="non-virtual"><scope>walle::TrackingAgent</scope><name>~TrackingAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

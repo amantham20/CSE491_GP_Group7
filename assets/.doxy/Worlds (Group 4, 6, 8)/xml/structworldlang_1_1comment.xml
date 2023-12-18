@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1comment" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::comment</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::seq&lt; pegtl::one&lt; &apos;#&apos; &gt;, pegtl::until&lt; pegtl::eol &gt; &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>comment</label>
+        <link refid="structworldlang_1_1comment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seq&lt; pegtl::one&lt; &apos;#&apos; &gt;, pegtl::until&lt; pegtl::eol &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>comment</label>
+        <link refid="structworldlang_1_1comment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seq&lt; pegtl::one&lt; &apos;#&apos; &gt;, pegtl::until&lt; pegtl::eol &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="240" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="246" bodyend="246"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

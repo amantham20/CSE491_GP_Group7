@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classcse491_1_1_grid_position" kind="class" language="C++" prot="public">
     <compoundname>cse491::GridPosition</compoundname>
+    <basecompoundref refid="classcse491_1_1_core_object" prot="public" virt="non-virtual">CoreObject</basecompoundref>
     <includes refid="_grid_position_8hpp" local="no">GridPosition.hpp</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classcse491_1_1_grid_position_1af88b946fb90d5f08b5fb740c70e98c10" prot="private" static="no" mutable="no">
@@ -17,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="23" column="12" bodyfile="source/core/GridPosition.hpp" bodystart="23" bodyend="-1"/>
+        <location file="source/core/GridPosition.hpp" line="27" column="10" bodyfile="source/core/GridPosition.hpp" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_grid_position_1ab927965981178aa1fba979a37168db2a" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -32,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="24" column="12" bodyfile="source/core/GridPosition.hpp" bodystart="24" bodyend="-1"/>
+        <location file="source/core/GridPosition.hpp" line="28" column="10" bodyfile="source/core/GridPosition.hpp" bodystart="28" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -48,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="27" column="5"/>
+        <location file="source/core/GridPosition.hpp" line="31" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1ac891df5fbea2948a4ff6f3dd8376a392" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -70,7 +71,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="28" column="5" bodyfile="source/core/GridPosition.hpp" bodystart="28" bodyend="28"/>
+        <location file="source/core/GridPosition.hpp" line="32" column="3" bodyfile="source/core/GridPosition.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1ad546e83dbe06fc8e08112983d756ae0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GridPosition</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>GridPosition</name>
+        <qualifiedname>cse491::GridPosition::GridPosition</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="33" column="3" bodyfile="source/core/GridPosition.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a6f88731ef95119626e9170aa82bf7575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -87,7 +106,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="29" column="5"/>
+        <location file="source/core/GridPosition.hpp" line="34" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a89272e645071019ef96bb3e6adb0bfe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GridPosition</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GridPosition</name>
+        <qualifiedname>cse491::GridPosition::~GridPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="36" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a781ba113b38478bc40db5e202fed1479" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
@@ -104,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="31" column="19"/>
+        <location file="source/core/GridPosition.hpp" line="38" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1ac302cda48a4a650a3f8cf1dfe9a0cb1e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -118,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="35" column="13" bodyfile="source/core/GridPosition.hpp" bodystart="35" bodyend="35"/>
+        <location file="source/core/GridPosition.hpp" line="42" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a2c302e1e24ca25bc362746dc51c22510" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -132,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="36" column="13" bodyfile="source/core/GridPosition.hpp" bodystart="36" bodyend="36"/>
+        <location file="source/core/GridPosition.hpp" line="43" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="43" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a86fdfb1559d519664a8c86e5fafa1401" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -146,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="37" column="13" bodyfile="source/core/GridPosition.hpp" bodystart="37" bodyend="37"/>
+        <location file="source/core/GridPosition.hpp" line="44" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a9a4599d367dfd44642b823309768ff39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -160,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="38" column="13" bodyfile="source/core/GridPosition.hpp" bodystart="38" bodyend="38"/>
+        <location file="source/core/GridPosition.hpp" line="45" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="45" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a1dc77bce08532dcf6ef18ee22585a595" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>auto</type>
@@ -178,7 +211,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="41" column="5"/>
+        <location file="source/core/GridPosition.hpp" line="48" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a6c1f27c9de7ff98356fa712e4b796a1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsInvalid</definition>
+        <argsstring>() const</argsstring>
+        <name>IsInvalid</name>
+        <qualifiedname>cse491::GridPosition::IsInvalid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="50" column="9" bodyfile="source/core/GridPosition.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1ac532c4b500b1a85ea22217f2c65a70ed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsValid</definition>
+        <argsstring>() const</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>cse491::GridPosition::IsValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="51" column="9" bodyfile="source/core/GridPosition.hpp" bodystart="51" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a6038bdee1207c3624933a24c174c5e92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
@@ -200,7 +261,43 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="45" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="45" bodyend="48"/>
+        <location file="source/core/GridPosition.hpp" line="55" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1add19b187cfd107e9814a90e4c1928096" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>GridPosition &amp; SetX</definition>
+        <argsstring>(double in)</argsstring>
+        <name>SetX</name>
+        <qualifiedname>cse491::GridPosition::SetX</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="60" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a583d8c181a3bf7c54b29ea0459781074" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>GridPosition &amp; SetY</definition>
+        <argsstring>(double in)</argsstring>
+        <name>SetY</name>
+        <qualifiedname>cse491::GridPosition::SetY</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="61" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="61" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a1da1d1b6de9c1321f4d56d75dbafb4b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
@@ -222,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="49" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="49" bodyend="52"/>
+        <location file="source/core/GridPosition.hpp" line="63" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="63" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a030bea496155fb8658adac5a10ad84f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
@@ -240,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="54" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="54" bodyend="54"/>
+        <location file="source/core/GridPosition.hpp" line="69" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="69" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a5cf2b8a9835128a2144bab2c9ef32c33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
@@ -258,7 +355,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="55" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="55" bodyend="55"/>
+        <location file="source/core/GridPosition.hpp" line="70" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1aca21124c00679d173f42b488549ef175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>GridPosition &amp; MakeInvalid</definition>
+        <argsstring>()</argsstring>
+        <name>MakeInvalid</name>
+        <qualifiedname>cse491::GridPosition::MakeInvalid</qualifiedname>
+        <briefdescription>
+<para>Make this grid position invalid, by setting both coords to &quot;not-a-number&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>This object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="74" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -281,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="61" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="61" bodyend="63"/>
+        <location file="source/core/GridPosition.hpp" line="88" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a1122f21ad6af4f79068df50bf27c1eee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -301,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="66" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="66" bodyend="66"/>
+        <location file="source/core/GridPosition.hpp" line="93" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="93" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a733d8134d924230e305f84bdfbc974aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -321,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="69" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="69" bodyend="69"/>
+        <location file="source/core/GridPosition.hpp" line="96" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="96" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1af1192bae7fa2ab154b700b40d4d8b63f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -341,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="72" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="72" bodyend="72"/>
+        <location file="source/core/GridPosition.hpp" line="99" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="99" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1aa12c34149d2cde81c881fd40a30ee3e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -361,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="75" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="75" bodyend="75"/>
+        <location file="source/core/GridPosition.hpp" line="102" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="102" bodyend="102"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_grid_position_1a6e36c7ecfce04449155ca244b71e3920" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -380,7 +495,222 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/GridPosition.hpp" line="78" column="19" bodyfile="source/core/GridPosition.hpp" bodystart="78" bodyend="80"/>
+        <location file="source/core/GridPosition.hpp" line="105" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1acc90dab3f4abfca505f40f099a459ed3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Distance</definition>
+        <argsstring>(GridPosition pos2) const</argsstring>
+        <name>Distance</name>
+        <qualifiedname>cse491::GridPosition::Distance</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>pos2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="107" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a9fbbce4347251c6fdc971508165554c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double MDistance</definition>
+        <argsstring>(GridPosition pos2) const</argsstring>
+        <name>MDistance</name>
+        <qualifiedname>cse491::GridPosition::MDistance</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>pos2</declname>
+        </param>
+        <briefdescription>
+<para>Manhattan distance between grid positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position to compare to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Manhattan distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="116" column="11" bodyfile="source/core/GridPosition.hpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1aad8266b537be5e07af3613ff5e21af88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsNear</definition>
+        <argsstring>(GridPosition pos2, double max_dist=1.0) const</argsstring>
+        <name>IsNear</name>
+        <qualifiedname>cse491::GridPosition::IsNear</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+          <declname>pos2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max_dist</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="122" column="9" bodyfile="source/core/GridPosition.hpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a19c380b03cea21d7ac7325136a131ff0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ToString</definition>
+        <argsstring>() const</argsstring>
+        <name>ToString</name>
+        <qualifiedname>cse491::GridPosition::ToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="128" column="16" bodyfile="source/core/GridPosition.hpp" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1acc102e09c35f90306eb650dc26cbed94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>GridPosition &amp; FromStream</definition>
+        <argsstring>(std::istream &amp;ss)</argsstring>
+        <name>FromStream</name>
+        <qualifiedname>cse491::GridPosition::FromStream</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>ss</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="134" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="134" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1a6cd15ef67a491f66e11befdee4518685" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>GridPosition &amp; FromString</definition>
+        <argsstring>(std::string in_str)</argsstring>
+        <name>FromString</name>
+        <qualifiedname>cse491::GridPosition::FromString</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>in_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="150" column="17" bodyfile="source/core/GridPosition.hpp" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName_impl</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::GridPosition::GetTypeName_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2">GetTypeName_impl</reimplements>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="159" column="15" bodyfile="source/core/GridPosition.hpp" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::GridPosition::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73">Serialize_impl</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to store the current state of this object for later extraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">output_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ostream that the required information should be stored in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="161" column="8" bodyfile="source/core/GridPosition.hpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1aa912efd8fc53715bdadc51234115d82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::GridPosition::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31">Deserialize_impl</reimplements>
+        <param>
+          <type>std::istream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to restore the state of this object from the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">input_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The istream with full details about this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="166" column="8" bodyfile="source/core/GridPosition.hpp" bodystart="166" bodyend="169"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcse491_1_1_grid_position_1af8ab99864f5be331d317137f99046262" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref> &amp;</type>
+        <definition>static const GridPosition &amp; Invalid</definition>
+        <argsstring>()</argsstring>
+        <name>Invalid</name>
+        <qualifiedname>cse491::GridPosition::Invalid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/GridPosition.hpp" line="80" column="30" bodyfile="source/core/GridPosition.hpp" bodystart="80" bodyend="83"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -388,29 +718,81 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="source/core/GridPosition.hpp" line="21" column="3" bodyfile="source/core/GridPosition.hpp" bodystart="21" bodyend="81"/>
+    <inheritancegraph>
+      <node id="1">
+        <label>GridPosition</label>
+        <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GridPosition</label>
+        <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/GridPosition.hpp" line="25" column="1" bodyfile="source/core/GridPosition.hpp" bodystart="25" bodyend="171"/>
     <listofallmembers>
       <member refid="classcse491_1_1_grid_position_1a1122f21ad6af4f79068df50bf27c1eee" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Above</name></member>
       <member refid="classcse491_1_1_grid_position_1a733d8134d924230e305f84bdfbc974aa" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Below</name></member>
       <member refid="classcse491_1_1_grid_position_1a86fdfb1559d519664a8c86e5fafa1401" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>CellX</name></member>
       <member refid="classcse491_1_1_grid_position_1a9a4599d367dfd44642b823309768ff39" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>CellY</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_grid_position_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::GridPosition</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_grid_position_1acc90dab3f4abfca505f40f099a459ed3" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Distance</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::GridPosition</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::GridPosition</scope><name>EndSerialize</name></member>
+      <member refid="classcse491_1_1_grid_position_1acc102e09c35f90306eb650dc26cbed94" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>FromStream</name></member>
+      <member refid="classcse491_1_1_grid_position_1a6cd15ef67a491f66e11befdee4518685" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>FromString</name></member>
       <member refid="classcse491_1_1_grid_position_1afe1c7074d598c766d48985214bf22c9d" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GetOffset</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_grid_position_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" virt="virtual"><scope>cse491::GridPosition</scope><name>GetTypeName_impl</name></member>
       <member refid="classcse491_1_1_grid_position_1ac302cda48a4a650a3f8cf1dfe9a0cb1e" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GetX</name></member>
       <member refid="classcse491_1_1_grid_position_1a2c302e1e24ca25bc362746dc51c22510" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GetY</name></member>
       <member refid="classcse491_1_1_grid_position_1a5f914195c71dfdb02d941e38ca858649" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GridPosition</name></member>
       <member refid="classcse491_1_1_grid_position_1ac891df5fbea2948a4ff6f3dd8376a392" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GridPosition</name></member>
+      <member refid="classcse491_1_1_grid_position_1ad546e83dbe06fc8e08112983d756ae0e" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GridPosition</name></member>
       <member refid="classcse491_1_1_grid_position_1a6f88731ef95119626e9170aa82bf7575" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>GridPosition</name></member>
+      <member refid="classcse491_1_1_grid_position_1af8ab99864f5be331d317137f99046262" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Invalid</name></member>
+      <member refid="classcse491_1_1_grid_position_1a6c1f27c9de7ff98356fa712e4b796a1a" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>IsInvalid</name></member>
+      <member refid="classcse491_1_1_grid_position_1aad8266b537be5e07af3613ff5e21af88" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>IsNear</name></member>
+      <member refid="classcse491_1_1_grid_position_1ac532c4b500b1a85ea22217f2c65a70ed" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>IsValid</name></member>
+      <member refid="classcse491_1_1_grid_position_1aca21124c00679d173f42b488549ef175" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>MakeInvalid</name></member>
+      <member refid="classcse491_1_1_grid_position_1a9fbbce4347251c6fdc971508165554c5" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>MDistance</name></member>
       <member refid="classcse491_1_1_grid_position_1a6e36c7ecfce04449155ca244b71e3920" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>operator+</name></member>
       <member refid="classcse491_1_1_grid_position_1a030bea496155fb8658adac5a10ad84f8" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>operator+=</name></member>
       <member refid="classcse491_1_1_grid_position_1a5cf2b8a9835128a2144bab2c9ef32c33" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>operator-=</name></member>
       <member refid="classcse491_1_1_grid_position_1a1dc77bce08532dcf6ef18ee22585a595" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual" ambiguityscope="cse491::CoreObject::"><scope>cse491::GridPosition</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_grid_position_1a781ba113b38478bc40db5e202fed1479" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_grid_position_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::GridPosition</scope><name>Serialize_impl</name></member>
       <member refid="classcse491_1_1_grid_position_1a6038bdee1207c3624933a24c174c5e92" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Set</name></member>
+      <member refid="classcse491_1_1_grid_position_1add19b187cfd107e9814a90e4c1928096" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>SetX</name></member>
+      <member refid="classcse491_1_1_grid_position_1a583d8c181a3bf7c54b29ea0459781074" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>SetY</name></member>
       <member refid="classcse491_1_1_grid_position_1a1da1d1b6de9c1321f4d56d75dbafb4b0" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>Shift</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::GridPosition</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::GridPosition</scope><name>StartSerialize</name></member>
       <member refid="classcse491_1_1_grid_position_1af1192bae7fa2ab154b700b40d4d8b63f" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>ToLeft</name></member>
       <member refid="classcse491_1_1_grid_position_1aa12c34149d2cde81c881fd40a30ee3e4" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>ToRight</name></member>
+      <member refid="classcse491_1_1_grid_position_1a19c380b03cea21d7ac7325136a131ff0" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>ToString</name></member>
       <member refid="classcse491_1_1_grid_position_1af88b946fb90d5f08b5fb740c70e98c10" prot="private" virt="non-virtual"><scope>cse491::GridPosition</scope><name>x</name></member>
       <member refid="classcse491_1_1_grid_position_1ab927965981178aa1fba979a37168db2a" prot="private" virt="non-virtual"><scope>cse491::GridPosition</scope><name>y</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::GridPosition</scope><name>~CoreObject</name></member>
+      <member refid="classcse491_1_1_grid_position_1a89272e645071019ef96bb3e6adb0bfe3" prot="public" virt="non-virtual"><scope>cse491::GridPosition</scope><name>~GridPosition</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

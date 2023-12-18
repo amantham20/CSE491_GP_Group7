@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceclogged" kind="namespace" language="C++">
+    <compoundname>clogged</compoundname>
+    <innerclass refid="classclogged_1_1_logger" prot="public">clogged::Logger</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>LogLevel</name>
+        <qualifiedname>clogged::LogLevel</qualifiedname>
+        <enumvalue id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9adc30ec20708ef7b0f641ef78b7880a15" prot="public">
+          <name>DEBUG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9a551b723eafd6a31d444fcb2f5920fbd3" prot="public">
+          <name>INFO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9a059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9acd22bad976363fdd1bfbf6759fede482" prot="public">
+          <name>ERR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9ad4cd0dabcf4caa22ad92fab40844c786" prot="public">
+          <name>NA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Log levels for logging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="19" column="1" bodyfile="source/core/EasyLogging.hpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Team</name>
+        <qualifiedname>clogged::Team</qualifiedname>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a50abd728ba09fdf743f4c4f992da5cbc" prot="public">
+          <name>TEAM_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a764a39a22c1b7ca9e7bb6011a911ed4b" prot="public">
+          <name>TEAM_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a7365e15fce2379e42ffb4fcf71bc6e92" prot="public">
+          <name>TEAM_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a220798ac99bb6ba50182e6652a4e883c" prot="public">
+          <name>TEAM_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a28e86f37d3632a3cbadf46af2a54a3f1" prot="public">
+          <name>TEAM_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a7493c90ad8f9c86994340f7cbf595d34" prot="public">
+          <name>TEAM_6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a4f6d08bc028b67e6030e4b67f570e626" prot="public">
+          <name>TEAM_7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a03f316a6087e2c72296a4f7abb18c8ed" prot="public">
+          <name>TEAM_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598a849b1757bb5dbe64375eeea7fa83c3d6" prot="public">
+          <name>TEAM_9</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598ab61773b9b3968a9988d765d728985862" prot="public">
+          <name>GENERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598ad4cd0dabcf4caa22ad92fab40844c786" prot="public">
+          <name>NA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Teams Names for logging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="24" column="1" bodyfile="source/core/EasyLogging.hpp" bodystart="24" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1c" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Color</name>
+        <qualifiedname>clogged::Color</qualifiedname>
+        <enumvalue id="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1cab5859d8721cfdc0312b2838b9c985bc1" prot="public">
+          <name>RESET</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f" prot="public">
+          <name>BLUE</name>
+          <initializer>= 34</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" prot="public">
+          <name>GREEN</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0" prot="public">
+          <name>RED</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Colors for logging. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="42" column="1" bodyfile="source/core/EasyLogging.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceclogged_1ae4329a3b091cf8802f792b7f5852ca39" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9" kindref="member">LogLevel</ref></type>
+        <definition>const LogLevel LOGLEVEL</definition>
+        <argsstring></argsstring>
+        <name>LOGLEVEL</name>
+        <qualifiedname>clogged::LOGLEVEL</qualifiedname>
+        <initializer>= LogLevel::DEBUG</initializer>
+        <briefdescription>
+<para>Level of logging @TODO: Change this to be a flag in the CMakeLists.txt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="48" column="16" bodyfile="source/core/EasyLogging.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tools for debug-logging that can be easily controlled. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: ALPHA </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/core/EasyLogging.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

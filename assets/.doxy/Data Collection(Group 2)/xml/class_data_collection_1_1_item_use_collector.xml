@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_item_use_collector" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::ItemUseCollector</compoundname>
+    <includes refid="_item_use_collector_8hpp" local="no">ItemUseCollector.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_item_use_collector_1a3069c51d43116e1fc8354a3ecc35ab1a" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; usageData</definition>
+        <argsstring></argsstring>
+        <name>usageData</name>
+        <qualifiedname>DataCollection::ItemUseCollector::usageData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="17" column="28" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1acc6b2a9137803237f9ef8e90bcb5ad85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ItemUseCollector</definition>
+        <argsstring>()=default</argsstring>
+        <name>ItemUseCollector</name>
+        <qualifiedname>DataCollection::ItemUseCollector::ItemUseCollector</qualifiedname>
+        <briefdescription>
+<para>Damage storage map of item name to amount of uses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for <ref refid="class_data_collection_1_1_item_use_collector" kindref="compound">ItemUseCollector</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1ad0ce7ee3af9abe9ff9494f3ab44aa4e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::unordered_map&lt; std::string, int &gt; &amp;</type>
+        <definition>const std::unordered_map&lt; std::string, int &gt; &amp; GetUsageData</definition>
+        <argsstring>()</argsstring>
+        <name>GetUsageData</name>
+        <qualifiedname>DataCollection::ItemUseCollector::GetUsageData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for item usage data <simplesect kind="return"><para>Const reference to the usage data storage. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="28" column="34" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1aac41089a82b1a29d432c9e1e8206eca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GetNumberOfItems</definition>
+        <argsstring>()</argsstring>
+        <name>GetNumberOfItems</name>
+        <qualifiedname>DataCollection::ItemUseCollector::GetNumberOfItems</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the amount of unique items that are collected <simplesect kind="return"><para>int amount of unique items </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="36" column="13" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1a03ab5a68fb5d19a62aaf88260d479ff1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IncrementItemUsage</definition>
+        <argsstring>(const std::string &amp;itemName)</argsstring>
+        <name>IncrementItemUsage</name>
+        <qualifiedname>DataCollection::ItemUseCollector::IncrementItemUsage</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>itemName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment usage amount for a certain item. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>itemName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item name to record new usage of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="44" column="14" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1a731fbd0a502d555779d1cbceac76e929" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GetMostFrequent</definition>
+        <argsstring>()</argsstring>
+        <name>GetMostFrequent</name>
+        <qualifiedname>DataCollection::ItemUseCollector::GetMostFrequent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the most frequently used item in the game. <simplesect kind="return"><para>Name of the most frequent item as a string, empty string if no data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="52" column="21" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="52" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1a2a95b4352487d3a932bd64e332570b8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GetLeastFrequent</definition>
+        <argsstring>()</argsstring>
+        <name>GetLeastFrequent</name>
+        <qualifiedname>DataCollection::ItemUseCollector::GetLeastFrequent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the least frequently used item in the game. <simplesect kind="return"><para>Name of the least item as a string, empty string if no data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="70" column="21" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="70" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_item_use_collector_1a0b059689d77b5517e091d07267541e80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToItemUseFile</definition>
+        <argsstring>(std::string path)</argsstring>
+        <name>WriteToItemUseFile</name>
+        <qualifiedname>DataCollection::ItemUseCollector::WriteToItemUseFile</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/ItemUseCollector.hpp" line="84" column="14" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="84" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A data collector class for usage amount of game items. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Useful for setting up graphs for analysis of item balancing. </para>
+    </detaileddescription>
+    <location file="source/DataCollection/ItemUseCollector.hpp" line="15" column="5" bodyfile="source/DataCollection/ItemUseCollector.hpp" bodystart="15" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_item_use_collector_1a2a95b4352487d3a932bd64e332570b8e" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>GetLeastFrequent</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1a731fbd0a502d555779d1cbceac76e929" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>GetMostFrequent</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1aac41089a82b1a29d432c9e1e8206eca3" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>GetNumberOfItems</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1ad0ce7ee3af9abe9ff9494f3ab44aa4e2" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>GetUsageData</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1a03ab5a68fb5d19a62aaf88260d479ff1" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>IncrementItemUsage</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1acc6b2a9137803237f9ef8e90bcb5ad85" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>ItemUseCollector</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1a3069c51d43116e1fc8354a3ecc35ab1a" prot="private" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>usageData</name></member>
+      <member refid="class_data_collection_1_1_item_use_collector_1a0b059689d77b5517e091d07267541e80" prot="public" virt="non-virtual"><scope>DataCollection::ItemUseCollector</scope><name>WriteToItemUseFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

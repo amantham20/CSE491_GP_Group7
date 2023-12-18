@@ -10,10 +10,18 @@
 
 
 
+* `#include <algorithm>`
 * `#include <cassert>`
+* `#include <istream>`
+* `#include <memory>`
+* `#include <ostream>`
 * `#include <string>`
 * `#include <unordered_map>`
+* `#include <vector>`
+* `#include "CoreObject.hpp"`
+* `#include "Data.hpp"`
 * `#include "GridPosition.hpp"`
+* `#include "Property.hpp"`
 
 
 

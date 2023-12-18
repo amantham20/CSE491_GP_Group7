@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_alerter" kind="class" language="C++" prot="public">
+    <compoundname>walle::Alerter</compoundname>
+    <includes refid="_tracking_agent_8hpp" local="no">TrackingAgent.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_alerter_1a021872bf26339e79ba51d846c1aead3e" prot="private" static="no" mutable="no">
+        <type>cse491::WorldBase *</type>
+        <definition>cse491::WorldBase* world_ptr_</definition>
+        <argsstring></argsstring>
+        <name>world_ptr_</name>
+        <qualifiedname>walle::Alerter::world_ptr_</qualifiedname>
+        <briefdescription>
+<para>World the agents in the agent network are a part of. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="38" column="23" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_alerter_1a387993e0f998d0e8f7d771a94439bd9f" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; size_t &gt;</type>
+        <definition>std::unordered_set&lt;size_t&gt; agent_network_set_</definition>
+        <argsstring></argsstring>
+        <name>agent_network_set_</name>
+        <qualifiedname>walle::Alerter::agent_network_set_</qualifiedname>
+        <briefdescription>
+<para>Set of all agents in a single network. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="41" column="24" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_alerter_1ad7697450afb7180b6ac75b004b87e712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Alerter</definition>
+        <argsstring>()=delete</argsstring>
+        <name>Alerter</name>
+        <qualifiedname>walle::Alerter::Alerter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1aee18492d4c577d94656d2a17d2837340" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Alerter</definition>
+        <argsstring>(cse491::WorldBase *world_ptr)</argsstring>
+        <name>Alerter</name>
+        <qualifiedname>walle::Alerter::Alerter</qualifiedname>
+        <param>
+          <type>cse491::WorldBase *</type>
+          <declname>world_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> constructor (only knows its world and has no agents in its network) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the world this alerter is associated with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="46" column="14" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="459" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1ac9e968ba38fa11a132e28d072bd9e7d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Alerter</definition>
+        <argsstring>(cse491::WorldBase *world_ptr, size_t id)</argsstring>
+        <name>Alerter</name>
+        <qualifiedname>walle::Alerter::Alerter</qualifiedname>
+        <param>
+          <type>cse491::WorldBase *</type>
+          <declname>world_ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> constructor (adds the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> with that id to the alerter network) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of agent to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>world_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the world this alerter is associated with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="47" column="5" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="466" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1a178e994c1847978fa797c257d103681b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddAgent</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>AddAgent</name>
+        <qualifiedname>walle::Alerter::AddAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> to the network <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of agent to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="48" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="475" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1aa0c7867142a9a9a48f0b5b2161a7728f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemoveAgent</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>RemoveAgent</name>
+        <qualifiedname>walle::Alerter::RemoveAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> to the network <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of agent to be removed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>no assertions here since we may want to allow the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> to join another network later if it&apos;s not being destructed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="49" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="486" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1adf6ec54e7f74f5e110f2f8cbfc779c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AlertAllTrackingAgents</definition>
+        <argsstring>(size_t caller_id)</argsstring>
+        <name>AlertAllTrackingAgents</name>
+        <qualifiedname>walle::Alerter::AlertAllTrackingAgents</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>caller_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses UpdateState to focus all trackers onto their goal_pos regardless of the distance away <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>caller_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the original id of the agent that came into range of its goal_pos; does not need to be updated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="50" column="10" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="494" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_alerter_1a648961f5fd5d120dbd796470076161a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unordered_set&lt; size_t &gt; const &amp;</type>
+        <definition>std::unordered_set&lt; size_t &gt; const  &amp; GetNetworkSet</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNetworkSet</name>
+        <qualifiedname>walle::Alerter::GetNetworkSet</qualifiedname>
+        <briefdescription>
+<para>Returns an immutable reference to the <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref>&apos;s set of agents it knows about. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="53" column="30" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A single <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> is responsible for forcefully changing the state of all trackers in its network to TrackingState::TRACKING when a single <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> in the set of trackers comes into range of its goal_pos </para>
+    </detaileddescription>
+    <location file="source/Agents/TrackingAgent.hpp" line="35" column="1" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="35" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_alerter_1a178e994c1847978fa797c257d103681b" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>AddAgent</name></member>
+      <member refid="classwalle_1_1_alerter_1a387993e0f998d0e8f7d771a94439bd9f" prot="private" virt="non-virtual"><scope>walle::Alerter</scope><name>agent_network_set_</name></member>
+      <member refid="classwalle_1_1_alerter_1adf6ec54e7f74f5e110f2f8cbfc779c5b" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>AlertAllTrackingAgents</name></member>
+      <member refid="classwalle_1_1_alerter_1ad7697450afb7180b6ac75b004b87e712" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>Alerter</name></member>
+      <member refid="classwalle_1_1_alerter_1aee18492d4c577d94656d2a17d2837340" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>Alerter</name></member>
+      <member refid="classwalle_1_1_alerter_1ac9e968ba38fa11a132e28d072bd9e7d1" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>Alerter</name></member>
+      <member refid="classwalle_1_1_alerter_1a648961f5fd5d120dbd796470076161a9" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>GetNetworkSet</name></member>
+      <member refid="classwalle_1_1_alerter_1aa0c7867142a9a9a48f0b5b2161a7728f" prot="public" virt="non-virtual"><scope>walle::Alerter</scope><name>RemoveAgent</name></member>
+      <member refid="classwalle_1_1_alerter_1a021872bf26339e79ba51d846c1aead3e" prot="private" virt="non-virtual"><scope>walle::Alerter</scope><name>world_ptr_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecowboys" kind="namespace" language="C++">
+    <compoundname>cowboys</compoundname>
+    <innerclass refid="classcowboys_1_1_c_g_p_agent" prot="public">cowboys::CGPAgent</innerclass>
+    <innerclass refid="classcowboys_1_1_c_g_p_genotype" prot="public">cowboys::CGPGenotype</innerclass>
+    <innerclass refid="structcowboys_1_1_c_g_p_node_gene" prot="public">cowboys::CGPNodeGene</innerclass>
+    <innerclass refid="structcowboys_1_1_c_g_p_parameters" prot="public">cowboys::CGPParameters</innerclass>
+    <innerclass refid="classcowboys_1_1_g_p_agent" prot="public">cowboys::GPAgent</innerclass>
+    <innerclass refid="classcowboys_1_1_g_p_agent_analyzer" prot="public">cowboys::GPAgentAnalyzer</innerclass>
+    <innerclass refid="classcowboys_1_1_g_p_agent_base" prot="public">cowboys::GPAgentBase</innerclass>
+    <innerclass refid="classcowboys_1_1_g_p_agent_registers" prot="public">cowboys::GPAgentRegisters</innerclass>
+    <innerclass refid="classcowboys_1_1_g_p_training_loop" prot="public">cowboys::GPTrainingLoop</innerclass>
+    <innerclass refid="classcowboys_1_1_graph" prot="public">cowboys::Graph</innerclass>
+    <innerclass refid="classcowboys_1_1_graph_builder" prot="public">cowboys::GraphBuilder</innerclass>
+    <innerclass refid="classcowboys_1_1_graph_node" prot="public">cowboys::GraphNode</innerclass>
+    <innerclass refid="classcowboys_1_1_l_g_p_agent" prot="public">cowboys::LGPAgent</innerclass>
+    <innerclass refid="structcowboys_1_1_node_function" prot="public">cowboys::NodeFunction</innerclass>
+    <innerclass refid="classcowboys_1_1_sensors" prot="public">cowboys::Sensors</innerclass>
+    <innernamespace refid="namespacecowboys_1_1base64">cowboys::base64</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacecowboys_1a37636acd6f892f0a1e3cddbe084dac66" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SensorDirection</name>
+        <qualifiedname>cowboys::SensorDirection</qualifiedname>
+        <enumvalue id="namespacecowboys_1a37636acd6f892f0a1e3cddbe084dac66adb45120aafd37a973140edee24708065" prot="public">
+          <name>LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecowboys_1a37636acd6f892f0a1e3cddbe084dac66aec8379af7490bb9eaaf579cf17876f38" prot="public">
+          <name>RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecowboys_1a37636acd6f892f0a1e3cddbe084dac66aaad01162f441b9162610e81352541694" prot="public">
+          <name>ABOVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecowboys_1a37636acd6f892f0a1e3cddbe084dac66a249f61b14032b08617e4b2446bace97e" prot="public">
+          <name>BELOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="25" column="1" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacecowboys_1af4a8f166c40a583407b74b00d70072e0" prot="public" static="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt;</type>
+        <definition>using GraphLayer =  std::vector&lt;std::shared_ptr&lt;GraphNode&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>GraphLayer</name>
+        <qualifiedname>cowboys::GraphLayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="15" column="3" bodyfile="source/Agents/GP/Graph.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" prot="public" static="no">
+        <type>double(*)(const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;, const cse491::AgentBase &amp;)</type>
+        <definition>using InnerFunction =  double (*)(const GraphNode &amp;, const cse491::AgentBase &amp;)</definition>
+        <argsstring></argsstring>
+        <name>InnerFunction</name>
+        <qualifiedname>cowboys::InnerFunction</qualifiedname>
+        <briefdescription>
+<para>Function pointer for a node function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Forward declaration of <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="33" column="3" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecowboys_1a7c0cf9b32411d2258a70c1b78b156046" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t INPUT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>INPUT_SIZE</name>
+        <qualifiedname>cowboys::INPUT_SIZE</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+<para>Don&apos;t know the maximum size a state can be, arbitrary large number. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPAgent.hpp" line="19" column="20" bodyfile="source/Agents/GP/CGPAgent.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1ac31731614fa61af123ff3ff1a2a42321" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t NUM_LAYERS</definition>
+        <argsstring></argsstring>
+        <name>NUM_LAYERS</name>
+        <qualifiedname>cowboys::NUM_LAYERS</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Number of computational layers for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPAgent.hpp" line="22" column="20" bodyfile="source/Agents/GP/CGPAgent.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1aa53eee1d94dd977107c85305e205483d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t NUM_NODES_PER_LAYER</definition>
+        <argsstring></argsstring>
+        <name>NUM_NODES_PER_LAYER</name>
+        <qualifiedname>cowboys::NUM_NODES_PER_LAYER</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>The number of nodes in each layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPAgent.hpp" line="25" column="20" bodyfile="source/Agents/GP/CGPAgent.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a9b17a4368fdba52c54b5730947898fbd" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t LAYERS_BACK</definition>
+        <argsstring></argsstring>
+        <name>LAYERS_BACK</name>
+        <qualifiedname>cowboys::LAYERS_BACK</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>The number of layers preceding a node&apos;s layer that the node can reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPAgent.hpp" line="28" column="20" bodyfile="source/Agents/GP/CGPAgent.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a10b5af813611feaa70637e847db7e012" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char HEADER_SEP</definition>
+        <argsstring></argsstring>
+        <name>HEADER_SEP</name>
+        <qualifiedname>cowboys::HEADER_SEP</qualifiedname>
+        <initializer>= &apos;,&apos;</initializer>
+        <briefdescription>
+<para>The separator between each parameter in the header, defining the cartesian graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="21" column="18" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a7ff10c9167568e43db986d758a9c776d" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char HEADER_END</definition>
+        <argsstring></argsstring>
+        <name>HEADER_END</name>
+        <qualifiedname>cowboys::HEADER_END</qualifiedname>
+        <initializer>= &apos;;&apos;</initializer>
+        <briefdescription>
+<para>The separator between the header and the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="23" column="18" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a91bdea709fcf1bdde06fc543bd9a3a06" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char NODE_GENE_SEP</definition>
+        <argsstring></argsstring>
+        <name>NODE_GENE_SEP</name>
+        <qualifiedname>cowboys::NODE_GENE_SEP</qualifiedname>
+        <initializer>= &apos;.&apos;</initializer>
+        <briefdescription>
+<para>The separator between each attribute in a node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="25" column="18" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a687dc901abd692180466f653935cb8f8" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char NODE_SEP</definition>
+        <argsstring></argsstring>
+        <name>NODE_SEP</name>
+        <qualifiedname>cowboys::NODE_SEP</qualifiedname>
+        <initializer>= &apos;:&apos;</initializer>
+        <briefdescription>
+<para>The separator between each node in the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="27" column="18" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a685d683470e08faeb8d2bc5504f3f288" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int WALL</definition>
+        <argsstring></argsstring>
+        <name>WALL</name>
+        <qualifiedname>cowboys::WALL</qualifiedname>
+        <initializer>=
+    2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="20" column="22" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a81175817ee536c3a1b4de2a11afdb5d1" prot="public" static="no" constexpr="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int TRAINING_SEED</definition>
+        <argsstring></argsstring>
+        <name>TRAINING_SEED</name>
+        <qualifiedname>cowboys::TRAINING_SEED</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>If this is 0, then a random seed will be used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="30" column="28" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a978c9878bf03588bb1ee06eb62c67fa8" prot="public" static="yes" mutable="no">
+        <type>const std::vector&lt; <ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref> &gt;</type>
+        <definition>const std::vector&lt;InnerFunction&gt; NODE_FUNCTION_SET</definition>
+        <argsstring></argsstring>
+        <name>NODE_FUNCTION_SET</name>
+        <qualifiedname>cowboys::NODE_FUNCTION_SET</qualifiedname>
+        <initializer>{
+      nullptr,  <ref refid="namespacecowboys_1a2f056f1a4aecb240d5332908fdb7b527" kindref="member">Sum</ref>,         <ref refid="namespacecowboys_1aba71998b80dfdf6f4ea2a7df48361cb5" kindref="member">And</ref>, <ref refid="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" kindref="member">AnyEq</ref>, <ref refid="namespacecowboys_1aa67f79467415e8b65a208e083d577b33" kindref="member">Not</ref>,    <ref refid="namespacecowboys_1a096431a5e693001753f1073d061b2a45" kindref="member">Gate</ref>,   <ref refid="namespacecowboys_1a600040bf260198f6ab9b4980f0d47c9f" kindref="member">Sin</ref>,      <ref refid="namespacecowboys_1a23ee900029214ea7f0c0ff7a6c0ced30" kindref="member">Cos</ref>,      <ref refid="namespacecowboys_1a1f1ff8ef29777c707d3ed36c71321967" kindref="member">Product</ref>, <ref refid="namespacecowboys_1a829095846be4e7c7c10083198caa7af6" kindref="member">Exp</ref>,
+      <ref refid="namespacecowboys_1a26e5401ea9982262cc2807a29da8d571" kindref="member">LessThan</ref>, <ref refid="namespacecowboys_1ac87a28134c362a15afe90d9713689d68" kindref="member">GreaterThan</ref>, <ref refid="namespacecowboys_1ad73ee65cbef4ee7d663505357d6a953a" kindref="member">Max</ref>, <ref refid="namespacecowboys_1a6ddf96d02edea36a4085bad5977687e2" kindref="member">Min</ref>,   <ref refid="namespacecowboys_1a613a473e8cd07e1a1ea189c43121f488" kindref="member">NegSum</ref>, <ref refid="namespacecowboys_1a4699134839c4da097acb078c33dfbb22" kindref="member">Square</ref>, <ref refid="namespacecowboys_1aeb3b5bb70be3dda1d0532b62b10946dd" kindref="member">PosClamp</ref>, <ref refid="namespacecowboys_1a5080fed5f002ab8e78afecd43ba393d1" kindref="member">NegClamp</ref>, <ref refid="namespacecowboys_1a2121fb3254c30d5f9bc4a7174d8ee592" kindref="member">Sqrt</ref>}</initializer>
+        <briefdescription>
+<para>A vector of all the node functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="408" column="28" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="408" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1a3a6091445c759f07070a67359aa5086d" prot="public" static="yes" mutable="no">
+        <type>const std::vector&lt; <ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref> &gt;</type>
+        <definition>const std::vector&lt;InnerFunction&gt; SENSOR_FUNCTION_SET</definition>
+        <argsstring></argsstring>
+        <name>SENSOR_FUNCTION_SET</name>
+        <qualifiedname>cowboys::SENSOR_FUNCTION_SET</qualifiedname>
+        <initializer>{<ref refid="namespacecowboys_1ad8a48f3c171cfe8ad9f5cb88be2a47b2" kindref="member">WallDistanceUp</ref>, <ref refid="namespacecowboys_1a32d63260d0a7deaa3a8f701a15d4e467" kindref="member">WallDistanceDown</ref>, <ref refid="namespacecowboys_1a4a12053565d9b86d0b4debdbfcb71f6d" kindref="member">WallDistanceLeft</ref>,
+                                                              <ref refid="namespacecowboys_1aedf2b19c21a7f95ef5b3c27c01405577" kindref="member">WallDistanceRight</ref>, <ref refid="namespacecowboys_1a350aa3ed6791f9ad76b83458aebb876e" kindref="member">AStarDistance</ref>}</initializer>
+        <briefdescription>
+<para>A vector of all the sensor functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="412" column="28" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="412" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1aaeb7b78f7fb04da8092d4918d6bb670f" prot="public" static="yes" mutable="no">
+        <type>const std::vector&lt; <ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref> &gt;</type>
+        <definition>const std::vector&lt;InnerFunction&gt; FUNCTION_SET</definition>
+        <argsstring></argsstring>
+        <name>FUNCTION_SET</name>
+        <qualifiedname>cowboys::FUNCTION_SET</qualifiedname>
+        <initializer>= []() {
+    std::vector&lt;<ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref>&gt; functions;
+    functions.reserve(NODE_FUNCTION_SET.size() + SENSOR_FUNCTION_SET.size());
+    functions.insert(functions.cend(), NODE_FUNCTION_SET.cbegin(), NODE_FUNCTION_SET.cend());
+    functions.insert(functions.cend(), SENSOR_FUNCTION_SET.cbegin(), SENSOR_FUNCTION_SET.cend());
+    return functions;
+  }()</initializer>
+        <briefdescription>
+<para>A vector of all the node functions and sensors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="416" column="28" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="416" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1ab8286e2c72aa7de1d97e8438a492d993" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int LISTSIZE</definition>
+        <argsstring></argsstring>
+        <name>LISTSIZE</name>
+        <qualifiedname>cowboys::LISTSIZE</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/LGPAgent.hpp" line="20" column="15" bodyfile="source/Agents/GP/LGPAgent.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecowboys_1a4ae5e28c193596630be226394f791180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt; size_t &gt; EncodeActions</definition>
+        <argsstring>(const std::unordered_map&lt; std::string, size_t &gt; &amp;action_map)</argsstring>
+        <name>EncodeActions</name>
+        <qualifiedname>cowboys::EncodeActions</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; std::string, size_t &gt; &amp;</type>
+          <declname>action_map</declname>
+        </param>
+        <briefdescription>
+<para>Encodes the actions from an agent&apos;s action map into a vector of size_t, representing action IDs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action map from the agent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of size_t, representing action IDs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="105" column="15" bodyfile="source/Agents/GP/Graph.hpp" bodystart="105" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1ae7613530678393876c118a78388fb251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; EncodeState</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;, const cse491::item_map_t &amp;, const cse491::agent_map_t &amp;, const cse491::AgentBase *agent, const std::unordered_map&lt; std::string, double &gt; &amp;extra_agent_state)</argsstring>
+        <name>EncodeState</name>
+        <qualifiedname>cowboys::EncodeState</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::AgentBase *</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>const std::unordered_map&lt; std::string, double &gt; &amp;</type>
+          <declname>extra_agent_state</declname>
+        </param>
+        <briefdescription>
+<para>Translates state into nodes for the decision graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector of doubles for the decision graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: Implement this function properly.</para>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="117" column="15" bodyfile="source/Agents/GP/Graph.hpp" bodystart="117" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a2f056f1a4aecb240d5332908fdb7b527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sum</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Sum</name>
+        <qualifiedname>cowboys::Sum</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="187" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1aba71998b80dfdf6f4ea2a7df48361cb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double And</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>And</name>
+        <qualifiedname>cowboys::And</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns 1 if all inputs are not equal to 0, 0 otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="195" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a814ec1d3ff2a1b7f5ee1814050fde1a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AnyEq</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>AnyEq</name>
+        <qualifiedname>cowboys::AnyEq</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns 1 if any of the inputs besides the first are equal to the first input, 0 otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="204" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="204" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1aa67f79467415e8b65a208e083d577b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Not</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Not</name>
+        <qualifiedname>cowboys::Not</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns 1 if the first input is equal to 0 or there are no inputs, 0 otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="218" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="218" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a096431a5e693001753f1073d061b2a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Gate</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Gate</name>
+        <qualifiedname>cowboys::Gate</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the input with index 0 if the condition (input with index 1) is not 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="229" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="229" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a600040bf260198f6ab9b4980f0d47c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sin</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Sin</name>
+        <qualifiedname>cowboys::Sin</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Sums the sin(x) of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="239" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a23ee900029214ea7f0c0ff7a6c0ced30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Cos</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Cos</name>
+        <qualifiedname>cowboys::Cos</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Sums the cos(x) of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="248" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="248" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a1f1ff8ef29777c707d3ed36c71321967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Product</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Product</name>
+        <qualifiedname>cowboys::Product</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the product of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="257" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="257" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1af663206543544e1b202421e0d7ce1a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Reciprocal</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Reciprocal</name>
+        <qualifiedname>cowboys::Reciprocal</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of the reciprocal of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="265" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="265" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a829095846be4e7c7c10083198caa7af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Exp</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Exp</name>
+        <qualifiedname>cowboys::Exp</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of the exp(x) of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="274" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="274" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a26e5401ea9982262cc2807a29da8d571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double LessThan</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>LessThan</name>
+        <qualifiedname>cowboys::LessThan</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns 1 if all inputs are in ascending, 0 otherwise. If only one input, then defaults to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="283" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="283" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1ac87a28134c362a15afe90d9713689d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double GreaterThan</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>GreaterThan</name>
+        <qualifiedname>cowboys::GreaterThan</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns 1 if all inputs are in ascending, 0 otherwise. If only one input, then defaults to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="291" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1ad73ee65cbef4ee7d663505357d6a953a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Max</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Max</name>
+        <qualifiedname>cowboys::Max</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the maximum value of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="299" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="299" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a6ddf96d02edea36a4085bad5977687e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Min</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Min</name>
+        <qualifiedname>cowboys::Min</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the minimum value of all inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="309" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="309" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a613a473e8cd07e1a1ea189c43121f488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double NegSum</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>NegSum</name>
+        <qualifiedname>cowboys::NegSum</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the sum of negated inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="319" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="319" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a4699134839c4da097acb078c33dfbb22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Square</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Square</name>
+        <qualifiedname>cowboys::Square</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of squared inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="324" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="324" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1aeb3b5bb70be3dda1d0532b62b10946dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double PosClamp</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>PosClamp</name>
+        <qualifiedname>cowboys::PosClamp</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of positively clamped inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="333" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="333" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a5080fed5f002ab8e78afecd43ba393d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double NegClamp</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>NegClamp</name>
+        <qualifiedname>cowboys::NegClamp</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of negatively clamped inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="342" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="342" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a2121fb3254c30d5f9bc4a7174d8ee592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Sqrt</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;)</argsstring>
+        <name>Sqrt</name>
+        <qualifiedname>cowboys::Sqrt</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Returns the sum of square root of positively clamped inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The function result as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="351" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="351" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1ad8a48f3c171cfe8ad9f5cb88be2a47b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double WallDistanceUp</definition>
+        <argsstring>(const GraphNode &amp;, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>WallDistanceUp</name>
+        <qualifiedname>cowboys::WallDistanceUp</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance to the nearest obstruction upwards from the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that the node belongs to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to the nearest obstruction upwards. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="360" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="360" bodyend="362"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a32d63260d0a7deaa3a8f701a15d4e467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double WallDistanceDown</definition>
+        <argsstring>(const GraphNode &amp;, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>WallDistanceDown</name>
+        <qualifiedname>cowboys::WallDistanceDown</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance to the nearest obstruction downwards from the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that the node belongs to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to the nearest obstruction downwards. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="367" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="367" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a4a12053565d9b86d0b4debdbfcb71f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double WallDistanceLeft</definition>
+        <argsstring>(const GraphNode &amp;, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>WallDistanceLeft</name>
+        <qualifiedname>cowboys::WallDistanceLeft</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance to the nearest obstruction to the left of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that the node belongs to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to the nearest obstruction to the left. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="374" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="374" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1aedf2b19c21a7f95ef5b3c27c01405577" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double WallDistanceRight</definition>
+        <argsstring>(const GraphNode &amp;, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>WallDistanceRight</name>
+        <qualifiedname>cowboys::WallDistanceRight</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance to the nearest obstruction to the right of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that the node belongs to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to the nearest obstruction to the right. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="381" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="381" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1a350aa3ed6791f9ad76b83458aebb876e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AStarDistance</definition>
+        <argsstring>(const GraphNode &amp;node, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>AStarDistance</name>
+        <qualifiedname>cowboys::AStarDistance</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Returns the distance to the grid position represented by the first two inputs using A*. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to get the inputs from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that the node belongs to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The distance to the grid position using A* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="389" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="389" bodyend="405"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>An Agent based on genetic programming. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An Agent based on linear genetic programming.</para>
+<para>yeeeeeeeehaaaaaaaaa</para>
+<para>Namespace for <ref refid="classcowboys_1_1_g_p_agent" kindref="compound">GPAgent</ref> and its related classes.</para>
+<para>This file is part of the Fall 2023, CSE 491 course project.</para>
+<para><simplesect kind="note"><para>yeeeeeeeehaaaaaaaaa 🤠</para>
+</simplesect>
+This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL</para>
+</simplesect>
+currently a static class</para>
+<para><simplesect kind="author"><para>@amantham20</para>
+</simplesect>
+currenly supports only wall distance sensors for left, right, top and bottom. this is library of sensors for a given agent return </para>
+    </detaileddescription>
+    <location file="source/Agents/GP/CGPAgent.hpp" line="17" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacegroup4" kind="namespace" language="C++">
+    <compoundname>group4</compoundname>
+    <innerclass refid="classgroup4_1_1_second_world" prot="public">group4::SecondWorld</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_second_world_8hpp_1a4ad32f41cfd95fcdaa1944a7b1261dc9" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string FIRST_FLOOR_FILENAME</definition>
+        <argsstring></argsstring>
+        <name>FIRST_FLOOR_FILENAME</name>
+        <qualifiedname>group4::FIRST_FLOOR_FILENAME</qualifiedname>
+        <initializer>= &quot;../assets/grids/group4_maze.grid&quot;</initializer>
+        <briefdescription>
+<para>Filename for the first floor grid file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="20" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a097d3d9e96cbcebf60f4c14aea342f9d" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string SECOND_FLOOR_FILENAME</definition>
+        <argsstring></argsstring>
+        <name>SECOND_FLOOR_FILENAME</name>
+        <qualifiedname>group4::SECOND_FLOOR_FILENAME</qualifiedname>
+        <initializer>= &quot;../assets/grids/second_floor.grid&quot;</initializer>
+        <briefdescription>
+<para>Filename for the second floor grid file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="23" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a8d3e5f542d6a835a2f7b586f77f1bb88" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string FINAL_FLOOR_FILENAME</definition>
+        <argsstring></argsstring>
+        <name>FINAL_FLOOR_FILENAME</name>
+        <qualifiedname>group4::FINAL_FLOOR_FILENAME</qualifiedname>
+        <initializer>= &quot;../assets/grids/third_floor.grid&quot;</initializer>
+        <briefdescription>
+<para>Filename for the last floor grid file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="26" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a51c2498e5800316001d93f4489d4b1ff" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string ITEM_PICKUP_SCRIPT</definition>
+        <argsstring></argsstring>
+        <name>ITEM_PICKUP_SCRIPT</name>
+        <qualifiedname>group4::ITEM_PICKUP_SCRIPT</qualifiedname>
+        <initializer>= &quot;../assets/scripts/g4_item_pickup.ws&quot;</initializer>
+        <briefdescription>
+<para>Filename for item pickup script. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This script modifies properties of the agent collecting the item. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="31" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1ac00f8378ed0d7304d7e7c4dc3ea242f9" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string COMBAT_SCRIPT</definition>
+        <argsstring></argsstring>
+        <name>COMBAT_SCRIPT</name>
+        <qualifiedname>group4::COMBAT_SCRIPT</qualifiedname>
+        <initializer>= &quot;../assets/scripts/g4_agent_attack.ws&quot;</initializer>
+        <briefdescription>
+<para>Filename for agent combat script. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When an agent attempts to move into another agent, this attack script runs. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="36" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a75ff8415f756c8cb09c4ce99d0370d45" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string WORLD_LOAD_SCRIPT</definition>
+        <argsstring></argsstring>
+        <name>WORLD_LOAD_SCRIPT</name>
+        <qualifiedname>group4::WORLD_LOAD_SCRIPT</qualifiedname>
+        <initializer>= &quot;../assets/scripts/g4_world_load.ws&quot;</initializer>
+        <briefdescription>
+<para>Filename for world initialization script. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="39" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a6b074aa6fcb000aa1e4e7b12af7a7af9" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string WORLD_LOAD_SCRIPT_2</definition>
+        <argsstring></argsstring>
+        <name>WORLD_LOAD_SCRIPT_2</name>
+        <qualifiedname>group4::WORLD_LOAD_SCRIPT_2</qualifiedname>
+        <initializer>= &quot;../assets/scripts/g4_world_2_load.ws&quot;</initializer>
+        <briefdescription>
+<para>Filename for second floor initialization script. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="42" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a561fa7c1ab32b163798ad7d3af564b42" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string WORLD_LOAD_SCRIPT_3</definition>
+        <argsstring></argsstring>
+        <name>WORLD_LOAD_SCRIPT_3</name>
+        <qualifiedname>group4::WORLD_LOAD_SCRIPT_3</qualifiedname>
+        <initializer>= &quot;../assets/scripts/g4_world_3_load.ws&quot;</initializer>
+        <briefdescription>
+<para>Filename for final floor initialization script. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="45" column="19" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a16da9c43ee55d5df246fb94a321f5ae4" prot="public" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t MAX_INVENTORY_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MAX_INVENTORY_SIZE</name>
+        <qualifiedname>group4::MAX_INVENTORY_SIZE</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+<para>Maximum inventory size for an agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="48" column="14" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_second_world_8hpp_1a3b0bc31ba4ee08eab62bd18fc62d302c" prot="public" static="no" mutable="no">
+        <type>const cse491::GridPosition</type>
+        <definition>const cse491::GridPosition OffGrid</definition>
+        <argsstring></argsstring>
+        <name>OffGrid</name>
+        <qualifiedname>group4::OffGrid</qualifiedname>
+        <initializer>= {-1, -1}</initializer>
+        <briefdescription>
+<para>Off the grid position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/SecondWorld.hpp" line="51" column="28" bodyfile="source/Worlds/SecondWorld.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Worlds/SecondWorld.hpp" line="18" column="1"/>
+  </compounddef>
+</doxygen>

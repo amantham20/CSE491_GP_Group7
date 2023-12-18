@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_text_box" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::TextBox</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1aa9f6dd4b24ced14f37f02ac8897dc7bd" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::Text &gt;</type>
+        <definition>std::unique_ptr&lt;sf::Text&gt; mText</definition>
+        <argsstring></argsstring>
+        <name>mText</name>
+        <qualifiedname>i_2D::TextBox::mText</qualifiedname>
+        <briefdescription>
+<para>The string of the text. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="27" column="25" bodyfile="source/Interfaces/TextBox.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1acc22ea908d31d8fad7a6939514290f6a" prot="private" static="no" mutable="no">
+        <type>std::ostringstream</type>
+        <definition>std::ostringstream mStreamText</definition>
+        <argsstring></argsstring>
+        <name>mStreamText</name>
+        <qualifiedname>i_2D::TextBox::mStreamText</qualifiedname>
+        <briefdescription>
+<para>Use to take in string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="28" column="28" bodyfile="source/Interfaces/TextBox.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1aa878fd61855f549b463ca8e9ac7ad0f6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool isSelected</definition>
+        <argsstring></argsstring>
+        <name>isSelected</name>
+        <qualifiedname>i_2D::TextBox::isSelected</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="29" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1aea27059ee545ce557e7157dca6bfad78" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool hasLimit</definition>
+        <argsstring></argsstring>
+        <name>hasLimit</name>
+        <qualifiedname>i_2D::TextBox::hasLimit</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Flag for checking text mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="30" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1a093d9695bc7f56e2e457d8ccf15652c1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int limit</definition>
+        <argsstring></argsstring>
+        <name>limit</name>
+        <qualifiedname>i_2D::TextBox::limit</qualifiedname>
+        <initializer>= 60</initializer>
+        <briefdescription>
+<para>Flag for checking limit mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="31" column="13" bodyfile="source/Interfaces/TextBox.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_text_box_1abb30c17f31ba8514c016befe349a0c53" prot="private" static="no" mutable="no">
+        <type>sf::RectangleShape</type>
+        <definition>sf::RectangleShape mBorderRect</definition>
+        <argsstring></argsstring>
+        <name>mBorderRect</name>
+        <qualifiedname>i_2D::TextBox::mBorderRect</qualifiedname>
+        <briefdescription>
+<para>The limit of characters allowed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="33" column="28" bodyfile="source/Interfaces/TextBox.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a84b92ce6ba3846032f6756db3eac41d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputLogic</definition>
+        <argsstring>(int charTyped)</argsstring>
+        <name>InputLogic</name>
+        <qualifiedname>i_2D::TextBox::InputLogic</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>charTyped</declname>
+        </param>
+        <briefdescription>
+<para>Determines what actions to take with different key presses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>charTyped</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character that has just been entered into the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="35" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="84" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a7834f48502775be10418de812b03def8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteLastChar</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteLastChar</name>
+        <qualifiedname>i_2D::TextBox::DeleteLastChar</qualifiedname>
+        <briefdescription>
+<para>removes the last character from the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>&apos;s current string </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="37" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="101" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1ace4bfe44cf968833a964f20cb47975c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextBox</definition>
+        <argsstring>()=default</argsstring>
+        <name>TextBox</name>
+        <qualifiedname>i_2D::TextBox::TextBox</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="40" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a48cd325a2c0aa2b93ec508212ac3ad26" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextBox</definition>
+        <argsstring>(const sf::Font &amp;font, int size=25, sf::Color color=sf::Color::Red, bool sel=false)</argsstring>
+        <name>TextBox</name>
+        <qualifiedname>i_2D::TextBox::TextBox</qualifiedname>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>25</defval>
+        </param>
+        <param>
+          <type>sf::Color</type>
+          <declname>color</declname>
+          <defval>sf::Color::Red</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sel</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font used by <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the text </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the text </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set the activity of <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="42" column="18" bodyfile="source/Interfaces/TextBox.cpp" bodystart="20" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1ab8f16bc48cef1fc515752f4e0d3eb5bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetString</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>SetString</name>
+        <qualifiedname>i_2D::TextBox::SetString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Set the string of the text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to be set to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="44" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a1c2d939d8b8c039a9de9981ea8afbe81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFont</definition>
+        <argsstring>(const sf::Font &amp;font)</argsstring>
+        <name>SetFont</name>
+        <qualifiedname>i_2D::TextBox::SetFont</qualifiedname>
+        <param>
+          <type>const sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <briefdescription>
+<para>Set the font of the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font to be set to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="51" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1af18021f4bef52a0152c6e873cc71a6fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetPosition</definition>
+        <argsstring>(sf::Vector2f pos)</argsstring>
+        <name>SetPosition</name>
+        <qualifiedname>i_2D::TextBox::SetPosition</qualifiedname>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>The position of the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position to be set to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="60" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1ae8ad72858c56d5c394146c215f838bda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetLimit</definition>
+        <argsstring>(bool ToF)</argsstring>
+        <name>SetLimit</name>
+        <qualifiedname>i_2D::TextBox::SetLimit</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>ToF</declname>
+        </param>
+        <briefdescription>
+<para>Set the limit of the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ToF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True of False </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="69" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a8ff733967d9e1360f8dc642e1585c2e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetLimit</definition>
+        <argsstring>(bool ToF, int lim)</argsstring>
+        <name>SetLimit</name>
+        <qualifiedname>i_2D::TextBox::SetLimit</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>ToF</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <briefdescription>
+<para>Set the limit of the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ToF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True or False </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lim</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The limit of the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="79" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1af025aef6d178ecfabdafdfc12725c3ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetSelected</definition>
+        <argsstring>(bool sel)</argsstring>
+        <name>SetSelected</name>
+        <qualifiedname>i_2D::TextBox::SetSelected</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>sel</declname>
+        </param>
+        <briefdescription>
+<para>Setter for isSelected, updates the text displayed in the box. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> is to be set selected or not </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="84" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a771d3274eeff6cfc2e00f9f47e0d49c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string GetText</definition>
+        <argsstring>()</argsstring>
+        <name>GetText</name>
+        <qualifiedname>i_2D::TextBox::GetText</qualifiedname>
+        <briefdescription>
+<para>Get the string that was input by user. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return the string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="91" column="21" bodyfile="source/Interfaces/TextBox.hpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTo</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>DrawTo</name>
+        <qualifiedname>i_2D::TextBox::DrawTo</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Draws the text to the render window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The render window to be drawn on </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="95" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="113" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a766d52a2249bc1991d5212bc3169c2b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TypedOn</definition>
+        <argsstring>(sf::Event input)</argsstring>
+        <name>TypedOn</name>
+        <qualifiedname>i_2D::TextBox::TypedOn</qualifiedname>
+        <param>
+          <type>sf::Event</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>TypedOn event handler. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new text that has been typed into the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="97" column="14" bodyfile="source/Interfaces/TextBox.cpp" bodystart="63" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1a1a06af1358e62deeb3dfc305d9b69e53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsSelected</definition>
+        <argsstring>() const</argsstring>
+        <name>IsSelected</name>
+        <qualifiedname>i_2D::TextBox::IsSelected</qualifiedname>
+        <briefdescription>
+<para>Checks if <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> is active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if active, else False </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="104" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_text_box_1aa23589dae42f28e362b8a27f94d5057a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Contains</definition>
+        <argsstring>(sf::Vector2f point) const</argsstring>
+        <name>Contains</name>
+        <qualifiedname>i_2D::TextBox::Contains</qualifiedname>
+        <param>
+          <type>sf::Vector2f</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a point is within the <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an xy point to check the location of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the point is in bounds, False otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="113" column="14" bodyfile="source/Interfaces/TextBox.hpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>is where users write to interface and the world </para>
+    </detaileddescription>
+    <location file="source/Interfaces/TextBox.hpp" line="23" column="5" bodyfile="source/Interfaces/TextBox.hpp" bodystart="23" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_text_box_1aa23589dae42f28e362b8a27f94d5057a" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>Contains</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a7834f48502775be10418de812b03def8" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>DeleteLastChar</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>DrawTo</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a771d3274eeff6cfc2e00f9f47e0d49c5" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>GetText</name></member>
+      <member refid="classi__2_d_1_1_text_box_1aea27059ee545ce557e7157dca6bfad78" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>hasLimit</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a84b92ce6ba3846032f6756db3eac41d2" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>InputLogic</name></member>
+      <member refid="classi__2_d_1_1_text_box_1aa878fd61855f549b463ca8e9ac7ad0f6" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>isSelected</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a1a06af1358e62deeb3dfc305d9b69e53" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>IsSelected</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a093d9695bc7f56e2e457d8ccf15652c1" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>limit</name></member>
+      <member refid="classi__2_d_1_1_text_box_1abb30c17f31ba8514c016befe349a0c53" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>mBorderRect</name></member>
+      <member refid="classi__2_d_1_1_text_box_1acc22ea908d31d8fad7a6939514290f6a" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>mStreamText</name></member>
+      <member refid="classi__2_d_1_1_text_box_1aa9f6dd4b24ced14f37f02ac8897dc7bd" prot="private" virt="non-virtual"><scope>i_2D::TextBox</scope><name>mText</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a1c2d939d8b8c039a9de9981ea8afbe81" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetFont</name></member>
+      <member refid="classi__2_d_1_1_text_box_1ae8ad72858c56d5c394146c215f838bda" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetLimit</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a8ff733967d9e1360f8dc642e1585c2e2" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetLimit</name></member>
+      <member refid="classi__2_d_1_1_text_box_1af18021f4bef52a0152c6e873cc71a6fd" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetPosition</name></member>
+      <member refid="classi__2_d_1_1_text_box_1af025aef6d178ecfabdafdfc12725c3ea" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetSelected</name></member>
+      <member refid="classi__2_d_1_1_text_box_1ab8f16bc48cef1fc515752f4e0d3eb5bc" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>SetString</name></member>
+      <member refid="classi__2_d_1_1_text_box_1ace4bfe44cf968833a964f20cb47975c9" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>TextBox</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a48cd325a2c0aa2b93ec508212ac3ad26" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>TextBox</name></member>
+      <member refid="classi__2_d_1_1_text_box_1a766d52a2249bc1991d5212bc3169c2b5" prot="public" virt="non-virtual"><scope>i_2D::TextBox</scope><name>TypedOn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

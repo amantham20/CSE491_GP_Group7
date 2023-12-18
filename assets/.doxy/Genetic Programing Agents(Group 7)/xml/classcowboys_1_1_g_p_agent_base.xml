@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_g_p_agent_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>cowboys::GPAgentBase</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <derivedcompoundref refid="classcowboys_1_1_c_g_p_agent" prot="public" virt="non-virtual">CGPAgent</derivedcompoundref>
+    <derivedcompoundref refid="classcowboys_1_1_l_g_p_agent" prot="public" virt="non-virtual">LGPAgent</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_base_1a0e7b2f0ffd1061b5551bd39f413c184f" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, double &gt;</type>
+        <definition>std::unordered_map&lt;std::string, double&gt; extra_state</definition>
+        <argsstring></argsstring>
+        <name>extra_state</name>
+        <qualifiedname>cowboys::GPAgentBase::extra_state</qualifiedname>
+        <briefdescription>
+<para>A map of extra state information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="22" column="24" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_base_1ae21f357c223957d36046a0d71cc6aed7" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>cowboys::GPAgentBase::seed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Seed for the random number generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="23" column="18" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_base_1adbe79e918414b2480135e3a7871b44ac" prot="protected" static="no" mutable="no">
+        <type>std::mt19937</type>
+        <definition>std::mt19937 rng</definition>
+        <argsstring></argsstring>
+        <name>rng</name>
+        <qualifiedname>cowboys::GPAgentBase::rng</qualifiedname>
+        <initializer>{<ref refid="classcowboys_1_1_g_p_agent_base_1ae21f357c223957d36046a0d71cc6aed7" kindref="member">seed</ref>}</initializer>
+        <briefdescription>
+<para>Random number generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="24" column="18" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_base_1a2ebc76e66e04eb30cd5e27858a5f6d92" prot="protected" static="no" mutable="no">
+        <type>std::uniform_real_distribution&lt; double &gt;</type>
+        <definition>std::uniform_real_distribution&lt;double&gt; uni_dist</definition>
+        <argsstring></argsstring>
+        <name>uni_dist</name>
+        <qualifiedname>cowboys::GPAgentBase::uni_dist</qualifiedname>
+        <briefdescription>
+<para>Uniform distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="25" column="36" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_agent_base_1a3a253e827bd9c3befe5c0aa6c32154a3" prot="protected" static="no" mutable="no">
+        <type>std::normal_distribution&lt; double &gt;</type>
+        <definition>std::normal_distribution&lt;double&gt; norm_dist</definition>
+        <argsstring></argsstring>
+        <name>norm_dist</name>
+        <qualifiedname>cowboys::GPAgentBase::norm_dist</qualifiedname>
+        <briefdescription>
+<para>Normal distribution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="26" column="30" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a17ba6c31307854523caaec41f4dc458d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GPAgentBase</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>GPAgentBase</name>
+        <qualifiedname>cowboys::GPAgentBase::GPAgentBase</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="29" column="5" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a4a997f96dcf96ce2a344eb36c47008da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GPAgentBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GPAgentBase</name>
+        <qualifiedname>cowboys::GPAgentBase::~GPAgentBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>cowboys::GPAgentBase::Initialize</qualifiedname>
+        <briefdescription>
+<para>Setup graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="36" column="10" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1ad5d23d10f26504e959bc21d262b4280d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;type_options, const cse491::item_map_t &amp;item_set, const cse491::agent_map_t &amp;agent_set) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>cowboys::GPAgentBase::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+<para>Choose the action to take a step in the appropriate direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="39" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="39" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a95334f87b0470c62fe6af84be4075219" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t GetAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;type_options, const cse491::item_map_t &amp;item_set, const cse491::agent_map_t &amp;agent_set)=0</argsstring>
+        <name>GetAction</name>
+        <qualifiedname>cowboys::GPAgentBase::GetAction</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1a58366ebbf4b68697803d45b42822727f">GetAction</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1a58366ebbf4b68697803d45b42822727f">GetAction</reimplementedby>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+          <declname>item_set</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+          <declname>agent_set</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="56" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1adc6cbc839d9d98572f47e8e70cfbf26c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::unordered_map&lt; std::string, double &gt;</type>
+        <definition>const std::unordered_map&lt; std::string, double &gt; GetExtraState</definition>
+        <argsstring>() const</argsstring>
+        <name>GetExtraState</name>
+        <qualifiedname>cowboys::GPAgentBase::GetExtraState</qualifiedname>
+        <briefdescription>
+<para>Get a map of extra state information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map of extra state information </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="61" column="30" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a7ce4da07dc1a708487c5021a80a07931" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void MutateAgent</definition>
+        <argsstring>(double mutation_rate=0.8)=0</argsstring>
+        <name>MutateAgent</name>
+        <qualifiedname>cowboys::GPAgentBase::MutateAgent</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1af02b43436c26bd6a4845defc7d7e76b1">MutateAgent</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1a8f14a6500a8b65ba2d22f145c47006bd">MutateAgent</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+          <defval>0.8</defval>
+        </param>
+        <briefdescription>
+<para>Mutate this agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutation rate. Between 0 and 1. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="65" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1aa82685f867b5b4648c298ed2d309bba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Copy</definition>
+        <argsstring>(const GPAgentBase &amp;other)=0</argsstring>
+        <name>Copy</name>
+        <qualifiedname>cowboys::GPAgentBase::Copy</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1aaee8c0f5bd37faf977b084acf57ea31c">Copy</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1aaee8c0f5bd37faf977b084acf57ea31c">Copy</reimplementedby>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copy the behavior of another agent into this agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent to copy. Should be the same type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a68d2b299e2c2953de5bf6df754c199e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void PrintAgent</definition>
+        <argsstring>()</argsstring>
+        <name>PrintAgent</name>
+        <qualifiedname>cowboys::GPAgentBase::PrintAgent</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1a786c261b9c114bcfe6f542a004fb0b5b">PrintAgent</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1a786c261b9c114bcfe6f542a004fb0b5b">PrintAgent</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="71" column="18" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a3bbb84c9c60a09b1495d787bb12d7c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SerializeGP</definition>
+        <argsstring>(tinyxml2::XMLDocument &amp;doc, tinyxml2::XMLElement *parentElem, double fitness=-1)=0</argsstring>
+        <name>SerializeGP</name>
+        <qualifiedname>cowboys::GPAgentBase::SerializeGP</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1af890affa3a16014c7829157032b7c1d9">SerializeGP</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1af890affa3a16014c7829157032b7c1d9">SerializeGP</reimplementedby>
+        <param>
+          <type>tinyxml2::XMLDocument &amp;</type>
+          <declname>doc</declname>
+        </param>
+        <param>
+          <type>tinyxml2::XMLElement *</type>
+          <declname>parentElem</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fitness</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="75" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1ab4e11066d286702098b242c229f33f98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Export</definition>
+        <argsstring>()</argsstring>
+        <name>Export</name>
+        <qualifiedname>cowboys::GPAgentBase::Export</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1a579a50ca461adc28bc6f982ede35cf0b">Export</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1a579a50ca461adc28bc6f982ede35cf0b">Export</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="77" column="25" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1af9637c24b59315432ea63d5ffb6ebfc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Reset</definition>
+        <argsstring>(bool=false)</argsstring>
+        <name>Reset</name>
+        <qualifiedname>cowboys::GPAgentBase::Reset</qualifiedname>
+        <param>
+          <type>bool</type>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="79" column="18" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a416556ac17a42b995152f472f67a0673" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Import</definition>
+        <argsstring>(const std::string &amp;genotype)=0</argsstring>
+        <name>Import</name>
+        <qualifiedname>cowboys::GPAgentBase::Import</qualifiedname>
+        <reimplementedby refid="classcowboys_1_1_l_g_p_agent_1a75bbe49d84244d22bd4fb3896033baf7">Import</reimplementedby>
+        <reimplementedby refid="classcowboys_1_1_c_g_p_agent_1a5da8fcfd539d52d89e106189ec76c011">Import</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>genotype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="86" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a1313250848e77e61352b7721e450a778" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetSeed</definition>
+        <argsstring>(unsigned int seed)</argsstring>
+        <name>SetSeed</name>
+        <qualifiedname>cowboys::GPAgentBase::SetSeed</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Set the seed used to initialize this RNG. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="91" column="10" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a79d4664ed86dd90c0bb076235ad1c681" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int GetSeed</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSeed</name>
+        <qualifiedname>cowboys::GPAgentBase::GetSeed</qualifiedname>
+        <briefdescription>
+<para>Get the seed used to initialize this RNG. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="97" column="18" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1aae5aa0b4384c8fabd4cc2aaceea6e054" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandom</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandom</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandom</qualifiedname>
+        <briefdescription>
+<para>Return a uniform random value between 0.0 and 1.0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="100" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a501be400a4e22b588836fc786d93364a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandom</definition>
+        <argsstring>(double max)</argsstring>
+        <name>GetRandom</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandom</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Return a uniform random value between 0.0 and max. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="103" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1aa064376e81c66f46007f507559024320" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandom</definition>
+        <argsstring>(double min, double max)</argsstring>
+        <name>GetRandom</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandom</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Return a uniform random value between min and max. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="106" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1af36f73ce29a08f1a0643166cfbabc732" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetRandomULL</definition>
+        <argsstring>(size_t max)</argsstring>
+        <name>GetRandomULL</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandomULL</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Return a uniform random unsigned long long between 0 (inclusive) and max (exclusive) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="112" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1a20860da23777f250442fa2121f1b865b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandomNormal</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomNormal</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandomNormal</qualifiedname>
+        <briefdescription>
+<para>Return a gaussian random value with mean 0.0 and sd 1.0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="115" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_agent_base_1aed3e9b4f642356f63522fe908ec775a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandomNormal</definition>
+        <argsstring>(double mean, double sd=1.0)</argsstring>
+        <name>GetRandomNormal</name>
+        <qualifiedname>cowboys::GPAgentBase::GetRandomNormal</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mean</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sd</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Return a gaussian random value with provided mean and sd. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentBase.hpp" line="118" column="12" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="118" bodyend="121"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GPAgentBase</label>
+        <link refid="classcowboys_1_1_g_p_agent_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CGPAgent</label>
+        <link refid="classcowboys_1_1_c_g_p_agent"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>LGPAgent</label>
+        <link refid="classcowboys_1_1_l_g_p_agent"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GPAgentBase</label>
+        <link refid="classcowboys_1_1_g_p_agent_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/GP/GPAgentBase.hpp" line="20" column="3" bodyfile="source/Agents/GP/GPAgentBase.hpp" bodystart="20" bodyend="122"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_g_p_agent_base_1aa82685f867b5b4648c298ed2d309bba6" prot="public" virt="pure-virtual"><scope>cowboys::GPAgentBase</scope><name>Copy</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1ab4e11066d286702098b242c229f33f98" prot="public" virt="virtual"><scope>cowboys::GPAgentBase</scope><name>Export</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a0e7b2f0ffd1061b5551bd39f413c184f" prot="protected" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>extra_state</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a95334f87b0470c62fe6af84be4075219" prot="public" virt="pure-virtual"><scope>cowboys::GPAgentBase</scope><name>GetAction</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1adc6cbc839d9d98572f47e8e70cfbf26c" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetExtraState</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1aae5aa0b4384c8fabd4cc2aaceea6e054" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandom</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a501be400a4e22b588836fc786d93364a" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandom</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1aa064376e81c66f46007f507559024320" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandom</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a20860da23777f250442fa2121f1b865b" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandomNormal</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1aed3e9b4f642356f63522fe908ec775a7" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandomNormal</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1af36f73ce29a08f1a0643166cfbabc732" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetRandomULL</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a79d4664ed86dd90c0bb076235ad1c681" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GetSeed</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a17ba6c31307854523caaec41f4dc458d" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>GPAgentBase</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a416556ac17a42b995152f472f67a0673" prot="public" virt="pure-virtual"><scope>cowboys::GPAgentBase</scope><name>Import</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>Initialize</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a7ce4da07dc1a708487c5021a80a07931" prot="public" virt="pure-virtual"><scope>cowboys::GPAgentBase</scope><name>MutateAgent</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a3a253e827bd9c3befe5c0aa6c32154a3" prot="protected" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>norm_dist</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a68d2b299e2c2953de5bf6df754c199e4" prot="public" virt="virtual"><scope>cowboys::GPAgentBase</scope><name>PrintAgent</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1af9637c24b59315432ea63d5ffb6ebfc2" prot="public" virt="virtual"><scope>cowboys::GPAgentBase</scope><name>Reset</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1adbe79e918414b2480135e3a7871b44ac" prot="protected" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>rng</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1ae21f357c223957d36046a0d71cc6aed7" prot="protected" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>seed</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1ad5d23d10f26504e959bc21d262b4280d" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>SelectAction</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a3bbb84c9c60a09b1495d787bb12d7c53" prot="public" virt="pure-virtual"><scope>cowboys::GPAgentBase</scope><name>SerializeGP</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a1313250848e77e61352b7721e450a778" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>SetSeed</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a2ebc76e66e04eb30cd5e27858a5f6d92" prot="protected" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>uni_dist</name></member>
+      <member refid="classcowboys_1_1_g_p_agent_base_1a4a997f96dcf96ce2a344eb36c47008da" prot="public" virt="non-virtual"><scope>cowboys::GPAgentBase</scope><name>~GPAgentBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

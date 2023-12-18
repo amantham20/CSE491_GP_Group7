@@ -5,12 +5,12 @@
 
 ## a
 
-* **agent\_set\_t** ([**cse491**](namespacecse491.md))
+* **agent\_map\_t** ([**cse491**](namespacecse491.md))
 
 
 ## i
 
-* **item\_set\_t** ([**cse491**](namespacecse491.md))
+* **item\_map\_t** ([**cse491**](namespacecse491.md))
 
 
 ## t

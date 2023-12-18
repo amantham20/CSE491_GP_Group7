@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_trash_interface" kind="class" language="C++" prot="public">
+    <compoundname>cse491::TrashInterface</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">InterfaceBase</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_trash_interface_1a67463ea75d91a3e0ae0a1a4bf8644778" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool wait_for_input</definition>
+        <argsstring></argsstring>
+        <name>wait_for_input</name>
+        <qualifiedname>cse491::TrashInterface::wait_for_input</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Should we pause and wait for the user to hit a key? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="20" column="10" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1ade751c86590f6f0d8d22eb80204dd39f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawGrid</definition>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map)</argsstring>
+        <name>DrawGrid</name>
+        <qualifiedname>cse491::TrashInterface::DrawGrid</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+          <declname>agent_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="23" column="10" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="23" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1acdc201636ac9787da860387272add756" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrashInterface</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>TrashInterface</name>
+        <qualifiedname>cse491::TrashInterface::TrashInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="78" column="5" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1a99d24026c9549697e20ac348900f64ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TrashInterface</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TrashInterface</name>
+        <qualifiedname>cse491::TrashInterface::~TrashInterface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="79" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>cse491::TrashInterface::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="83" column="10" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1a940f13c3ddc63876641097fe6bf42b46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>cse491::TrashInterface::SelectAction</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+          <declname>agent_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="87" column="14" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="87" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_trash_interface_1aa763849c1f33d5d3c824a8500550a848" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Notify</definition>
+        <argsstring>(const std::string &amp;message, const std::string &amp;=&quot;none&quot;) override</argsstring>
+        <name>Notify</name>
+        <qualifiedname>cse491::TrashInterface::Notify</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval>&quot;none&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TrashInterface.hpp" line="131" column="10" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="131" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="1">
+        <label>TrashInterface</label>
+        <link refid="classcse491_1_1_trash_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="1">
+        <label>TrashInterface</label>
+        <link refid="classcse491_1_1_trash_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/TrashInterface.hpp" line="18" column="3" bodyfile="source/Interfaces/TrashInterface.hpp" bodystart="18" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_trash_interface_1ade751c86590f6f0d8d22eb80204dd39f" prot="protected" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>DrawGrid</name></member>
+      <member refid="classcse491_1_1_trash_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>Initialize</name></member>
+      <member refid="classcse491_1_1_trash_interface_1aa763849c1f33d5d3c824a8500550a848" prot="public" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>Notify</name></member>
+      <member refid="classcse491_1_1_trash_interface_1a940f13c3ddc63876641097fe6bf42b46" prot="public" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_trash_interface_1acdc201636ac9787da860387272add756" prot="public" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>TrashInterface</name></member>
+      <member refid="classcse491_1_1_trash_interface_1a67463ea75d91a3e0ae0a1a4bf8644778" prot="protected" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>wait_for_input</name></member>
+      <member refid="classcse491_1_1_trash_interface_1a99d24026c9549697e20ac348900f64ad" prot="public" virt="non-virtual"><scope>cse491::TrashInterface</scope><name>~TrashInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

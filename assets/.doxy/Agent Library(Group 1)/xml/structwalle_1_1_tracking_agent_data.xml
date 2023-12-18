@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_tracking_agent_data" kind="struct" language="C++" prot="public">
+    <compoundname>walle::TrackingAgentData</compoundname>
+    <basecompoundref refid="structwalle_1_1_base_agent_data" prot="public" virt="non-virtual">BaseAgentData</basecompoundref>
+    <includes refid="_agent_factory_8hpp" local="no">AgentFactory.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1acb9d4acd4d84dd2ed3615f5b9bf91681" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; vector_path</definition>
+        <argsstring></argsstring>
+        <name>vector_path</name>
+        <qualifiedname>walle::TrackingAgentData::vector_path</qualifiedname>
+        <briefdescription>
+<para>Set of grid positions that are applied to the agent&apos;s position during one step (constructed from string_path) like in <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="152" column="17" bodyfile="source/Agents/AgentFactory.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1aa2800d7c5ce7c510518526e8190edb05" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string string_path</definition>
+        <argsstring></argsstring>
+        <name>string_path</name>
+        <qualifiedname>walle::TrackingAgentData::string_path</qualifiedname>
+        <briefdescription>
+<para>String representation of the path traveled (e.g. &quot;n s e w&quot; for north south east west) like in <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="155" column="17" bodyfile="source/Agents/AgentFactory.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1a4700c302b57961da57172b0e5e4ab9fc" prot="public" static="no" mutable="no">
+        <type>cse491::Entity *</type>
+        <definition>cse491::Entity* target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <qualifiedname>walle::TrackingAgentData::target</qualifiedname>
+        <briefdescription>
+<para>Goal Entity being tracked (must not be null or else the agent simply behaves like a <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref>) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="158" column="20" bodyfile="source/Agents/AgentFactory.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1a55c444b52736353767da15d3fb391863" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tracking_distance</definition>
+        <argsstring></argsstring>
+        <name>tracking_distance</name>
+        <qualifiedname>walle::TrackingAgentData::tracking_distance</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Distance that the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> can &quot;see&quot; such that when the target enters that range, it begins tracking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="161" column="9" bodyfile="source/Agents/AgentFactory.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1a5d98e0c169fef19f6cb8c0c1edaed7a1" prot="public" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition start_pos</definition>
+        <argsstring></argsstring>
+        <name>start_pos</name>
+        <qualifiedname>walle::TrackingAgentData::start_pos</qualifiedname>
+        <briefdescription>
+<para>Where the <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> begins from patrolling from and returns two after the target moves out of range. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="164" column="26" bodyfile="source/Agents/AgentFactory.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_tracking_agent_data_1a6a0320a34562a8d38da11dba617e016c" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Alerter&gt; alerter</definition>
+        <argsstring></argsstring>
+        <name>alerter</name>
+        <qualifiedname>walle::TrackingAgentData::alerter</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared reference to an <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref>, which is non-null if the agent should be able to tell other agents to immediately focus on their targets <simplesect kind="remark"><para>You should be using the <bold>same</bold> shared pointer across multiple instances of <ref refid="structwalle_1_1_tracking_agent_data" kindref="compound">TrackingAgentData</ref> in order to make the TrackingAgents part of the same network. This means you need to copy around this shared pointer when using the factory </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="171" column="21" bodyfile="source/Agents/AgentFactory.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structwalle_1_1_tracking_agent_data_1a8d04dc68e7db32bf2c70b1973047b77a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgentData</definition>
+        <argsstring>()=default</argsstring>
+        <name>TrackingAgentData</name>
+        <qualifiedname>walle::TrackingAgentData::TrackingAgentData</qualifiedname>
+        <briefdescription>
+<para>Use initial values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="174" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structwalle_1_1_tracking_agent_data_1ae3d47b9a8076921ae1d4f70330d313f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TrackingAgentData</definition>
+        <argsstring>(std::string name, cse491::GridPosition curr_pos, char symbol, std::string path, cse491::Entity *target, int tracking_dist, cse491::GridPosition start_pos, std::shared_ptr&lt; Alerter &gt; alerter)</argsstring>
+        <name>TrackingAgentData</name>
+        <qualifiedname>walle::TrackingAgentData::TrackingAgentData</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>curr_pos</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>cse491::Entity *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tracking_dist</declname>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>start_pos</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classwalle_1_1_alerter" kindref="compound">Alerter</ref> &gt;</type>
+          <declname>alerter</declname>
+        </param>
+        <briefdescription>
+<para>Set all values. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="177" column="5" bodyfile="source/Agents/AgentFactory.hpp" bodystart="177" bodyend="191"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores data for a <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TrackingAgentData</label>
+        <link refid="structwalle_1_1_tracking_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TrackingAgentData</label>
+        <link refid="structwalle_1_1_tracking_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/AgentFactory.hpp" line="150" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="150" bodyend="192"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_tracking_agent_data_1a6a0320a34562a8d38da11dba617e016c" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>alerter</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>name</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>position</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1a5d98e0c169fef19f6cb8c0c1edaed7a1" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>start_pos</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1aa2800d7c5ce7c510518526e8190edb05" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>string_path</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>symbol</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1a4700c302b57961da57172b0e5e4ab9fc" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>target</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1a55c444b52736353767da15d3fb391863" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>tracking_distance</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1a8d04dc68e7db32bf2c70b1973047b77a" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>TrackingAgentData</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1ae3d47b9a8076921ae1d4f70330d313f9" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>TrackingAgentData</name></member>
+      <member refid="structwalle_1_1_tracking_agent_data_1acb9d4acd4d84dd2ed3615f5b9bf91681" prot="public" virt="non-virtual"><scope>walle::TrackingAgentData</scope><name>vector_path</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_agent_receiver" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::AgentReceiver</compoundname>
+    <basecompoundref refid="class_data_collection_1_1_data_receiver" prot="public" virt="non-virtual">DataReceiver&lt; AgentData &gt;</basecompoundref>
+    <includes refid="_agent_reciever_8hpp" local="no">AgentReciever.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_agent_receiver_1ac53e09b8c8bafa17a4bd0d488426b24f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::shared_ptr&lt; <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::shared_ptr&lt;AgentData&gt; &gt; agent_map</definition>
+        <argsstring></argsstring>
+        <name>agent_map</name>
+        <qualifiedname>DataCollection::AgentReceiver::agent_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="18" column="28" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_agent_receiver_1a37208227946eac70c04f17f806632db2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StoreData</definition>
+        <argsstring>(std::string name, cse491::GridPosition pos, int last_action)</argsstring>
+        <name>StoreData</name>
+        <qualifiedname>DataCollection::AgentReceiver::StoreData</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>last_action</declname>
+        </param>
+        <briefdescription>
+<para>Stores a grid position and last action ID associated with an agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The grid position to be stored. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>last_action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The last action ID associated with the agent. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="27" column="14" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_receiver_1abf8d8eaa437180266386d555c31582af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddAgent</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>AddAgent</name>
+        <qualifiedname>DataCollection::AgentReceiver::AddAgent</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Stores agent data into the storage and writes to a json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="43" column="14" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_receiver_1a442d74740031e1155cc6018315c70022" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; AgentData &gt; GetAgent</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetAgent</name>
+        <qualifiedname>DataCollection::AgentReceiver::GetAgent</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="49" column="25" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="49" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_receiver_1ab87ae6baf7d7626114acc26d2d8ab69a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref></type>
+        <definition>AgentData GetAgentData</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>GetAgentData</name>
+        <qualifiedname>DataCollection::AgentReceiver::GetAgentData</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="60" column="19" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_receiver_1a1fd8ee6d7952d9599d746c78f1bb1e3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToPositionFile</definition>
+        <argsstring>(std::string path)</argsstring>
+        <name>WriteToPositionFile</name>
+        <qualifiedname>DataCollection::AgentReceiver::WriteToPositionFile</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Writes the stored <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> Positions to a JSON file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> Position to be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentReciever.hpp" line="69" column="14" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="69" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Data receiver class specialized for storing <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> objects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class extends <ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref> class and provides specific functionality for storing <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> objects along with grid positions and last action IDs. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AgentReceiver</label>
+        <link refid="class_data_collection_1_1_agent_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataReceiver&lt; AgentData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AgentReceiver</label>
+        <link refid="class_data_collection_1_1_agent_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataReceiver&lt; AgentData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/DataCollection/AgentReciever.hpp" line="16" column="5" bodyfile="source/DataCollection/AgentReciever.hpp" bodystart="16" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_agent_receiver_1abf8d8eaa437180266386d555c31582af" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>AddAgent</name></member>
+      <member refid="class_data_collection_1_1_agent_receiver_1ac53e09b8c8bafa17a4bd0d488426b24f" prot="private" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>agent_map</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>DataReceiver</name></member>
+      <member refid="class_data_collection_1_1_agent_receiver_1a442d74740031e1155cc6018315c70022" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>GetAgent</name></member>
+      <member refid="class_data_collection_1_1_agent_receiver_1ab87ae6baf7d7626114acc26d2d8ab69a" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>GetAgentData</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>getStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>IsEmpty</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" prot="protected" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>storage</name></member>
+      <member refid="class_data_collection_1_1_agent_receiver_1a37208227946eac70c04f17f806632db2" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>StoreData</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>StoreIntoStorage</name></member>
+      <member refid="class_data_collection_1_1_agent_receiver_1a1fd8ee6d7952d9599d746c78f1bb1e3e" prot="public" virt="non-virtual"><scope>DataCollection::AgentReceiver</scope><name>WriteToPositionFile</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" prot="public" virt="virtual"><scope>DataCollection::AgentReceiver</scope><name>~DataReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -5,9 +5,14 @@
     <innerfile refid="_agent_base_8hpp">AgentBase.hpp</innerfile>
     <innerfile refid="_core_object_8hpp">CoreObject.hpp</innerfile>
     <innerfile refid="_data_8hpp">Data.hpp</innerfile>
+    <innerfile refid="_easy_logging_8hpp">EasyLogging.hpp</innerfile>
+    <innerfile refid="_entity_8cpp">Entity.cpp</innerfile>
     <innerfile refid="_entity_8hpp">Entity.hpp</innerfile>
     <innerfile refid="_grid_position_8hpp">GridPosition.hpp</innerfile>
     <innerfile refid="_interface_base_8hpp">InterfaceBase.hpp</innerfile>
+    <innerfile refid="_item_base_8hpp">ItemBase.hpp</innerfile>
+    <innerfile refid="_property_8hpp">Property.hpp</innerfile>
+    <innerfile refid="_serialize_8hpp">Serialize.hpp</innerfile>
     <innerfile refid="_world_base_8hpp">WorldBase.hpp</innerfile>
     <innerfile refid="_world_grid_8hpp">WorldGrid.hpp</innerfile>
     <briefdescription>

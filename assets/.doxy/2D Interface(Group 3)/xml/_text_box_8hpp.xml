@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_text_box_8hpp" kind="file" language="C++">
+    <compoundname>TextBox.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="_main_interface_8hpp" local="yes">source/Interfaces/MainInterface.hpp</includedby>
+    <includedby refid="_text_box_8cpp" local="yes">source/Interfaces/TextBox.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/Interfaces/TextBox.hpp</label>
+        <link refid="_text_box_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>source/Interfaces/MainInterface.cpp</label>
+        <link refid="_main_interface_8cpp"/>
+      </node>
+      <node id="2">
+        <label>source/Interfaces/MainInterface.hpp</label>
+        <link refid="_main_interface_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>source/Interfaces/TextBox.cpp</label>
+        <link refid="_text_box_8cpp"/>
+      </node>
+      <node id="1">
+        <label>source/Interfaces/TextBox.hpp</label>
+        <link refid="_text_box_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classi__2_d_1_1_text_box" prot="public">i_2D::TextBox</innerclass>
+    <innernamespace refid="namespacei__2_d">i_2D</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_text_box_8hpp_1a5a6b2a4537cccad5a1b8568904a5ee1e" prot="public" static="no">
+        <name>DELETE_KEY</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para>value for delete key </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="16" column="9" bodyfile="source/Interfaces/TextBox.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_text_box_8hpp_1afba17fd121bcd7abc852f1ae1f3abb58" prot="public" static="no">
+        <name>ENTER_KEY</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para>value for the enter key </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="17" column="9" bodyfile="source/Interfaces/TextBox.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_text_box_8hpp_1a4c2609b38a3373c688d3888fd50808a6" prot="public" static="no">
+        <name>ESCAPE_KEY</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para>value for the escape key </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextBox.hpp" line="18" column="9" bodyfile="source/Interfaces/TextBox.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Gaya Kanagaraj, Vincenzo Felici, Mui Pham </para>
+</simplesect>
+<simplesect kind="date"><para>: 11/02/2023 TextBox class enables interface entity to send message to the MessageBoard and World </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacei__2_d" kindref="compound">i_2D</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_text_box_8hpp_1a5a6b2a4537cccad5a1b8568904a5ee1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DELETE_KEY<sp/>8<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_text_box_8hpp_1afba17fd121bcd7abc852f1ae1f3abb58" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENTER_KEY<sp/>13<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_text_box_8hpp_1a4c2609b38a3373c688d3888fd50808a6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESCAPE_KEY<sp/>27<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classi__2_d_1_1_text_box" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unique_ptr&lt;sf::Text&gt;<sp/>mText;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>mStreamText;<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isSelected<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hasLimit<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>limit<sp/>=<sp/>60;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>the<sp/>border<sp/>around<sp/>the<sp/>TextBox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::RectangleShape<sp/>mBorderRect;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InputLogic(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>charTyped);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DeleteLastChar();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Font<sp/>&amp;font,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>25,<sp/>sf::Color<sp/>color<sp/>=<sp/>sf::Color::Red,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sel<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1ab8f16bc48cef1fc515752f4e0d3eb5bc" kindref="member">SetString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;s);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classi__2_d_1_1_text_box_1a1c2d939d8b8c039a9de9981ea8afbe81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1a1c2d939d8b8c039a9de9981ea8afbe81" kindref="member">SetFont</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Font<sp/>&amp;font)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mText-&gt;setFont(font);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classi__2_d_1_1_text_box_1af18021f4bef52a0152c6e873cc71a6fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1af18021f4bef52a0152c6e873cc71a6fd" kindref="member">SetPosition</ref>(sf::Vector2f<sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mText-&gt;setPosition(pos);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classi__2_d_1_1_text_box_1ae8ad72858c56d5c394146c215f838bda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1ae8ad72858c56d5c394146c215f838bda" kindref="member">SetLimit</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ToF)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasLimit<sp/>=<sp/>ToF;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classi__2_d_1_1_text_box_1a8ff733967d9e1360f8dc642e1585c2e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1a8ff733967d9e1360f8dc642e1585c2e2" kindref="member">SetLimit</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ToF,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lim)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hasLimit<sp/>=<sp/>ToF;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>limit<sp/>=<sp/>lim;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1af025aef6d178ecfabdafdfc12725c3ea" kindref="member">SetSelected</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sel);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classi__2_d_1_1_text_box_1a771d3274eeff6cfc2e00f9f47e0d49c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classi__2_d_1_1_text_box_1a771d3274eeff6cfc2e00f9f47e0d49c5" kindref="member">GetText</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mStreamText.str();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1a5554edc9127e8682fcf5bdb9bfa4d8be" kindref="member">DrawTo</ref>(sf::RenderWindow<sp/>&amp;window);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1a766d52a2249bc1991d5212bc3169c2b5" kindref="member">TypedOn</ref>(sf::Event<sp/>input);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classi__2_d_1_1_text_box_1a1a06af1358e62deeb3dfc305d9b69e53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1a1a06af1358e62deeb3dfc305d9b69e53" kindref="member">IsSelected</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isSelected;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classi__2_d_1_1_text_box_1aa23589dae42f28e362b8a27f94d5057a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_text_box_1aa23589dae42f28e362b8a27f94d5057a" kindref="member">Contains</ref>(sf::Vector2f<sp/>point)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mBorderRect.getGlobalBounds().contains(point);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/Interfaces/TextBox.hpp"/>
+  </compounddef>
+</doxygen>

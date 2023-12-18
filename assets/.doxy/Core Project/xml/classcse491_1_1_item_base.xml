@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_item_base" kind="class" language="C++" prot="public">
+    <compoundname>cse491::ItemBase</compoundname>
+    <basecompoundref refid="classcse491_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>OwnerType</name>
+        <qualifiedname>cse491::ItemBase::OwnerType</qualifiedname>
+        <enumvalue id="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="protected">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18afbf4fa9eb81ba842a80a29b45064e348" prot="protected">
+          <name>GRID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18a27207306eaa08e691edc2281f05d7c7e" prot="protected">
+          <name>ITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18a40e60d510aa885cf9334b0c0175cd2b2" prot="protected">
+          <name>AGENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="20" column="3" bodyfile="source/core/ItemBase.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_item_base_1af5c89281db257e4d922c04cf1f47838c" prot="protected" static="no" mutable="no">
+        <type>OwnerType</type>
+        <definition>OwnerType owner_type</definition>
+        <argsstring></argsstring>
+        <name>owner_type</name>
+        <qualifiedname>cse491::ItemBase::owner_type</qualifiedname>
+        <initializer>= OwnerType::NONE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="21" column="13" bodyfile="source/core/ItemBase.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_item_base_1a3f97d51e7ad23f717f06faae9ededa20" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t owner_id</definition>
+        <argsstring></argsstring>
+        <name>owner_id</name>
+        <qualifiedname>cse491::ItemBase::owner_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="22" column="10" bodyfile="source/core/ItemBase.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a6f2eb2eefadcc2afce35a9b41f5151e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ItemBase</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>ItemBase</name>
+        <qualifiedname>cse491::ItemBase::ItemBase</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="25" column="3" bodyfile="source/core/ItemBase.hpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a911b4e649f84b92c771078cfe9e6e314" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ItemBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ItemBase</name>
+        <qualifiedname>cse491::ItemBase::~ItemBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="26" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a04dc015ddd281ec586ed04397e0a33ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool IsItem</definition>
+        <argsstring>() const override</argsstring>
+        <name>IsItem</name>
+        <qualifiedname>cse491::ItemBase::IsItem</qualifiedname>
+        <reimplements refid="classcse491_1_1_entity_1a91d327ae5ea52f9dc758f398253745f0">IsItem</reimplements>
+        <briefdescription>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an item? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="30" column="8" bodyfile="source/core/ItemBase.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a1200429d6b5acc71d042fb718bfc7060" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOnGrid</definition>
+        <argsstring>() const</argsstring>
+        <name>IsOnGrid</name>
+        <qualifiedname>cse491::ItemBase::IsOnGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="33" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a737b2295346c0ac8e4eb3cb109c9fd8b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwnedByItem</definition>
+        <argsstring>() const</argsstring>
+        <name>IsOwnedByItem</name>
+        <qualifiedname>cse491::ItemBase::IsOwnedByItem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="34" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1aa62aecd925baa08a01c575224ab95015" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwnedByAgent</definition>
+        <argsstring>() const</argsstring>
+        <name>IsOwnedByAgent</name>
+        <qualifiedname>cse491::ItemBase::IsOwnedByAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="35" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1ab9f1d3b4f8f7c28f2d9ca3aeab7c2145" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwned</definition>
+        <argsstring>() const</argsstring>
+        <name>IsOwned</name>
+        <qualifiedname>cse491::ItemBase::IsOwned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="36" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a55285950c7d37ea2ce5e24cc924ea767" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOnGrid</definition>
+        <argsstring>(size_t grid_id) const</argsstring>
+        <name>IsOnGrid</name>
+        <qualifiedname>cse491::ItemBase::IsOnGrid</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>grid_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="37" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a3fc8ca2e69e228107cc6a451c32ac85f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwnedByItem</definition>
+        <argsstring>(size_t item_id) const</argsstring>
+        <name>IsOwnedByItem</name>
+        <qualifiedname>cse491::ItemBase::IsOwnedByItem</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>item_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="38" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1ac05851d8dac4aae1ba834014eab59979" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwnedByAgent</definition>
+        <argsstring>(size_t agent_id) const</argsstring>
+        <name>IsOwnedByAgent</name>
+        <qualifiedname>cse491::ItemBase::IsOwnedByAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="41" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a01b019e40e96e9269f4f6f2d87790489" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOwnedBy</definition>
+        <argsstring>(size_t entity_id) const</argsstring>
+        <name>IsOwnedBy</name>
+        <qualifiedname>cse491::ItemBase::IsOwnedBy</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>entity_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="44" column="9" bodyfile="source/core/ItemBase.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a96ae156088ee19ccf03dda8bcf0f27a8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetOwnerID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOwnerID</name>
+        <qualifiedname>cse491::ItemBase::GetOwnerID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="47" column="11" bodyfile="source/core/ItemBase.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a9b6245b1418c3d2878752ad08753345e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_item_base" kindref="compound">ItemBase</ref> &amp;</type>
+        <definition>ItemBase &amp; SetOwner</definition>
+        <argsstring>(const Entity &amp;owner)</argsstring>
+        <name>SetOwner</name>
+        <qualifiedname>cse491::ItemBase::SetOwner</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+<para>Identify the entity (item or agent) that now owns this item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new owning entity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to this item. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="52" column="12" bodyfile="source/core/ItemBase.hpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1aec066a0b135a49fba7f71cefc8d0bb95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_item_base" kindref="compound">ItemBase</ref> &amp;</type>
+        <definition>ItemBase &amp; SetGrid</definition>
+        <argsstring>(size_t grid_id=0)</argsstring>
+        <name>SetGrid</name>
+        <qualifiedname>cse491::ItemBase::SetGrid</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>grid_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="64" column="12" bodyfile="source/core/ItemBase.hpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1a84b73316af38dc2071f391642bffe97b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_item_base" kindref="compound">ItemBase</ref> &amp;</type>
+        <definition>ItemBase &amp; SetUnowned</definition>
+        <argsstring>()</argsstring>
+        <name>SetUnowned</name>
+        <qualifiedname>cse491::ItemBase::SetUnowned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="69" column="12" bodyfile="source/core/ItemBase.hpp" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName_impl</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::ItemBase::GetTypeName_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2">GetTypeName_impl</reimplements>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="74" column="15" bodyfile="source/core/ItemBase.hpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::ItemBase::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_entity_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Serialize item-specific values and call <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>&apos;s Serialize_impl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream to write contents to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="78" column="8" bodyfile="source/core/ItemBase.hpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_item_base_1aa912efd8fc53715bdadc51234115d82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::ItemBase::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_entity_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplements>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize item-specific values and call <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>&apos;s Deserialize_impl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>istream to read contents from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/ItemBase.hpp" line="86" column="8" bodyfile="source/core/ItemBase.hpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ItemBase</label>
+        <link refid="classcse491_1_1_item_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classcse491_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ItemBase</label>
+        <link refid="classcse491_1_1_item_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classcse491_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GridPosition</label>
+        <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/ItemBase.hpp" line="18" column="1" bodyfile="source/core/ItemBase.hpp" bodystart="18" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_entity_1afe03b0eaf89eb7d96cc1da613e3542ee" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_entity_1a7c24de0b9b1425909e394badaedb242a" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18a40e60d510aa885cf9334b0c0175cd2b2" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>AGENT</name></member>
+      <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>AsProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_item_base_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>EndSerialize</name></member>
+      <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a4ffa22f4412fcf5311ce82f141ba0859" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetGridID</name></member>
+      <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetID</name></member>
+      <member refid="classcse491_1_1_entity_1a2832506a8de210991390410bd86a2f72" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetInventory</name></member>
+      <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetName</name></member>
+      <member refid="classcse491_1_1_entity_1a7e57a528d2258936fccfd76ba5bb7ded" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetNumProperties</name></member>
+      <member refid="classcse491_1_1_item_base_1a96ae156088ee19ccf03dda8bcf0f27a8" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetOwnerID</name></member>
+      <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a58604fcd0bd186c26cfc8523ca18de2c" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetPropertyMap</name></member>
+      <member refid="classcse491_1_1_entity_1a6861d4f61a5ceb4211e0193d4423101e" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetPropertyType</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_item_base_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_entity_1a88f8198fa0b98315eaeb845ebb8c6dcf" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GetWorld</name></member>
+      <member refid="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18afbf4fa9eb81ba842a80a29b45064e348" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>GRID</name></member>
+      <member refid="classcse491_1_1_entity_1a65d59a4da280ec1586bf960dd050f852" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>grid_id</name></member>
+      <member refid="classcse491_1_1_entity_1a4941a720636380ff1b2230c44e16236c" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>HasItem</name></member>
+      <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>HasProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a24934eba69d59a45f2a534b190ad81f7" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>HasWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1ae98df8c658e54f8dad0ebe2b6c59eb51" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>inventory</name></member>
+      <member refid="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>IsAgent</name></member>
+      <member refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>IsInterface</name></member>
+      <member refid="classcse491_1_1_item_base_1a04dc015ddd281ec586ed04397e0a33ce" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>IsItem</name></member>
+      <member refid="classcse491_1_1_item_base_1a1200429d6b5acc71d042fb718bfc7060" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOnGrid</name></member>
+      <member refid="classcse491_1_1_item_base_1a55285950c7d37ea2ce5e24cc924ea767" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOnGrid</name></member>
+      <member refid="classcse491_1_1_item_base_1ab9f1d3b4f8f7c28f2d9ca3aeab7c2145" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwned</name></member>
+      <member refid="classcse491_1_1_item_base_1a01b019e40e96e9269f4f6f2d87790489" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwnedBy</name></member>
+      <member refid="classcse491_1_1_item_base_1aa62aecd925baa08a01c575224ab95015" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwnedByAgent</name></member>
+      <member refid="classcse491_1_1_item_base_1ac05851d8dac4aae1ba834014eab59979" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwnedByAgent</name></member>
+      <member refid="classcse491_1_1_item_base_1a737b2295346c0ac8e4eb3cb109c9fd8b" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwnedByItem</name></member>
+      <member refid="classcse491_1_1_item_base_1a3fc8ca2e69e228107cc6a451c32ac85f" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>IsOwnedByItem</name></member>
+      <member refid="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18a27207306eaa08e691edc2281f05d7c7e" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>ITEM</name></member>
+      <member refid="classcse491_1_1_item_base_1a6f2eb2eefadcc2afce35a9b41f5151e0" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>ItemBase</name></member>
+      <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>name</name></member>
+      <member refid="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>NONE</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>operator=</name></member>
+      <member refid="classcse491_1_1_item_base_1a3f97d51e7ad23f717f06faae9ededa20" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>owner_id</name></member>
+      <member refid="classcse491_1_1_item_base_1af5c89281db257e4d922c04cf1f47838c" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>owner_type</name></member>
+      <member refid="classcse491_1_1_item_base_1a66bb3f43a0cc367bb151fdebc1506a18" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>OwnerType</name></member>
+      <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>position</name></member>
+      <member refid="classcse491_1_1_entity_1aaf95d2aca1711a816f70645c5ee76aaa" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>property_map_t</name></member>
+      <member refid="classcse491_1_1_entity_1a250dc20128eced2591bbf14ae4e27263" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>RemoveItem</name></member>
+      <member refid="classcse491_1_1_entity_1ae256acb3e6cfd455e274eb1c2b5bf762" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>RemoveItem</name></member>
+      <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>RemoveProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_item_base_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>Serialize_impl</name></member>
+      <member refid="classcse491_1_1_item_base_1aec066a0b135a49fba7f71cefc8d0bb95" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetGrid</name></member>
+      <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetName</name></member>
+      <member refid="classcse491_1_1_item_base_1a9b6245b1418c3d2878752ad08753345e" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetOwner</name></member>
+      <member refid="classcse491_1_1_entity_1aec036a2f43c433afaa742192eef9d102" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1aec09f29c9b8611a97ede88aca9eda904" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetProperty</name></member>
+      <member refid="classcse491_1_1_item_base_1a84b73316af38dc2071f391642bffe97b" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>SetUnowned</name></member>
+      <member refid="classcse491_1_1_entity_1af5cd6b1f10d96860e91dbdaf7f994e4c" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>SetWorld</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::ItemBase</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>~CoreObject</name></member>
+      <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" virt="virtual"><scope>cse491::ItemBase</scope><name>~Entity</name></member>
+      <member refid="classcse491_1_1_item_base_1a911b4e649f84b92c771078cfe9e6e314" prot="public" virt="non-virtual"><scope>cse491::ItemBase</scope><name>~ItemBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

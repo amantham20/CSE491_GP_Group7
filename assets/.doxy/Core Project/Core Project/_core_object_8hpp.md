@@ -11,8 +11,13 @@
 
 
 * `#include <fstream>`
+* `#include <functional>`
 * `#include <iostream>`
+* `#include <map>`
+* `#include <sstream>`
 * `#include <string>`
+* `#include <unordered_map>`
+* `#include "Serialize.hpp"`
 
 
 
@@ -87,7 +92,60 @@
 
 
 
+## Macros
 
+| Type | Name |
+| ---: | :--- |
+| define  | [**EXPERIMENTAL\_CLASS**](_core_object_8hpp.md#define-experimental_class)  \_\_attribute\_\_((annotate("experimental\_class")))<br> |
+| define  | [**EXPERIMENTAL\_FUNCTION**](_core_object_8hpp.md#define-experimental_function)  \_\_attribute\_\_((annotate("experimental\_function")))<br>_A common interface class for core objects that sets up required functionality._  |
+
+## Macro Definition Documentation
+
+
+
+
+
+### define EXPERIMENTAL\_CLASS 
+
+```C++
+#define EXPERIMENTAL_CLASS __attribute__((annotate("experimental_class")))
+```
+
+
+
+
+
+
+### define EXPERIMENTAL\_FUNCTION 
+
+_A common interface class for core objects that sets up required functionality._ 
+```C++
+#define EXPERIMENTAL_FUNCTION __attribute__((annotate("experimental_function")))
+```
+
+
+
+This file is part of the Fall 2023, CSE 491 course project. 
+
+**Note:**
+
+Status: ALPHA
+
+
+This CoreObject class builds an interface for all of the core object, ensuring that they can be properly serialized.
+
+
+Derived classes must implement: GetTypeName\_impl() - Return the qualified type name. Serialize\_impl(std::ostream &) - Store the object in a stream. Deserialize\_impl(std::istream &) - Restore the object from a stream. 
+
+**Author:**
+
+@amantham20 uses as attribute to mark experimental classes and functions 
+
+
+
+
+
+        
 
 ------------------------------
 The documentation for this class was generated from the following file `source/core/CoreObject.hpp`

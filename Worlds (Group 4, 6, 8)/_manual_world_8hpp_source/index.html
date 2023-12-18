@@ -1,0 +1,10622 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for CSE 491 Group 7 GP Agent">
+      
+      
+      
+      
+        <link rel="prev" href="../_manual_world_8hpp/">
+      
+      
+        <link rel="next" href="../_maze_world_8hpp/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>File ManualWorld.hpp - CSE 491 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#file-manualworldhpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CSE 491 Documentation" class="md-header__button md-logo" aria-label="CSE 491 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CSE 491 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              File ManualWorld.hpp
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MSU-CSE491/cse_491_fall_2023" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CSE491 Capstone Project
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CSE 491 Documentation" class="md-nav__button md-logo" aria-label="CSE 491 Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CSE 491 Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MSU-CSE491/cse_491_fall_2023" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CSE491 Capstone Project
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How to Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            How to Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToOverview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToCompile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Compile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToTest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToAssembleAMain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Assemble a Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToBuildAWorld/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Build a World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToBuildAnAgent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Build an Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToBuildAnInterface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Build an Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Group Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Group Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Group%201%20-%20README/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group 1 Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Group_7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group 7 Details
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DataCollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group 2 Data Collection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Project
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Core Project
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespaceclogged/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace clogged
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classclogged_1_1_logger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class clogged::Logger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_agent_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::AgentBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1_cell_type/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::CellType
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_core_object/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::CoreObject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_entity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::Entity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_grid_position/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::GridPosition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_interface_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::InterfaceBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_item_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::ItemBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1_property/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::Property
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1_property_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::PropertyBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_world_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::WorldBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classcse491_1_1_world_grid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::WorldGrid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1is__any__map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::is_any_map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1is__any__map_3_01std_1_1map_3_01_k_e_y___t_00_01_v_a_l_u_e___t_01_4_01_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::is_any_map&lt; std::map&lt; KEY_T, VALUE_T &gt; &gt;
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1is__any__map_3_01std_1_1unordered__map_3_01_k_e_y___t_00_01_v_a_l_u_e___t_01_4_01_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::is_any_map&lt; std::unordered_map&lt; KEY_T, VALUE_T &gt; &gt;
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1is__vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::is_vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/structcse491_1_1is__vector_3_01std_1_1vector_3_01_t_01_4_01_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cse491::is_vector&lt; std::vector&lt; T &gt; &gt;
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespacestd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace std
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespaceworldlang/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace worldlang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/dir_0d27ce74e9bd514c31e1d63efab6b388/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_agent_base_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_agent_base_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_core_object_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CoreObject.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_core_object_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CoreObject.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_data_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Data.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_data_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Data.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_easy_logging_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File EasyLogging.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_easy_logging_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File EasyLogging.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_entity_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Entity.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_entity_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Entity.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_entity_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Entity.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_entity_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Entity.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_grid_position_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GridPosition.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_grid_position_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GridPosition.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_interface_base_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File InterfaceBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_interface_base_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File InterfaceBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_item_base_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ItemBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_item_base_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ItemBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_property_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Property.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_property_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Property.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_serialize_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Serialize.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_serialize_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Serialize.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_world_base_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File WorldBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_world_base_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File WorldBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_world_grid_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File WorldGrid.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/_world_grid_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File WorldGrid.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Core%20Project/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agent Library(Group 1)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Agent Library(Group 1)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classcse491_1_1_pacing_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::PacingAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespacewalle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace walle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_a_star_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::AStarAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_a_star_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::AStarAgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_agent_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::AgentFactory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_alerter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::Alerter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_base_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::BaseAgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_compare_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::CompareNodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_pacing_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::PacingAgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_path_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::PathAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_path_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::PathAgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_random_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::RandomAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classwalle_1_1_tracking_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class walle::TrackingAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/structwalle_1_1_tracking_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct walle::TrackingAgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/dir_425e53e3c77c59c8573ea1fd0ff9622a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_a_star_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AStarAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_a_star_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AStarAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_agent_factory_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentFactory.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_agent_factory_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentFactory.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_agent_libary_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentLibary.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_agent_libary_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentLibary.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_pacing_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PacingAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_pacing_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PacingAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_path_agent_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PathAgent.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_path_agent_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PathAgent.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_path_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PathAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_path_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PathAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_random_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File RandomAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_random_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File RandomAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_tracking_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TrackingAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/_tracking_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TrackingAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Agent%20Library%28Group%201%29/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Collection(Group 2)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data Collection(Group 2)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_data_collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace DataCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_agent_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::AgentData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_agent_interaction_collector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::AgentInteractionCollector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_agent_receiver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::AgentReceiver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_damage_collector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::DamageCollector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_damage_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::DamageData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_damage_receiver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::DamageReceiver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_data_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::DataManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_data_receiver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::DataReceiver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_game_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::GameData
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_game_receiver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::GameReceiver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_item_use_collector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::ItemUseCollector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_data_collection_1_1_json_builder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class DataCollection::JsonBuilder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/dir_8adf75fe53ae17187785c216cf2633db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/DataCollection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_data_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_data_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_interaction_collector_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentInteractionCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_interaction_collector_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentInteractionCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_reciever_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentReciever.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_agent_reciever_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File AgentReciever.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_collector_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_collector_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_data_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_data_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_receiver_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_damage_receiver_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DamageReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_data_manager_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DataManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_data_manager_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DataManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_data_receiver_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DataReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_data_receiver_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File DataReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_game_data_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GameData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_game_data_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GameData.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_game_receiver_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GameReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_game_receiver_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GameReceiver.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_item_use_collector_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ItemUseCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_item_use_collector_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ItemUseCollector.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_json_builder_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File JsonBuilder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/_json_builder_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File JsonBuilder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Collection%28Group%202%29/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2D Interface(Group 3)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            2D Interface(Group 3)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classcse491_1_1_trash_interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::TrashInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespacei__2_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace i_2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_button/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::Button
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_inventory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::Inventory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_main_interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::MainInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_message_board/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::MessageBoard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_text_box/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::TextBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classi__2_d_1_1_texture_holder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class i_2D::TextureHolder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/dir_e52260c07c5ca641bf485ae92612dd08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_button_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Button.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_button_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Button.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_button_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Button.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_button_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Button.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_inventory_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Inventory.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_inventory_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Inventory.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_inventory_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Inventory.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_inventory_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Inventory.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_main_interface_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MainInterface.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_main_interface_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MainInterface.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_main_interface_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MainInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_main_interface_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MainInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_menu_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Menu.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_menu_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Menu.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_menu_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Menu.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_menu_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Menu.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_message_board_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MessageBoard.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_message_board_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MessageBoard.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_message_board_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MessageBoard.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_message_board_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MessageBoard.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_text_box_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextBox.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_text_box_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextBox.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_text_box_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextBox.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_text_box_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextBox.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_texture_holder_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextureHolder.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_texture_holder_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextureHolder.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_texture_holder_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextureHolder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_texture_holder_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TextureHolder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_trash_interface_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TrashInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/_trash_interface_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File TrashInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2D%20Interface%28Group%203%29/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Networks (Group 5)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Networks (Group 5)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespacei__2_d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace i_2D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespacenet_worth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace netWorth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_client_interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::ClientInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_client_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::ClientManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_controlled_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::ControlledAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_networking_interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::NetworkingInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_server_interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::ServerInterface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classnet_worth_1_1_server_manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class netWorth::ServerManager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespacesf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace sf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/dir_e52260c07c5ca641bf485ae92612dd08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/dir_0121daa1f68cbca759acb74b3e906cff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Interfaces/NetWorth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_network_interface_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File NetworkInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_network_interface_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File NetworkInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/dir_d63376ef77eb621cc9b73f8097e771f8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Interfaces/NetWorth/client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_client_interface_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ClientInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_client_interface_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ClientInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_client_manager_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ClientManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_client_manager_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ClientManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_controlled_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ControlledAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_controlled_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ControlledAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/dir_1ea711888d2c31b2ee5b33ee0d19cbd8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Interfaces/NetWorth/server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_server_interface_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ServerInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_server_interface_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ServerInterface.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_server_manager_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ServerManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/_server_manager_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ServerManager.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Networks%20%28Group%205%29/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Genetic Programing Agents(Group 7)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Genetic Programing Agents(Group 7)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespacecowboys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cowboys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_c_g_p_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::CGPAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_c_g_p_genotype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::CGPGenotype
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/structcowboys_1_1_c_g_p_node_gene/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cowboys::CGPNodeGene
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/structcowboys_1_1_c_g_p_parameters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cowboys::CGPParameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_agent_analyzer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentAnalyzer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_agent_base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentBase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_agent_registers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentRegisters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_agent_registers_1_1iterator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPAgentRegisters::iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_g_p_training_loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GPTrainingLoop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/structcowboys_1_1_g_p_training_loop_1_1_save_data_params/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cowboys::GPTrainingLoop::SaveDataParams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_graph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_graph_builder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GraphBuilder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_graph_node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::GraphNode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_l_g_p_agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::LGPAgent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/structcowboys_1_1_node_function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct cowboys::NodeFunction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classcowboys_1_1_sensors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cowboys::Sensors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespacecowboys_1_1base64/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cowboys::base64
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespacestd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace std
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/dir_425e53e3c77c59c8573ea1fd0ff9622a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/dir_24320de467b989ce68b31a9ae5cbbd05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Agents/GP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_c_g_p_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CGPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_c_g_p_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CGPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_c_g_p_genotype_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CGPGenotype.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_c_g_p_genotype_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File CGPGenotype.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_analyze_8h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentAnalyze.h
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_analyze_8h_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentAnalyze.h
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_base_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_base_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentBase.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_sensors_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentSensors.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agent_sensors_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentSensors.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agents_registers_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentsRegisters.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_agents_registers_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPAgentsRegisters.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_training_loop_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPTrainingLoop.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_g_p_training_loop_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GPTrainingLoop.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Graph.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Graph.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_builder_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GraphBuilder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_builder_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GraphBuilder.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_node_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GraphNode.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_graph_node_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GraphNode.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_l_g_p_agent_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File LGPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/_l_g_p_agent_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File LGPAgent.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Genetic%20Programing%20Agents%28Group%207%29/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Worlds (Group 4, 6, 8)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Worlds (Group 4, 6, 8)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacecse491/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classcse491_1_1_maze_world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491::MazeWorld
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacecse491__team8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace cse491_team8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classcse491__team8_1_1_manual_world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class cse491_team8::ManualWorld
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacegroup4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace group4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classgroup4_1_1_second_world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class group4::SecondWorld
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacegroup6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace group6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classgroup6_1_1_biome_generator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class group6::BiomeGenerator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classgroup6_1_1_generative_world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class group6::GenerativeWorld
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacesiv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace siv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classsiv_1_1_basic_perlin_noise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class siv::BasicPerlinNoise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacesiv_1_1perlin__detail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace siv::perlin_detail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacestd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace std
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacetao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace tao
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespacetao_1_1pegtl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace tao::pegtl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaceworldlang/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace worldlang
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classworldlang_1_1_program_executor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class worldlang::ProgramExecutor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1_program_executor_1_1_identifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::ProgramExecutor::Identifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1_unit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::Unit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::add
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1add__a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::add_a
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1assignment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::assignment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1code__block/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::code_block
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1comment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::comment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1comp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::comp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1comp__a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::comp_a
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1element/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::element
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1expression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::expression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1expression__list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::expression_list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1identifier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::identifier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1identifier__list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::identifier_list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1mul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::mul
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1mul__a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::mul_a
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1number/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::number
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1op__prio__add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::op_prio_add
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1op__prio__comp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::op_prio_comp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1op__prio__mul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::op_prio_mul
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1program/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::program
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1statement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::statement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1statement__list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::statement_list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structworldlang_1_1string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct worldlang::string
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dir_9813a27ecb6dbdc5ed22cda8cf865019/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dir source/Worlds
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_biome_generator_8cpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File BiomeGenerator.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_biome_generator_8cpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File BiomeGenerator.cpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_biome_generator_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File BiomeGenerator.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_biome_generator_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File BiomeGenerator.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_generative_world_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GenerativeWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_generative_world_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File GenerativeWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_language_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Language.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_language_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Language.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_manual_world_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ManualWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    File ManualWorld.hpp
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_maze_world_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MazeWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_maze_world_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File MazeWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_perlin_noise_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PerlinNoise.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_perlin_noise_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File PerlinNoise.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_program_executor_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ProgramExecutor.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_program_executor_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File ProgramExecutor.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_second_world_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File SecondWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../_second_world_8hpp_source/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File SecondWorld.hpp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hierarchy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Hierarchy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Related Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_typedefs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Typedefs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_enums/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace Member Enums
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macros/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="file-manualworldhpp">File ManualWorld.hpp</h1>
+<p><a href="../files/"><strong>File List</strong></a> <strong>&gt;</strong> <a href="../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b/"><strong>source</strong></a> <strong>&gt;</strong> <a href="../dir_9813a27ecb6dbdc5ed22cda8cf865019/"><strong>Worlds</strong></a> <strong>&gt;</strong> <a href="../_manual_world_8hpp/"><strong>ManualWorld.hpp</strong></a></p>
+<p><a href="../_manual_world_8hpp/">Go to the documentation of this file</a></p>
+<pre><code class="language-C++">
+
+
+#pragma once
+
+#include &lt;cassert&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;map&gt;
+#include &lt;tuple&gt;
+
+#include &quot;../core/WorldBase.hpp&quot;
+#include &quot;../core/AgentBase.hpp&quot;
+
+namespace cse491_team8 {
+
+  class ManualWorld : public cse491::WorldBase {
+  protected:
+    enum ActionType { REMAIN_STILL=0, MOVE_UP, MOVE_DOWN, MOVE_LEFT, MOVE_RIGHT, USE_AXE, USE_BOAT, STATS, HEAL, RUN,
+            ATTACK, SPECIAL, BUFF, HELP };
+    enum FacingDirection { UP=0, RIGHT, DOWN, LEFT};
+
+    size_t grass_id;  
+    size_t tree_id;   
+    size_t water_id;  
+    size_t bridge_id; 
+    size_t rock_id;   
+    size_t portal_id_a; 
+    size_t portal_id_b; 
+    size_t portal_id_c; 
+    size_t portal_id_d; 
+
+    void ConfigAgent(cse491::AgentBase &amp; agent) override {
+      agent.AddAction(&quot;up&quot;, MOVE_UP);
+      agent.AddAction(&quot;down&quot;, MOVE_DOWN);
+      agent.AddAction(&quot;left&quot;, MOVE_LEFT);
+      agent.AddAction(&quot;right&quot;, MOVE_RIGHT);
+      agent.AddAction(&quot;use_axe&quot;, USE_AXE);
+      agent.AddAction(&quot;use_boat&quot;, USE_BOAT);
+      agent.AddAction(&quot;stats&quot;, STATS);
+      agent.AddAction(&quot;heal&quot;, HEAL);
+      agent.AddAction(&quot;run&quot;, RUN);
+      agent.AddAction(&quot;attack&quot;, ATTACK);
+      agent.AddAction(&quot;special&quot;, SPECIAL);
+      agent.AddAction(&quot;buff&quot;, BUFF);
+      agent.AddAction(&quot;help&quot;, HELP);
+      agent.SetProperties(&quot;Strength&quot;, 10, &quot;Health&quot;, 100, &quot;Max_Health&quot;, 150, &quot;Direction&quot;, 0, &quot;Battling&quot;, false);
+    }
+
+  public:
+    ManualWorld() {
+      grass_id = AddCellType(&quot;grass&quot;, &quot;Grass that you can easily walk over.&quot;, ' ');
+      tree_id = AddCellType(&quot;tree&quot;, &quot;Tree that you cannot pass without an axe.&quot;, '^');
+      water_id = AddCellType(&quot;water&quot;, &quot;Water that cannot be crossed without a boat.&quot;, '~');
+      bridge_id = AddCellType(&quot;bridge&quot;, &quot;Bridge that allows the playerto cross water.&quot;, '#');
+      rock_id = AddCellType(&quot;rock&quot;, &quot;Rock that the player cannot cross&quot;, '$');
+      portal_id_a = AddCellType(&quot;portal_a&quot;, &quot;Portal that teleports player to another a-portal spot.&quot;, '}');
+      portal_id_b = AddCellType(&quot;portal_b&quot;, &quot;Portal that teleports player to another b-portal spot.&quot;, '{');
+      portal_id_c = AddCellType(&quot;portal_c&quot;, &quot;Portal that teleports player to another c-portal spot.&quot;, '(');
+      portal_id_d = AddCellType(&quot;portal_d&quot;, &quot;Portal that teleports player to another d-portal spot.&quot;, ')');
+      main_grid.Read(&quot;../assets/grids/team8_grid_v2.grid&quot;, type_options);
+    }
+    ~ManualWorld() = default;
+
+    void GenerateMoveSets()
+    {
+        for (auto &amp; [id, agent_ptr] : agent_map)
+        {
+          auto agent_strength = agent_ptr-&gt;GetProperty&lt;int&gt;(&quot;Strength&quot;);
+          if (agent_ptr-&gt;GetName() == &quot;Interface&quot;)
+          {
+            std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt; move_set = {
+                {&quot;Attack&quot;, std::make_tuple('d', 1.0)},
+                {&quot;Special&quot;, std::make_tuple('d', 1.5)}, {&quot;Run&quot;, std::make_tuple('d', 0.0)},
+                {&quot;Heal&quot;, std::make_tuple('h', 0.25)}};
+            // agent_ptr-&gt;SetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;, move_set);
+            agent_ptr-&gt;SetProperty(&quot;MoveSet&quot;, move_set);
+            continue;
+          }
+          std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt; move_set = {{&quot;Attack&quot;, std::make_tuple('d', 1.0)}};
+          if (agent_strength &gt;= 10)
+          {
+            move_set[&quot;Special&quot;] = std::make_tuple('d', 1.5);
+          }
+          if (agent_strength &gt;= 15)
+          {
+            move_set[&quot;Heal&quot;] = std::make_tuple('h', 0);
+          }
+          if (agent_strength &gt;= 20)
+          {
+            move_set[&quot;Buff&quot;] = std::make_tuple('s', 0.5);
+          }
+          agent_ptr-&gt;SetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;, move_set);
+        }
+    }
+
+    void AddMove(cse491::AgentBase&amp; agent, std::string&amp; move, char stat, double modification)
+    {
+      if (!agent.HasProperty(&quot;MoveSet&quot;)) {
+        agent.Notify(&quot;Error: Agent does not have a Move Set\n&quot;);
+        return;
+      }
+      else
+      {
+        std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt; move_set = agent.GetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;);
+        move_set[move] = std::make_tuple(stat, modification);
+        agent.SetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;, move_set);
+      }
+    }
+    bool RemoveMove(cse491::AgentBase&amp; agent, std::string&amp; move)
+    {
+      if (!agent.HasProperty(&quot;MoveSet&quot;)) {
+        agent.Notify(&quot;Error: Agent does not have a Move Set\n&quot;);
+        return false;
+      }
+      else
+      {
+        std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt; move_set = agent.GetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;);
+        move_set.erase(move);
+        agent.SetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;, move_set);
+        return true;
+      }
+    }
+
+    void HealAction(cse491::AgentBase &amp; agent)
+    {
+      size_t can_heal = FindItem(agent, &quot;Health Potion&quot;);
+      if (can_heal != SIZE_MAX) {
+        int healing_req = agent.GetProperty&lt;int&gt;(&quot;Max_Health&quot;) - agent.GetProperty&lt;int&gt;(&quot;Health&quot;);
+        int healing = item_map[can_heal]-&gt;GetProperty&lt;int&gt;(&quot;Healing&quot;);
+        if (healing_req &gt;= healing) {
+          agent.Notify(&quot;You healed &quot; + std::to_string(healing) + &quot; health!\n&quot;);
+          agent.SetProperty(&quot;Health&quot;, agent.GetProperty&lt;int&gt;(&quot;Health&quot;) + healing);
+          agent.RemoveItem(can_heal);
+          RemoveItem(can_heal);
+        }
+        else if (healing_req == 0) {
+          agent.Notify(&quot;You already have max health&quot;);
+        } else {
+          agent.Notify(&quot;You healed &quot; + std::to_string(healing_req) + &quot; health!\n&quot;);
+          agent.SetProperty(&quot;Health&quot;, agent.GetProperty&lt;int&gt;(&quot;Health&quot;) + healing_req);
+          item_map[can_heal]-&gt;SetProperty(&quot;Healing&quot;, healing - healing_req);
+        }
+      } else {
+        agent.Notify(&quot;You do not have any health potions!\n&quot;);
+      }
+
+    }
+
+    void StatsAction(cse491::AgentBase &amp; agent)
+    {
+        std::string output = &quot;&quot;;
+        output += &quot;Items owned by the player:\n&quot;;
+        for (const auto &amp; [item_id, item] : item_map)
+        {
+            if (item-&gt;IsOwnedBy(agent.GetID()))
+            {
+                for (const auto &amp; [name, entity] : item-&gt;GetPropertyMap())
+                {
+                    if (name == &quot;Uses&quot; || name == &quot;Strength&quot; || name == &quot;Healing&quot;)
+                    {
+                        size_t value = item-&gt;GetProperty&lt;int&gt;(name);
+                        output += item-&gt;GetName() + &quot;: &quot; + name + &quot;: &quot; + std::to_string(value) + &quot;\n&quot;;
+                    }
+                }
+            }
+        }
+        output += &quot;\nProperties of the player:\n&quot;;
+        for (const auto &amp; [name, entity] : agent.GetPropertyMap())
+        {
+            if (name == &quot;Strength&quot; || name == &quot;Health&quot; || name == &quot;Max_Health&quot;)
+            {
+                size_t value = agent.GetProperty&lt;int&gt;(name);
+                output += name + &quot;: &quot; + std::to_string(value) + &quot;\n&quot;;
+            }
+        }
+        agent.Notify(output);
+    }
+
+    void MoveSetAction(cse491::AgentBase &amp; agent)
+    {
+        agent.Notify(&quot;Your Moveset is:\nMove Up: W\nMove Down: S\nMove Left: A\nMove Right: D\nUse Axe: C\nUse Boat: V\nDisplay Stats: T\nHeal: H\nAttack: F\nSpecial: G\nRun: R\nBuff: B\nDisplay Moveset: Y&quot;);
+    }
+
+    cse491::GridPosition LookAhead(cse491::AgentBase &amp; agent)
+    {
+        size_t direction = agent.GetProperty&lt;int&gt;(&quot;Direction&quot;);
+        cse491::GridPosition look_position;
+
+        switch (direction)
+        {
+        case (0):
+          look_position = agent.GetPosition().Above();
+          break;
+        case (1):
+          look_position = agent.GetPosition().ToRight();
+          break;
+        case (2):
+          look_position = agent.GetPosition().Below();
+          break;
+        case (3):
+          look_position = agent.GetPosition().ToLeft();
+          break;
+
+        default:
+          agent.Notify(&quot;Invalid Position: Returning Current Position&quot;);
+          look_position = agent.GetPosition();
+          break;
+        }
+
+        return look_position;
+    }
+
+    void DropItems(cse491::AgentBase &amp; agent, cse491::AgentBase &amp; other_agent)
+    {
+        for (const auto&amp; [id, item] : item_map)
+        {
+            if (item-&gt;IsOwnedBy(other_agent.GetID()))
+            {
+                if (item-&gt;HasProperty(&quot;Strength&quot;) &amp;&amp; other_agent.HasProperty(&quot;Strength&quot;))
+                {
+                    auto agent_health = other_agent.GetProperty&lt;int&gt;(&quot;Strength&quot;);
+                    auto item_strength = item-&gt;GetProperty&lt;int&gt;(&quot;Strength&quot;);
+                    other_agent.SetProperty&lt;int&gt;(&quot;Strength&quot;, (int)(agent_health - item_strength));
+                }
+                other_agent.RemoveItem(item-&gt;GetID());
+                item-&gt;SetPosition(other_agent.GetPosition());
+                agent.Notify(other_agent.GetName() + &quot; dropped their &quot; + item-&gt;GetName() + &quot;!&quot;);
+            }
+        }
+    }
+
+    int OtherAction(cse491::AgentBase &amp; other_agent, cse491::AgentBase &amp; agent)
+    {
+        int other_damage = 0;
+        std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt; move_set = other_agent.GetProperty&lt;std::map&lt;std::string, std::tuple&lt;char, double&gt;&gt;&gt;(&quot;MoveSet&quot;);
+        auto iterator = move_set.begin();
+        int random = GetRandom(move_set.size());
+        std::advance(iterator, random);
+        std::string random_key = iterator-&gt;first;
+        agent.Notify(&quot;\nThe enemy has used: &quot; + random_key);
+        std::tuple&lt;char, double&gt; move_info = iterator-&gt;second;
+        char stat_char = std::get&lt;0&gt;(move_info);
+        double stat_modification = std::get&lt;1&gt;(move_info);
+        if (stat_char == 'd') {
+            other_damage = static_cast&lt;int&gt;(other_agent.GetProperty&lt;int&gt;(&quot;Strength&quot;) * stat_modification);
+        }
+        if (stat_char == 'h') {
+            HealAction(other_agent);
+        }
+        if (stat_char == 's') {
+          if (stat_modification &lt; 0) {
+            int agent_strength = agent.GetProperty&lt;int&gt;(&quot;Strength&quot;);
+            int new_strength = static_cast&lt;int&gt;(agent_strength - abs(stat_modification) * agent_strength);
+            agent.SetProperty&lt;int&gt;(&quot;Strength&quot;, new_strength);
+          }
+          else {
+            int other_agent_strength = other_agent.GetProperty&lt;int&gt;(&quot;Strength&quot;);
+            int new_strength_other = static_cast&lt;int&gt;(other_agent_strength + abs(stat_modification) * other_agent_strength);
+            other_agent.SetProperty&lt;int&gt;(&quot;Strength&quot;, new_strength_other);
+          }
+        }
+        return other_damage;
+    }
+
+    void DoBattle(cse491::AgentBase &amp; other_agent, cse491::AgentBase &amp; agent, char attack_type) {
+        // User Input for Player Decision
+        bool won = false;
+        bool run = false;
+        int damage = 0;
+        switch (attack_type) {
+        case 'a': case 'A': damage = agent.GetProperty&lt;int&gt;(&quot;Strength&quot;);    break;
+        case 's': case 'S': damage = static_cast&lt;int&gt;(agent.GetProperty&lt;int&gt;(&quot;Strength&quot;) * 1.5);  break;
+        case 'r': case 'R': won = false; run = true; break;
+        case 'b': case 'B': agent.SetProperty&lt;int&gt;(&quot;Strength&quot;, static_cast&lt;int&gt;(1.5 * agent.GetProperty&lt;int&gt;(&quot;Strength&quot;))); break;
+        case 'h': case 'H': HealAction(agent); break;
+        default: break;
+        }
+
+        // Other Agent Move Choice, will modify strength of player agent or NPC agent based on the move selected
+        int other_damage = OtherAction(other_agent, agent);
+
+        // Process the Player's Move and the Agent's Move
+        if (run)
+        {
+            agent.SetProperty&lt;int&gt;(&quot;Health&quot;, agent.GetProperty&lt;int&gt;(&quot;Health&quot;) - other_damage);
+        }
+        else
+        {
+            other_agent.SetProperty&lt;int&gt;(&quot;Health&quot;, other_agent.GetProperty&lt;int&gt;(&quot;Health&quot;) - damage);
+            if (other_agent.GetProperty&lt;int&gt;(&quot;Health&quot;) &lt;= 0)
+            {
+                won = true;
+                other_damage = 0;
+            }
+            agent.SetProperty&lt;int&gt;(&quot;Health&quot;, agent.GetProperty&lt;int&gt;(&quot;Health&quot;) - other_damage);
+            if (agent.GetProperty&lt;int&gt;(&quot;Health&quot;) &lt;= 0)
+            {
+                won = false;
+                // run_over = true;
+            }
+        }
+
+        agent.Notify(&quot;Player Health: &quot; + std::to_string(agent.GetProperty&lt;int&gt;(&quot;Health&quot;))+&quot;\n&quot;+
+                &quot;Player Strength: &quot; + std::to_string(agent.GetProperty&lt;int&gt;(&quot;Strength&quot;))+&quot;\n&quot;+
+                &quot;Enemy Health: &quot; + std::to_string(other_agent.GetProperty&lt;int&gt;(&quot;Health&quot;))+&quot;\n&quot;+
+                &quot;Enemy Strength: &quot; + std::to_string(other_agent.GetProperty&lt;int&gt;(&quot;Strength&quot;)));
+
+        std::string other_agent_name = other_agent.GetName();
+        DataCollection::DataManager::GetInstance().GetAgentInteractionCollector().RecordInteraction(other_agent_name);
+
+        if (!won) {
+          if (run)
+          {
+            agent.Notify(&quot;You ran away, this means you don't gain health or strength and any battle damage stays!\n&quot;);
+          }
+          std::cout &lt;&lt; agent.GetName()  &lt;&lt; &quot;: &quot; &lt;&lt;  agent.GetProperty&lt;int&gt;(&quot;Health&quot;) &lt;&lt; std::endl;
+          if (agent.IsInterface() &amp;&amp; agent.GetProperty&lt;int&gt;(&quot;Health&quot;) &lt;= 0)
+          {
+            agent.Notify(other_agent_name + &quot; has beat &quot; + agent.GetName() + &quot;\nYou Lost...\n&quot;);
+
+            DropItems(agent, agent);
+
+            agent.SetProperty&lt;int&gt;(&quot;Health&quot;, 100);
+            agent.SetProperty&lt;int&gt;(&quot;Direction&quot;, 0);
+
+            agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+            other_agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+
+            agent.SetPosition(80, 63);
+            agent.Notify(&quot;You Have died and dropped all your items&quot;);
+          }
+        }
+        else
+        {
+          agent.Notify(agent.GetName() + &quot; has beat &quot; + other_agent.GetName());
+          agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+          other_agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+          DropItems(agent, other_agent);
+          other_agent.SetProperty&lt;bool&gt;(&quot;deleted&quot;, true);
+        }
+    }
+
+    void UpdateWorld() override
+    {
+
+    }
+
+    void Run() override
+    {
+      run_over = false;
+      while (!run_over) {
+        RunAgents();
+        CollectData();
+        UpdateWorld();
+      }
+    }
+
+    void RunAgents() override {
+      for (auto &amp; [id, agent_ptr] : agent_map) {
+        if (agent_ptr-&gt;HasProperty(&quot;deleted&quot;)) {
+          continue;
+        }
+        size_t action_id = agent_ptr-&gt;SelectAction(main_grid, type_options, item_map, agent_map);
+        agent_ptr-&gt;storeActionMap(agent_ptr-&gt;GetName());
+        int result = DoAction(*agent_ptr, action_id);
+        agent_ptr-&gt;SetActionResult(result);
+      }
+    }
+
+    void DoActionAttemptItemPickup(cse491::AgentBase &amp; agent, const cse491::GridPosition &amp; new_position) {
+      for (const auto &amp; [id, item_ptr] : item_map) {
+        if (item_ptr-&gt;GetPosition() == new_position &amp;&amp; item_ptr-&gt;GetOwnerID() == 0)
+        {
+          std::string uses_property = &quot;&quot;;
+          if (item_ptr-&gt;GetName() == &quot;Stick&quot; || item_ptr-&gt;GetName() == &quot;Sword&quot;) { uses_property = &quot;Strength&quot;; }
+          if (item_ptr-&gt;GetName() == &quot;Boat&quot; || item_ptr-&gt;GetName() == &quot;Axe&quot;)  { uses_property = &quot;Uses&quot;; }
+          if (item_ptr-&gt;GetName() == &quot;Health Potion&quot;) { uses_property = &quot;Healing&quot;; }
+
+          if (uses_property == &quot;Strength&quot;)
+          {
+            if (agent.HasProperty(uses_property))
+            {
+              agent.SetProperty(uses_property, item_ptr-&gt;GetProperty&lt;int&gt;(uses_property) + agent.GetProperty&lt;int&gt;(uses_property));
+            }
+            else
+            {
+              agent.SetProperty(uses_property, item_ptr-&gt;GetProperty&lt;int&gt;(uses_property));
+            }
+          }
+
+          DataCollection::DataManager::GetInstance().GetItemUseCollector().IncrementItemUsage(item_ptr-&gt;GetName());
+          agent.Notify(&quot;Picked up the &quot; + item_ptr-&gt;GetName() + &quot;!\nYou gained &quot; +
+                        std::to_string(item_ptr-&gt;GetProperty&lt;int&gt;(uses_property)) + &quot; &quot; +
+                        uses_property + &quot;!\n&quot;);
+
+          // remove it from the board
+          agent.AddItem(item_ptr-&gt;GetID());
+          break;
+        }
+      }
+    }
+
+
+    cse491::GridPosition DoActionFindNewPosition(cse491::AgentBase&amp; agent, size_t action_id) {
+        // Determine where the agent is trying to move.
+        cse491::GridPosition new_position, look_position;
+        char move = ' ';
+
+        bool battling = agent.GetProperty&lt;bool&gt;(&quot;Battling&quot;);
+        // Update Direction property and get new position.
+        switch (action_id) {
+        case REMAIN_STILL:
+        {
+            new_position = agent.GetPosition();
+            break;
+        }
+        case MOVE_UP:
+        {
+            if (battling)
+            {
+                new_position = agent.GetPosition();
+            }
+            else
+            {
+                agent.SetProperty&lt;int&gt;(&quot;Direction&quot;, UP);
+                new_position = agent.GetPosition().Above();
+            }
+            break;
+        }
+        case MOVE_DOWN:
+        {
+            if (battling)
+            {
+                new_position = agent.GetPosition();
+            }
+            else
+            {
+                agent.SetProperty&lt;int&gt;(&quot;Direction&quot;, DOWN);
+                new_position = agent.GetPosition().Below();
+            }
+            break;
+        }
+        case MOVE_LEFT:
+        {
+            if (battling)
+            {
+                new_position = agent.GetPosition();
+            }
+            else
+            {
+                agent.SetProperty&lt;int&gt;(&quot;Direction&quot;, LEFT);
+                new_position = agent.GetPosition().ToLeft();
+            }
+            break;
+        }
+        case MOVE_RIGHT:
+        {
+            if (battling)
+            {
+                new_position = agent.GetPosition();
+            }
+            else
+            {
+                agent.SetProperty&lt;int&gt;(&quot;Direction&quot;, RIGHT);
+                new_position = agent.GetPosition().ToRight();
+            }
+            break;
+        }
+        case USE_AXE:
+        {
+            new_position = agent.GetPosition();
+            look_position = LookAhead(agent);
+            if (main_grid.IsValid(look_position) &amp;&amp; main_grid.At(look_position) == tree_id)
+            {
+                DoActionTestNewPositionTree(agent, look_position);
+            } else {
+                agent.Notify(&quot;You can not use an Axe here!&quot;);
+            }
+            break;
+        }
+        case USE_BOAT:
+        {
+            new_position = agent.GetPosition();
+            if (main_grid.At(new_position) == water_id)
+            {
+              agent.Notify(&quot;Already on Water&quot;);
+              break;
+            }
+            look_position = LookAhead(agent);
+            if (main_grid.IsValid(look_position) &amp;&amp; main_grid.At(look_position) == water_id)
+            {
+                if (DoActionTestNewPositionWater(agent))
+                {
+                    new_position = look_position;
+                }
+            } else {
+                agent.Notify(&quot;You can not use a Boat here!&quot;);
+            }
+            break;
+        }
+        case STATS:
+        {
+            new_position = agent.GetPosition();
+            StatsAction(agent);
+            break;
+        }
+        case HEAL:
+        {
+            new_position = agent.GetPosition();
+            if (battling)
+            {
+                move = 'h';
+            }
+            else
+            {
+                HealAction(agent);
+            }
+            break;
+        }
+        case RUN:
+        {
+            if (!battling)
+            {
+                new_position = agent.GetPosition();
+                break;
+            }
+            new_position = agent.GetPosition();
+            agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+
+            auto agents = FindAgentsNear(agent.GetPosition(), 1);
+            for (auto agent_id : agents)
+            {
+                if (!agent_map[agent_id]-&gt;IsInterface() &amp;&amp; !agent_map[agent_id]-&gt;HasProperty(&quot;deleted&quot;))
+                {
+                    agent.Notify(&quot;You are running away&quot;);
+                    agent_map[agent_id]-&gt;SetProperty&lt;bool&gt;(&quot;Battling&quot;, false);
+                    DoBattle(*agent_map[agent_id], agent, 'r');
+                }
+            }
+            break;
+        }
+        case ATTACK:
+        {
+            move = 'a';
+            break;
+        }
+        case SPECIAL:
+        {
+            move = 's';
+            break;
+        }
+        case BUFF:
+        {
+            move = 'b';
+            break;
+        }
+        case HELP:
+        {
+            new_position = agent.GetPosition();
+            MoveSetAction(agent);
+            break;
+        }
+      }
+
+      if (move != ' ')
+      {
+          if (agent.GetProperty&lt;bool&gt;(&quot;Battling&quot;) == false)
+          {
+              agent.Notify(&quot;You are in a battle! Use Y and choose battling moves!&quot;);
+          }
+          auto agents = FindAgentsNear(agent.GetPosition(), 1);
+          for (auto agent_id : agents)
+          {
+              // Battle other agent near the player
+              if (!agent_map[agent_id]-&gt;IsInterface() &amp;&amp; !agent_map[agent_id]-&gt;HasProperty(&quot;deleted&quot;))
+              {
+                  agent.SetProperty&lt;bool&gt;(&quot;Battling&quot;, true);
+                  agent_map[agent_id]-&gt;SetProperty&lt;bool&gt;(&quot;Battling&quot;, true);
+                  DoBattle(*agent_map[agent_id], agent, move);
+                  break;
+              }
+          }
+          new_position = agent.GetPosition();
+      }
+
+      // assume new position is valid
+      return new_position;
+
+    }
+
+    size_t FindItem(cse491::AgentBase &amp; agent, const std::string &amp; item_name) {
+      size_t item_id = SIZE_MAX;
+      for (auto &amp; item : item_map)
+      {
+        if (item.second-&gt;GetName() == item_name &amp;&amp; item.second-&gt;IsOwnedBy(agent.GetID()))
+        {
+          item_id = item.second-&gt;GetID();
+          break;
+        }
+      }
+      return item_id;
+    }
+
+    void DoActionTestNewPositionTree(cse491::AgentBase &amp; agent, const cse491::GridPosition &amp; new_position) {
+        size_t item_id = FindItem(agent, &quot;Axe&quot;);
+        if (item_id != SIZE_MAX)
+        {
+          agent.Notify(&quot;You have used your Axe to chop down this tree. You have &quot; +
+                        std::to_string(item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) - 1) + &quot; uses remaining&quot;);
+
+          // decrement uses by 1, change the tree to grass
+          item_map[item_id]-&gt;SetProperty(&quot;Uses&quot;, item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) - 1);
+          if (item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) == 0)
+          {
+            agent.RemoveItem(item_id);
+            RemoveItem(item_id);
+          }
+          main_grid[new_position] = grass_id;
+        }
+    }
+
+
+    bool DoActionTestNewPositionWater(cse491::AgentBase&amp; agent) {
+        size_t item_id = FindItem(agent, &quot;Boat&quot;);
+        if (item_id != SIZE_MAX)
+        {
+            agent.Notify(&quot;You have used your Boat to float on the water. You have &quot; +
+                          std::to_string(item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) - 1) + &quot; uses remaining&quot;);
+
+            // decrement uses by 1
+            item_map[item_id]-&gt;SetProperty(&quot;Uses&quot;, item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) - 1);
+            if (item_map[item_id]-&gt;GetProperty&lt;int&gt;(&quot;Uses&quot;) == 0)
+            {
+                agent.RemoveItem(item_id);
+                RemoveItem(item_id);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    int DoAction(cse491::AgentBase &amp; agent, size_t action_id) override {
+
+      cse491::GridPosition new_position = DoActionFindNewPosition(agent, action_id);
+
+      // Don't let the agent move off the world or into a wall.
+      if (!main_grid.IsValid(new_position)) { return false; }
+
+      DoActionAttemptItemPickup(agent, new_position);
+
+      if (main_grid.At(new_position) == tree_id)
+      {
+          return false;
+      }
+
+      if (main_grid.At(new_position) == water_id)
+      {
+          if (agent.HasProperty(&quot;OnlyWater&quot;))
+          {
+              agent.SetPosition(new_position);
+              return true;
+          }
+          if (action_id != USE_BOAT &amp;&amp; main_grid.At(agent.GetPosition()) != water_id) { return false; }
+      }
+
+      if (main_grid.At(new_position) == grass_id)
+      {
+        if (agent.HasProperty(&quot;OnlyWater&quot;)) { return false; }
+      }
+
+      if (main_grid.At(new_position) == rock_id)
+      {
+        return false;
+      }
+
+      if (main_grid.At(new_position) == portal_id_a)
+      {
+          // which portal should we go to - for medium grid
+          if (new_position.GetX() == 33)
+              new_position = cse491::GridPosition(3, 1);
+          else if (new_position.GetX() == 3)
+              new_position = cse491::GridPosition(33, 0);
+
+          // for large grid, big right sand patch (x=137) to circle lake island (x=41)
+          else if (new_position.GetX() == 137)
+              new_position = cse491::GridPosition(41, 98);
+          else if (new_position.GetX() == 41)
+              new_position = cse491::GridPosition(137, 40);
+      }
+
+      if (main_grid.At(new_position) == portal_id_b)
+      {
+          // for medium grid
+          if (new_position.GetX() == 44)
+              new_position = cse491::GridPosition(2, 10);
+          else if (new_position.GetX() == 2)
+              new_position = cse491::GridPosition(44, 17);
+
+          // for large grid, tree-locked upper left sand patch(x=32) to lower right along water (x=114)
+          else if (new_position.GetX() == 32)
+              new_position = cse491::GridPosition(114, 132);
+          else if (new_position.GetX() == 114)
+              new_position = cse491::GridPosition(32, 36);
+
+      }
+
+      if (main_grid.At(new_position) == portal_id_c)
+      {
+          // above top right lake (x=120) to left of circle lake (x=16)
+          if (new_position.GetX() == 120)
+              new_position = cse491::GridPosition(16, 140);
+          else if (new_position.GetX() == 16)
+              new_position = cse491::GridPosition(120, 25);
+      }
+
+      if (main_grid.At(new_position) == portal_id_d)
+      {
+          // from circle lake island (x=36) to very bottom right corner (x=146)
+          if (new_position.GetX() == 36)
+              new_position = cse491::GridPosition(146, 147);
+          else if (new_position.GetX() == 146)
+              new_position = cse491::GridPosition(36, 94);
+      }
+
+      // Set the agent to its new postion.
+      agent.SetPosition(new_position);
+
+      return true;
+    }
+
+    [[nodiscard]] bool IsTraversable(const cse491::AgentBase &amp; /*agent*/, cse491::GridPosition pos) const override {
+      return main_grid.At(pos) == grass_id;
+    }
+
+  };
+
+} // End of namespace cse491_team8
+
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+    
+  </body>
+</html>

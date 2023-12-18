@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_pacing_agent_data" kind="struct" language="C++" prot="public">
+    <compoundname>walle::PacingAgentData</compoundname>
+    <basecompoundref refid="structwalle_1_1_base_agent_data" prot="public" virt="non-virtual">BaseAgentData</basecompoundref>
+    <includes refid="_agent_factory_8hpp" local="no">AgentFactory.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_pacing_agent_data_1a0ef08fd776d2f8ef00eeaea1128aa89c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vertical</definition>
+        <argsstring></argsstring>
+        <name>vertical</name>
+        <qualifiedname>walle::PacingAgentData::vertical</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether the PacingAgent is moving up and down (vertical) or left and right(!vertical) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="70" column="10" bodyfile="source/Agents/AgentFactory.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores data for a PacingAgent </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PacingAgentData</label>
+        <link refid="structwalle_1_1_pacing_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PacingAgentData</label>
+        <link refid="structwalle_1_1_pacing_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/AgentFactory.hpp" line="68" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="68" bodyend="71"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>walle::PacingAgentData</scope><name>name</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::PacingAgentData</scope><name>position</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>walle::PacingAgentData</scope><name>symbol</name></member>
+      <member refid="structwalle_1_1_pacing_agent_data_1a0ef08fd776d2f8ef00eeaea1128aa89c" prot="public" virt="non-virtual"><scope>walle::PacingAgentData</scope><name>vertical</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

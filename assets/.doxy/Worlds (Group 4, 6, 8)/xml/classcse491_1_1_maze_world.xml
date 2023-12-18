@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_maze_world" kind="class" language="C++" prot="public">
+    <compoundname>cse491::MazeWorld</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WorldBase</basecompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>ActionType</name>
+        <qualifiedname>cse491::MazeWorld::ActionType</qualifiedname>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected">
+          <name>REMAIN_STILL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected">
+          <name>MOVE_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected">
+          <name>MOVE_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected">
+          <name>MOVE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected">
+          <name>MOVE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950baa8d6737df2b8b3a9b8f607c0d5afa9f6" prot="protected">
+          <name>MOVE_ARBITRARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="18" column="3" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="18" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_maze_world_1ab27a455aa0942f1d526a50dbfb258e24" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t floor_id</definition>
+        <argsstring></argsstring>
+        <name>floor_id</name>
+        <qualifiedname>cse491::MazeWorld::floor_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to floor CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="27" column="10" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_maze_world_1a0c8e3b987124b2d9c5a5a0500c764922" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t wall_id</definition>
+        <argsstring></argsstring>
+        <name>wall_id</name>
+        <qualifiedname>cse491::MazeWorld::wall_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to wall CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="28" column="10" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1a21f86deff499b566e7c55e3eea625acb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MazeWorld</definition>
+        <argsstring>(unsigned int seed=0)</argsstring>
+        <name>MazeWorld</name>
+        <qualifiedname>cse491::MazeWorld::MazeWorld</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="31" column="3" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1a1003fdf932ac2ea88b259c8991409d2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MazeWorld</definition>
+        <argsstring>()=default</argsstring>
+        <name>~MazeWorld</name>
+        <qualifiedname>cse491::MazeWorld::~MazeWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="43" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1a557be0a6e2a001ae035a4b3385928b35" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigAgent</definition>
+        <argsstring>(AgentBase &amp;agent) const override</argsstring>
+        <name>ConfigAgent</name>
+        <qualifiedname>cse491::MazeWorld::ConfigAgent</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="46" column="8" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1a77f91cce146d7b727455ff9a3d6374c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigAgent</definition>
+        <argsstring>(AgentBase &amp;agent) override</argsstring>
+        <name>ConfigAgent</name>
+        <qualifiedname>cse491::MazeWorld::ConfigAgent</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="54" column="8" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1a883d6bdcdc59c0dfe25ee3ee441ea06e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DoAction</definition>
+        <argsstring>(AgentBase &amp;agent, size_t action_id) override</argsstring>
+        <name>DoAction</name>
+        <qualifiedname>cse491::MazeWorld::DoAction</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+<para>Allow the agents to move around the maze. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="63" column="7" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="63" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_maze_world_1ab01f928d565cc96ed55345152eae59e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsTraversable</definition>
+        <argsstring>(const AgentBase &amp;, cse491::GridPosition pos) const override</argsstring>
+        <name>IsTraversable</name>
+        <qualifiedname>cse491::MazeWorld::IsTraversable</qualifiedname>
+        <param>
+          <type>const AgentBase &amp;</type>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/MazeWorld.hpp" line="91" column="9" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="91" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MazeWorld</label>
+        <link refid="classcse491_1_1_maze_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MazeWorld</label>
+        <link refid="classcse491_1_1_maze_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/MazeWorld.hpp" line="16" column="1" bodyfile="source/Worlds/MazeWorld.hpp" bodystart="16" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>ActionType</name></member>
+      <member refid="classcse491_1_1_maze_world_1a557be0a6e2a001ae035a4b3385928b35" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>ConfigAgent</name></member>
+      <member refid="classcse491_1_1_maze_world_1a77f91cce146d7b727455ff9a3d6374c6" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>ConfigAgent</name></member>
+      <member refid="classcse491_1_1_maze_world_1a883d6bdcdc59c0dfe25ee3ee441ea06e" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>DoAction</name></member>
+      <member refid="classcse491_1_1_maze_world_1ab27a455aa0942f1d526a50dbfb258e24" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>floor_id</name></member>
+      <member refid="classcse491_1_1_maze_world_1ab01f928d565cc96ed55345152eae59e1" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>IsTraversable</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21f86deff499b566e7c55e3eea625acb" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MazeWorld</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950baa8d6737df2b8b3a9b8f607c0d5afa9f6" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MOVE_ARBITRARY</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MOVE_DOWN</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MOVE_LEFT</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MOVE_RIGHT</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>MOVE_UP</name></member>
+      <member refid="classcse491_1_1_maze_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>REMAIN_STILL</name></member>
+      <member refid="classcse491_1_1_maze_world_1a0c8e3b987124b2d9c5a5a0500c764922" prot="protected" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>wall_id</name></member>
+      <member refid="classcse491_1_1_maze_world_1a1003fdf932ac2ea88b259c8991409d2d" prot="public" virt="non-virtual"><scope>cse491::MazeWorld</scope><name>~MazeWorld</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

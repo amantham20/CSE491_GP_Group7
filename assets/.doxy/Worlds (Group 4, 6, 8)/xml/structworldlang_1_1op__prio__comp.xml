@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1op__prio__comp" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::op_prio_comp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::sor&lt; TAO_PEGTL_STRING(&quot;==&quot;), TAO_PEGTL_STRING(&quot;!=&quot;), TAO_PEGTL_STRING(&quot;&lt;=&quot;), TAO_PEGTL_STRING(&quot;&gt;=&quot;), pegtl::one&lt; &apos;&lt;&apos; &gt;, pegtl::one&lt; &apos;&gt;&apos; &gt; &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>op_prio_comp</label>
+        <link refid="structworldlang_1_1op__prio__comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; TAO_PEGTL_STRING(&quot;==&quot;), TAO_PEGTL_STRING(&quot;!=&quot;), TAO_PEGTL_STRING(&quot;&lt;=&quot;), TAO_PEGTL_STRING(&quot;&gt;=&quot;), pegtl::one&lt; &apos;&lt;&apos; &gt;, pegtl::one&lt; &apos;&gt;&apos; &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>op_prio_comp</label>
+        <link refid="structworldlang_1_1op__prio__comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; TAO_PEGTL_STRING(&quot;==&quot;), TAO_PEGTL_STRING(&quot;!=&quot;), TAO_PEGTL_STRING(&quot;&lt;=&quot;), TAO_PEGTL_STRING(&quot;&gt;=&quot;), pegtl::one&lt; &apos;&lt;&apos; &gt;, pegtl::one&lt; &apos;&gt;&apos; &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="95" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="103" bodyend="103"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

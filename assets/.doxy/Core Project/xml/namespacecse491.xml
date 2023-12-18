@@ -8,8 +8,162 @@
     <innerclass refid="classcse491_1_1_entity" prot="public">cse491::Entity</innerclass>
     <innerclass refid="classcse491_1_1_grid_position" prot="public">cse491::GridPosition</innerclass>
     <innerclass refid="classcse491_1_1_interface_base" prot="public">cse491::InterfaceBase</innerclass>
+    <innerclass refid="structcse491_1_1is__any__map" prot="public">cse491::is_any_map</innerclass>
+    <innerclass refid="structcse491_1_1is__any__map_3_01std_1_1map_3_01_k_e_y___t_00_01_v_a_l_u_e___t_01_4_01_4" prot="public">cse491::is_any_map&lt; std::map&lt; KEY_T, VALUE_T &gt; &gt;</innerclass>
+    <innerclass refid="structcse491_1_1is__any__map_3_01std_1_1unordered__map_3_01_k_e_y___t_00_01_v_a_l_u_e___t_01_4_01_4" prot="public">cse491::is_any_map&lt; std::unordered_map&lt; KEY_T, VALUE_T &gt; &gt;</innerclass>
+    <innerclass refid="structcse491_1_1is__vector" prot="public">cse491::is_vector</innerclass>
+    <innerclass refid="structcse491_1_1is__vector_3_01std_1_1vector_3_01_t_01_4_01_4" prot="public">cse491::is_vector&lt; std::vector&lt; T &gt; &gt;</innerclass>
+    <innerclass refid="classcse491_1_1_item_base" prot="public">cse491::ItemBase</innerclass>
+    <innerclass refid="structcse491_1_1_property" prot="public">cse491::Property</innerclass>
+    <innerclass refid="structcse491_1_1_property_base" prot="public">cse491::PropertyBase</innerclass>
     <innerclass refid="classcse491_1_1_world_base" prot="public">cse491::WorldBase</innerclass>
     <innerclass refid="classcse491_1_1_world_grid" prot="public">cse491::WorldGrid</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>State</name>
+        <qualifiedname>cse491::State</qualifiedname>
+        <enumvalue id="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8a20361a7c83b3b025146fb779cb87c4f0" prot="public">
+          <name>Healthy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8a3d81f3e0fc047120952a60f355ebc249" prot="public">
+          <name>Taking_Damage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8a96cc2a0090ada376561406d48d1f2089" prot="public">
+          <name>Dying</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8acc86e17fdd957175f68ec7e160d2e065" prot="public">
+          <name>Deceased</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>States that an agent can be in. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="22" column="1" bodyfile="source/core/AgentBase.hpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PropertyType</name>
+        <qualifiedname>cse491::PropertyType</qualifiedname>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87a2496e26ad6b4d8fe2d1385047884fae0" prot="public">
+          <name>t_double</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87a19319df7fae5c67868573cf75d49c549" prot="public">
+          <name>t_int</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87aa545fa16738b703ca8e0c62b08b5efc4" prot="public">
+          <name>t_char</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87a89fa9405c9e2a718cdae895494e7c412" prot="public">
+          <name>t_string</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87ae50737130fdc200a60c43f2bec46e28f" prot="public">
+          <name>t_position</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87a72905f5b4cd31503a726bb94a1480b7c" prot="public">
+          <name>t_bool</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87a990b47287347eeb55a671c376ce988aa" prot="public">
+          <name>t_other</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Common types of properties in network serialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="55" column="1" bodyfile="source/core/Data.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacecse491_1ac026f4452e357220c38b348f83db2175" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>WorldType</name>
+        <qualifiedname>cse491::WorldType</qualifiedname>
+        <enumvalue id="namespacecse491_1ac026f4452e357220c38b348f83db2175af1f29c5909549ccae3bcf0b02fb4cb08" prot="public">
+          <name>w_maze</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1ac026f4452e357220c38b348f83db2175ac71370bb260ac06916aac474a9e46781" prot="public">
+          <name>w_second</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1ac026f4452e357220c38b348f83db2175a0920de468f52236124851635c74a04cd" prot="public">
+          <name>w_generative</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacecse491_1ac026f4452e357220c38b348f83db2175a806319ffdce572e1e879ad28f75902b2" prot="public">
+          <name>w_manual</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum for World types in network serialization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="58" column="1" bodyfile="source/core/Data.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="typedef">
       <memberdef kind="typedef" id="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" prot="public" static="no">
         <type>std::vector&lt; <ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref> &gt;</type>
@@ -24,37 +178,420 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="23" column="3" bodyfile="source/core/Data.hpp" bodystart="23" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="44" column="1" bodyfile="source/core/Data.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" prot="public" static="no">
-        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &gt; &gt;</type>
-        <definition>using item_set_t =  std::vector&lt;std::unique_ptr&lt;Entity&gt; &gt;</definition>
+      <memberdef kind="typedef" id="namespacecse491_1a275795f59edd15aeb303e92d7488ebfa" prot="public" static="no">
+        <type>std::map&lt; size_t, std::unique_ptr&lt; <ref refid="classcse491_1_1_item_base" kindref="compound">ItemBase</ref> &gt; &gt;</type>
+        <definition>using item_map_t =  std::map&lt;size_t, std::unique_ptr&lt;ItemBase&gt; &gt;</definition>
         <argsstring></argsstring>
-        <name>item_set_t</name>
-        <qualifiedname>cse491::item_set_t</qualifiedname>
+        <name>item_map_t</name>
+        <qualifiedname>cse491::item_map_t</qualifiedname>
         <briefdescription>
-<para>Sets of items will be represented as vectors of pointers to the base class. </para>
+<para>Maps of item IDs to item pointers. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="27" column="3" bodyfile="source/core/Data.hpp" bodystart="27" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="48" column="1" bodyfile="source/core/Data.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" prot="public" static="no">
-        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &gt; &gt;</type>
-        <definition>using agent_set_t =  std::vector&lt;std::unique_ptr&lt;AgentBase&gt; &gt;</definition>
+      <memberdef kind="typedef" id="namespacecse491_1a4d00708c07d0a0de86796a44dd8bfa6a" prot="public" static="no">
+        <type>std::map&lt; size_t, std::unique_ptr&lt; <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &gt; &gt;</type>
+        <definition>using agent_map_t =  std::map&lt;size_t, std::unique_ptr&lt;AgentBase&gt; &gt;</definition>
         <argsstring></argsstring>
-        <name>agent_set_t</name>
-        <qualifiedname>cse491::agent_set_t</qualifiedname>
+        <name>agent_map_t</name>
+        <qualifiedname>cse491::agent_map_t</qualifiedname>
         <briefdescription>
-<para>Sets of agents will be represented as vectors of pointers to the base class. </para>
+<para>Maps of agent IDs to agent pointers. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="31" column="3" bodyfile="source/core/Data.hpp" bodystart="31" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="52" column="1" bodyfile="source/core/Data.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecse491_1aa0be71dd9d613fa09fd59e7bee04099c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void SerializeValue_Vector</definition>
+        <argsstring>(std::ostream &amp;os, const std::vector&lt; T &gt; &amp;var)</argsstring>
+        <name>SerializeValue_Vector</name>
+        <qualifiedname>cse491::SerializeValue_Vector</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <defname>var</defname>
+        </param>
+        <briefdescription>
+<para>Helper specialty function to serialize a vector-based member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to serialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="85" column="13" bodyfile="source/core/Serialize.hpp" bodystart="85" bodyend="90" declfile="source/core/Serialize.hpp" declline="18" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1acb402d7a8588c545b961a575d527aefa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void SerializeValue_Map</definition>
+        <argsstring>(std::ostream &amp;os, const T &amp;var)</argsstring>
+        <name>SerializeValue_Map</name>
+        <qualifiedname>cse491::SerializeValue_Map</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <defname>os</defname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <defname>var</defname>
+        </param>
+        <briefdescription>
+<para>Helper specialty function to serialize a unordered_map member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to serialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="96" column="13" bodyfile="source/core/Serialize.hpp" bodystart="96" bodyend="102" declfile="source/core/Serialize.hpp" declline="19" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1a3b9781c2fbdbcf0d4ef4ec57b6602769" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void DeserializeValue_Vector</definition>
+        <argsstring>(std::istream &amp;is, std::vector&lt; T &gt; &amp;var)</argsstring>
+        <name>DeserializeValue_Vector</name>
+        <qualifiedname>cse491::DeserializeValue_Vector</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <defname>is</defname>
+        </param>
+        <param>
+          <type>std::vector&lt; T &gt; &amp;</type>
+          <defname>var</defname>
+        </param>
+        <briefdescription>
+<para>Helper specialty function to deserialize a vector-based member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to deserialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="176" column="13" bodyfile="source/core/Serialize.hpp" bodystart="176" bodyend="181" declfile="source/core/Serialize.hpp" declline="20" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1a62ee78546fe4797571363be4a9061464" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void DeserializeValue_Map</definition>
+        <argsstring>(std::istream &amp;, T &amp;)</argsstring>
+        <name>DeserializeValue_Map</name>
+        <qualifiedname>cse491::DeserializeValue_Map</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+        </param>
+        <param>
+          <type>T &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="21" column="25" declfile="source/core/Serialize.hpp" declline="21" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1a8f7d8eed3eadd0b39e5719f83afa6fdb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void SerializeValue</definition>
+        <argsstring>(std::ostream &amp;os, const T &amp;var)</argsstring>
+        <name>SerializeValue</name>
+        <qualifiedname>cse491::SerializeValue</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const T &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to serialize a single member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to serialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="66" column="13" bodyfile="source/core/Serialize.hpp" bodystart="66" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1a3a91bb6c40ed31501157bf6e0348c6cc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void DeserializeValue</definition>
+        <argsstring>(std::istream &amp;is, T &amp;var)</argsstring>
+        <name>DeserializeValue</name>
+        <qualifiedname>cse491::DeserializeValue</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to deserialize a single member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to write from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to deserialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="108" column="13" bodyfile="source/core/Serialize.hpp" bodystart="108" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1ad5c827f6f0c290cc8cdaf38f041a9393" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void DeserializeFunction</definition>
+        <argsstring>(std::istream &amp;is, std::function&lt; void(T)&gt; set_fun)</argsstring>
+        <name>DeserializeFunction</name>
+        <qualifiedname>cse491::DeserializeFunction</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(T)&gt;</type>
+          <declname>set_fun</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to deserialize a member variables from a function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to write from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to serialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="146" column="13" bodyfile="source/core/Serialize.hpp" bodystart="146" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1a7ff3f0ed4e6a4f3e116944f512d1893e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>static T DeserializeAs</definition>
+        <argsstring>(std::istream &amp;is)</argsstring>
+        <name>DeserializeAs</name>
+        <qualifiedname>cse491::DeserializeAs</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to deserialize and return a specified type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to write from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="166" column="10" bodyfile="source/core/Serialize.hpp" bodystart="166" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecse491_1abeefea3ecd5111efdc71ace69b959fe1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename MAP_T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void DeserializeValue_Map</definition>
+        <argsstring>(std::istream &amp;is, MAP_T &amp;var)</argsstring>
+        <name>DeserializeValue_Map</name>
+        <qualifiedname>cse491::DeserializeValue_Map</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <param>
+          <type>MAP_T &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Helper specialty function to deserialize a unordered_map member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream to read from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable to deserialize. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Serialize.hpp" line="187" column="13" bodyfile="source/core/Serialize.hpp" bodystart="187" bodyend="197"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -62,19 +599,17 @@
     </briefdescription>
     <detaileddescription>
 <para>A simple 2D Grid container.</para>
-<para>A base class for all World modules.</para>
+<para>Tools to simplify serializing classes.</para>
+<para>A class to maintain arbitrary data and facilitate its use.</para>
+<para>A base class interface for all non-agent item types.</para>
 <para>A base class for all player-interface types.</para>
 <para>A mechanism of identifying a grid cell, as well as a position within the cell.</para>
 <para>A base class for all items or agents that can exist on the grid.</para>
 <para>Set of types used throughout the codebase.</para>
-<para>A common interface class for core objects that sets up required functionality.</para>
-<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL</para>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: ALPHA </para>
 </simplesect>
-This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL</para>
-</simplesect>
-This <ref refid="classcse491_1_1_core_object" kindref="compound">CoreObject</ref> class builds an interface for all of the core object, ensuring that they can be properly serialized.</para>
-<para>Derived classes must implement: GetTypeName_impl() - To return the qualified type name. Serialize_impl() - To store the object in a stream. Deserialize_impl() - To restore the object from a stream. </para>
+</para>
     </detaileddescription>
-    <location file="source/core/AgentBase.hpp" line="18" column="1"/>
+    <location file="source/core/AgentBase.hpp" line="20" column="1"/>
   </compounddef>
 </doxygen>

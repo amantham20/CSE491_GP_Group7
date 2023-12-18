@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_client_manager" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::ClientManager</compoundname>
+    <includes refid="_client_manager_8hpp" local="no">ClientManager.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1a2053ba7e19441b8994c7d2fd02499efd" prot="private" static="no" mutable="no">
+        <type>sf::UdpSocket *</type>
+        <definition>sf::UdpSocket* m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <qualifiedname>netWorth::ClientManager::m_socket</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="20" column="23" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1ae3699d3927ec1e5b72a715dfd47e0024" prot="private" static="no" mutable="no">
+        <type>sf::UdpSocket *</type>
+        <definition>sf::UdpSocket* m_game_update_socket</definition>
+        <argsstring></argsstring>
+        <name>m_game_update_socket</name>
+        <qualifiedname>netWorth::ClientManager::m_game_update_socket</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Socket shared with <ref refid="classnet_worth_1_1_client_interface" kindref="compound">ClientInterface</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="21" column="23" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1a58adfa67e0ca80c31e9f251dcf10c770" prot="private" static="no" mutable="no">
+        <type>std::optional&lt; sf::IpAddress &gt;</type>
+        <definition>std::optional&lt;sf::IpAddress&gt; m_ip</definition>
+        <argsstring></argsstring>
+        <name>m_ip</name>
+        <qualifiedname>netWorth::ClientManager::m_ip</qualifiedname>
+        <briefdescription>
+<para>Game update socket (for agent updates) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="22" column="23" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1ac82a7ec8ff27de44ad086869c878099f" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short m_update_port</definition>
+        <argsstring></argsstring>
+        <name>m_update_port</name>
+        <qualifiedname>netWorth::ClientManager::m_update_port</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Server IP address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="23" column="16" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1a180a29ab7c258c028789e80b33e03bb8" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; size_t, size_t &gt;</type>
+        <definition>std::unordered_map&lt;size_t, size_t&gt; m_action_map</definition>
+        <argsstring></argsstring>
+        <name>m_action_map</name>
+        <qualifiedname>netWorth::ClientManager::m_action_map</qualifiedname>
+        <briefdescription>
+<para>Port to update the game. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="24" column="28" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_client_manager_1a88c8ee1d534172e0d70eac7b0b72e248" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t m_client_id</definition>
+        <argsstring></argsstring>
+        <name>m_client_id</name>
+        <qualifiedname>netWorth::ClientManager::m_client_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Map of agent IDs to most recent action selected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="25" column="16" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1a6d04c6327d05740b6236bc56eb6a2fe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClientManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>ClientManager</name>
+        <qualifiedname>netWorth::ClientManager::ClientManager</qualifiedname>
+        <briefdescription>
+<para>Id of client. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor (AgentBase) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="35" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1a0a134544e52b882e731ab763065ece77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setUpdatePort</definition>
+        <argsstring>(unsigned short port)</argsstring>
+        <name>setUpdatePort</name>
+        <qualifiedname>netWorth::ClientManager::setUpdatePort</qualifiedname>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="37" column="6" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1ae66719e76cd22d14b82d74ee9b5fba3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void packetToActionMap</definition>
+        <argsstring>(sf::Packet pkt)</argsstring>
+        <name>packetToActionMap</name>
+        <qualifiedname>netWorth::ClientManager::packetToActionMap</qualifiedname>
+        <param>
+          <type>sf::Packet</type>
+          <declname>pkt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turn packet from server into action map for ControlledAgents <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>received packet </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="43" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1a0e322f3a39f1ec4f15bf860d3a0109da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupSocket</definition>
+        <argsstring>(sf::UdpSocket *socket, std::optional&lt; sf::IpAddress &gt; ip)</argsstring>
+        <name>setupSocket</name>
+        <qualifiedname>netWorth::ClientManager::setupSocket</qualifiedname>
+        <param>
+          <type>sf::UdpSocket *</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; sf::IpAddress &gt;</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set receiving socket for action map and IP/port info <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to <ref refid="classnet_worth_1_1_client_interface" kindref="compound">ClientInterface</ref>&apos;s socket </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="58" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1adab5bcb27aa7dbb77bacee48dd559935" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setupGameUpdateSocket</definition>
+        <argsstring>(sf::UdpSocket *socket)</argsstring>
+        <name>setupGameUpdateSocket</name>
+        <qualifiedname>netWorth::ClientManager::setupGameUpdateSocket</qualifiedname>
+        <param>
+          <type>sf::UdpSocket *</type>
+          <declname>socket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set socket for game updates <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to socket </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="67" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1ad107666bab5c69b6012e4dc928c37fdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool iDPresent</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>iDPresent</name>
+        <qualifiedname>netWorth::ClientManager::iDPresent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if Agent ID is present in agent action map <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if ID is present </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="80" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1ade4221e60ac5b6532d0ca421edc36af4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t getActionID</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>getActionID</name>
+        <qualifiedname>netWorth::ClientManager::getActionID</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return action ID correspoding to agent ID <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>action ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="89" column="16" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1a64fd8ff60c1e1cfe360fb73c362c8b45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearActionMap</definition>
+        <argsstring>()</argsstring>
+        <name>clearActionMap</name>
+        <qualifiedname>netWorth::ClientManager::clearActionMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear action map after <ref refid="classnet_worth_1_1_client_interface" kindref="compound">ClientInterface</ref> moves </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="96" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1ad56ae61125c714fdce161648a4a444c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getSerializedAgents</definition>
+        <argsstring>()</argsstring>
+        <name>getSerializedAgents</name>
+        <qualifiedname>netWorth::ClientManager::getSerializedAgents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Receive serialized agent data for midgame updates <simplesect kind="return"><para>serialized data (or empty if no update) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="104" column="21" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="104" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1adac2c7bddd391488885695904f551c27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setClientID</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>setClientID</name>
+        <qualifiedname>netWorth::ClientManager::setClientID</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="117" column="14" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_manager_1a52398991739f4976ccf7faf384372ce5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t getClientID</definition>
+        <argsstring>() const</argsstring>
+        <name>getClientID</name>
+        <qualifiedname>netWorth::ClientManager::getClientID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="121" column="16" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The server that will be running and that allows clients to connect to </para>
+    </detaileddescription>
+    <location file="source/Interfaces/NetWorth/client/ClientManager.hpp" line="18" column="5" bodyfile="source/Interfaces/NetWorth/client/ClientManager.hpp" bodystart="18" bodyend="125"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_client_manager_1a64fd8ff60c1e1cfe360fb73c362c8b45" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>clearActionMap</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a6d04c6327d05740b6236bc56eb6a2fe6" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>ClientManager</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ade4221e60ac5b6532d0ca421edc36af4" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>getActionID</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a52398991739f4976ccf7faf384372ce5" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>getClientID</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ad56ae61125c714fdce161648a4a444c4" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>getSerializedAgents</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ad107666bab5c69b6012e4dc928c37fdc" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>iDPresent</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a180a29ab7c258c028789e80b33e03bb8" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_action_map</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a88c8ee1d534172e0d70eac7b0b72e248" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_client_id</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ae3699d3927ec1e5b72a715dfd47e0024" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_game_update_socket</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a58adfa67e0ca80c31e9f251dcf10c770" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_ip</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a2053ba7e19441b8994c7d2fd02499efd" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_socket</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ac82a7ec8ff27de44ad086869c878099f" prot="private" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>m_update_port</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1ae66719e76cd22d14b82d74ee9b5fba3c" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>packetToActionMap</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1adac2c7bddd391488885695904f551c27" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>setClientID</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a0a134544e52b882e731ab763065ece77" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>setUpdatePort</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1adab5bcb27aa7dbb77bacee48dd559935" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>setupGameUpdateSocket</name></member>
+      <member refid="classnet_worth_1_1_client_manager_1a0e322f3a39f1ec4f15bf860d3a0109da" prot="public" virt="non-virtual"><scope>netWorth::ClientManager</scope><name>setupSocket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

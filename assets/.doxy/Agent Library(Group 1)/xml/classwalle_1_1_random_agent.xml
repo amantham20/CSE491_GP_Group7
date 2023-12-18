@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_random_agent" kind="class" language="C++" prot="public">
+    <compoundname>walle::RandomAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <includes refid="_random_agent_8hpp" local="no">RandomAgent.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_random_agent_1ad78b718ff61b27cee3e3370fab6d2453" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double random_val</definition>
+        <argsstring></argsstring>
+        <name>random_val</name>
+        <qualifiedname>walle::RandomAgent::random_val</qualifiedname>
+        <initializer>= 4.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="25" column="20" bodyfile="source/Agents/RandomAgent.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_random_agent_1afdd7df977b812f9a8192fab08773efca" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool moving</definition>
+        <argsstring></argsstring>
+        <name>moving</name>
+        <qualifiedname>walle::RandomAgent::moving</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Random value used to determine direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="27" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1abdbacc3e7635b8943172784bbf4db76b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RandomAgent</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>RandomAgent</name>
+        <qualifiedname>walle::RandomAgent::RandomAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Is the agent moving? </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a new Random Agent object <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of the agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="35" column="13" bodyfile="source/Agents/RandomAgent.hpp" bodystart="35" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1a0ff68d5253a6fcb97f245a6a55e40170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~RandomAgent</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RandomAgent</name>
+        <qualifiedname>walle::RandomAgent::~RandomAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="38" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>walle::RandomAgent::Initialize</qualifiedname>
+        <briefdescription>
+<para>This agent needs a specific set of actions to function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="44" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1a464a813fdccf527181785e25e59586cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;, const cse491::type_options_t &amp;, const cse491::item_map_t &amp;, const cse491::agent_map_t &amp;) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>walle::RandomAgent::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+        </param>
+        <briefdescription>
+<para>Choose the action to take a step in the random direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="51" column="20" bodyfile="source/Agents/RandomAgent.hpp" bodystart="51" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1a00789d223f3dec2aca5782475b574e9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CalculateRandom</definition>
+        <argsstring>(double multiplier)</argsstring>
+        <name>CalculateRandom</name>
+        <qualifiedname>walle::RandomAgent::CalculateRandom</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>multiplier</declname>
+        </param>
+        <briefdescription>
+<para>Function to calculate the random direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>multiplier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>double: random multiplier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="81" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1a9eec5b9c2c1ff33542c4f74bff6b486b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetDirection</definition>
+        <argsstring>(double direction)</argsstring>
+        <name>SetDirection</name>
+        <qualifiedname>walle::RandomAgent::SetDirection</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Set the Direction object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="89" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1ab20ebf8b85f472d67e4489fcfc092f54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetMoving</definition>
+        <argsstring>(bool move)</argsstring>
+        <name>SetMoving</name>
+        <qualifiedname>walle::RandomAgent::SetMoving</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Set the Moving object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>move to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="95" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1aee2633cd4aaf7f0b576dc6039fa567e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetRandom</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRandom</name>
+        <qualifiedname>walle::RandomAgent::GetRandom</qualifiedname>
+        <briefdescription>
+<para>Get the Random object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double random member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="101" column="20" bodyfile="source/Agents/RandomAgent.hpp" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_random_agent_1aeeb44f93984f5257137420dddea70fce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GetMoving</definition>
+        <argsstring>() const</argsstring>
+        <name>GetMoving</name>
+        <qualifiedname>walle::RandomAgent::GetMoving</qualifiedname>
+        <briefdescription>
+<para>Get the Moving object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/RandomAgent.hpp" line="108" column="18" bodyfile="source/Agents/RandomAgent.hpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class for the Random Agent </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RandomAgent</label>
+        <link refid="classwalle_1_1_random_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RandomAgent</label>
+        <link refid="classwalle_1_1_random_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/RandomAgent.hpp" line="21" column="5" bodyfile="source/Agents/RandomAgent.hpp" bodystart="21" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_random_agent_1a00789d223f3dec2aca5782475b574e9d" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>CalculateRandom</name></member>
+      <member refid="classwalle_1_1_random_agent_1aeeb44f93984f5257137420dddea70fce" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>GetMoving</name></member>
+      <member refid="classwalle_1_1_random_agent_1aee2633cd4aaf7f0b576dc6039fa567e3" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>GetRandom</name></member>
+      <member refid="classwalle_1_1_random_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>Initialize</name></member>
+      <member refid="classwalle_1_1_random_agent_1afdd7df977b812f9a8192fab08773efca" prot="private" virt="non-virtual"><scope>walle::RandomAgent</scope><name>moving</name></member>
+      <member refid="classwalle_1_1_random_agent_1ad78b718ff61b27cee3e3370fab6d2453" prot="private" virt="non-virtual"><scope>walle::RandomAgent</scope><name>random_val</name></member>
+      <member refid="classwalle_1_1_random_agent_1abdbacc3e7635b8943172784bbf4db76b" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>RandomAgent</name></member>
+      <member refid="classwalle_1_1_random_agent_1a464a813fdccf527181785e25e59586cb" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>SelectAction</name></member>
+      <member refid="classwalle_1_1_random_agent_1a9eec5b9c2c1ff33542c4f74bff6b486b" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>SetDirection</name></member>
+      <member refid="classwalle_1_1_random_agent_1ab20ebf8b85f472d67e4489fcfc092f54" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>SetMoving</name></member>
+      <member refid="classwalle_1_1_random_agent_1a0ff68d5253a6fcb97f245a6a55e40170" prot="public" virt="non-virtual"><scope>walle::RandomAgent</scope><name>~RandomAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_graph_node" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::GraphNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; GraphNode &gt;</basecompoundref>
+    <includes refid="_graph_node_8hpp" local="no">GraphNode.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1a3180020f18cd9028187c5ee99cc33cd9" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;GraphNode&gt; &gt; inputs</definition>
+        <argsstring></argsstring>
+        <name>inputs</name>
+        <qualifiedname>cowboys::GraphNode::inputs</qualifiedname>
+        <briefdescription>
+<para>The input nodes to this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="47" column="17" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1ac8e55f136a0e35fc4d9ffd946b2d2ccf" prot="protected" static="no" mutable="no">
+        <type><ref refid="structcowboys_1_1_node_function" kindref="compound">NodeFunction</ref></type>
+        <definition>NodeFunction function_pointer</definition>
+        <argsstring></argsstring>
+        <name>function_pointer</name>
+        <qualifiedname>cowboys::GraphNode::function_pointer</qualifiedname>
+        <briefdescription>
+<para>The function that operates on the outputs from a node&apos;s input nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="50" column="18" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1a57fd3fa01192edef2d40c82d9e48d83b" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double default_output</definition>
+        <argsstring></argsstring>
+        <name>default_output</name>
+        <qualifiedname>cowboys::GraphNode::default_output</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The default output of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="53" column="12" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1a7d3291d4344ee789ba9384e97a29b452" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> * &gt;</type>
+        <definition>std::vector&lt;GraphNode *&gt; outputs</definition>
+        <argsstring></argsstring>
+        <name>outputs</name>
+        <qualifiedname>cowboys::GraphNode::outputs</qualifiedname>
+        <briefdescription>
+<para>The nodes connected to this node&apos;s output. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="56" column="17" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1a44f1486e5cd7df091926e8851990b563" prot="protected" static="no" mutable="yes">
+        <type>double</type>
+        <definition>double cached_output</definition>
+        <argsstring></argsstring>
+        <name>cached_output</name>
+        <qualifiedname>cowboys::GraphNode::cached_output</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The cached output of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="59" column="20" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_graph_node_1a10e9727ea6522de28c13fa2996f8ecd1" prot="protected" static="no" mutable="yes">
+        <type>bool</type>
+        <definition>bool cached_output_valid</definition>
+        <argsstring></argsstring>
+        <name>cached_output_valid</name>
+        <qualifiedname>cowboys::GraphNode::cached_output_valid</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>Flag indicating whether the cached output is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="62" column="18" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a57c2531f2fab97dc4f7ae5211c004327" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddOutput</definition>
+        <argsstring>(GraphNode *node)</argsstring>
+        <name>AddOutput</name>
+        <qualifiedname>cowboys::GraphNode::AddOutput</qualifiedname>
+        <param>
+          <type><ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Add an output node to this node. Used for cache invalidation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to add as an output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="66" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a13e217d25a26fa30d06b8615b3122f2b" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecursiveInvalidateCache</definition>
+        <argsstring>() const</argsstring>
+        <name>RecursiveInvalidateCache</name>
+        <qualifiedname>cowboys::GraphNode::RecursiveInvalidateCache</qualifiedname>
+        <briefdescription>
+<para>Invalidates this node&apos;s cache and the caches of all nodes that depend on this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="69" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="69" bodyend="74"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1abeab1612678933e8b326bf058569edc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GraphNode</definition>
+        <argsstring>()=default</argsstring>
+        <name>GraphNode</name>
+        <qualifiedname>cowboys::GraphNode::GraphNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="77" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a53641f1cad4d43770b2b97adcda971b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GraphNode</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GraphNode</name>
+        <qualifiedname>cowboys::GraphNode::~GraphNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="78" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a7952283961ad517bc6bb77cc8dcc3156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphNode</definition>
+        <argsstring>(double default_value)</argsstring>
+        <name>GraphNode</name>
+        <qualifiedname>cowboys::GraphNode::GraphNode</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+<para>TODO: Check guidelines for this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="81" column="5" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a1617fd15880c10479291f45bb3e51300" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphNode</definition>
+        <argsstring>(NodeFunction function)</argsstring>
+        <name>GraphNode</name>
+        <qualifiedname>cowboys::GraphNode::GraphNode</qualifiedname>
+        <param>
+          <type><ref refid="structcowboys_1_1_node_function" kindref="compound">NodeFunction</ref></type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="82" column="5" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a1df8a8b9ac15d9dbc66d2d031abe57ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GraphNode</definition>
+        <argsstring>(InnerFunction function)</argsstring>
+        <name>GraphNode</name>
+        <qualifiedname>cowboys::GraphNode::GraphNode</qualifiedname>
+        <param>
+          <type><ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref></type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="83" column="5" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a5a5d6a8f850e42ccd5c21a7cd5bbf399" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetOutput</definition>
+        <argsstring>() const</argsstring>
+        <name>GetOutput</name>
+        <qualifiedname>cowboys::GraphNode::GetOutput</qualifiedname>
+        <briefdescription>
+<para>Get the output of this node. Performs caching. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The output of this node. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="87" column="12" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="87" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1ab46b326d0b92c0f7ea2549c1290a589b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; GetInputValues</definition>
+        <argsstring>() const</argsstring>
+        <name>GetInputValues</name>
+        <qualifiedname>cowboys::GraphNode::GetInputValues</qualifiedname>
+        <briefdescription>
+<para>Get the output values of the inputs of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector of doubles representing the input values. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="106" column="17" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="106" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1aa1d58d2106949021178e18ac542df93c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>std::optional&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::optional&lt; std::vector&lt; double &gt; &gt; GetInputValues</definition>
+        <argsstring>(const std::array&lt; size_t, N &gt; &amp;indices) const</argsstring>
+        <name>GetInputValues</name>
+        <qualifiedname>cowboys::GraphNode::GetInputValues</qualifiedname>
+        <param>
+          <type>const std::array&lt; size_t, N &gt; &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+<para>Get the output values of the inputs of this node given an array of indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>N</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the indices array. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>indices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indices of the inputs to get the output values of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of doubles representing the input values in the same order of the indices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="118" column="31" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="118" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1adb518a944000d6625ce03d13e5193226" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFunctionPointer</definition>
+        <argsstring>(NodeFunction function)</argsstring>
+        <name>SetFunctionPointer</name>
+        <qualifiedname>cowboys::GraphNode::SetFunctionPointer</qualifiedname>
+        <param>
+          <type><ref refid="structcowboys_1_1_node_function" kindref="compound">NodeFunction</ref></type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+<para>Set the function pointer of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function for this node to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="131" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a0d13055404f602579b1e05eb9b4ed8cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetFunctionPointer</definition>
+        <argsstring>(InnerFunction inner_function)</argsstring>
+        <name>SetFunctionPointer</name>
+        <qualifiedname>cowboys::GraphNode::SetFunctionPointer</qualifiedname>
+        <param>
+          <type><ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref></type>
+          <declname>inner_function</declname>
+        </param>
+        <briefdescription>
+<para>Set the function pointer of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inner_function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The inner function for this node to use. Will be wrapped in a <ref refid="structcowboys_1_1_node_function" kindref="compound">NodeFunction</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="138" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1afa1b37076a3681dfbb362b114c26c7bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddInput</definition>
+        <argsstring>(std::shared_ptr&lt; GraphNode &gt; node)</argsstring>
+        <name>AddInput</name>
+        <qualifiedname>cowboys::GraphNode::AddInput</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>Add an input node to this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The node to add as an input. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="145" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="145" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a2ec99f5328eaf84155cfe604fcd6f2e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddInputs</definition>
+        <argsstring>(const std::vector&lt; std::shared_ptr&lt; GraphNode &gt; &gt; &amp;nodes)</argsstring>
+        <name>AddInputs</name>
+        <qualifiedname>cowboys::GraphNode::AddInputs</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt; &amp;</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+<para>Append nodes in a vector to this node&apos;s list of inputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nodes to add as inputs. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="154" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a1ab71cc7460f3fbe4a3d5b019a315584" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetInputs</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; GraphNode &gt; &gt; nodes)</argsstring>
+        <name>SetInputs</name>
+        <qualifiedname>cowboys::GraphNode::SetInputs</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt;</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+<para>Set the input nodes of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="161" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a1502f2bfbf6ea8d90c148a1e71c5c299" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetDefaultOutput</definition>
+        <argsstring>(double value)</argsstring>
+        <name>SetDefaultOutput</name>
+        <qualifiedname>cowboys::GraphNode::SetDefaultOutput</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the default output of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new default output. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="168" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="168" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a323929db974a080afbd9409e380bd36d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double GetDefaultOutput</definition>
+        <argsstring>() const</argsstring>
+        <name>GetDefaultOutput</name>
+        <qualifiedname>cowboys::GraphNode::GetDefaultOutput</qualifiedname>
+        <briefdescription>
+<para>Get the default output of this node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The default output. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="177" column="12" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="177" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_node_1a47cd99774fbe3a282157cef5b21cf958" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsCacheValid</definition>
+        <argsstring>() const</argsstring>
+        <name>IsCacheValid</name>
+        <qualifiedname>cowboys::GraphNode::IsCacheValid</qualifiedname>
+        <briefdescription>
+<para>Check if the cached output is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the cached output is valid, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="181" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="181" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A node in a decision graph. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This should always be a shared pointer. Caching will not work otherwise. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GraphNode</label>
+        <link refid="classcowboys_1_1_graph_node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>enable_shared_from_this&lt; GraphNode &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GraphNode</label>
+        <link refid="classcowboys_1_1_graph_node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function_pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GraphNode</label>
+        <link refid="classcowboys_1_1_graph_node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>function_pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>NodeFunction</label>
+        <link refid="structcowboys_1_1_node_function"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>enable_shared_from_this&lt; GraphNode &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/GP/GraphNode.hpp" line="44" column="3" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="44" bodyend="182"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_graph_node_1afa1b37076a3681dfbb362b114c26c7bf" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>AddInput</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a2ec99f5328eaf84155cfe604fcd6f2e1" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>AddInputs</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a57c2531f2fab97dc4f7ae5211c004327" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>AddOutput</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a44f1486e5cd7df091926e8851990b563" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>cached_output</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a10e9727ea6522de28c13fa2996f8ecd1" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>cached_output_valid</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a57fd3fa01192edef2d40c82d9e48d83b" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>default_output</name></member>
+      <member refid="classcowboys_1_1_graph_node_1ac8e55f136a0e35fc4d9ffd946b2d2ccf" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>function_pointer</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a323929db974a080afbd9409e380bd36d" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GetDefaultOutput</name></member>
+      <member refid="classcowboys_1_1_graph_node_1ab46b326d0b92c0f7ea2549c1290a589b" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GetInputValues</name></member>
+      <member refid="classcowboys_1_1_graph_node_1aa1d58d2106949021178e18ac542df93c" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GetInputValues</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a5a5d6a8f850e42ccd5c21a7cd5bbf399" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GetOutput</name></member>
+      <member refid="classcowboys_1_1_graph_node_1abeab1612678933e8b326bf058569edc7" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GraphNode</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a7952283961ad517bc6bb77cc8dcc3156" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GraphNode</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a1617fd15880c10479291f45bb3e51300" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GraphNode</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a1df8a8b9ac15d9dbc66d2d031abe57ef" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>GraphNode</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a3180020f18cd9028187c5ee99cc33cd9" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>inputs</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a47cd99774fbe3a282157cef5b21cf958" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>IsCacheValid</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a7d3291d4344ee789ba9384e97a29b452" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>outputs</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a13e217d25a26fa30d06b8615b3122f2b" prot="protected" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>RecursiveInvalidateCache</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a1502f2bfbf6ea8d90c148a1e71c5c299" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>SetDefaultOutput</name></member>
+      <member refid="classcowboys_1_1_graph_node_1adb518a944000d6625ce03d13e5193226" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>SetFunctionPointer</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a0d13055404f602579b1e05eb9b4ed8cf" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>SetFunctionPointer</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a1ab71cc7460f3fbe4a3d5b019a315584" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>SetInputs</name></member>
+      <member refid="classcowboys_1_1_graph_node_1a53641f1cad4d43770b2b97adcda971b6" prot="public" virt="non-virtual"><scope>cowboys::GraphNode</scope><name>~GraphNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

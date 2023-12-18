@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1statement" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::statement</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::sor&lt; pegtl::seq&lt; function, pegtl::opt&lt; code_block &gt;, pegtl::opt&lt; pegtl::eol &gt; &gt;, pegtl::seq&lt; assignment, pegtl::opt&lt; pegtl::eol &gt; &gt;, comment, pegtl::eol &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>statement</label>
+        <link refid="structworldlang_1_1statement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; function, pegtl::opt&lt; code_block &gt;, pegtl::opt&lt; pegtl::eol &gt; &gt;, pegtl::seq&lt; assignment, pegtl::opt&lt; pegtl::eol &gt; &gt;, comment, pegtl::eol &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>statement</label>
+        <link refid="structworldlang_1_1statement"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sor&lt; pegtl::seq&lt; function, pegtl::opt&lt; code_block &gt;, pegtl::opt&lt; pegtl::eol &gt; &gt;, pegtl::seq&lt; assignment, pegtl::opt&lt; pegtl::eol &gt; &gt;, comment, pegtl::eol &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="261" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="274" bodyend="274"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

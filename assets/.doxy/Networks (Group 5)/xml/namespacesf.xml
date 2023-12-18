@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacesf" kind="namespace" language="C++">
+    <compoundname>sf</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The interface of our client that will be interacting and connection with our server </para>
+    </detaileddescription>
+    <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="18" column="5"/>
+  </compounddef>
+</doxygen>

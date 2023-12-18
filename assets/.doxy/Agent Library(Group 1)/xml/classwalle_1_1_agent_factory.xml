@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_agent_factory" kind="class" language="C++" prot="public">
+    <compoundname>walle::AgentFactory</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_agent_factory_1ac9d2f2570ef7c904f472f8ef17def80a" prot="private" static="no" mutable="no">
+        <type>cse491::WorldBase &amp;</type>
+        <definition>cse491::WorldBase&amp; world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <qualifiedname>walle::AgentFactory::world</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="33" column="23" bodyfile="source/Agents/AgentFactory.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a251f653cfc8034eee9d138507b9e8f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AgentFactory</definition>
+        <argsstring>()=delete</argsstring>
+        <name>AgentFactory</name>
+        <qualifiedname>walle::AgentFactory::AgentFactory</qualifiedname>
+        <briefdescription>
+<para>The world to create Agents in. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="36" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a3664945de3ab47d08f0c3f551b31cc7e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AgentFactory</definition>
+        <argsstring>(cse491::WorldBase &amp;world)</argsstring>
+        <name>AgentFactory</name>
+        <qualifiedname>walle::AgentFactory::AgentFactory</qualifiedname>
+        <param>
+          <type>cse491::WorldBase &amp;</type>
+          <declname>world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for <ref refid="classwalle_1_1_agent_factory" kindref="compound">AgentFactory</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>we are adding agents too </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="42" column="14" bodyfile="source/Agents/AgentFactory.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a6665979a25b4b3e23636865c8872d548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> &amp;</type>
+        <definition>AStarAgent &amp; AddAStarAgent</definition>
+        <argsstring>(const AStarAgentData &amp;agent_data)</argsstring>
+        <name>AddAStarAgent</name>
+        <qualifiedname>walle::AgentFactory::AddAStarAgent</qualifiedname>
+        <param>
+          <type>const <ref refid="structwalle_1_1_a_star_agent_data" kindref="compound">AStarAgentData</ref> &amp;</type>
+          <declname>agent_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add an <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> to the world <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data for agent we want to create </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="44" column="16" bodyfile="source/Agents/AgentFactory.hpp" bodystart="137" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a184b79e2a3944541a4fda1d29b08be6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_pacing_agent" kindref="compound">cse491::PacingAgent</ref> &amp;</type>
+        <definition>cse491::PacingAgent &amp; AddPacingAgent</definition>
+        <argsstring>(const PacingAgentData &amp;agent_data)</argsstring>
+        <name>AddPacingAgent</name>
+        <qualifiedname>walle::AgentFactory::AddPacingAgent</qualifiedname>
+        <param>
+          <type>const <ref refid="structwalle_1_1_pacing_agent_data" kindref="compound">PacingAgentData</ref> &amp;</type>
+          <declname>agent_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a PacingAgent to the world <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data for agent we want to create </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="45" column="25" bodyfile="source/Agents/AgentFactory.hpp" bodystart="78" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a376b64c12d173ec7e77c92f7f0d72cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> &amp;</type>
+        <definition>TrackingAgent &amp; AddTrackingAgent</definition>
+        <argsstring>(const TrackingAgentData &amp;agent_data)</argsstring>
+        <name>AddTrackingAgent</name>
+        <qualifiedname>walle::AgentFactory::AddTrackingAgent</qualifiedname>
+        <param>
+          <type>const <ref refid="structwalle_1_1_tracking_agent_data" kindref="compound">TrackingAgentData</ref> &amp;</type>
+          <declname>agent_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a <ref refid="classwalle_1_1_tracking_agent" kindref="compound">TrackingAgent</ref> to the world <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data for agent we want to create </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="46" column="19" bodyfile="source/Agents/AgentFactory.hpp" bodystart="199" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_agent_factory_1a03f1afa428def83129d65f3e6d9b55f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> &amp;</type>
+        <definition>PathAgent &amp; AddPathAgent</definition>
+        <argsstring>(const PathAgentData &amp;agent_data)</argsstring>
+        <name>AddPathAgent</name>
+        <qualifiedname>walle::AgentFactory::AddPathAgent</qualifiedname>
+        <param>
+          <type>const <ref refid="structwalle_1_1_path_agent_data" kindref="compound">PathAgentData</ref> &amp;</type>
+          <declname>agent_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a <ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> to the world <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>data for agent we want to create </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="47" column="15" bodyfile="source/Agents/AgentFactory.hpp" bodystart="106" bodyend="119"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/AgentFactory.hpp" line="31" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="31" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_agent_factory_1a6665979a25b4b3e23636865c8872d548" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AddAStarAgent</name></member>
+      <member refid="classwalle_1_1_agent_factory_1a184b79e2a3944541a4fda1d29b08be6b" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AddPacingAgent</name></member>
+      <member refid="classwalle_1_1_agent_factory_1a03f1afa428def83129d65f3e6d9b55f5" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AddPathAgent</name></member>
+      <member refid="classwalle_1_1_agent_factory_1a376b64c12d173ec7e77c92f7f0d72cc6" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AddTrackingAgent</name></member>
+      <member refid="classwalle_1_1_agent_factory_1a251f653cfc8034eee9d138507b9e8f2c" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AgentFactory</name></member>
+      <member refid="classwalle_1_1_agent_factory_1a3664945de3ab47d08f0c3f551b31cc7e" prot="public" virt="non-virtual"><scope>walle::AgentFactory</scope><name>AgentFactory</name></member>
+      <member refid="classwalle_1_1_agent_factory_1ac9d2f2570ef7c904f472f8ef17def80a" prot="private" virt="non-virtual"><scope>walle::AgentFactory</scope><name>world</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

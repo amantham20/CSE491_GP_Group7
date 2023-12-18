@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_24320de467b989ce68b31a9ae5cbbd05" kind="dir">
+    <compoundname>source/Agents/GP</compoundname>
+    <innerfile refid="_c_g_p_agent_8hpp">CGPAgent.hpp</innerfile>
+    <innerfile refid="_c_g_p_genotype_8hpp">CGPGenotype.hpp</innerfile>
+    <innerfile refid="_g_p_agent_8hpp">GPAgent.hpp</innerfile>
+    <innerfile refid="_g_p_agent_analyze_8h">GPAgentAnalyze.h</innerfile>
+    <innerfile refid="_g_p_agent_base_8hpp">GPAgentBase.hpp</innerfile>
+    <innerfile refid="_g_p_agent_sensors_8hpp">GPAgentSensors.hpp</innerfile>
+    <innerfile refid="_g_p_agents_registers_8hpp">GPAgentsRegisters.hpp</innerfile>
+    <innerfile refid="_g_p_training_loop_8hpp">GPTrainingLoop.hpp</innerfile>
+    <innerfile refid="_graph_8hpp">Graph.hpp</innerfile>
+    <innerfile refid="_graph_builder_8hpp">GraphBuilder.hpp</innerfile>
+    <innerfile refid="_graph_node_8hpp">GraphNode.hpp</innerfile>
+    <innerfile refid="_l_g_p_agent_8hpp">LGPAgent.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/"/>
+  </compounddef>
+</doxygen>

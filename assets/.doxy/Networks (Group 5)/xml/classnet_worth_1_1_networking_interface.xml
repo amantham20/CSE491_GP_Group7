@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_networking_interface" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::NetworkingInterface</compoundname>
+    <basecompoundref prot="public" virt="virtual">InterfaceBase</basecompoundref>
+    <derivedcompoundref refid="classnet_worth_1_1_client_interface" prot="public" virt="non-virtual">ClientInterface</derivedcompoundref>
+    <derivedcompoundref refid="classnet_worth_1_1_server_interface" prot="public" virt="non-virtual">ServerInterface</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_networking_interface_1a0a5f384fbbd590c8e871ba72f52e5ed0" prot="protected" static="no" mutable="no">
+        <type>UdpSocket</type>
+        <definition>UdpSocket m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <qualifiedname>netWorth::NetworkingInterface::m_socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="26" column="23" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_networking_interface_1a8ddcf13c8084c8b94c8edb2a541bed43" prot="protected" static="no" mutable="no">
+        <type>std::optional&lt; IpAddress &gt;</type>
+        <definition>std::optional&lt;IpAddress&gt; m_ip</definition>
+        <argsstring></argsstring>
+        <name>m_ip</name>
+        <qualifiedname>netWorth::NetworkingInterface::m_ip</qualifiedname>
+        <briefdescription>
+<para>The socket we are going to make our connection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="27" column="27" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_networking_interface_1ac8f5c2dcfe32cf7f600e04fe61164361" prot="protected" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <qualifiedname>netWorth::NetworkingInterface::m_port</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>the destination IP of the machine this communicates with </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="28" column="28" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_networking_interface_1aaaa81235fdcd360c7d4ae52d7bfe5f37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>NetworkingInterface</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>NetworkingInterface</name>
+        <qualifiedname>netWorth::NetworkingInterface::NetworkingInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>the destination port of the machine this communicates with </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor (AgentBase) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="36" column="13" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_networking_interface_1ab3defdc7328b1893f4577b3be3af4028" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>UdpSocket *</type>
+        <definition>virtual UdpSocket * getSocket</definition>
+        <argsstring>()</argsstring>
+        <name>getSocket</name>
+        <qualifiedname>netWorth::NetworkingInterface::getSocket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Receives a socket that has been connected between client and server <simplesect kind="return"><para>the udp socket </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="44" column="32" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_networking_interface_1a651d5aa55d8137a944b74085193ba1d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool bindSocket</definition>
+        <argsstring>(UdpSocket &amp;socket, unsigned short port)</argsstring>
+        <name>bindSocket</name>
+        <qualifiedname>netWorth::NetworkingInterface::bindSocket</qualifiedname>
+        <param>
+          <type>UdpSocket &amp;</type>
+          <declname>socket</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bind socket to port number <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>socket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to be bound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="54" column="26" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_networking_interface_1a04d60c5124ab56b1dfc7140491bfe84e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool sendPacket</definition>
+        <argsstring>(Packet packet, IpAddress destAddr, const unsigned short port)</argsstring>
+        <name>sendPacket</name>
+        <qualifiedname>netWorth::NetworkingInterface::sendPacket</qualifiedname>
+        <param>
+          <type>Packet</type>
+          <declname>packet</declname>
+        </param>
+        <param>
+          <type>IpAddress</type>
+          <declname>destAddr</declname>
+        </param>
+        <param>
+          <type>const unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a packet across the socket <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>packet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the packet we want to send </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>destAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the destination address we want to send to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the port of the connection </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if successfully sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="70" column="26" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="70" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_networking_interface_1a4f5d19c23bc2ec20d0f9e315f4829ef1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool receivePacket</definition>
+        <argsstring>(Packet &amp;pkt, std::optional&lt; IpAddress &gt; &amp;sender, unsigned short &amp;port)</argsstring>
+        <name>receivePacket</name>
+        <qualifiedname>netWorth::NetworkingInterface::receivePacket</qualifiedname>
+        <param>
+          <type>Packet &amp;</type>
+          <declname>pkt</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; IpAddress &gt; &amp;</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>unsigned short &amp;</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the connection by receiving the first packet <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IP of sending machine </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>port number of sending machine </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>received packet </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="84" column="26" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="84" bodyend="90"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="3">
+        <label>ClientInterface</label>
+        <link refid="classnet_worth_1_1_client_interface"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ServerInterface</label>
+        <link refid="classnet_worth_1_1_server_interface"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/NetWorth/NetworkInterface.hpp" line="22" column="5" bodyfile="source/Interfaces/NetWorth/NetworkInterface.hpp" bodystart="22" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_networking_interface_1a651d5aa55d8137a944b74085193ba1d0" prot="public" virt="virtual"><scope>netWorth::NetworkingInterface</scope><name>bindSocket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ab3defdc7328b1893f4577b3be3af4028" prot="public" virt="virtual"><scope>netWorth::NetworkingInterface</scope><name>getSocket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a8ddcf13c8084c8b94c8edb2a541bed43" prot="protected" virt="non-virtual"><scope>netWorth::NetworkingInterface</scope><name>m_ip</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ac8f5c2dcfe32cf7f600e04fe61164361" prot="protected" virt="non-virtual"><scope>netWorth::NetworkingInterface</scope><name>m_port</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a0a5f384fbbd590c8e871ba72f52e5ed0" prot="protected" virt="non-virtual"><scope>netWorth::NetworkingInterface</scope><name>m_socket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1aaaa81235fdcd360c7d4ae52d7bfe5f37" prot="public" virt="non-virtual"><scope>netWorth::NetworkingInterface</scope><name>NetworkingInterface</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a4f5d19c23bc2ec20d0f9e315f4829ef1" prot="public" virt="virtual"><scope>netWorth::NetworkingInterface</scope><name>receivePacket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a04d60c5124ab56b1dfc7140491bfe84e" prot="public" virt="virtual"><scope>netWorth::NetworkingInterface</scope><name>sendPacket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

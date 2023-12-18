@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_game_receiver" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::GameReceiver</compoundname>
+    <basecompoundref refid="class_data_collection_1_1_data_receiver" prot="public" virt="non-virtual">DataReceiver&lt; GameData &gt;</basecompoundref>
+    <includes refid="_game_receiver_8hpp" local="no">GameReceiver.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_game_receiver_1a0ab4ee90d0ca7e0cd74960c52acbc209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameReceiver</definition>
+        <argsstring>()=default</argsstring>
+        <name>GameReceiver</name>
+        <qualifiedname>DataCollection::GameReceiver::GameReceiver</qualifiedname>
+        <briefdescription>
+<para>Default constructor for the <ref refid="class_data_collection_1_1_game_receiver" kindref="compound">GameReceiver</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameReceiver.hpp" line="25" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_receiver_1a9629b62a7488e1ecb3d07239974af37d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GameReceiver</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~GameReceiver</name>
+        <qualifiedname>DataCollection::GameReceiver::~GameReceiver</qualifiedname>
+        <briefdescription>
+<para>Destructor for the <ref refid="class_data_collection_1_1_game_receiver" kindref="compound">GameReceiver</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameReceiver.hpp" line="30" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_receiver_1a01f95c959f2f46f8f686cc7908300f9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void store_GameData</definition>
+        <argsstring>(const GameData &amp;gameData)</argsstring>
+        <name>store_GameData</name>
+        <qualifiedname>DataCollection::GameReceiver::store_GameData</qualifiedname>
+        <param>
+          <type>const <ref refid="class_data_collection_1_1_game_data" kindref="compound">GameData</ref> &amp;</type>
+          <declname>gameData</declname>
+        </param>
+        <briefdescription>
+<para>Store a <ref refid="class_data_collection_1_1_game_data" kindref="compound">GameData</ref> object into the receiver&apos;s storage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method allows for the addition of game-specific data into the receiver&apos;s storage for further processing or analysis.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data_collection_1_1_game_data" kindref="compound">GameData</ref> object to be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameReceiver.hpp" line="40" column="14" bodyfile="source/DataCollection/GameReceiver.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a receiver specifically designed to handle game-related data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_data_collection_1_1_game_receiver" kindref="compound">GameReceiver</ref> is an extension of the generic <ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref>, specialized to handle data related to games. It provides methods for storing and processing game-specific data types such as <ref refid="class_data_collection_1_1_game_data" kindref="compound">GameData</ref>. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>DataReceiver&lt; GameData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+      <node id="1">
+        <label>GameReceiver</label>
+        <link refid="class_data_collection_1_1_game_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>DataReceiver&lt; GameData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+      <node id="1">
+        <label>GameReceiver</label>
+        <link refid="class_data_collection_1_1_game_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/DataCollection/GameReceiver.hpp" line="20" column="5" bodyfile="source/DataCollection/GameReceiver.hpp" bodystart="20" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>DataReceiver</name></member>
+      <member refid="class_data_collection_1_1_game_receiver_1a0ab4ee90d0ca7e0cd74960c52acbc209" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>GameReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>getStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>IsEmpty</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" prot="protected" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>storage</name></member>
+      <member refid="class_data_collection_1_1_game_receiver_1a01f95c959f2f46f8f686cc7908300f9b" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>store_GameData</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>StoreIntoStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" prot="public" virt="virtual"><scope>DataCollection::GameReceiver</scope><name>~DataReceiver</name></member>
+      <member refid="class_data_collection_1_1_game_receiver_1a9629b62a7488e1ecb3d07239974af37d" prot="public" virt="non-virtual"><scope>DataCollection::GameReceiver</scope><name>~GameReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

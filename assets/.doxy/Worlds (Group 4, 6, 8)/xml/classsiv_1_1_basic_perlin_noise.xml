@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classsiv_1_1_basic_perlin_noise" kind="class" language="C++" prot="public">
+    <compoundname>siv::BasicPerlinNoise</compoundname>
+    <templateparamlist>
+      <param>
+        <type>class Float</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsiv_1_1_basic_perlin_noise_1ab39e5f224873c37dda5754714c0036ad" prot="public" static="no">
+        <type>std::array&lt; std::uint8_t, 256 &gt;</type>
+        <definition>using state_type =  std::array&lt;std::uint8_t, 256&gt;</definition>
+        <argsstring></argsstring>
+        <name>state_type</name>
+        <qualifiedname>siv::BasicPerlinNoise::state_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="98" column="9" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsiv_1_1_basic_perlin_noise_1a96577589b265ce5ee15dd8975846dac6" prot="public" static="no">
+        <type>Float</type>
+        <definition>using value_type =  Float</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>siv::BasicPerlinNoise::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="100" column="9" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsiv_1_1_basic_perlin_noise_1a032b5ec2efce38e20177db64d887e1be" prot="public" static="no">
+        <type>std::mt19937</type>
+        <definition>using default_random_engine =  std::mt19937</definition>
+        <argsstring></argsstring>
+        <name>default_random_engine</name>
+        <qualifiedname>siv::BasicPerlinNoise::default_random_engine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="102" column="9" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsiv_1_1_basic_perlin_noise_1af71c42fa914824a4ae920d1dd6a961cd" prot="public" static="no">
+        <type>typename default_random_engine::result_type</type>
+        <definition>using seed_type =  typename default_random_engine::result_type</definition>
+        <argsstring></argsstring>
+        <name>seed_type</name>
+        <qualifiedname>siv::BasicPerlinNoise::seed_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="104" column="9" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsiv_1_1_basic_perlin_noise_1a97f83b771beebd5f8e1c8aaaacabbcda" prot="private" static="no" mutable="no">
+        <type>state_type</type>
+        <definition>state_type m_permutation</definition>
+        <argsstring></argsstring>
+        <name>m_permutation</name>
+        <qualifiedname>siv::BasicPerlinNoise::m_permutation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="241" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a94f50174077154a71cecd8bb582b8edd" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>SIVPERLIN_NODISCARD_CXX20 constexpr</type>
+        <definition>constexpr BasicPerlinNoise</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>BasicPerlinNoise</name>
+        <qualifiedname>siv::BasicPerlinNoise::BasicPerlinNoise</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="112" column="19" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="411" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1af3168863ee3b4c21b771726f07b1755b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>SIVPERLIN_NODISCARD_CXX20</type>
+        <definition>BasicPerlinNoise</definition>
+        <argsstring>(seed_type seed)</argsstring>
+        <name>BasicPerlinNoise</name>
+        <qualifiedname>siv::BasicPerlinNoise::BasicPerlinNoise</qualifiedname>
+        <param>
+          <type>seed_type</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="115" column="18" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="427" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a633a4a50f587348cd506e9b4613bd9bd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type>SIVPERLIN_CONCEPT_URBG SIVPERLIN_NODISCARD_CXX20</type>
+        <definition>SIVPERLIN_CONCEPT_URBG_ BasicPerlinNoise</definition>
+        <argsstring>(URBG &amp;&amp;urbg)</argsstring>
+        <name>BasicPerlinNoise</name>
+        <qualifiedname>siv::BasicPerlinNoise::BasicPerlinNoise</qualifiedname>
+        <param>
+          <type>URBG &amp;&amp;</type>
+          <declname>urbg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="119" column="18" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="434" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a39dad4071810e409b5ad01bae186b790" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void reseed</definition>
+        <argsstring>(seed_type seed)</argsstring>
+        <name>reseed</name>
+        <qualifiedname>siv::BasicPerlinNoise::reseed</qualifiedname>
+        <param>
+          <type>seed_type</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="126" column="14" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="442" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1aa6a7601cf75de9411701845d398e768c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SIVPERLIN_CONCEPT_URBG void</type>
+        <definition>SIVPERLIN_CONCEPT_URBG_ void reseed</definition>
+        <argsstring>(URBG &amp;&amp;urbg)</argsstring>
+        <name>reseed</name>
+        <qualifiedname>siv::BasicPerlinNoise::reseed</qualifiedname>
+        <param>
+          <type>URBG &amp;&amp;</type>
+          <declname>urbg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="129" column="14" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="449" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1ad862d8424b66c2880429953aba6a1eac" prot="public" static="no" constexpr="yes" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr const state_type &amp;</type>
+        <definition>constexpr const BasicPerlinNoise&lt; Float &gt;::state_type &amp; serialize</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>serialize</name>
+        <qualifiedname>siv::BasicPerlinNoise::serialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="137" column="36" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="459" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a4a1eed4ad1c2ce13860fec659d782169" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>constexpr void</type>
+        <definition>constexpr void deserialize</definition>
+        <argsstring>(const state_type &amp;state) noexcept</argsstring>
+        <name>deserialize</name>
+        <qualifiedname>siv::BasicPerlinNoise::deserialize</qualifiedname>
+        <param>
+          <type>const state_type &amp;</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="139" column="24" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="465" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1ad74bb48dde87ba4b3dca553aa0f6c83b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise1D</definition>
+        <argsstring>(value_type x) const noexcept</argsstring>
+        <name>noise1D</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise1D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="147" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="473" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a9a05f564f0ef495721b4bcd37ffcd002" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise2D</definition>
+        <argsstring>(value_type x, value_type y) const noexcept</argsstring>
+        <name>noise2D</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise2D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="150" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="481" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a0430e506b1b69cb8822b8570e4f1c2c3" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise3D</definition>
+        <argsstring>(value_type x, value_type y, value_type z) const noexcept</argsstring>
+        <name>noise3D</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise3D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="153" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="489" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a2c08517e4a9acb1f8055f5af27200c06" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise1D_01</definition>
+        <argsstring>(value_type x) const noexcept</argsstring>
+        <name>noise1D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise1D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="161" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a14dceade96f46090f65bc1e3b3e36acb" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise2D_01</definition>
+        <argsstring>(value_type x, value_type y) const noexcept</argsstring>
+        <name>noise2D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise2D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="164" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="545" bodyend="548"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1afa37dc059b60e81f067b0c8ec27df9b7" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type noise3D_01</definition>
+        <argsstring>(value_type x, value_type y, value_type z) const noexcept</argsstring>
+        <name>noise3D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::noise3D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="167" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="551" bodyend="554"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a5d3cb8984db875b4dfffa1847ce9f550" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave1D</definition>
+        <argsstring>(value_type x, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave1D</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave1D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="175" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="559" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a0e5550df5e109fb37c58f43523a664d2" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave2D</definition>
+        <argsstring>(value_type x, value_type y, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave2D</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave2D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="178" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="565" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a1b0705da240501cd23988dce4b8b93d5" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave3D</definition>
+        <argsstring>(value_type x, value_type y, value_type z, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave3D</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave3D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="181" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="571" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a6c8eed4164b934756fc54152875e0364" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave1D_11</definition>
+        <argsstring>(value_type x, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave1D_11</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave1D_11</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="189" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="579" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1aa2907f0f00491c6fdf037fa7c51a0b28" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave2D_11</definition>
+        <argsstring>(value_type x, value_type y, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave2D_11</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave2D_11</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="192" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="585" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a35803b7c2d5af7995a3c310ee83d93ca" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave3D_11</definition>
+        <argsstring>(value_type x, value_type y, value_type z, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave3D_11</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave3D_11</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="195" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="591" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1aef6bd45f0dfc880406d2b1414912869d" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave1D_01</definition>
+        <argsstring>(value_type x, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave1D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave1D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="203" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="599" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a87caad870b932ebccf3b8d355647e9ac" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave2D_01</definition>
+        <argsstring>(value_type x, value_type y, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave2D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave2D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="206" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="605" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a55c64566d2d75b68e5aed6644b520f4e" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type octave3D_01</definition>
+        <argsstring>(value_type x, value_type y, value_type z, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>octave3D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::octave3D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="209" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="611" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1ad26ab5f9365f445bc80f4e4f0d6159eb" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave1D</definition>
+        <argsstring>(value_type x, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave1D</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave1D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="217" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="619" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1ae4610b388067879a1cd9ec768d262e36" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave2D</definition>
+        <argsstring>(value_type x, value_type y, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave2D</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave2D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="220" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="625" bodyend="628"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a4b0bedbd01e7ecc8ed5edac31ebb0fa6" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave3D</definition>
+        <argsstring>(value_type x, value_type y, value_type z, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave3D</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave3D</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="223" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="631" bodyend="634"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1af4be00d74a605074ecc382143d2f556b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave1D_01</definition>
+        <argsstring>(value_type x, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave1D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave1D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="231" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="639" bodyend="642"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a0c59496fc162ada74c1c1b7fdccb6369" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave2D_01</definition>
+        <argsstring>(value_type x, value_type y, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave2D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave2D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="234" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="645" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="classsiv_1_1_basic_perlin_noise_1a08896b91db17ac7613517c8cc492940b" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>value_type</type>
+        <definition>BasicPerlinNoise&lt; Float &gt;::value_type normalizedOctave3D_01</definition>
+        <argsstring>(value_type x, value_type y, value_type z, std::int32_t octaves, value_type persistence=value_type(0.5)) const noexcept</argsstring>
+        <name>normalizedOctave3D_01</name>
+        <qualifiedname>siv::BasicPerlinNoise::normalizedOctave3D_01</qualifiedname>
+        <param>
+          <type>value_type</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>std::int32_t</type>
+          <declname>octaves</declname>
+        </param>
+        <param>
+          <type>value_type</type>
+          <declname>persistence</declname>
+          <defval>value_type(0.5)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="237" column="20" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="651" bodyend="654"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Worlds/PerlinNoise.hpp" line="87" column="5" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="88" bodyend="242"/>
+    <listofallmembers>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a94f50174077154a71cecd8bb582b8edd" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>BasicPerlinNoise</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1af3168863ee3b4c21b771726f07b1755b" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>BasicPerlinNoise</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a633a4a50f587348cd506e9b4613bd9bd" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>BasicPerlinNoise</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a032b5ec2efce38e20177db64d887e1be" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>default_random_engine</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a4a1eed4ad1c2ce13860fec659d782169" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>deserialize</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a97f83b771beebd5f8e1c8aaaacabbcda" prot="private" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>m_permutation</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1ad74bb48dde87ba4b3dca553aa0f6c83b" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise1D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a2c08517e4a9acb1f8055f5af27200c06" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise1D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a9a05f564f0ef495721b4bcd37ffcd002" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise2D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a14dceade96f46090f65bc1e3b3e36acb" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise2D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a0430e506b1b69cb8822b8570e4f1c2c3" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise3D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1afa37dc059b60e81f067b0c8ec27df9b7" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>noise3D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1ad26ab5f9365f445bc80f4e4f0d6159eb" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave1D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1af4be00d74a605074ecc382143d2f556b" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave1D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1ae4610b388067879a1cd9ec768d262e36" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave2D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a0c59496fc162ada74c1c1b7fdccb6369" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave2D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a4b0bedbd01e7ecc8ed5edac31ebb0fa6" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave3D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a08896b91db17ac7613517c8cc492940b" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>normalizedOctave3D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a5d3cb8984db875b4dfffa1847ce9f550" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave1D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1aef6bd45f0dfc880406d2b1414912869d" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave1D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a6c8eed4164b934756fc54152875e0364" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave1D_11</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a0e5550df5e109fb37c58f43523a664d2" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave2D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a87caad870b932ebccf3b8d355647e9ac" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave2D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1aa2907f0f00491c6fdf037fa7c51a0b28" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave2D_11</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a1b0705da240501cd23988dce4b8b93d5" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave3D</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a55c64566d2d75b68e5aed6644b520f4e" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave3D_01</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a35803b7c2d5af7995a3c310ee83d93ca" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>octave3D_11</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a39dad4071810e409b5ad01bae186b790" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>reseed</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1aa6a7601cf75de9411701845d398e768c" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>reseed</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1af71c42fa914824a4ae920d1dd6a961cd" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>seed_type</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1ad862d8424b66c2880429953aba6a1eac" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>serialize</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1ab39e5f224873c37dda5754714c0036ad" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>state_type</name></member>
+      <member refid="classsiv_1_1_basic_perlin_noise_1a96577589b265ce5ee15dd8975846dac6" prot="public" virt="non-virtual"><scope>siv::BasicPerlinNoise</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

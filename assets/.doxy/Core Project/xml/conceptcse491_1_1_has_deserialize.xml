@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptcse491_1_1_has_deserialize" kind="concept">
+    <compoundname>cse491::HasDeserialize</compoundname>
+    <includes refid="_serialize_8hpp" local="no">Serialize.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename OBJ_T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename OBJ_T&gt;
+concept <ref refid="conceptcse491_1_1_has_deserialize" kindref="compound">cse491::HasDeserialize</ref> =  requires(OBJ_T value) {
+  { value.Deserialize(std::cin) } -&gt; std::same_as&lt;void&gt;;
+}    </initializer>
+    <briefdescription>
+<para>Concept to identify if a type has a Deserialize() member function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/core/Serialize.hpp" line="58" column="1"/>
+  </compounddef>
+</doxygen>

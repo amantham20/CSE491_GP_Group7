@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_server_interface" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::ServerInterface</compoundname>
+    <basecompoundref refid="classnet_worth_1_1_networking_interface" prot="public" virt="non-virtual">NetworkingInterface</basecompoundref>
+    <includes refid="_server_interface_8hpp" local="no">ServerInterface.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_server_interface_1a10f86e0747b8226b345459e0c7ba00ec" prot="private" static="no" mutable="no">
+        <type><ref refid="classnet_worth_1_1_server_manager" kindref="compound">ServerManager</ref> *</type>
+        <definition>ServerManager* m_manager</definition>
+        <argsstring></argsstring>
+        <name>m_manager</name>
+        <qualifiedname>netWorth::ServerInterface::m_manager</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="25" column="15" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_interface_1a6954093bba9e5c198c9d0e3cd2d8d94d" prot="private" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short m_world_update_port</definition>
+        <argsstring></argsstring>
+        <name>m_world_update_port</name>
+        <qualifiedname>netWorth::ServerInterface::m_world_update_port</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Manager to handle updates of the world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="27" column="16" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_server_interface_1a186dc35e659f5a163279e04266836c23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ServerInterface</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>ServerInterface</name>
+        <qualifiedname>netWorth::ServerInterface::ServerInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Port used by server manager to handle world updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor (AgentBase) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="36" column="1" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>netWorth::ServerInterface::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function that initializes server interface <simplesect kind="return"><para>boolean stating whether initialization was successful or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="47" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="47" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_interface_1a44d67cc0df9952f910f9c434dcd21723" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;typeOptions, const cse491::item_map_t &amp;itemMap, const cse491::agent_map_t &amp;agentMap) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>netWorth::ServerInterface::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>typeOptions</declname>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+          <declname>itemMap</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+          <declname>agentMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Choose action for player agent (mirror client agent) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the server-side grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeOptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>different cell types of the world </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the items that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agentMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the agents that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>action ID of the interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="158" column="8" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="158" bodyend="190"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnet_worth_1_1_server_interface_1a1c474bf76efb6df4c4ab493a288c4797" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Packet</type>
+        <definition>static Packet gridToPacket</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;typeOptions, const cse491::item_map_t &amp;itemMap, const cse491::agent_map_t &amp;agentMap)</argsstring>
+        <name>gridToPacket</name>
+        <qualifiedname>netWorth::ServerInterface::gridToPacket</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>typeOptions</declname>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+          <declname>itemMap</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+          <declname>agentMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The grid that will be sent to the client from the server after the connection so the client can start asking to make moves <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the grid to send to the server </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeOptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>different cell types of the world </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>itemMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the items that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agentMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the agents that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the grid that will be sent to the client </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="88" column="15" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="88" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The server that will be running and that allows clients to connect to, acts as a sort of clone </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ServerInterface</label>
+        <link refid="classnet_worth_1_1_server_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="2">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ServerInterface</label>
+        <link refid="classnet_worth_1_1_server_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="2">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/NetWorth/server/ServerInterface.hpp" line="22" column="1" bodyfile="source/Interfaces/NetWorth/server/ServerInterface.hpp" bodystart="23" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_networking_interface_1a651d5aa55d8137a944b74085193ba1d0" prot="public" virt="virtual"><scope>netWorth::ServerInterface</scope><name>bindSocket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ab3defdc7328b1893f4577b3be3af4028" prot="public" virt="virtual"><scope>netWorth::ServerInterface</scope><name>getSocket</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a1c474bf76efb6df4c4ab493a288c4797" prot="public" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>gridToPacket</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>Initialize</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a8ddcf13c8084c8b94c8edb2a541bed43" prot="protected" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>m_ip</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a10f86e0747b8226b345459e0c7ba00ec" prot="private" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>m_manager</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ac8f5c2dcfe32cf7f600e04fe61164361" prot="protected" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>m_port</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a0a5f384fbbd590c8e871ba72f52e5ed0" prot="protected" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>m_socket</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a6954093bba9e5c198c9d0e3cd2d8d94d" prot="private" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>m_world_update_port</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1aaaa81235fdcd360c7d4ae52d7bfe5f37" prot="public" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>NetworkingInterface</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a4f5d19c23bc2ec20d0f9e315f4829ef1" prot="public" virt="virtual"><scope>netWorth::ServerInterface</scope><name>receivePacket</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a44d67cc0df9952f910f9c434dcd21723" prot="public" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>SelectAction</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a04d60c5124ab56b1dfc7140491bfe84e" prot="public" virt="virtual"><scope>netWorth::ServerInterface</scope><name>sendPacket</name></member>
+      <member refid="classnet_worth_1_1_server_interface_1a186dc35e659f5a163279e04266836c23" prot="public" virt="non-virtual"><scope>netWorth::ServerInterface</scope><name>ServerInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

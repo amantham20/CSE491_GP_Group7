@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_server_manager" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::ServerManager</compoundname>
+    <includes refid="_server_manager_8hpp" local="no">ServerManager.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a2bc40789861dd57f520b2b95515abd03" prot="private" static="no" mutable="no">
+        <type>sf::UdpSocket</type>
+        <definition>sf::UdpSocket m_manager_socket</definition>
+        <argsstring></argsstring>
+        <name>m_manager_socket</name>
+        <qualifiedname>netWorth::ServerManager::m_manager_socket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="24" column="15" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1ae89d00ee12538588f696338737c9b207" prot="private" static="no" mutable="no">
+        <type>std::set&lt; size_t &gt;</type>
+        <definition>std::set&lt;size_t&gt; m_interface_set</definition>
+        <argsstring></argsstring>
+        <name>m_interface_set</name>
+        <qualifiedname>netWorth::ServerManager::m_interface_set</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="26" column="18" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a02d39d1e1ffbe51a85a7ad40dbb368e5" prot="private" static="no" mutable="no">
+        <type>std::map&lt; size_t, size_t &gt;</type>
+        <definition>std::map&lt;size_t, size_t&gt; m_action_map</definition>
+        <argsstring></argsstring>
+        <name>m_action_map</name>
+        <qualifiedname>netWorth::ServerManager::m_action_map</qualifiedname>
+        <briefdescription>
+<para>Set of interfaces on the server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="28" column="18" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a3ea16aaf41ce9e2ed5e260c1d629466d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string m_current_serialized_agents</definition>
+        <argsstring></argsstring>
+        <name>m_current_serialized_agents</name>
+        <qualifiedname>netWorth::ServerManager::m_current_serialized_agents</qualifiedname>
+        <briefdescription>
+<para>Map of agent IDs to most recent action selected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="30" column="21" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a4df51003e68323cf73786b1e801d3912" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; sf::IpAddress, unsigned short &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;sf::IpAddress, unsigned short&gt; &gt; m_update_vec</definition>
+        <argsstring></argsstring>
+        <name>m_update_vec</name>
+        <qualifiedname>netWorth::ServerManager::m_update_vec</qualifiedname>
+        <briefdescription>
+<para>String with all current serialized agents. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="32" column="13" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1ac0e70844987164f26d6d67403bd95982" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_has_new_agent</definition>
+        <argsstring></argsstring>
+        <name>m_has_new_agent</name>
+        <qualifiedname>netWorth::ServerManager::m_has_new_agent</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>IP Addresses and ports to send updates to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="34" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a1b0be970c382c521c04ed2b4423c5b51" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool m_interfaces_present</definition>
+        <argsstring></argsstring>
+        <name>m_interfaces_present</name>
+        <qualifiedname>netWorth::ServerManager::m_interfaces_present</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Boolean that states if this manager has gotten a new agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="36" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a75025bd6536585b641734cf854615850" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const constexpr unsigned short</type>
+        <definition>const constexpr unsigned short m_init_connection_port</definition>
+        <argsstring></argsstring>
+        <name>m_init_connection_port</name>
+        <qualifiedname>netWorth::ServerManager::m_init_connection_port</qualifiedname>
+        <initializer>= 55000</initializer>
+        <briefdescription>
+<para>Boolean that states if there are interfaces present on the server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="41" column="47" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_server_manager_1a7a4d96233f1e472841083d8460eda867" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short m_max_client_port</definition>
+        <argsstring></argsstring>
+        <name>m_max_client_port</name>
+        <qualifiedname>netWorth::ServerManager::m_max_client_port</qualifiedname>
+        <initializer>= 55000</initializer>
+        <briefdescription>
+<para>Port for initial client connection. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="43" column="24" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a0832ba55c80437cf4ae5bddbbf755bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ServerManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>ServerManager</name>
+        <qualifiedname>netWorth::ServerManager::ServerManager</qualifiedname>
+        <briefdescription>
+<para>Port that is incremented for client thread handoff. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor (AgentBase) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="50" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ad56ae61125c714fdce161648a4a444c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getSerializedAgents</definition>
+        <argsstring>()</argsstring>
+        <name>getSerializedAgents</name>
+        <qualifiedname>netWorth::ServerManager::getSerializedAgents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current serialized agents <simplesect kind="return"><para>a string of the current serialized agents </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="56" column="21" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a664f63bc68ad559b9952757012386434" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setSerializedAgents</definition>
+        <argsstring>(std::string &amp;serializedAgents)</argsstring>
+        <name>setSerializedAgents</name>
+        <qualifiedname>netWorth::ServerManager::setSerializedAgents</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>serializedAgents</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the current serialized agents of the server <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>serializedAgents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string reference representing the serialized agents </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="62" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a94980178d190df5c1bddde82f749341b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool hasAgentsPresent</definition>
+        <argsstring>() const</argsstring>
+        <name>hasAgentsPresent</name>
+        <qualifiedname>netWorth::ServerManager::hasAgentsPresent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns if there are agents present on the server as a boolean <simplesect kind="return"><para>boolean representing if there are agents present on the server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="68" column="7" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ae5a41f433696df773744297997ae351c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setNewAgent</definition>
+        <argsstring>(bool hasNewAgent)</argsstring>
+        <name>setNewAgent</name>
+        <qualifiedname>netWorth::ServerManager::setNewAgent</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>hasNewAgent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a boolean stating if the server has received a new agent <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hasNewAgent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean stating that a new agent has joined </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="74" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a27e6790b9c8acfaad82a15833a34dda9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>sf::Packet</type>
+        <definition>sf::Packet actionMapToPacket</definition>
+        <argsstring>()</argsstring>
+        <name>actionMapToPacket</name>
+        <qualifiedname>netWorth::ServerManager::actionMapToPacket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert action map to packet to send to client <simplesect kind="return"><para>packet containing action map as series of integers </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="80" column="20" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="80" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ade0347e819dd9431c90cff411cd7d59e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void increasePort</definition>
+        <argsstring>()</argsstring>
+        <name>increasePort</name>
+        <qualifiedname>netWorth::ServerManager::increasePort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increases the max client port </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="96" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a9e18651ff69c4bad5927f3ddd71ba980" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void removeInterface</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>removeInterface</name>
+        <qualifiedname>netWorth::ServerManager::removeInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes an interface by ID <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="102" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a68bc2449eb85cc5459a71557f0d84257" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void addToUpdatePairs</definition>
+        <argsstring>(sf::IpAddress ip, unsigned short port)</argsstring>
+        <name>addToUpdatePairs</name>
+        <qualifiedname>netWorth::ServerManager::addToUpdatePairs</qualifiedname>
+        <param>
+          <type>sf::IpAddress</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds an IP and port to a vector for group update <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IP address of client receiving updates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>port of client receiving updates </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="112" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ab6c07ac9701a95b6794ad4fef10b4ee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sendGameUpdates</definition>
+        <argsstring>()</argsstring>
+        <name>sendGameUpdates</name>
+        <qualifiedname>netWorth::ServerManager::sendGameUpdates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends game updates to all clients when a new agent joins </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="119" column="7" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="119" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ab9e72484d4f29f4c1d027f78fde5a1b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void removeFromActionMap</definition>
+        <argsstring>(size_t key)</argsstring>
+        <name>removeFromActionMap</name>
+        <qualifiedname>netWorth::ServerManager::removeFromActionMap</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes an interface from action map by key <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="140" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1ab76a87114568091f38d8e435da86f01d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void removeFromUpdatePairs</definition>
+        <argsstring>(sf::IpAddress ip, unsigned short port)</argsstring>
+        <name>removeFromUpdatePairs</name>
+        <qualifiedname>netWorth::ServerManager::removeFromUpdatePairs</qualifiedname>
+        <param>
+          <type>sf::IpAddress</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes ip and port from the update vector <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ip to remove </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>port to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="149" column="6" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="149" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a44f1d701df820c95c80045814eb26ae5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void writeToActionMap</definition>
+        <argsstring>(size_t key, size_t val)</argsstring>
+        <name>writeToActionMap</name>
+        <qualifiedname>netWorth::ServerManager::writeToActionMap</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes to the action map <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to reference </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="161" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="161" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_server_manager_1a466224b9911e0281f2133b0a96b6ed55" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void addToInterfaceSet</definition>
+        <argsstring>(size_t agent_id)</argsstring>
+        <name>addToInterfaceSet</name>
+        <qualifiedname>netWorth::ServerManager::addToInterfaceSet</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds and interface to the interface set <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="169" column="14" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The server that will be running and that allows clients to connect to </para>
+    </detaileddescription>
+    <location file="source/Interfaces/NetWorth/server/ServerManager.hpp" line="21" column="5" bodyfile="source/Interfaces/NetWorth/server/ServerManager.hpp" bodystart="21" bodyend="174"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_server_manager_1a27e6790b9c8acfaad82a15833a34dda9" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>actionMapToPacket</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a466224b9911e0281f2133b0a96b6ed55" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>addToInterfaceSet</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a68bc2449eb85cc5459a71557f0d84257" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>addToUpdatePairs</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ad56ae61125c714fdce161648a4a444c4" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>getSerializedAgents</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a94980178d190df5c1bddde82f749341b" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>hasAgentsPresent</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ade0347e819dd9431c90cff411cd7d59e" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>increasePort</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a02d39d1e1ffbe51a85a7ad40dbb368e5" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_action_map</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a3ea16aaf41ce9e2ed5e260c1d629466d" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_current_serialized_agents</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ac0e70844987164f26d6d67403bd95982" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_has_new_agent</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a75025bd6536585b641734cf854615850" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_init_connection_port</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ae89d00ee12538588f696338737c9b207" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_interface_set</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a1b0be970c382c521c04ed2b4423c5b51" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_interfaces_present</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a2bc40789861dd57f520b2b95515abd03" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_manager_socket</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a7a4d96233f1e472841083d8460eda867" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_max_client_port</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a4df51003e68323cf73786b1e801d3912" prot="private" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>m_update_vec</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ab9e72484d4f29f4c1d027f78fde5a1b0" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>removeFromActionMap</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ab76a87114568091f38d8e435da86f01d" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>removeFromUpdatePairs</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a9e18651ff69c4bad5927f3ddd71ba980" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>removeInterface</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ab6c07ac9701a95b6794ad4fef10b4ee1" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>sendGameUpdates</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a0832ba55c80437cf4ae5bddbbf755bc0" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>ServerManager</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1ae5a41f433696df773744297997ae351c" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>setNewAgent</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a664f63bc68ad559b9952757012386434" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>setSerializedAgents</name></member>
+      <member refid="classnet_worth_1_1_server_manager_1a44f1d701df820c95c80045814eb26ae5" prot="public" virt="non-virtual"><scope>netWorth::ServerManager</scope><name>writeToActionMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

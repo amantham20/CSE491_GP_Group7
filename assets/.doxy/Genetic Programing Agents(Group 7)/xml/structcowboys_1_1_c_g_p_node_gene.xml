@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcowboys_1_1_c_g_p_node_gene" kind="struct" language="C++" prot="public">
+    <compoundname>cowboys::CGPNodeGene</compoundname>
+    <includes refid="_c_g_p_genotype_8hpp" local="no">CGPGenotype.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_node_gene_1af8a73f702c6ea1fe80361221cbb99560" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt;char&gt; input_connections</definition>
+        <argsstring></argsstring>
+        <name>input_connections</name>
+        <qualifiedname>cowboys::CGPNodeGene::input_connections</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>The input connections of this node. &apos;1&apos; means connected, &apos;0&apos; means not connected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="175" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="175" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_node_gene_1aa9a3abbc8e9889d74f86caa136169735" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t function_idx</definition>
+        <argsstring></argsstring>
+        <name>function_idx</name>
+        <qualifiedname>cowboys::CGPNodeGene::function_idx</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The index of the function the node uses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="178" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="178" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_node_gene_1a57fd3fa01192edef2d40c82d9e48d83b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double default_output</definition>
+        <argsstring></argsstring>
+        <name>default_output</name>
+        <qualifiedname>cowboys::CGPNodeGene::default_output</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The default output of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="181" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="181" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcowboys_1_1_c_g_p_node_gene_1a820e4416ca8f3216972e67cbeccc523f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const CGPNodeGene &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>cowboys::CGPNodeGene::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Compare two CGPNodeGenes for equality. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> to compare to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the two CGPNodeGenes are equal, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="186" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="186" bodyend="189"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the representation of a cartesian graph node. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/CGPGenotype.hpp" line="173" column="3" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="173" bodyend="190"/>
+    <listofallmembers>
+      <member refid="structcowboys_1_1_c_g_p_node_gene_1a57fd3fa01192edef2d40c82d9e48d83b" prot="public" virt="non-virtual"><scope>cowboys::CGPNodeGene</scope><name>default_output</name></member>
+      <member refid="structcowboys_1_1_c_g_p_node_gene_1aa9a3abbc8e9889d74f86caa136169735" prot="public" virt="non-virtual"><scope>cowboys::CGPNodeGene</scope><name>function_idx</name></member>
+      <member refid="structcowboys_1_1_c_g_p_node_gene_1af8a73f702c6ea1fe80361221cbb99560" prot="public" virt="non-virtual"><scope>cowboys::CGPNodeGene</scope><name>input_connections</name></member>
+      <member refid="structcowboys_1_1_c_g_p_node_gene_1a820e4416ca8f3216972e67cbeccc523f" prot="public" virt="non-virtual"><scope>cowboys::CGPNodeGene</scope><name>operator==</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,790 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgroup6_1_1_biome_generator" kind="class" language="C++" prot="public">
+    <compoundname>group6::BiomeGenerator</compoundname>
+    <includes refid="_biome_generator_8hpp" local="no">BiomeGenerator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1aca01f6b5e4aaee6d3a001bcbc3adfe5f" prot="private" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <qualifiedname>group6::BiomeGenerator::frequency</qualifiedname>
+        <initializer>= 8.0</initializer>
+        <briefdescription>
+<para>[0.1, 64.0] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="34" column="22" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a01655631a2df6d0ffdf2fd04a2673d71" prot="private" static="no" mutable="no">
+        <type>PerlinNoise</type>
+        <definition>PerlinNoise perlinNoise</definition>
+        <argsstring></argsstring>
+        <name>perlinNoise</name>
+        <qualifiedname>group6::BiomeGenerator::perlinNoise</qualifiedname>
+        <briefdescription>
+<para>The Perlin Noise procedural generation algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="37" column="21" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a1c746388024986f670d8791430eb5886" prot="private" static="no" mutable="no">
+        <type>BiomeType</type>
+        <definition>BiomeType biome</definition>
+        <argsstring></argsstring>
+        <name>biome</name>
+        <qualifiedname>group6::BiomeGenerator::biome</qualifiedname>
+        <briefdescription>
+<para>Biome for the gird. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="39" column="19" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1aca34d28e3d8bcbcadb8edb4e3af24f8c" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <qualifiedname>group6::BiomeGenerator::width</qualifiedname>
+        <briefdescription>
+<para>Width of the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="41" column="22" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ab2e78c61905b4419fcc7b4cfc500fe85" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <qualifiedname>group6::BiomeGenerator::height</qualifiedname>
+        <briefdescription>
+<para>Height of the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="42" column="22" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a8e1abc02be5e4b18f1f2590160128e90" prot="private" static="no" mutable="no">
+        <type>WorldGrid</type>
+        <definition>WorldGrid grid</definition>
+        <argsstring></argsstring>
+        <name>grid</name>
+        <qualifiedname>group6::BiomeGenerator::grid</qualifiedname>
+        <briefdescription>
+<para>Grid of all tiles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="43" column="19" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1aaf5ae28eefea3a0ffb3f5f206b93b471" prot="private" static="no" mutable="no">
+        <type>WorldBase *</type>
+        <definition>WorldBase* worldPtr</definition>
+        <argsstring></argsstring>
+        <name>worldPtr</name>
+        <qualifiedname>group6::BiomeGenerator::worldPtr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="45" column="19" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ae21f357c223957d36046a0d71cc6aed7" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>group6::BiomeGenerator::seed</qualifiedname>
+        <briefdescription>
+<para>Seed used for RNG. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="47" column="22" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ae0064c3f65ac25af2ce49e517b91e5c9" prot="private" static="no" mutable="no">
+        <type>GridPosition</type>
+        <definition>GridPosition keyLocation</definition>
+        <argsstring></argsstring>
+        <name>keyLocation</name>
+        <qualifiedname>group6::BiomeGenerator::keyLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="49" column="22" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a98a01ff31123ef77f9cd5097461a2fdf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; tiles</definition>
+        <argsstring></argsstring>
+        <name>tiles</name>
+        <qualifiedname>group6::BiomeGenerator::tiles</qualifiedname>
+        <briefdescription>
+<para>Vector to store tiles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="51" column="21" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ab27a455aa0942f1d526a50dbfb258e24" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t floor_id</definition>
+        <argsstring></argsstring>
+        <name>floor_id</name>
+        <qualifiedname>group6::BiomeGenerator::floor_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="53" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a0c8e3b987124b2d9c5a5a0500c764922" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t wall_id</definition>
+        <argsstring></argsstring>
+        <name>wall_id</name>
+        <qualifiedname>group6::BiomeGenerator::wall_id</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="54" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ae4b9bee2815f412de182f45a38d5df79" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t spike_id</definition>
+        <argsstring></argsstring>
+        <name>spike_id</name>
+        <qualifiedname>group6::BiomeGenerator::spike_id</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="56" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a04c6946a8d2d2587876fa3c649c8316b" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t tar_id</definition>
+        <argsstring></argsstring>
+        <name>tar_id</name>
+        <qualifiedname>group6::BiomeGenerator::tar_id</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="57" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a35578b78f921753861ba23cb72b32b55" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t key_id</definition>
+        <argsstring></argsstring>
+        <name>key_id</name>
+        <qualifiedname>group6::BiomeGenerator::key_id</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="58" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a58313ed245b766b60a2b4758dbadea42" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t door_id</definition>
+        <argsstring></argsstring>
+        <name>door_id</name>
+        <qualifiedname>group6::BiomeGenerator::door_id</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="59" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a04a22fb8a6560406d73e9def36e63277" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t grass_id</definition>
+        <argsstring></argsstring>
+        <name>grass_id</name>
+        <qualifiedname>group6::BiomeGenerator::grass_id</qualifiedname>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="61" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ac598ea16bdd760223fa9e632d87a4929" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t dirt_id</definition>
+        <argsstring></argsstring>
+        <name>dirt_id</name>
+        <qualifiedname>group6::BiomeGenerator::dirt_id</qualifiedname>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="62" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a194f38dad184fae443bdbd9a877b434a" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t tree_id</definition>
+        <argsstring></argsstring>
+        <name>tree_id</name>
+        <qualifiedname>group6::BiomeGenerator::tree_id</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="64" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a70240894fa26ead98216bda7434672ec" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sand_id</definition>
+        <argsstring></argsstring>
+        <name>sand_id</name>
+        <qualifiedname>group6::BiomeGenerator::sand_id</qualifiedname>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="66" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t water_id</definition>
+        <argsstring></argsstring>
+        <name>water_id</name>
+        <qualifiedname>group6::BiomeGenerator::water_id</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="67" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_biome_generator_1a784b47062ce096d7ed3f6c68719ca59e" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hole_id</definition>
+        <argsstring></argsstring>
+        <name>hole_id</name>
+        <qualifiedname>group6::BiomeGenerator::hole_id</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="69" column="16" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1aa3d28c4a964060ced0ca114cce84c577" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BiomeGenerator</definition>
+        <argsstring>(BiomeType biome, unsigned int width, unsigned int height, unsigned int seed)</argsstring>
+        <name>BiomeGenerator</name>
+        <qualifiedname>group6::BiomeGenerator::BiomeGenerator</qualifiedname>
+        <param>
+          <type>BiomeType</type>
+          <declname>biome</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a generator with a grid of the given size and using the given seed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>biome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The biome of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed used for random number generation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="72" column="9" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="26" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1aaf01320430cc26aaa3910d16af41cd41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~BiomeGenerator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BiomeGenerator</name>
+        <qualifiedname>group6::BiomeGenerator::~BiomeGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="73" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1ab9bd82c6ef11ced8498221fa1a7544e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setWorld</definition>
+        <argsstring>(WorldBase *world)</argsstring>
+        <name>setWorld</name>
+        <qualifiedname>group6::BiomeGenerator::setWorld</qualifiedname>
+        <param>
+          <type>WorldBase *</type>
+          <declname>world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="75" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a3c01631a4116e8810c6c1021d7110ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void generate</definition>
+        <argsstring>()</argsstring>
+        <name>generate</name>
+        <qualifiedname>group6::BiomeGenerator::generate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates the grid with two types of tiles </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="77" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="47" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a5371c69f51170e6e6d1feba7d9bc984f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveToFile</definition>
+        <argsstring>(const std::string &amp;filename) const</argsstring>
+        <name>saveToFile</name>
+        <qualifiedname>group6::BiomeGenerator::saveToFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves the grid to the given filepath <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename the grid will be saved to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="78" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="207" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1ad76f1306d57ebc2b0d73f40fd69c892f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void placeSpecialTiles</definition>
+        <argsstring>(const size_t &amp;genericTile, const size_t &amp;specialTile, double percentage)</argsstring>
+        <name>placeSpecialTiles</name>
+        <qualifiedname>group6::BiomeGenerator::placeSpecialTiles</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>genericTile</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>specialTile</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>percentage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates special tiles on the grid <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>genericTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tile that the special tile can spawn on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>specialTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The special tile to generate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>percentage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chance of special tile generating on the generic tile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="79" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="124" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a3db7b2ef3d1db037c8ee72d03a76c42b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int getSeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getSeed</name>
+        <qualifiedname>group6::BiomeGenerator::getSeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="81" column="23" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a357b5b76d4529c9dd84dda08d2fc7e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setTiles</definition>
+        <argsstring>(const size_t &amp;firstTile, const size_t &amp;secondTile)</argsstring>
+        <name>setTiles</name>
+        <qualifiedname>group6::BiomeGenerator::setTiles</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>firstTile</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>secondTile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the tile vector for the biome <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>firstTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tile #1 for the biome </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tile #2 for the biome </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="83" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="234" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a8c029c2e923ccc2f1d54bf76b64fe915" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>BiomeType</type>
+        <definition>BiomeType getBiome</definition>
+        <argsstring>() const</argsstring>
+        <name>getBiome</name>
+        <qualifiedname>group6::BiomeGenerator::getBiome</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="84" column="20" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1ac6d674f4d53f19b89167e01570197e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void placeDoorTile</definition>
+        <argsstring>(const size_t &amp;doorTile)</argsstring>
+        <name>placeDoorTile</name>
+        <qualifiedname>group6::BiomeGenerator::placeDoorTile</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>doorTile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates door tile on grid at [1][1] <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>doorTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Door Tile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="86" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1a3f4addcaa515d057f65829efc20b6114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void placeTileRandom</definition>
+        <argsstring>(const size_t &amp;tile, const size_t &amp;spawnTile)</argsstring>
+        <name>placeTileRandom</name>
+        <qualifiedname>group6::BiomeGenerator::placeTileRandom</qualifiedname>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>tile</declname>
+        </param>
+        <param>
+          <type>const size_t &amp;</type>
+          <declname>spawnTile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generates random coordinates to place the given tile</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tile being placed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spawnTile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of tile allowed to be replaced </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="87" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="92" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1ad2a7ece054b22aca1879448fdaaf4133" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; GridPosition &gt;</type>
+        <definition>vector&lt; GridPosition &gt; clearPath</definition>
+        <argsstring>() const</argsstring>
+        <name>clearPath</name>
+        <qualifiedname>group6::BiomeGenerator::clearPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears a randomized path from the top left of the grid, to any point on the rightmost side of the map <simplesect kind="return"><para>A vector of GridPositions necessary for this path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="89" column="22" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="150" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1ad171b63de8ebcd444cd2e21528985f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void applyPathToGrid</definition>
+        <argsstring>(const std::vector&lt; GridPosition &gt; &amp;path)</argsstring>
+        <name>applyPathToGrid</name>
+        <qualifiedname>group6::BiomeGenerator::applyPathToGrid</qualifiedname>
+        <param>
+          <type>const std::vector&lt; GridPosition &gt; &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the walls out of the grid, guaranteeing a path from the left of the grid, to any point on the rightmost side of the map <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of GridPositions necessary for this path </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="90" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="197" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1afe7a3be7b57fe810b13db5770c836adb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void placeTrees</definition>
+        <argsstring>()</argsstring>
+        <name>placeTrees</name>
+        <qualifiedname>group6::BiomeGenerator::placeTrees</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Places trees on the grid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="92" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="243" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_biome_generator_1abb2eeb31acb8b97fbd6fd90b3cb59c6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void oceanHandler</definition>
+        <argsstring>()</argsstring>
+        <name>oceanHandler</name>
+        <qualifiedname>group6::BiomeGenerator::oceanHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles logic for Ocean biome </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="94" column="14" bodyfile="source/Worlds/BiomeGenerator.cpp" bodystart="270" bodyend="286"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generates a new grid based on a specified biome </para>
+    </detaileddescription>
+    <location file="source/Worlds/BiomeGenerator.hpp" line="32" column="5" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="32" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classgroup6_1_1_biome_generator_1ad171b63de8ebcd444cd2e21528985f40" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>applyPathToGrid</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a1c746388024986f670d8791430eb5886" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>biome</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1aa3d28c4a964060ced0ca114cce84c577" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>BiomeGenerator</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ad2a7ece054b22aca1879448fdaaf4133" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>clearPath</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ac598ea16bdd760223fa9e632d87a4929" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>dirt_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a58313ed245b766b60a2b4758dbadea42" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>door_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ab27a455aa0942f1d526a50dbfb258e24" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>floor_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1aca01f6b5e4aaee6d3a001bcbc3adfe5f" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>frequency</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a3c01631a4116e8810c6c1021d7110ab7" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>generate</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a8c029c2e923ccc2f1d54bf76b64fe915" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>getBiome</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a3db7b2ef3d1db037c8ee72d03a76c42b" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>getSeed</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a04a22fb8a6560406d73e9def36e63277" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>grass_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a8e1abc02be5e4b18f1f2590160128e90" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>grid</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ab2e78c61905b4419fcc7b4cfc500fe85" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>height</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a784b47062ce096d7ed3f6c68719ca59e" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>hole_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a35578b78f921753861ba23cb72b32b55" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>key_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ae0064c3f65ac25af2ce49e517b91e5c9" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>keyLocation</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1abb2eeb31acb8b97fbd6fd90b3cb59c6b" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>oceanHandler</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a01655631a2df6d0ffdf2fd04a2673d71" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>perlinNoise</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ac6d674f4d53f19b89167e01570197e31" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>placeDoorTile</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ad76f1306d57ebc2b0d73f40fd69c892f" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>placeSpecialTiles</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a3f4addcaa515d057f65829efc20b6114" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>placeTileRandom</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1afe7a3be7b57fe810b13db5770c836adb" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>placeTrees</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a70240894fa26ead98216bda7434672ec" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>sand_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a5371c69f51170e6e6d1feba7d9bc984f" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>saveToFile</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ae21f357c223957d36046a0d71cc6aed7" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>seed</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a357b5b76d4529c9dd84dda08d2fc7e37" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>setTiles</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ab9bd82c6ef11ced8498221fa1a7544e4" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>setWorld</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ae4b9bee2815f412de182f45a38d5df79" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>spike_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a04c6946a8d2d2587876fa3c649c8316b" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>tar_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a98a01ff31123ef77f9cd5097461a2fdf" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>tiles</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a194f38dad184fae443bdbd9a877b434a" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>tree_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1a0c8e3b987124b2d9c5a5a0500c764922" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>wall_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>water_id</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1aca34d28e3d8bcbcadb8edb4e3af24f8c" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>width</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1aaf5ae28eefea3a0ffb3f5f206b93b471" prot="private" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>worldPtr</name></member>
+      <member refid="classgroup6_1_1_biome_generator_1aaf01320430cc26aaa3910d16af41cd41" prot="public" virt="non-virtual"><scope>group6::BiomeGenerator</scope><name>~BiomeGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

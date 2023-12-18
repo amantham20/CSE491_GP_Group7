@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_texture_holder" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::TextureHolder</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_texture_holder_1a19b1119c15588692c4da102dc0ec5873" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::unique_ptr&lt; sf::Texture &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::unique_ptr&lt;sf::Texture&gt; &gt; textures_</definition>
+        <argsstring></argsstring>
+        <name>textures_</name>
+        <qualifiedname>i_2D::TextureHolder::textures_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="18" column="28" bodyfile="source/Interfaces/TextureHolder.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a258256e7dcd5d988fb08f80420225a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TextureHolder</definition>
+        <argsstring>()=default</argsstring>
+        <name>TextureHolder</name>
+        <qualifiedname>i_2D::TextureHolder::TextureHolder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="21" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a3eced4962518027de5e33625363d5e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~TextureHolder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~TextureHolder</name>
+        <qualifiedname>i_2D::TextureHolder::~TextureHolder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a6637af444d9ac4bb891e079bf3ef4a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LoadTexture</definition>
+        <argsstring>(std::string id, std::string file_name)</argsstring>
+        <name>LoadTexture</name>
+        <qualifiedname>i_2D::TextureHolder::LoadTexture</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+<para>Stores a texture under the given id/name;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier used to reference this texture in the future. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to load the texture from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="23" column="14" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="15" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a8dffde0f8f6b8a290c139503a3f8364d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::Texture &amp;</type>
+        <definition>const sf::Texture &amp; GetTexture</definition>
+        <argsstring>(std::string id)</argsstring>
+        <name>GetTexture</name>
+        <qualifiedname>i_2D::TextureHolder::GetTexture</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Returns a held texture matching the given id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier/Name of the texture stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sf::Texture matching the id. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="24" column="27" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a75dfaff19cda944a2d224da7ab4dc92d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt; char, sf::Texture &gt; MazeTexture</definition>
+        <argsstring>()</argsstring>
+        <name>MazeTexture</name>
+        <qualifiedname>i_2D::TextureHolder::MazeTexture</qualifiedname>
+        <briefdescription>
+<para>This function loads texture for the maze world images - Default maze. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::map&lt; name, texture&gt; returns the map, key is the name of the texture and values is the actual texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="25" column="18" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="45" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a48f25c88d87a2f964296421596cc28e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt; char, sf::Texture &gt; SecondWorldTexture</definition>
+        <argsstring>()</argsstring>
+        <name>SecondWorldTexture</name>
+        <qualifiedname>i_2D::TextureHolder::SecondWorldTexture</qualifiedname>
+        <briefdescription>
+<para>This function loads texture for the second world images group 4. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::map&lt; name, texture&gt; returns the map, key is the name of the texture and values is the actual texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="26" column="18" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="64" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a5fded348c163abda85dfea9961de77a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt; char, sf::Texture &gt; ManualWorldTexture</definition>
+        <argsstring>()</argsstring>
+        <name>ManualWorldTexture</name>
+        <qualifiedname>i_2D::TextureHolder::ManualWorldTexture</qualifiedname>
+        <briefdescription>
+<para>This function loads texture for the manual world images group 8. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::map&lt; name, texture&gt; returns the map, key is the name of the texture and values is the actual texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="27" column="18" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="109" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_texture_holder_1a753b244df5a47e90de2852cfcaacab92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt; char, sf::Texture &gt; GenerativeWorldTexture</definition>
+        <argsstring>()</argsstring>
+        <name>GenerativeWorldTexture</name>
+        <qualifiedname>i_2D::TextureHolder::GenerativeWorldTexture</qualifiedname>
+        <briefdescription>
+<para>This function loads texture for the generative world images group 6. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::map&lt; name, texture&gt; returns the map, key is the name of the texture and values is the actual texture </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/TextureHolder.hpp" line="28" column="18" bodyfile="source/Interfaces/TextureHolder.cpp" bodystart="152" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/TextureHolder.hpp" line="15" column="5" bodyfile="source/Interfaces/TextureHolder.hpp" bodystart="15" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_texture_holder_1a753b244df5a47e90de2852cfcaacab92" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>GenerativeWorldTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a8dffde0f8f6b8a290c139503a3f8364d" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>GetTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a6637af444d9ac4bb891e079bf3ef4a7e" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>LoadTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a5fded348c163abda85dfea9961de77a1" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>ManualWorldTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a75dfaff19cda944a2d224da7ab4dc92d" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>MazeTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a48f25c88d87a2f964296421596cc28e8" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>SecondWorldTexture</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a258256e7dcd5d988fb08f80420225a89" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>TextureHolder</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a19b1119c15588692c4da102dc0ec5873" prot="private" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>textures_</name></member>
+      <member refid="classi__2_d_1_1_texture_holder_1a3eced4962518027de5e33625363d5e10" prot="public" virt="non-virtual"><scope>i_2D::TextureHolder</scope><name>~TextureHolder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

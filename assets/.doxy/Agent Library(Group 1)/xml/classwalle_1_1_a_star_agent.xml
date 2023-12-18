@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_a_star_agent" kind="class" language="C++" prot="public">
+    <compoundname>walle::AStarAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <includes refid="_a_star_agent_8hpp" local="no">AStarAgent.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_a_star_agent_1a08e13d354663f407e06d40843b146e95" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>walle::AStarAgent::path</qualifiedname>
+        <briefdescription>
+<para>Path this agent is taking. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="22" column="21" bodyfile="source/Agents/AStarAgent.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_a_star_agent_1a594cb51316ba42bbee9f4bfb5b276edb" prot="private" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition goal_position</definition>
+        <argsstring></argsstring>
+        <name>goal_position</name>
+        <qualifiedname>walle::AStarAgent::goal_position</qualifiedname>
+        <briefdescription>
+<para>Where the agent wants to end up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="23" column="30" bodyfile="source/Agents/AStarAgent.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_a_star_agent_1aacfec9d59167392968f85408a86c890a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int recalculate_after_x_turns</definition>
+        <argsstring></argsstring>
+        <name>recalculate_after_x_turns</name>
+        <qualifiedname>walle::AStarAgent::recalculate_after_x_turns</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>How often agent recalculates moves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="24" column="13" bodyfile="source/Agents/AStarAgent.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_a_star_agent_1aff4f798be3e42bf3fcd55310c604cede" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int current_move_num</definition>
+        <argsstring></argsstring>
+        <name>current_move_num</name>
+        <qualifiedname>walle::AStarAgent::current_move_num</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>What move # we are currently on. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="25" column="13" bodyfile="source/Agents/AStarAgent.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1aaa9258565d80d6d15f27c53d6e2a6ca9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AStarAgent</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>AStarAgent</name>
+        <qualifiedname>walle::AStarAgent::AStarAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for creating a new <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of the agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="31" column="9" bodyfile="source/Agents/AStarAgent.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1aa7e0494ce49314ba2d2cce805f8bf33b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~AStarAgent</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AStarAgent</name>
+        <qualifiedname>walle::AStarAgent::~AStarAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="33" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>walle::AStarAgent::Initialize</qualifiedname>
+        <briefdescription>
+<para>This agent needs a specific set of actions to function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="37" column="14" bodyfile="source/Agents/AStarAgent.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a92962b4f39c34f64df42bc5281dd9ee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetGoalPosition</definition>
+        <argsstring>(const double x, const double y)</argsstring>
+        <name>SetGoalPosition</name>
+        <qualifiedname>walle::AStarAgent::SetGoalPosition</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Set where the agent should head towards. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x-coordinate of the goal position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y-coordinate of the goal position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="47" column="14" bodyfile="source/Agents/AStarAgent.hpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a3dc0236aade00fa698d872f9cad0e913" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetGoalPosition</definition>
+        <argsstring>(const cse491::GridPosition gp)</argsstring>
+        <name>SetGoalPosition</name>
+        <qualifiedname>walle::AStarAgent::SetGoalPosition</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition</type>
+          <declname>gp</declname>
+        </param>
+        <briefdescription>
+<para>Set where the agent should head towards. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position agent should go towards </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="56" column="14" bodyfile="source/Agents/AStarAgent.hpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a0173b162a094199d7690e3db561276a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition GetGoalPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGoalPosition</name>
+        <qualifiedname>walle::AStarAgent::GetGoalPosition</qualifiedname>
+        <briefdescription>
+<para>gets the goal position and returns it </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>goal_position member variable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="64" column="30" bodyfile="source/Agents/AStarAgent.hpp" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a2015958da9e8043b047fdb547db2e85b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GetRecalculateValue</definition>
+        <argsstring>() const</argsstring>
+        <name>GetRecalculateValue</name>
+        <qualifiedname>walle::AStarAgent::GetRecalculateValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the recalculate value <simplesect kind="return"><para>recalculated value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="70" column="13" bodyfile="source/Agents/AStarAgent.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1abf4c86a413a0172eb530dd62f4f42ea2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GetPathLength</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPathLength</name>
+        <qualifiedname>walle::AStarAgent::GetPathLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the size of the current path <simplesect kind="return"><para>length of path </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="76" column="13" bodyfile="source/Agents/AStarAgent.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a25822d6e1e6c8fd892e65fdb725dc632" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetRecalculate</definition>
+        <argsstring>(const int recalculate)</argsstring>
+        <name>SetRecalculate</name>
+        <qualifiedname>walle::AStarAgent::SetRecalculate</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>recalculate</declname>
+        </param>
+        <briefdescription>
+<para>Set how many moves should occur before recalculating path A lower number will react faster to updates in the world but will call A* search more often. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recalculate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How often path should be recalculated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="85" column="14" bodyfile="source/Agents/AStarAgent.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1ab689719b9504c2f28198696cf3d78ab5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecalculatePath</definition>
+        <argsstring>()</argsstring>
+        <name>RecalculatePath</name>
+        <qualifiedname>walle::AStarAgent::RecalculatePath</qualifiedname>
+        <briefdescription>
+<para>Update the path to go to goal position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="92" column="14" bodyfile="source/Agents/AStarAgent.hpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition GetNextPosition</definition>
+        <argsstring>() override</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>walle::AStarAgent::GetNextPosition</qualifiedname>
+        <briefdescription>
+<para>Get the next position to move to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>GridPosition to move to </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="100" column="31" bodyfile="source/Agents/AStarAgent.hpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_a_star_agent_1a464a813fdccf527181785e25e59586cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;, const cse491::type_options_t &amp;, const cse491::item_map_t &amp;, const cse491::agent_map_t &amp;) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>walle::AStarAgent::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+        </param>
+        <briefdescription>
+<para>Choose the action to take a step in the appropriate direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AStarAgent.hpp" line="105" column="16" bodyfile="source/Agents/AStarAgent.hpp" bodystart="105" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class that describes a <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> class </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AStarAgent</label>
+        <link refid="classwalle_1_1_a_star_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AStarAgent</label>
+        <link refid="classwalle_1_1_a_star_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/AStarAgent.hpp" line="20" column="5" bodyfile="source/Agents/AStarAgent.hpp" bodystart="20" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_a_star_agent_1aaa9258565d80d6d15f27c53d6e2a6ca9" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>AStarAgent</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1aff4f798be3e42bf3fcd55310c604cede" prot="private" virt="non-virtual"><scope>walle::AStarAgent</scope><name>current_move_num</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a0173b162a094199d7690e3db561276a5" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>GetGoalPosition</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>GetNextPosition</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1abf4c86a413a0172eb530dd62f4f42ea2" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>GetPathLength</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a2015958da9e8043b047fdb547db2e85b" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>GetRecalculateValue</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a594cb51316ba42bbee9f4bfb5b276edb" prot="private" virt="non-virtual"><scope>walle::AStarAgent</scope><name>goal_position</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>Initialize</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a08e13d354663f407e06d40843b146e95" prot="private" virt="non-virtual"><scope>walle::AStarAgent</scope><name>path</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1aacfec9d59167392968f85408a86c890a" prot="private" virt="non-virtual"><scope>walle::AStarAgent</scope><name>recalculate_after_x_turns</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1ab689719b9504c2f28198696cf3d78ab5" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>RecalculatePath</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a464a813fdccf527181785e25e59586cb" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>SelectAction</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a92962b4f39c34f64df42bc5281dd9ee1" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>SetGoalPosition</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a3dc0236aade00fa698d872f9cad0e913" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>SetGoalPosition</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1a25822d6e1e6c8fd892e65fdb725dc632" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>SetRecalculate</name></member>
+      <member refid="classwalle_1_1_a_star_agent_1aa7e0494ce49314ba2d2cce805f8bf33b" prot="public" virt="non-virtual"><scope>walle::AStarAgent</scope><name>~AStarAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classnet_worth_1_1_client_interface" kind="class"><name>netWorth::ClientInterface</name>
+    <member refid="classnet_worth_1_1_client_interface_1a6003a7e2b662facc667a881b1494aebb" kind="variable"><name>m_manager</name></member>
+    <member refid="classnet_worth_1_1_client_interface_1a6e150715999c4a2c283792f608612d90" kind="function"><name>ClientInterface</name></member>
+    <member refid="classnet_worth_1_1_client_interface_1a54aa3db4e29fbab38a726bd91930b950" kind="function"><name>Initialize</name></member>
+    <member refid="classnet_worth_1_1_client_interface_1a44d67cc0df9952f910f9c434dcd21723" kind="function"><name>SelectAction</name></member>
+  </compound>
+  <compound refid="classnet_worth_1_1_client_manager" kind="class"><name>netWorth::ClientManager</name>
+    <member refid="classnet_worth_1_1_client_manager_1a2053ba7e19441b8994c7d2fd02499efd" kind="variable"><name>m_socket</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ae3699d3927ec1e5b72a715dfd47e0024" kind="variable"><name>m_game_update_socket</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a58adfa67e0ca80c31e9f251dcf10c770" kind="variable"><name>m_ip</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ac82a7ec8ff27de44ad086869c878099f" kind="variable"><name>m_update_port</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a180a29ab7c258c028789e80b33e03bb8" kind="variable"><name>m_action_map</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a88c8ee1d534172e0d70eac7b0b72e248" kind="variable"><name>m_client_id</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a6d04c6327d05740b6236bc56eb6a2fe6" kind="function"><name>ClientManager</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a0a134544e52b882e731ab763065ece77" kind="function"><name>setUpdatePort</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ae66719e76cd22d14b82d74ee9b5fba3c" kind="function"><name>packetToActionMap</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a0e322f3a39f1ec4f15bf860d3a0109da" kind="function"><name>setupSocket</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1adab5bcb27aa7dbb77bacee48dd559935" kind="function"><name>setupGameUpdateSocket</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ad107666bab5c69b6012e4dc928c37fdc" kind="function"><name>iDPresent</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ade4221e60ac5b6532d0ca421edc36af4" kind="function"><name>getActionID</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a64fd8ff60c1e1cfe360fb73c362c8b45" kind="function"><name>clearActionMap</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1ad56ae61125c714fdce161648a4a444c4" kind="function"><name>getSerializedAgents</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1adac2c7bddd391488885695904f551c27" kind="function"><name>setClientID</name></member>
+    <member refid="classnet_worth_1_1_client_manager_1a52398991739f4976ccf7faf384372ce5" kind="function"><name>getClientID</name></member>
+  </compound>
+  <compound refid="classnet_worth_1_1_controlled_agent" kind="class"><name>netWorth::ControlledAgent</name>
+    <member refid="classnet_worth_1_1_controlled_agent_1a90c01a3d9a29e24a7516c81763b30f7b" kind="variable"><name>m_manager</name></member>
+    <member refid="classnet_worth_1_1_controlled_agent_1a69f80fbe94a8181389453ab50a5428fa" kind="function"><name>ControlledAgent</name></member>
+    <member refid="classnet_worth_1_1_controlled_agent_1a54aa3db4e29fbab38a726bd91930b950" kind="function"><name>Initialize</name></member>
+    <member refid="classnet_worth_1_1_controlled_agent_1a464a813fdccf527181785e25e59586cb" kind="function"><name>SelectAction</name></member>
+  </compound>
+  <compound refid="classnet_worth_1_1_networking_interface" kind="class"><name>netWorth::NetworkingInterface</name>
+    <member refid="classnet_worth_1_1_networking_interface_1a0a5f384fbbd590c8e871ba72f52e5ed0" kind="variable"><name>m_socket</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1a8ddcf13c8084c8b94c8edb2a541bed43" kind="variable"><name>m_ip</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1ac8f5c2dcfe32cf7f600e04fe61164361" kind="variable"><name>m_port</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1aaaa81235fdcd360c7d4ae52d7bfe5f37" kind="function"><name>NetworkingInterface</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1ab3defdc7328b1893f4577b3be3af4028" kind="function"><name>getSocket</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1a651d5aa55d8137a944b74085193ba1d0" kind="function"><name>bindSocket</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1a04d60c5124ab56b1dfc7140491bfe84e" kind="function"><name>sendPacket</name></member>
+    <member refid="classnet_worth_1_1_networking_interface_1a4f5d19c23bc2ec20d0f9e315f4829ef1" kind="function"><name>receivePacket</name></member>
+  </compound>
+  <compound refid="classnet_worth_1_1_server_interface" kind="class"><name>netWorth::ServerInterface</name>
+    <member refid="classnet_worth_1_1_server_interface_1a10f86e0747b8226b345459e0c7ba00ec" kind="variable"><name>m_manager</name></member>
+    <member refid="classnet_worth_1_1_server_interface_1a6954093bba9e5c198c9d0e3cd2d8d94d" kind="variable"><name>m_world_update_port</name></member>
+    <member refid="classnet_worth_1_1_server_interface_1a186dc35e659f5a163279e04266836c23" kind="function"><name>ServerInterface</name></member>
+    <member refid="classnet_worth_1_1_server_interface_1a54aa3db4e29fbab38a726bd91930b950" kind="function"><name>Initialize</name></member>
+    <member refid="classnet_worth_1_1_server_interface_1a44d67cc0df9952f910f9c434dcd21723" kind="function"><name>SelectAction</name></member>
+    <member refid="classnet_worth_1_1_server_interface_1a1c474bf76efb6df4c4ab493a288c4797" kind="function"><name>gridToPacket</name></member>
+  </compound>
+  <compound refid="classnet_worth_1_1_server_manager" kind="class"><name>netWorth::ServerManager</name>
+    <member refid="classnet_worth_1_1_server_manager_1a2bc40789861dd57f520b2b95515abd03" kind="variable"><name>m_manager_socket</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ae89d00ee12538588f696338737c9b207" kind="variable"><name>m_interface_set</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a02d39d1e1ffbe51a85a7ad40dbb368e5" kind="variable"><name>m_action_map</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a3ea16aaf41ce9e2ed5e260c1d629466d" kind="variable"><name>m_current_serialized_agents</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a4df51003e68323cf73786b1e801d3912" kind="variable"><name>m_update_vec</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ac0e70844987164f26d6d67403bd95982" kind="variable"><name>m_has_new_agent</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a1b0be970c382c521c04ed2b4423c5b51" kind="variable"><name>m_interfaces_present</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a75025bd6536585b641734cf854615850" kind="variable"><name>m_init_connection_port</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a7a4d96233f1e472841083d8460eda867" kind="variable"><name>m_max_client_port</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a0832ba55c80437cf4ae5bddbbf755bc0" kind="function"><name>ServerManager</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ad56ae61125c714fdce161648a4a444c4" kind="function"><name>getSerializedAgents</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a664f63bc68ad559b9952757012386434" kind="function"><name>setSerializedAgents</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a94980178d190df5c1bddde82f749341b" kind="function"><name>hasAgentsPresent</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ae5a41f433696df773744297997ae351c" kind="function"><name>setNewAgent</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a27e6790b9c8acfaad82a15833a34dda9" kind="function"><name>actionMapToPacket</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ade0347e819dd9431c90cff411cd7d59e" kind="function"><name>increasePort</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a9e18651ff69c4bad5927f3ddd71ba980" kind="function"><name>removeInterface</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a68bc2449eb85cc5459a71557f0d84257" kind="function"><name>addToUpdatePairs</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ab6c07ac9701a95b6794ad4fef10b4ee1" kind="function"><name>sendGameUpdates</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ab9e72484d4f29f4c1d027f78fde5a1b0" kind="function"><name>removeFromActionMap</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1ab76a87114568091f38d8e435da86f01d" kind="function"><name>removeFromUpdatePairs</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a44f1d701df820c95c80045814eb26ae5" kind="function"><name>writeToActionMap</name></member>
+    <member refid="classnet_worth_1_1_server_manager_1a466224b9911e0281f2133b0a96b6ed55" kind="function"><name>addToInterfaceSet</name></member>
+  </compound>
+  <compound refid="namespacecse491" kind="namespace"><name>cse491</name>
+  </compound>
+  <compound refid="namespacei__2_d" kind="namespace"><name>i_2D</name>
+  </compound>
+  <compound refid="namespacenet_worth" kind="namespace"><name>netWorth</name>
+  </compound>
+  <compound refid="namespacesf" kind="namespace"><name>sf</name>
+  </compound>
+  <compound refid="_client_interface_8hpp" kind="file"><name>ClientInterface.hpp</name>
+  </compound>
+  <compound refid="_client_manager_8hpp" kind="file"><name>ClientManager.hpp</name>
+  </compound>
+  <compound refid="_controlled_agent_8hpp" kind="file"><name>ControlledAgent.hpp</name>
+  </compound>
+  <compound refid="_network_interface_8hpp" kind="file"><name>NetworkInterface.hpp</name>
+  </compound>
+  <compound refid="_server_interface_8hpp" kind="file"><name>ServerInterface.hpp</name>
+  </compound>
+  <compound refid="_server_manager_8hpp" kind="file"><name>ServerManager.hpp</name>
+  </compound>
+  <compound refid="dir_d63376ef77eb621cc9b73f8097e771f8" kind="dir"><name>source/Interfaces/NetWorth/client</name>
+  </compound>
+  <compound refid="dir_e52260c07c5ca641bf485ae92612dd08" kind="dir"><name>source/Interfaces</name>
+  </compound>
+  <compound refid="dir_0121daa1f68cbca759acb74b3e906cff" kind="dir"><name>source/Interfaces/NetWorth</name>
+  </compound>
+  <compound refid="dir_1ea711888d2c31b2ee5b33ee0d19cbd8" kind="dir"><name>source/Interfaces/NetWorth/server</name>
+  </compound>
+  <compound refid="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir"><name>source</name>
+  </compound>
+</doxygenindex>

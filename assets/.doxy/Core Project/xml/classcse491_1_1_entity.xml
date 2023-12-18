@@ -2,24 +2,60 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classcse491_1_1_entity" kind="class" language="C++" prot="public">
     <compoundname>cse491::Entity</compoundname>
+    <basecompoundref refid="classcse491_1_1_core_object" prot="public" virt="non-virtual">CoreObject</basecompoundref>
     <derivedcompoundref refid="classcse491_1_1_agent_base" prot="public" virt="non-virtual">AgentBase</derivedcompoundref>
-    <innerclass refid="structcse491_1_1_entity_1_1_property" prot="protected">cse491::Entity::Property</innerclass>
-    <innerclass refid="structcse491_1_1_entity_1_1_property_base" prot="protected">cse491::Entity::PropertyBase</innerclass>
-    <sectiondef kind="protected-attrib">
-      <memberdef kind="variable" id="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" static="no" mutable="no">
-        <type>const size_t</type>
-        <definition>const size_t id</definition>
+    <derivedcompoundref refid="classcse491_1_1_item_base" prot="public" virt="non-virtual">ItemBase</derivedcompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" prot="protected" static="no">
+        <type>std::unordered_map&lt; std::string, std::unique_ptr&lt; <ref refid="structcse491_1_1_property_base" kindref="compound">PropertyBase</ref> &gt; &gt;</type>
+        <definition>using property_map_t =  std::unordered_map&lt;std::string, std::unique_ptr&lt;PropertyBase&gt; &gt;</definition>
         <argsstring></argsstring>
-        <name>id</name>
-        <qualifiedname>cse491::Entity::id</qualifiedname>
+        <name>property_map_t</name>
+        <qualifiedname>cse491::Entity::property_map_t</qualifiedname>
         <briefdescription>
-<para>Unique ID for this entity. </para>
+<para>Every entity can have a simple set of properties (with values) associated with it. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="19" column="18" bodyfile="source/core/Entity.hpp" bodystart="19" bodyend="-1"/>
+        <location file="source/core/Entity.hpp" line="41" column="3" bodyfile="source/core/Entity.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a7458a12c2732bd1fcdeba2f479606536" prot="private" static="no" mutable="no">
+        <type><ref refid="classcse491_1_1_world_base" kindref="compound">WorldBase</ref> *</type>
+        <definition>WorldBase* world_ptr</definition>
+        <argsstring></argsstring>
+        <name>world_ptr</name>
+        <qualifiedname>cse491::Entity::world_ptr</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Track world this entity is in. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="29" column="13" bodyfile="source/core/Entity.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>cse491::Entity::id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Unique ID for this entity (0 is used for &quot;no ID&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="32" column="10" bodyfile="source/core/Entity.hpp" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -27,6 +63,7 @@
         <argsstring></argsstring>
         <name>name</name>
         <qualifiedname>cse491::Entity::name</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
         <briefdescription>
 <para>Name for this entity (E.g., &quot;Player 1&quot; or &quot;+2 Sword&quot;) </para>
         </briefdescription>
@@ -34,7 +71,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="20" column="17" bodyfile="source/core/Entity.hpp" bodystart="20" bodyend="-1"/>
+        <location file="source/core/Entity.hpp" line="33" column="15" bodyfile="source/core/Entity.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1a65d59a4da280ec1586bf960dd050f852" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t grid_id</definition>
+        <argsstring></argsstring>
+        <name>grid_id</name>
+        <qualifiedname>cse491::Entity::grid_id</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Which grid is this entity on? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="35" column="10" bodyfile="source/core/Entity.hpp" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" static="no" mutable="no">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -49,22 +102,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="21" column="18" bodyfile="source/core/Entity.hpp" bodystart="21" bodyend="-1"/>
+        <location file="source/core/Entity.hpp" line="36" column="16" bodyfile="source/core/Entity.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" static="no" mutable="no">
-        <type>std::unordered_map&lt; std::string, std::unique_ptr&lt; <ref refid="structcse491_1_1_entity_1_1_property_base" kindref="compound">PropertyBase</ref> &gt; &gt;</type>
-        <definition>std::unordered_map&lt;std::string, std::unique_ptr&lt;PropertyBase&gt; &gt; property_map</definition>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1ae98df8c658e54f8dad0ebe2b6c59eb51" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; inventory</definition>
         <argsstring></argsstring>
-        <name>property_map</name>
-        <qualifiedname>cse491::Entity::property_map</qualifiedname>
+        <name>inventory</name>
+        <qualifiedname>cse491::Entity::inventory</qualifiedname>
         <briefdescription>
-<para>Every entity can have a simple set of properties (with values) associated with it. </para>
+<para>What entity ids are held by this entity? </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="35" column="24" bodyfile="source/core/Entity.hpp" bodystart="35" bodyend="-1"/>
+        <location file="source/core/Entity.hpp" line="38" column="15" bodyfile="source/core/Entity.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_entity_1aaf95d2aca1711a816f70645c5ee76aaa" prot="protected" static="no" mutable="no">
+        <type><ref refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" kindref="member">property_map_t</ref></type>
+        <definition>property_map_t property_map</definition>
+        <argsstring></argsstring>
+        <name>property_map</name>
+        <qualifiedname>cse491::Entity::property_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="42" column="18" bodyfile="source/core/Entity.hpp" bodystart="42" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-func">
@@ -74,7 +141,7 @@
             <type>typename T</type>
           </param>
         </templateparamlist>
-        <type><ref refid="structcse491_1_1_entity_1_1_property" kindref="compound">Property</ref>&lt; T &gt; &amp;</type>
+        <type><ref refid="structcse491_1_1_property" kindref="compound">Property</ref>&lt; T &gt; &amp;</type>
         <definition>Property&lt; T &gt; &amp; AsProperty</definition>
         <argsstring>(const std::string &amp;name) const</argsstring>
         <name>AsProperty</name>
@@ -89,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="40" column="15" bodyfile="source/core/Entity.hpp" bodystart="40" bodyend="46"/>
+        <location file="source/core/Entity.hpp" line="47" column="12" bodyfile="source/core/Entity.hpp" bodystart="47" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -113,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="49" column="5" bodyfile="source/core/Entity.hpp" bodystart="49" bodyend="49"/>
+        <location file="source/core/Entity.hpp" line="56" column="3" bodyfile="source/core/Entity.hpp" bodystart="56" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -130,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="50" column="5"/>
+        <location file="source/core/Entity.hpp" line="57" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -147,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="51" column="5"/>
+        <location file="source/core/Entity.hpp" line="58" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -161,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="52" column="13"/>
+        <location file="source/core/Entity.hpp" line="59" column="11"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -178,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="54" column="13"/>
+        <location file="source/core/Entity.hpp" line="61" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -195,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="55" column="13"/>
+        <location file="source/core/Entity.hpp" line="62" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -209,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="58" column="13" bodyfile="source/core/Entity.hpp" bodystart="58" bodyend="58"/>
+        <location file="source/core/Entity.hpp" line="65" column="11" bodyfile="source/core/Entity.hpp" bodystart="65" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -223,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="59" column="25" bodyfile="source/core/Entity.hpp" bodystart="59" bodyend="59"/>
+        <location file="source/core/Entity.hpp" line="66" column="22" bodyfile="source/core/Entity.hpp" bodystart="66" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
@@ -237,7 +304,67 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="60" column="19" bodyfile="source/core/Entity.hpp" bodystart="60" bodyend="60"/>
+        <location file="source/core/Entity.hpp" line="67" column="17" bodyfile="source/core/Entity.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a88f8198fa0b98315eaeb845ebb8c6dcf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_world_base" kindref="compound">WorldBase</ref> &amp;</type>
+        <definition>WorldBase &amp; GetWorld</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWorld</name>
+        <qualifiedname>cse491::Entity::GetWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="68" column="14" bodyfile="source/core/Entity.hpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a4ffa22f4412fcf5311ce82f141ba0859" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetGridID</definition>
+        <argsstring>() const</argsstring>
+        <name>GetGridID</name>
+        <qualifiedname>cse491::Entity::GetGridID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="72" column="11" bodyfile="source/core/Entity.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a4f2ce779a5091d928997ab65bdf62432" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsOnGrid</definition>
+        <argsstring>(size_t in_grid_id) const</argsstring>
+        <name>IsOnGrid</name>
+        <qualifiedname>cse491::Entity::IsOnGrid</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>in_grid_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="73" column="9" bodyfile="source/core/Entity.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a24934eba69d59a45f2a534b190ad81f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HasWorld</definition>
+        <argsstring>() const</argsstring>
+        <name>HasWorld</name>
+        <qualifiedname>cse491::Entity::HasWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="75" column="9" bodyfile="source/core/Entity.hpp" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -255,17 +382,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="62" column="13" bodyfile="source/core/Entity.hpp" bodystart="62" bodyend="62"/>
+        <location file="source/core/Entity.hpp" line="76" column="10" bodyfile="source/core/Entity.hpp" bodystart="76" bodyend="79"/>
       </memberdef>
-      <memberdef kind="function" id="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classcse491_1_1_entity_1aec036a2f43c433afaa742192eef9d102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
         <definition>Entity &amp; SetPosition</definition>
-        <argsstring>(GridPosition in_pos)</argsstring>
+        <argsstring>(GridPosition in_pos, size_t grid_id=0)</argsstring>
         <name>SetPosition</name>
         <qualifiedname>cse491::Entity::SetPosition</qualifiedname>
         <param>
           <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
           <declname>in_pos</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>grid_id</declname>
+          <defval>0</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -273,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="63" column="13" bodyfile="source/core/Entity.hpp" bodystart="63" bodyend="63"/>
+        <location file="source/core/Entity.hpp" line="80" column="10" bodyfile="source/core/Entity.cpp" bodystart="6" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -295,7 +427,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="64" column="13" bodyfile="source/core/Entity.hpp" bodystart="64" bodyend="64"/>
+        <location file="source/core/Entity.hpp" line="81" column="10" bodyfile="source/core/Entity.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1af5cd6b1f10d96860e91dbdaf7f994e4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>virtual Entity &amp; SetWorld</definition>
+        <argsstring>(WorldBase &amp;in_world)</argsstring>
+        <name>SetWorld</name>
+        <qualifiedname>cse491::Entity::SetWorld</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_world_base" kindref="compound">WorldBase</ref> &amp;</type>
+          <declname>in_world</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="85" column="18" bodyfile="source/core/Entity.hpp" bodystart="85" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -305,13 +455,29 @@
         <qualifiedname>cse491::Entity::IsAgent</qualifiedname>
         <reimplementedby refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2">IsAgent</reimplementedby>
         <briefdescription>
-<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually an autonomous agent? (Overridden in <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> to return true) </para>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an autonomous agent? </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="67" column="18" bodyfile="source/core/Entity.hpp" bodystart="67" bodyend="67"/>
+        <location file="source/core/Entity.hpp" line="90" column="16" bodyfile="source/core/Entity.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a91d327ae5ea52f9dc758f398253745f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool IsItem</definition>
+        <argsstring>() const</argsstring>
+        <name>IsItem</name>
+        <qualifiedname>cse491::Entity::IsItem</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_item_base_1a04dc015ddd281ec586ed04397e0a33ce">IsItem</reimplementedby>
+        <briefdescription>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an item? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="91" column="16" bodyfile="source/core/Entity.hpp" bodystart="91" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -321,13 +487,13 @@
         <qualifiedname>cse491::Entity::IsInterface</qualifiedname>
         <reimplementedby refid="classcse491_1_1_interface_base_1a4afb8c12fa7634510af645142be1ce16">IsInterface</reimplementedby>
         <briefdescription>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an interface for a human? </para>
         </briefdescription>
         <detaileddescription>
-<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually a specialty Agent that&apos;s an Interface for a human player? (Overridden in <ref refid="classcse491_1_1_interface_base" kindref="compound">InterfaceBase</ref> to return true) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="71" column="18" bodyfile="source/core/Entity.hpp" bodystart="71" bodyend="71"/>
+        <location file="source/core/Entity.hpp" line="92" column="16" bodyfile="source/core/Entity.hpp" bodystart="92" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -346,7 +512,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="77" column="11" bodyfile="source/core/Entity.hpp" bodystart="77" bodyend="79"/>
+        <location file="source/core/Entity.hpp" line="97" column="9" bodyfile="source/core/Entity.hpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a7e57a528d2258936fccfd76ba5bb7ded" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumProperties</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumProperties</name>
+        <qualifiedname>cse491::Entity::GetNumProperties</qualifiedname>
+        <briefdescription>
+<para>How many properties does this entity have? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="100" column="11" bodyfile="source/core/Entity.hpp" bodystart="100" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -371,7 +552,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="83" column="15" bodyfile="source/core/Entity.hpp" bodystart="83" bodyend="86"/>
+        <location file="source/core/Entity.hpp" line="104" column="12" bodyfile="source/core/Entity.hpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a6861d4f61a5ceb4211e0193d4423101e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87" kindref="member">PropertyType</ref></type>
+        <definition>PropertyType GetPropertyType</definition>
+        <argsstring>(const std::string &amp;name) const</argsstring>
+        <name>GetPropertyType</name>
+        <qualifiedname>cse491::Entity::GetPropertyType</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="109" column="17" bodyfile="source/core/Entity.hpp" bodystart="109" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -399,7 +598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="90" column="13" bodyfile="source/core/Entity.hpp" bodystart="90" bodyend="97"/>
+        <location file="source/core/Entity.hpp" line="117" column="10" bodyfile="source/core/Entity.hpp" bodystart="117" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -414,9 +613,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="100" column="13" bodyfile="source/core/Entity.hpp" bodystart="100" bodyend="100"/>
+        <location file="source/core/Entity.hpp" line="127" column="10" bodyfile="source/core/Entity.hpp" bodystart="127" bodyend="127"/>
       </memberdef>
-      <memberdef kind="function" id="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classcse491_1_1_entity_1aec09f29c9b8611a97ede88aca9eda904" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
           <param>
             <type>typename VALUE_T</type>
@@ -429,7 +628,7 @@
         </templateparamlist>
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
         <definition>Entity &amp; SetProperties</definition>
-        <argsstring>(const std::string &amp;name, VALUE_T &amp;&amp;value, EXTRA_Ts &amp;&amp;... extras)</argsstring>
+        <argsstring>(const std::string &amp;name, VALUE_T &amp;&amp;value, EXTRA_Ts &amp;&amp;...extras)</argsstring>
         <name>SetProperties</name>
         <qualifiedname>cse491::Entity::SetProperties</qualifiedname>
         <param>
@@ -450,7 +649,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="103" column="13" bodyfile="source/core/Entity.hpp" bodystart="103" bodyend="106"/>
+        <location file="source/core/Entity.hpp" line="130" column="10" bodyfile="source/core/Entity.hpp" bodystart="130" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
@@ -469,7 +668,189 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Entity.hpp" line="109" column="13" bodyfile="source/core/Entity.hpp" bodystart="109" bodyend="112"/>
+        <location file="source/core/Entity.hpp" line="136" column="10" bodyfile="source/core/Entity.hpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a58604fcd0bd186c26cfc8523ca18de2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" kindref="member">property_map_t</ref> &amp;</type>
+        <definition>property_map_t &amp; GetPropertyMap</definition>
+        <argsstring>()</argsstring>
+        <name>GetPropertyMap</name>
+        <qualifiedname>cse491::Entity::GetPropertyMap</qualifiedname>
+        <briefdescription>
+<para>return the property map for the entity </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="142" column="18" bodyfile="source/core/Entity.hpp" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a4941a720636380ff1b2230c44e16236c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HasItem</definition>
+        <argsstring>(size_t id) const</argsstring>
+        <name>HasItem</name>
+        <qualifiedname>cse491::Entity::HasItem</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Inventory Management. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="147" column="8" bodyfile="source/core/Entity.hpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1afe03b0eaf89eb7d96cc1da613e3542ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; AddItem</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>AddItem</name>
+        <qualifiedname>cse491::Entity::AddItem</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="151" column="10" bodyfile="source/core/Entity.cpp" bodystart="15" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a7c24de0b9b1425909e394badaedb242a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; AddItem</definition>
+        <argsstring>(Entity &amp;item)</argsstring>
+        <name>AddItem</name>
+        <qualifiedname>cse491::Entity::AddItem</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="152" column="10" bodyfile="source/core/Entity.hpp" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a250dc20128eced2591bbf14ae4e27263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; RemoveItem</definition>
+        <argsstring>(size_t id)</argsstring>
+        <name>RemoveItem</name>
+        <qualifiedname>cse491::Entity::RemoveItem</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="154" column="10" bodyfile="source/core/Entity.cpp" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1ae256acb3e6cfd455e274eb1c2b5bf762" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+        <definition>Entity &amp; RemoveItem</definition>
+        <argsstring>(Entity &amp;item)</argsstring>
+        <name>RemoveItem</name>
+        <qualifiedname>cse491::Entity::RemoveItem</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> &amp;</type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="155" column="10" bodyfile="source/core/Entity.hpp" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::Entity::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73">Serialize_impl</reimplements>
+        <reimplementedby refid="classcse491_1_1_item_base_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Serialize entity-specific values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream to write contents to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="159" column="8" bodyfile="source/core/Entity.hpp" bodystart="159" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1aa912efd8fc53715bdadc51234115d82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::Entity::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31">Deserialize_impl</reimplements>
+        <reimplementedby refid="classcse491_1_1_item_base_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Serialize entity-specific values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream to write contents to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="176" column="8" bodyfile="source/core/Entity.hpp" bodystart="176" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_entity_1a2832506a8de210991390410bd86a2f72" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt; size_t &gt; GetInventory</definition>
+        <argsstring>() const</argsstring>
+        <name>GetInventory</name>
+        <qualifiedname>cse491::Entity::GetInventory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Entity.hpp" line="208" column="16" bodyfile="source/core/Entity.hpp" bodystart="208" bodyend="208"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -480,17 +861,29 @@
       <node id="1">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="3">
         <label>AgentBase</label>
         <link refid="classcse491_1_1_agent_base"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="4">
         <label>InterfaceBase</label>
         <link refid="classcse491_1_1_interface_base"/>
-        <childnode refid="2" relation="public-inheritance">
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ItemBase</label>
+        <link refid="classcse491_1_1_item_base"/>
+        <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
@@ -498,41 +891,82 @@
       <node id="1">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
           <edgelabel>position</edgelabel>
         </childnode>
       </node>
       <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="3">
         <label>GridPosition</label>
         <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="source/core/Entity.hpp" line="17" column="3" bodyfile="source/core/Entity.hpp" bodystart="17" bodyend="113"/>
+    <location file="source/core/Entity.hpp" line="27" column="1" bodyfile="source/core/Entity.hpp" bodystart="27" bodyend="209"/>
     <listofallmembers>
+      <member refid="classcse491_1_1_entity_1afe03b0eaf89eb7d96cc1da613e3542ee" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_entity_1a7c24de0b9b1425909e394badaedb242a" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>AddItem</name></member>
       <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>AsProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_entity_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>EndSerialize</name></member>
       <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_entity_1a4ffa22f4412fcf5311ce82f141ba0859" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetGridID</name></member>
       <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetID</name></member>
+      <member refid="classcse491_1_1_entity_1a2832506a8de210991390410bd86a2f72" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetInventory</name></member>
       <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetName</name></member>
+      <member refid="classcse491_1_1_entity_1a7e57a528d2258936fccfd76ba5bb7ded" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetNumProperties</name></member>
       <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a58604fcd0bd186c26cfc8523ca18de2c" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetPropertyMap</name></member>
+      <member refid="classcse491_1_1_entity_1a6861d4f61a5ceb4211e0193d4423101e" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetPropertyType</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" virt="pure-virtual"><scope>cse491::Entity</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_entity_1a88f8198fa0b98315eaeb845ebb8c6dcf" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>GetWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a65d59a4da280ec1586bf960dd050f852" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>grid_id</name></member>
+      <member refid="classcse491_1_1_entity_1a4941a720636380ff1b2230c44e16236c" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>HasItem</name></member>
       <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>HasProperty</name></member>
-      <member refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1a24934eba69d59a45f2a534b190ad81f7" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>HasWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1ae98df8c658e54f8dad0ebe2b6c59eb51" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>inventory</name></member>
       <member refid="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>IsAgent</name></member>
       <member refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>IsInterface</name></member>
+      <member refid="classcse491_1_1_entity_1a91d327ae5ea52f9dc758f398253745f0" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>IsItem</name></member>
+      <member refid="classcse491_1_1_entity_1a4f2ce779a5091d928997ab65bdf62432" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>IsOnGrid</name></member>
       <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>name</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>position</name></member>
-      <member refid="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1aaf95d2aca1711a816f70645c5ee76aaa" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>property_map_t</name></member>
+      <member refid="classcse491_1_1_entity_1a250dc20128eced2591bbf14ae4e27263" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>RemoveItem</name></member>
+      <member refid="classcse491_1_1_entity_1ae256acb3e6cfd455e274eb1c2b5bf762" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>RemoveItem</name></member>
       <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>RemoveProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_entity_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>Serialize_impl</name></member>
       <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetName</name></member>
-      <member refid="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1aec036a2f43c433afaa742192eef9d102" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperties</name></member>
-      <member refid="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1aec09f29c9b8611a97ede88aca9eda904" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperties</name></member>
       <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" virt="non-virtual"><scope>cse491::Entity</scope><name>SetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1af5cd6b1f10d96860e91dbdaf7f994e4c" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>SetWorld</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::Entity</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_entity_1a7458a12c2732bd1fcdeba2f479606536" prot="private" virt="non-virtual"><scope>cse491::Entity</scope><name>world_ptr</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>~CoreObject</name></member>
       <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" virt="virtual"><scope>cse491::Entity</scope><name>~Entity</name></member>
     </listofallmembers>
   </compounddef>

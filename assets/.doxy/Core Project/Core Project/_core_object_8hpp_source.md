@@ -12,99 +12,114 @@
 #pragma once
 
 #include <fstream>
+#include <functional>
 #include <iostream>
+#include <map>
+#include <sstream>
 #include <string>
+#include <unordered_map>
+
+#include "Serialize.hpp"
+
+#ifndef NDEBUG
+#define EXPERIMENTAL_FUNCTION __attribute__((annotate("experimental_function")))
+#define EXPERIMENTAL_CLASS __attribute__((annotate("experimental_class")))
+
+#else // NDEBUG *not* set, so debug mode.
+#define EXPERIMENTAL_CLASS                       \
+  __attribute__((annotate("experimental_class"), \
+                 warning("This is an experimental class and should be used with caution.")))
+#define EXPERIMENTAL_FUNCTION                                              \
+  __attribute__((annotate("experimental_function"),                        \
+                 warning("This is an experimental function and should be " \
+                         "used with caution.")))
+#endif
 
 namespace cse491 {
 
-  class CoreObject {
-  protected:
-    // -- Required functionality in all core classes --
-    // These functions are core functionality that must be implemented in all derived
-    // classes.  They will enable the public interface to behave correctly.
+class CoreObject {
+protected:
+  // -- Required functionality in all core classes --
+  // These functions are core functionality that must be implemented in all derived
+  // classes.  They will enable the public interface to behave correctly.
 
-    virtual std::string GetTypeName_impl() const = 0;
+  virtual std::string GetTypeName_impl() const = 0;
 
-    virtual void Serialize_impl(std::ostream &) const = 0;
+  virtual void Serialize_impl(std::ostream &) const = 0;
 
-    virtual void Deserialize_impl(std::istream &) = 0;
+  virtual void Deserialize_impl(std::istream &) = 0;
 
+  // -- Helper functions --
+  // The functions below can be used in derived classes to implement above functionality.
 
-    // -- Helper functions --
-    // The functions below can be used in derived classes to implement above functionality.
+  void StartSerialize(std::ostream &os) const { os << ":::START " << GetTypeName() << "\n"; }
 
-    void StartSerialize(std::ostream & os) const {
-      os << ":::START " << GetTypeName() << "\n";
+  void EndSerialize(std::ostream &os) const { os << ":::END " << GetTypeName() << "\n"; }
+
+  bool StartDeserialize(std::istream &is) {
+    std::string line;
+    std::getline(is, line);
+    std::string expected = ":::START " + GetTypeName();
+    if (line != expected) {
+      std::cerr << "Deserialization error.  Expected: " << expected << "...Found: " << line;
+      return false;
     }
+    return true;
+  }
 
-    void EndSerialize(std::ostream & os) const {
-      os << ":::END " << GetTypeName() << "\n";
+  bool EndDeserialize(std::istream &is) {
+    std::string line;
+    std::getline(is, line);
+    std::string expected = ":::END " + GetTypeName();
+    if (line != expected) {
+      std::cerr << "Deserialization error.  Expected: " << expected << "...Found: " << line;
+      return false;
     }
+    return true;
+  }
 
-    bool StartDeserialize(std::istream & is) {
-      std::string line;
-      std::getline(is, line);
-      std::string expected = ":::START " + GetTypeName();
-      if (line != expected) {
-        std::cerr << "Deserialization error.  Expected: " << expected
-                  << "...Found: " << line;
-        return false;
-      }
-      return true;
+
+public:
+  virtual ~CoreObject() {}
+
+  auto operator<=>(const CoreObject &) const = default;
+
+  std::string GetTypeName() const { return GetTypeName_impl(); }
+
+  void Serialize(std::ostream &os) const {
+    StartSerialize(os);
+    Serialize_impl(os);
+    EndSerialize(os);
+  }
+
+  void Deserialize(std::istream &is) {
+    StartDeserialize(is);
+    Deserialize_impl(is);
+    EndDeserialize(is);
+  }
+
+  bool Serialize(std::string filename) const {
+    std::ofstream os(filename);
+    if (!os.is_open()) {
+      std::cerr << "Could not open file '" << filename << "' for Serialize()." << std::endl;
+      return false;
     }
+    Serialize(os);
+    return true;
+  }
 
-    bool EndDeserialize(std::istream & is) {
-      std::string line;
-      std::getline(is, line);
-      std::string expected = ":::END " + GetTypeName();
-      if (line != expected) {
-        std::cerr << "Deserialization error.  Expected: " << expected
-                  << "...Found: " << line;
-        return false;
-      }
-      return true;
+  bool Deserialize(std::string filename) {
+    std::ifstream is(filename);
+    if (!is.is_open()) {
+      std::cerr << "Could not open file '" << filename << "' for Serialize()." << std::endl;
+      return false;
     }
+    Deserialize(is);
+    return true;
+  }
+};
 
-  public:
-    virtual ~CoreObject() { }
-
-    std::string GetTypeName() const { return GetTypeName_impl(); }
-
-    void Serialize(std::ostream & os) const {
-      StartSerialize(os);
-      Serialize_impl(os);
-      EndSerialize(os);
-    }
-
-    void Deserialize(std::istream & is) {
-      StartDeserialize(is);
-      Deserialize_impl(is);
-      EndDeserialize(is);
-    }
-
-    bool Serialize(std::string filename) const {
-      std::ofstream os(filename);
-      if (!os.is_open()) {
-        std::cerr << "Could not open file '" << filename << "' for Serialize()." << std::endl;
-        return false;
-      }
-      Serialize(os);
-      return true;
-    }
-
-    bool Deserialize(std::string filename) {
-      std::ifstream is(filename);
-      if (!is.is_open()) {
-        std::cerr << "Could not open file '" << filename << "' for Serialize()." << std::endl;
-        return false;
-      }
-      Deserialize(is);
-      return true;
-    }
-
-  };
-
-} // End of namespace cse491
+}  // End of namespace cse491
 
 ```
 

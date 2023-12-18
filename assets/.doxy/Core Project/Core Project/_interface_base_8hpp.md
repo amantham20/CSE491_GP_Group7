@@ -11,7 +11,9 @@
 
 
 * `#include <string>`
+* `#include "../DataCollection/DataManager.hpp"`
 * `#include "AgentBase.hpp"`
+* `#include "ItemBase.hpp"`
 
 
 

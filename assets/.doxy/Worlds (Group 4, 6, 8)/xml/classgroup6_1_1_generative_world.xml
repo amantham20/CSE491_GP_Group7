@@ -1,0 +1,1029 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgroup6_1_1_generative_world" kind="class" language="C++" prot="public">
+    <compoundname>group6::GenerativeWorld</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WorldBase</basecompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>ActionType</name>
+        <qualifiedname>group6::GenerativeWorld::ActionType</qualifiedname>
+        <enumvalue id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected">
+          <name>REMAIN_STILL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected">
+          <name>MOVE_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected">
+          <name>MOVE_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected">
+          <name>MOVE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected">
+          <name>MOVE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="21" column="9" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1ab27a455aa0942f1d526a50dbfb258e24" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t floor_id</definition>
+        <argsstring></argsstring>
+        <name>floor_id</name>
+        <qualifiedname>group6::GenerativeWorld::floor_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to floor CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="25" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a0c8e3b987124b2d9c5a5a0500c764922" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t wall_id</definition>
+        <argsstring></argsstring>
+        <name>wall_id</name>
+        <qualifiedname>group6::GenerativeWorld::wall_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to wall CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="26" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1ae4b9bee2815f412de182f45a38d5df79" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t spike_id</definition>
+        <argsstring></argsstring>
+        <name>spike_id</name>
+        <qualifiedname>group6::GenerativeWorld::spike_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to spike CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="28" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a04c6946a8d2d2587876fa3c649c8316b" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t tar_id</definition>
+        <argsstring></argsstring>
+        <name>tar_id</name>
+        <qualifiedname>group6::GenerativeWorld::tar_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to tar CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="29" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a35578b78f921753861ba23cb72b32b55" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t key_id</definition>
+        <argsstring></argsstring>
+        <name>key_id</name>
+        <qualifiedname>group6::GenerativeWorld::key_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to key CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="30" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a58313ed245b766b60a2b4758dbadea42" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t door_id</definition>
+        <argsstring></argsstring>
+        <name>door_id</name>
+        <qualifiedname>group6::GenerativeWorld::door_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to door CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="31" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a9a5c36f1f6a7e040122252762c75c3a6" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t teleporter_id</definition>
+        <argsstring></argsstring>
+        <name>teleporter_id</name>
+        <qualifiedname>group6::GenerativeWorld::teleporter_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to teleporter CellTypeId. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="32" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1abac765c9b3ff31d417acab7cf7155813" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t armory_id</definition>
+        <argsstring></argsstring>
+        <name>armory_id</name>
+        <qualifiedname>group6::GenerativeWorld::armory_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to armory CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="33" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a194f38dad184fae443bdbd9a877b434a" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t tree_id</definition>
+        <argsstring></argsstring>
+        <name>tree_id</name>
+        <qualifiedname>group6::GenerativeWorld::tree_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to tree CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="35" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a04a22fb8a6560406d73e9def36e63277" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t grass_id</definition>
+        <argsstring></argsstring>
+        <name>grass_id</name>
+        <qualifiedname>group6::GenerativeWorld::grass_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to grass CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="36" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1ac598ea16bdd760223fa9e632d87a4929" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t dirt_id</definition>
+        <argsstring></argsstring>
+        <name>dirt_id</name>
+        <qualifiedname>group6::GenerativeWorld::dirt_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to dirt CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="37" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a784b47062ce096d7ed3f6c68719ca59e" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t hole_id</definition>
+        <argsstring></argsstring>
+        <name>hole_id</name>
+        <qualifiedname>group6::GenerativeWorld::hole_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to hole CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="38" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t water_id</definition>
+        <argsstring></argsstring>
+        <name>water_id</name>
+        <qualifiedname>group6::GenerativeWorld::water_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to water CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="40" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a70240894fa26ead98216bda7434672ec" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t sand_id</definition>
+        <argsstring></argsstring>
+        <name>sand_id</name>
+        <qualifiedname>group6::GenerativeWorld::sand_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to sand CellTypeID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="41" column="16" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a6bf3f0cd967683ec24c5187bb887188a" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int world_width</definition>
+        <argsstring></argsstring>
+        <name>world_width</name>
+        <qualifiedname>group6::GenerativeWorld::world_width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="43" column="22" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgroup6_1_1_generative_world_1a362eaa700c7aac45b12bc98e4a29a9c1" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int world_height</definition>
+        <argsstring></argsstring>
+        <name>world_height</name>
+        <qualifiedname>group6::GenerativeWorld::world_height</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="44" column="22" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a77f91cce146d7b727455ff9a3d6374c6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigAgent</definition>
+        <argsstring>(AgentBase &amp;agent) override</argsstring>
+        <name>ConfigAgent</name>
+        <qualifiedname>group6::GenerativeWorld::ConfigAgent</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide the agent with movement actions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent being configured </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; If key is set to 0, agent does not have possession of key. If it is 1, agent has possession of key and can exit through door</para>
+<para>&lt; If it is set to 5.0, agent is free to move. if it is set to 6.0, agent is stuck</para>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="50" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a5af398018eab6e47c5c41da0eb59f494" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DamageAgent</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>DamageAgent</name>
+        <qualifiedname>group6::GenerativeWorld::DamageAgent</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ends game if agent is the player <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent being damaged </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="63" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1ad9c25c32dcc2642e792b3e710b13b441" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateGrid</definition>
+        <argsstring>(BiomeType biome, unsigned int width, unsigned int height, unsigned int seed, const string &amp;file)</argsstring>
+        <name>CreateGrid</name>
+        <qualifiedname>group6::GenerativeWorld::CreateGrid</qualifiedname>
+        <param>
+          <type>BiomeType</type>
+          <declname>biome</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a new grid with the given parameters</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>biome</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The BiomeType being used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed used for random generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file to save the grid to. Full path is &quot;../assets/grids/generated_[file].grid&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="78" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="78" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a1af362436aa4a7b88ddba117f02d4a9b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenerativeWorld</definition>
+        <argsstring>(BiomeType biome, unsigned int width, unsigned int height, unsigned int seed)</argsstring>
+        <name>GenerativeWorld</name>
+        <qualifiedname>group6::GenerativeWorld::GenerativeWorld</qualifiedname>
+        <param>
+          <type>BiomeType</type>
+          <declname>biome</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="91" column="18" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="91" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a72cdae355cf2eed0fd3e4331c64f19bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GenerativeWorld</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~GenerativeWorld</name>
+        <qualifiedname>group6::GenerativeWorld::~GenerativeWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="118" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1abf19a758bc80913b068858028b1b202a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddTeleporters</definition>
+        <argsstring>()</argsstring>
+        <name>AddTeleporters</name>
+        <qualifiedname>group6::GenerativeWorld::AddTeleporters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds teleporters to map </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="123" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1ae97c287f33b88ce4025535ca8be26f8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EndGame</definition>
+        <argsstring>(bool win)</argsstring>
+        <name>EndGame</name>
+        <qualifiedname>group6::GenerativeWorld::EndGame</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ends the game <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>win</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the game is ending in a win. False if it is a loss </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="132" column="15" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="132" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1af796569dfdf31a1bb771d91b09375863" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddArmory</definition>
+        <argsstring>()</argsstring>
+        <name>AddArmory</name>
+        <qualifiedname>group6::GenerativeWorld::AddArmory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds armory tiles to grid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="146" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="146" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a883d6bdcdc59c0dfe25ee3ee441ea06e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DoAction</definition>
+        <argsstring>(AgentBase &amp;agent, size_t action_id) override</argsstring>
+        <name>DoAction</name>
+        <qualifiedname>group6::GenerativeWorld::DoAction</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles logic for agent movement <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent attempting to do an action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action being performed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the action was successful. 0 if it was not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="192" column="13" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="192" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a2f24687a23a44c6586dcad7492cf8bcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArmoryTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>ArmoryTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::ArmoryTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for armory functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="270" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="270" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a810f1c7d019e8b53e8d398905f2d7b72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpikeTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>SpikeTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::SpikeTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for spike tile functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="283" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="283" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1ae5ac4cbad36e6b6c0bf49ba375b54464" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TarTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>TarTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::TarTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for tar tile functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="309" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="309" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1abdb5baad93b41941bc37a29a4beca76d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TeleporterHelper</definition>
+        <argsstring>(GridPosition &amp;new_position)</argsstring>
+        <name>TeleporterHelper</name>
+        <qualifiedname>group6::GenerativeWorld::TeleporterHelper</qualifiedname>
+        <param>
+          <type>GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for armory functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new position agent is moving to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="336" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="336" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a35bdad3bed22ab901c90428c1d53be9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent, GridPosition &amp;new_position)</argsstring>
+        <name>KeyTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::KeyTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for key tile functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new position agent is moving to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="353" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="353" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1ae7cce8b64fa9b8d8b6a1310a654f8778" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DoorTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>DoorTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::DoorTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for door tile functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="365" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="365" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a179606406c020567a6828ffc31243150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HoleTileHelper</definition>
+        <argsstring>(AgentBase &amp;agent, GridPosition &amp;new_position)</argsstring>
+        <name>HoleTileHelper</name>
+        <qualifiedname>group6::GenerativeWorld::HoleTileHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for hole tile functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new position agent is moving to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="377" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="377" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1aca907fc828ed2971d8f7aac24665c60c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ItemHelper</definition>
+        <argsstring>(AgentBase &amp;agent, GridPosition &amp;new_position)</argsstring>
+        <name>ItemHelper</name>
+        <qualifiedname>group6::GenerativeWorld::ItemHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function for item pickup functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new position agent is moving to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="389" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="389" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a9f28299c8a8e0c7f05992c21e3450c36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AgentCollisionHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>AgentCollisionHelper</name>
+        <qualifiedname>group6::GenerativeWorld::AgentCollisionHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Collision testing functionality <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="404" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="404" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1ab01f928d565cc96ed55345152eae59e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsTraversable</definition>
+        <argsstring>(const AgentBase &amp;, cse491::GridPosition pos) const override</argsstring>
+        <name>IsTraversable</name>
+        <qualifiedname>group6::GenerativeWorld::IsTraversable</qualifiedname>
+        <param>
+          <type>const AgentBase &amp;</type>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boolean function for traversable tiles in maze <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent performing action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of tile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="422" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="422" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a5ea070e6c4d19659de1ad565d02f9819" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AStarAgentHelper</definition>
+        <argsstring>(AgentBase &amp;agent)</argsstring>
+        <name>AStarAgentHelper</name>
+        <qualifiedname>group6::GenerativeWorld::AStarAgentHelper</qualifiedname>
+        <param>
+          <type>AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="427" column="14" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="427" bodyend="444"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgroup6_1_1_generative_world_1a3e3d0bc794cc1e322f3ddab6db7eeaab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; GridPosition &gt;</type>
+        <definition>static vector&lt; GridPosition &gt; FindTiles</definition>
+        <argsstring>(WorldGrid grid, size_t tile_id)</argsstring>
+        <name>FindTiles</name>
+        <qualifiedname>group6::GenerativeWorld::FindTiles</qualifiedname>
+        <param>
+          <type>WorldGrid</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>tile_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/GenerativeWorld.hpp" line="172" column="24" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="172" bodyend="184"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GenerativeWorld</label>
+        <link refid="classgroup6_1_1_generative_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GenerativeWorld</label>
+        <link refid="classgroup6_1_1_generative_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/GenerativeWorld.hpp" line="19" column="5" bodyfile="source/Worlds/GenerativeWorld.hpp" bodystart="19" bodyend="445"/>
+    <listofallmembers>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>ActionType</name></member>
+      <member refid="classgroup6_1_1_generative_world_1af796569dfdf31a1bb771d91b09375863" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>AddArmory</name></member>
+      <member refid="classgroup6_1_1_generative_world_1abf19a758bc80913b068858028b1b202a" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>AddTeleporters</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a9f28299c8a8e0c7f05992c21e3450c36" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>AgentCollisionHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1abac765c9b3ff31d417acab7cf7155813" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>armory_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a2f24687a23a44c6586dcad7492cf8bcd" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>ArmoryTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a5ea070e6c4d19659de1ad565d02f9819" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>AStarAgentHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a77f91cce146d7b727455ff9a3d6374c6" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>ConfigAgent</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ad9c25c32dcc2642e792b3e710b13b441" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>CreateGrid</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a5af398018eab6e47c5c41da0eb59f494" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>DamageAgent</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ac598ea16bdd760223fa9e632d87a4929" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>dirt_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a883d6bdcdc59c0dfe25ee3ee441ea06e" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>DoAction</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a58313ed245b766b60a2b4758dbadea42" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>door_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ae7cce8b64fa9b8d8b6a1310a654f8778" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>DoorTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ae97c287f33b88ce4025535ca8be26f8f" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>EndGame</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a3e3d0bc794cc1e322f3ddab6db7eeaab" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>FindTiles</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ab27a455aa0942f1d526a50dbfb258e24" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>floor_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a1af362436aa4a7b88ddba117f02d4a9b" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>GenerativeWorld</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a04a22fb8a6560406d73e9def36e63277" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>grass_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a784b47062ce096d7ed3f6c68719ca59e" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>hole_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a179606406c020567a6828ffc31243150" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>HoleTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ab01f928d565cc96ed55345152eae59e1" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>IsTraversable</name></member>
+      <member refid="classgroup6_1_1_generative_world_1aca907fc828ed2971d8f7aac24665c60c" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>ItemHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a35578b78f921753861ba23cb72b32b55" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>key_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a35bdad3bed22ab901c90428c1d53be9b" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>KeyTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>MOVE_DOWN</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>MOVE_LEFT</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>MOVE_RIGHT</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>MOVE_UP</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>REMAIN_STILL</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a70240894fa26ead98216bda7434672ec" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>sand_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ae4b9bee2815f412de182f45a38d5df79" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>spike_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a810f1c7d019e8b53e8d398905f2d7b72" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>SpikeTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a04c6946a8d2d2587876fa3c649c8316b" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>tar_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ae5ac4cbad36e6b6c0bf49ba375b54464" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>TarTileHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a9a5c36f1f6a7e040122252762c75c3a6" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>teleporter_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1abdb5baad93b41941bc37a29a4beca76d" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>TeleporterHelper</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a194f38dad184fae443bdbd9a877b434a" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>tree_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a0c8e3b987124b2d9c5a5a0500c764922" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>wall_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>water_id</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a362eaa700c7aac45b12bc98e4a29a9c1" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>world_height</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a6bf3f0cd967683ec24c5187bb887188a" prot="protected" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>world_width</name></member>
+      <member refid="classgroup6_1_1_generative_world_1a72cdae355cf2eed0fd3e4331c64f19bf" prot="public" virt="non-virtual"><scope>group6::GenerativeWorld</scope><name>~GenerativeWorld</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

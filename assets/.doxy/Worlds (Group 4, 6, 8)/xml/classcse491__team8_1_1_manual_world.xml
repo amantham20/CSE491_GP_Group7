@@ -1,0 +1,1146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491__team8_1_1_manual_world" kind="class" language="C++" prot="public">
+    <compoundname>cse491_team8::ManualWorld</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">WorldBase</basecompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>ActionType</name>
+        <qualifiedname>cse491_team8::ManualWorld::ActionType</qualifiedname>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected">
+          <name>REMAIN_STILL</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected">
+          <name>MOVE_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected">
+          <name>MOVE_DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected">
+          <name>MOVE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected">
+          <name>MOVE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba4f0b748b883018eea7bddb312e207e79" prot="protected">
+          <name>USE_AXE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba1ec94bf0db4c8c692ec750a9d7ba4863" prot="protected">
+          <name>USE_BOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba56417e944da7c3429008202353a7ceba" prot="protected">
+          <name>STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950babb9fb5962c8d829b60b6d124bb4fca50" prot="protected">
+          <name>HEAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba439c688a4e9ed31638d5922a50680a8e" prot="protected">
+          <name>RUN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba831c130f9c83adc963152d232a9d61c7" prot="protected">
+          <name>ATTACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950baaa5259d84d06214a7b0503d636790465" prot="protected">
+          <name>SPECIAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba00d57e56153c7ef1097519cabb0c5e7c" prot="protected">
+          <name>BUFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba9f5cb747b2e1f0ea781d2b1f2a5b4824" prot="protected">
+          <name>HELP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="28" column="5" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11" prot="protected" static="no" strong="no">
+        <type></type>
+        <name>FacingDirection</name>
+        <qualifiedname>cse491_team8::ManualWorld::FacingDirection</qualifiedname>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11aba595d8bca8bc5e67c37c0a9d89becfa" prot="protected">
+          <name>UP</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11aec8379af7490bb9eaaf579cf17876f38" prot="protected">
+          <name>RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11a9b0b4a95b99523966e0e34ffdadac9da" prot="protected">
+          <name>DOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11adb45120aafd37a973140edee24708065" prot="protected">
+          <name>LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="30" column="5" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a04a22fb8a6560406d73e9def36e63277" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t grass_id</definition>
+        <argsstring></argsstring>
+        <name>grass_id</name>
+        <qualifiedname>cse491_team8::ManualWorld::grass_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to floor CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="32" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a194f38dad184fae443bdbd9a877b434a" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t tree_id</definition>
+        <argsstring></argsstring>
+        <name>tree_id</name>
+        <qualifiedname>cse491_team8::ManualWorld::tree_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to tree CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="33" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t water_id</definition>
+        <argsstring></argsstring>
+        <name>water_id</name>
+        <qualifiedname>cse491_team8::ManualWorld::water_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to water CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="34" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1abc4692919439e272259e72c9015dc2c2" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t bridge_id</definition>
+        <argsstring></argsstring>
+        <name>bridge_id</name>
+        <qualifiedname>cse491_team8::ManualWorld::bridge_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to bridge CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="35" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1ad91e07a0f0512abc830a8e1f19df96b2" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t rock_id</definition>
+        <argsstring></argsstring>
+        <name>rock_id</name>
+        <qualifiedname>cse491_team8::ManualWorld::rock_id</qualifiedname>
+        <briefdescription>
+<para>Easy access to rock CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="36" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a7c87d470124476ab08a42a748124de58" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t portal_id_a</definition>
+        <argsstring></argsstring>
+        <name>portal_id_a</name>
+        <qualifiedname>cse491_team8::ManualWorld::portal_id_a</qualifiedname>
+        <briefdescription>
+<para>Easy access to first portal CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="37" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a43218fd71502f6e95035bcdda8372657" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t portal_id_b</definition>
+        <argsstring></argsstring>
+        <name>portal_id_b</name>
+        <qualifiedname>cse491_team8::ManualWorld::portal_id_b</qualifiedname>
+        <briefdescription>
+<para>Easy access to second portal CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="38" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a062b88ab5f02692ffc6925302036ac2a" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t portal_id_c</definition>
+        <argsstring></argsstring>
+        <name>portal_id_c</name>
+        <qualifiedname>cse491_team8::ManualWorld::portal_id_c</qualifiedname>
+        <briefdescription>
+<para>Easy access to third portal CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="39" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491__team8_1_1_manual_world_1a179e7cc52f60836b6a8c7e3fd16559c3" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t portal_id_d</definition>
+        <argsstring></argsstring>
+        <name>portal_id_d</name>
+        <qualifiedname>cse491_team8::ManualWorld::portal_id_d</qualifiedname>
+        <briefdescription>
+<para>Easy access to fourth portal CellType ID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="40" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a815a17bf1473edc797ba7f0558723e66" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConfigAgent</definition>
+        <argsstring>(cse491::AgentBase &amp;agent) override</argsstring>
+        <name>ConfigAgent</name>
+        <qualifiedname>cse491_team8::ManualWorld::ConfigAgent</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Provide the agent with movement actions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="43" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="43" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1ab160d92bfa57c377e723a8d333402384" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ManualWorld</definition>
+        <argsstring>()</argsstring>
+        <name>ManualWorld</name>
+        <qualifiedname>cse491_team8::ManualWorld::ManualWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="61" column="5" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="61" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a74f115f890ee86eb63ac51365e9c42ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~ManualWorld</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ManualWorld</name>
+        <qualifiedname>cse491_team8::ManualWorld::~ManualWorld</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="73" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a097b8d99b938003617da6e476a043f6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenerateMoveSets</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateMoveSets</name>
+        <qualifiedname>cse491_team8::ManualWorld::GenerateMoveSets</qualifiedname>
+        <briefdescription>
+<para>Generates move sets for all the agents Sets the move sets as a property for each agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="78" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="78" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1ae0da062b57c62810b483331cb1cf3dd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddMove</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, std::string &amp;move, char stat, double modification)</argsstring>
+        <name>AddMove</name>
+        <qualifiedname>cse491_team8::ManualWorld::AddMove</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>stat</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>modification</declname>
+        </param>
+        <briefdescription>
+<para>adds a move to the move set for an agent </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the agent to add the move to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the move to add </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stat that the move affects </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>modification</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the modification percent of the move to that stat Adds a move to the move set map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="117" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="117" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a71cbcb69837822c260ad0ddf5c24b918" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RemoveMove</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, std::string &amp;move)</argsstring>
+        <name>RemoveMove</name>
+        <qualifiedname>cse491_team8::ManualWorld::RemoveMove</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>removes a move from the move set for an agent </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the agent to remove a move from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the move to remove Removes a move from the move set map </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true for success, false for failure </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="135" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="135" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1aea8fff02c6f88fa169f3ce76d52f77de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HealAction</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>HealAction</name>
+        <qualifiedname>cse491_team8::ManualWorld::HealAction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Heals an Agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Agent getting healed Calculates the healing of the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="154" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="154" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1ac687d61025e4ee0359fbb3e3510f14e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StatsAction</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>StatsAction</name>
+        <qualifiedname>cse491_team8::ManualWorld::StatsAction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Displays the items and properties that the player has. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent stats being showed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="181" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="181" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a3e2eae425643ca09a81dbf53a61b3a67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveSetAction</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>MoveSetAction</name>
+        <qualifiedname>cse491_team8::ManualWorld::MoveSetAction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Displays the moveset for the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent moveset being displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="213" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a81fffddeb85d5ccde69bb39ac029531e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition LookAhead</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>LookAhead</name>
+        <qualifiedname>cse491_team8::ManualWorld::LookAhead</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>looks one tile ahead of the agent based on facing direction </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent that is looking ahead </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the grid position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="221" column="26" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="221" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a21936314a5e11704e3a044c96474bd7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DropItems</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, cse491::AgentBase &amp;other_agent)</argsstring>
+        <name>DropItems</name>
+        <qualifiedname>cse491_team8::ManualWorld::DropItems</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>other_agent</declname>
+        </param>
+        <briefdescription>
+<para>Removes all items from other agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent that won the battle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>other_agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent that is dropping items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="253" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="253" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1af2e3ae6a2f56a66cce2455b35997c2b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int OtherAction</definition>
+        <argsstring>(cse491::AgentBase &amp;other_agent, cse491::AgentBase &amp;agent)</argsstring>
+        <name>OtherAction</name>
+        <qualifiedname>cse491_team8::ManualWorld::OtherAction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>other_agent</declname>
+        </param>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Determines the damage of the other agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The NPC agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player agent Gets the damage of the NPC agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The damage of the NPC </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="277" column="9" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="277" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a52790a333d5e7590e3ec2573d075ad2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DoBattle</definition>
+        <argsstring>(cse491::AgentBase &amp;other_agent, cse491::AgentBase &amp;agent, char attack_type)</argsstring>
+        <name>DoBattle</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoBattle</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>other_agent</declname>
+        </param>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>attack_type</declname>
+        </param>
+        <briefdescription>
+<para>Checks the strength between two agents. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other_agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The autonomous agent to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interface (player) agent to compare </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>attack_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attack that is being used by the player Prints the stronger agent and removes the weaker </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>RemoveAgent </para>
+</simplesect>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="317" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="317" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a05f1e6c2e45c2f9b4537ac7c41c152da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateWorld</definition>
+        <argsstring>() override</argsstring>
+        <name>UpdateWorld</name>
+        <qualifiedname>cse491_team8::ManualWorld::UpdateWorld</qualifiedname>
+        <briefdescription>
+<para>Looks for adjacencies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="396" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="396" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a29139ac9719e08c506c84696ea694060" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run</definition>
+        <argsstring>() override</argsstring>
+        <name>Run</name>
+        <qualifiedname>cse491_team8::ManualWorld::Run</qualifiedname>
+        <briefdescription>
+<para>Runs agents, updates the world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="402" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="402" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1ab1dfbbe417ef8f1864a355b09cd39bed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunAgents</definition>
+        <argsstring>() override</argsstring>
+        <name>RunAgents</name>
+        <qualifiedname>cse491_team8::ManualWorld::RunAgents</qualifiedname>
+        <briefdescription>
+<para>Step through each agent giving them a chance to take an action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="413" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="413" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1ac87e6f803e93b844318d124ac3132136" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DoActionAttemptItemPickup</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, const cse491::GridPosition &amp;new_position)</argsstring>
+        <name>DoActionAttemptItemPickup</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoActionAttemptItemPickup</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+<para>Attempt to pick up an item for the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that is picking up the item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New position of the agent to check if an item is there. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Nothing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="429" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="429" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1aacf8c44883c8e2019f9d7a7e890e6a6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition DoActionFindNewPosition</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, size_t action_id)</argsstring>
+        <name>DoActionFindNewPosition</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoActionFindNewPosition</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+<para>Updates agent&apos;s position and direction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent that is moving its position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A size_t representing the direction the agent moved </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The agent&apos;s new position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="467" column="26" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="467" bodyend="652"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1aa2321fc7b32a8648f07506a7d1268cb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t FindItem</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, const std::string &amp;item_name)</argsstring>
+        <name>FindItem</name>
+        <qualifiedname>cse491_team8::ManualWorld::FindItem</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>item_name</declname>
+        </param>
+        <briefdescription>
+<para>Check if an agent owns an item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent to see if is an owner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the item </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>item_id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="658" column="12" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="658" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a82d59ee229f5d132da4fad2b4878d032" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DoActionTestNewPositionTree</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, const cse491::GridPosition &amp;new_position)</argsstring>
+        <name>DoActionTestNewPositionTree</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoActionTestNewPositionTree</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>new_position</declname>
+        </param>
+        <briefdescription>
+<para>Attempt to interact with a tree If the agent can interact with the tree, prompts the user if they want to use one of their chops. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent trying to interact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position being interacted with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Nothing, the tree gets chopped if possible but the agent doesn&apos;t move </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="676" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="676" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a11d2a452427300d5f867dc3b0759f1fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DoActionTestNewPositionWater</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>DoActionTestNewPositionWater</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoActionTestNewPositionWater</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Attempt to float on a water tile If the agent has a boat, prompts the user if they want to use the boat once. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent trying to interact </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the agent is able to (and chooses) to move to the new spot, else false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="699" column="10" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="699" bodyend="716"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1aaeea65b8ee3be8aa3217fd05d500bc5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int DoAction</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, size_t action_id) override</argsstring>
+        <name>DoAction</name>
+        <qualifiedname>cse491_team8::ManualWorld::DoAction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>action_id</declname>
+        </param>
+        <briefdescription>
+<para>Central function for an agent to take any action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The specific agent taking the action </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the action to take </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of this action (usually 0/1 to indicate success) </para>
+</simplesect>
+<simplesect kind="note"><para>Thus function must be overridden in any derived world. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="723" column="9" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="723" bodyend="810"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491__team8_1_1_manual_world_1a20075959ec39b08b8d5df53dccb03d32" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsTraversable</definition>
+        <argsstring>(const cse491::AgentBase &amp;, cse491::GridPosition pos) const override</argsstring>
+        <name>IsTraversable</name>
+        <qualifiedname>cse491_team8::ManualWorld::IsTraversable</qualifiedname>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Determine if this tile can be walked on, defaults to every tile is walkable. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The grid position we are checking </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If an agent should be allowed on this square </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ManualWorld.hpp" line="815" column="11" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="815" bodyend="817"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ManualWorld</label>
+        <link refid="classcse491__team8_1_1_manual_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ManualWorld</label>
+        <link refid="classcse491__team8_1_1_manual_world"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WorldBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/ManualWorld.hpp" line="26" column="3" bodyfile="source/Worlds/ManualWorld.hpp" bodystart="26" bodyend="819"/>
+    <listofallmembers>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950b" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>ActionType</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ae0da062b57c62810b483331cb1cf3dd8" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>AddMove</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba831c130f9c83adc963152d232a9d61c7" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>ATTACK</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1abc4692919439e272259e72c9015dc2c2" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>bridge_id</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba00d57e56153c7ef1097519cabb0c5e7c" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>BUFF</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a815a17bf1473edc797ba7f0558723e66" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>ConfigAgent</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1aaeea65b8ee3be8aa3217fd05d500bc5d" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoAction</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ac87e6f803e93b844318d124ac3132136" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoActionAttemptItemPickup</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1aacf8c44883c8e2019f9d7a7e890e6a6d" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoActionFindNewPosition</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a82d59ee229f5d132da4fad2b4878d032" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoActionTestNewPositionTree</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a11d2a452427300d5f867dc3b0759f1fe" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoActionTestNewPositionWater</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a52790a333d5e7590e3ec2573d075ad2f" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DoBattle</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11a9b0b4a95b99523966e0e34ffdadac9da" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DOWN</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21936314a5e11704e3a044c96474bd7f" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>DropItems</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>FacingDirection</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1aa2321fc7b32a8648f07506a7d1268cb1" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>FindItem</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a097b8d99b938003617da6e476a043f6c" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>GenerateMoveSets</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a04a22fb8a6560406d73e9def36e63277" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>grass_id</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950babb9fb5962c8d829b60b6d124bb4fca50" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>HEAL</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1aea8fff02c6f88fa169f3ce76d52f77de" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>HealAction</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba9f5cb747b2e1f0ea781d2b1f2a5b4824" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>HELP</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a20075959ec39b08b8d5df53dccb03d32" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>IsTraversable</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11adb45120aafd37a973140edee24708065" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>LEFT</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a81fffddeb85d5ccde69bb39ac029531e" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>LookAhead</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ab160d92bfa57c377e723a8d333402384" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>ManualWorld</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bac306ffa7a0ee9849d5c7cb1dc9654e96" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>MOVE_DOWN</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bae890746014b644c289999b83d5287c11" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>MOVE_LEFT</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba05e150c88137543939f82e607e3a77e3" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>MOVE_RIGHT</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950bad1c2df17d4a2cdc3b734e4554ebbced6" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>MOVE_UP</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a3e2eae425643ca09a81dbf53a61b3a67" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>MoveSetAction</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1af2e3ae6a2f56a66cce2455b35997c2b5" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>OtherAction</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a7c87d470124476ab08a42a748124de58" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>portal_id_a</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a43218fd71502f6e95035bcdda8372657" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>portal_id_b</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a062b88ab5f02692ffc6925302036ac2a" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>portal_id_c</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a179e7cc52f60836b6a8c7e3fd16559c3" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>portal_id_d</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950baa7774c0ae2d0f594b9049101455c3bba" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>REMAIN_STILL</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a71cbcb69837822c260ad0ddf5c24b918" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>RemoveMove</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11aec8379af7490bb9eaaf579cf17876f38" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>RIGHT</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad91e07a0f0512abc830a8e1f19df96b2" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>rock_id</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba439c688a4e9ed31638d5922a50680a8e" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>RUN</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a29139ac9719e08c506c84696ea694060" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>Run</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ab1dfbbe417ef8f1864a355b09cd39bed" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>RunAgents</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950baaa5259d84d06214a7b0503d636790465" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>SPECIAL</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba56417e944da7c3429008202353a7ceba" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>STATS</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ac687d61025e4ee0359fbb3e3510f14e4" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>StatsAction</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a194f38dad184fae443bdbd9a877b434a" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>tree_id</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ad75f2d1f6565bcf922f3f2ddab4c6b11aba595d8bca8bc5e67c37c0a9d89becfa" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>UP</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a05f1e6c2e45c2f9b4537ac7c41c152da" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>UpdateWorld</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba4f0b748b883018eea7bddb312e207e79" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>USE_AXE</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a21d5e8f8cdaa838586b31007df0a950ba1ec94bf0db4c8c692ec750a9d7ba4863" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>USE_BOAT</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1ac8b3b625d4c4e7f1d52bca52c2051855" prot="protected" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>water_id</name></member>
+      <member refid="classcse491__team8_1_1_manual_world_1a74f115f890ee86eb63ac51365e9c42ea" prot="public" virt="non-virtual"><scope>cse491_team8::ManualWorld</scope><name>~ManualWorld</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

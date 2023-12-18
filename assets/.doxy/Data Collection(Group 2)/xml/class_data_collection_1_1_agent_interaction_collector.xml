@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_agent_interaction_collector" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::AgentInteractionCollector</compoundname>
+    <includes refid="_agent_interaction_collector_8hpp" local="no">AgentInteractionCollector.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_agent_interaction_collector_1ae608a6997f8a3fb000860cdb52d46905" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, int &gt;</type>
+        <definition>std::unordered_map&lt;std::string, int&gt; interactionData</definition>
+        <argsstring></argsstring>
+        <name>interactionData</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::interactionData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="16" column="28" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_agent_interaction_collector_1a807ee9bef7e43cba49b446931e38355d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AgentInteractionCollector</definition>
+        <argsstring>()=default</argsstring>
+        <name>AgentInteractionCollector</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::AgentInteractionCollector</qualifiedname>
+        <briefdescription>
+<para>Data storage map of agent name to interactions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for <ref refid="class_data_collection_1_1_agent_interaction_collector" kindref="compound">AgentInteractionCollector</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="21" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_interaction_collector_1a14c7a49e10ed024038c53df1c0b1a335" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::unordered_map&lt; std::string, int &gt; &amp;</type>
+        <definition>const std::unordered_map&lt; std::string, int &gt; &amp; GetInteractionData</definition>
+        <argsstring>()</argsstring>
+        <name>GetInteractionData</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::GetInteractionData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter for interaction data <simplesect kind="return"><para>Const reference to the interaction data storage. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="27" column="34" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_interaction_collector_1a9c001f8ae5d15b1e5bd0994538d576ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetUniqueInteractions</definition>
+        <argsstring>()</argsstring>
+        <name>GetUniqueInteractions</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::GetUniqueInteractions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the amount of unique agents that occured <simplesect kind="return"><para>int amount of agent occurances </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="33" column="16" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_interaction_collector_1ac2945e5fcdc6af74acde41c11a6416d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecordInteraction</definition>
+        <argsstring>(const std::string &amp;agentName)</argsstring>
+        <name>RecordInteraction</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::RecordInteraction</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>agentName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increment occurance amount for a certain agent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agentName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Agent name to record new interaction with </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="39" column="14" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_agent_interaction_collector_1a6c3b1c25f6673dee791f2ed900b0ebc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToInteractionFile</definition>
+        <argsstring>(const std::string filename)</argsstring>
+        <name>WriteToInteractionFile</name>
+        <qualifiedname>DataCollection::AgentInteractionCollector::WriteToInteractionFile</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/AgentInteractionCollector.hpp" line="41" column="14" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="41" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A data collector class to quantify agent interactions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Useful for setting up graphs for common interactions. </para>
+    </detaileddescription>
+    <location file="source/DataCollection/AgentInteractionCollector.hpp" line="14" column="5" bodyfile="source/DataCollection/AgentInteractionCollector.hpp" bodystart="14" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1a807ee9bef7e43cba49b446931e38355d" prot="public" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>AgentInteractionCollector</name></member>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1a14c7a49e10ed024038c53df1c0b1a335" prot="public" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>GetInteractionData</name></member>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1a9c001f8ae5d15b1e5bd0994538d576ce" prot="public" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>GetUniqueInteractions</name></member>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1ae608a6997f8a3fb000860cdb52d46905" prot="private" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>interactionData</name></member>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1ac2945e5fcdc6af74acde41c11a6416d8" prot="public" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>RecordInteraction</name></member>
+      <member refid="class_data_collection_1_1_agent_interaction_collector_1a6c3b1c25f6673dee791f2ed900b0ebc5" prot="public" virt="non-virtual"><scope>DataCollection::AgentInteractionCollector</scope><name>WriteToInteractionFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

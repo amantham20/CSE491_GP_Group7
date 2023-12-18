@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacesiv" kind="namespace" language="C++">
+    <compoundname>siv</compoundname>
+    <innerclass refid="classsiv_1_1_basic_perlin_noise" prot="public">siv::BasicPerlinNoise</innerclass>
+    <innernamespace refid="namespacesiv_1_1perlin__detail">siv::perlin_detail</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_perlin_noise_8hpp_1a34d98189ffd7dd60e78b4a583db94e4e" prot="public" static="no">
+        <type><ref refid="classsiv_1_1_basic_perlin_noise" kindref="compound">BasicPerlinNoise</ref>&lt; double &gt;</type>
+        <definition>using PerlinNoise =  BasicPerlinNoise&lt;double&gt;</definition>
+        <argsstring></argsstring>
+        <name>PerlinNoise</name>
+        <qualifiedname>siv::PerlinNoise</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/PerlinNoise.hpp" line="244" column="5" bodyfile="source/Worlds/PerlinNoise.hpp" bodystart="244" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Worlds/PerlinNoise.hpp" line="84" column="1"/>
+  </compounddef>
+</doxygen>

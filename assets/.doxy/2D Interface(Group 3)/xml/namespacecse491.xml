@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecse491" kind="namespace" language="C++">
+    <compoundname>cse491</compoundname>
+    <innerclass refid="classcse491_1_1_trash_interface" prot="public">cse491::TrashInterface</innerclass>
+    <briefdescription>
+<para>A low-end text interface providing a bare-minimum level of interaction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Interfaces/TrashInterface.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

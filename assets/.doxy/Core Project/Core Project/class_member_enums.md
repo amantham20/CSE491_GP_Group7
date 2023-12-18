@@ -2,6 +2,11 @@
 # Class Member Enums
 
 
-Nothing related to **Class Member Enums** found.
+
+## o
+
+* **OwnerType** ([**cse491::ItemBase**](classcse491_1_1_item_base.md))
+
+
 
 

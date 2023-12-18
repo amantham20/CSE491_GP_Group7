@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcowboys_1_1_c_g_p_parameters" kind="struct" language="C++" prot="public">
+    <compoundname>cowboys::CGPParameters</compoundname>
+    <includes refid="_c_g_p_genotype_8hpp" local="no">CGPGenotype.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_parameters_1af2622bb0eeaf803b11384c87c9db4c07" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t num_inputs</definition>
+        <argsstring></argsstring>
+        <name>num_inputs</name>
+        <qualifiedname>cowboys::CGPParameters::num_inputs</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The number of inputs to the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="195" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="195" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_parameters_1a015e1ca499af5944cb36d9085844512e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t num_outputs</definition>
+        <argsstring></argsstring>
+        <name>num_outputs</name>
+        <qualifiedname>cowboys::CGPParameters::num_outputs</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The number of outputs from the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="197" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="197" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_parameters_1ac209c1210685fd18fbf16ea2a786a0f1" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t num_layers</definition>
+        <argsstring></argsstring>
+        <name>num_layers</name>
+        <qualifiedname>cowboys::CGPParameters::num_layers</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The number of middle layers in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="199" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="199" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_parameters_1a0ad46dfb626df44058fb9b298ea97c7a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t num_nodes_per_layer</definition>
+        <argsstring></argsstring>
+        <name>num_nodes_per_layer</name>
+        <qualifiedname>cowboys::CGPParameters::num_nodes_per_layer</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The number of nodes per middle layer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="201" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="201" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_c_g_p_parameters_1a9cb41df8fee1e0899f5cf1cea433b020" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t layers_back</definition>
+        <argsstring></argsstring>
+        <name>layers_back</name>
+        <qualifiedname>cowboys::CGPParameters::layers_back</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>The number of layers backward that a node can connect to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="203" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="203" bodyend="203"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcowboys_1_1_c_g_p_parameters_1a78c4004b899747adb79c95eadd58aabd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CGPParameters</definition>
+        <argsstring>()=default</argsstring>
+        <name>CGPParameters</name>
+        <qualifiedname>cowboys::CGPParameters::CGPParameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="205" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="structcowboys_1_1_c_g_p_parameters_1a200507136f2ee8a0fec491a8ce23c85b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CGPParameters</definition>
+        <argsstring>(size_t num_inputs, size_t num_outputs, size_t num_layers, size_t num_nodes_per_layer, size_t layers_back)</argsstring>
+        <name>CGPParameters</name>
+        <qualifiedname>cowboys::CGPParameters::CGPParameters</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>num_inputs</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_outputs</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_layers</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_nodes_per_layer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>layers_back</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the cartesian graph parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="208" column="5" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="structcowboys_1_1_c_g_p_parameters_1af8242420c5a3fddf79fcf915bde9a2d4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetFunctionalNodeCount</definition>
+        <argsstring>() const</argsstring>
+        <name>GetFunctionalNodeCount</name>
+        <qualifiedname>cowboys::CGPParameters::GetFunctionalNodeCount</qualifiedname>
+        <briefdescription>
+<para>Returns the number of functional nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of functional nodes in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="215" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="215" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="structcowboys_1_1_c_g_p_parameters_1a6b7661b5f318ae5c151c7bf35f7570d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const CGPParameters &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>cowboys::CGPParameters::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Check if two <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> are equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> to compare to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the two <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> are equal, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="220" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="220" bodyend="223"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds the parameters that define the structure of a cartesian graph. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/CGPGenotype.hpp" line="193" column="3" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="193" bodyend="224"/>
+    <listofallmembers>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a78c4004b899747adb79c95eadd58aabd" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>CGPParameters</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a200507136f2ee8a0fec491a8ce23c85b" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>CGPParameters</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1af8242420c5a3fddf79fcf915bde9a2d4" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>GetFunctionalNodeCount</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a9cb41df8fee1e0899f5cf1cea433b020" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>layers_back</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1af2622bb0eeaf803b11384c87c9db4c07" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>num_inputs</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1ac209c1210685fd18fbf16ea2a786a0f1" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>num_layers</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a0ad46dfb626df44058fb9b298ea97c7a" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>num_nodes_per_layer</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a015e1ca499af5944cb36d9085844512e" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>num_outputs</name></member>
+      <member refid="structcowboys_1_1_c_g_p_parameters_1a6b7661b5f318ae5c151c7bf35f7570d1" prot="public" virt="non-virtual"><scope>cowboys::CGPParameters</scope><name>operator==</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

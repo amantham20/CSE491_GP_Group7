@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcse491_1_1_pacing_agent" kind="class" language="C++" prot="public">
+    <compoundname>cse491::PacingAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcse491_1_1_pacing_agent_1a0ef08fd776d2f8ef00eeaea1128aa89c" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vertical</definition>
+        <argsstring></argsstring>
+        <name>vertical</name>
+        <qualifiedname>cse491::PacingAgent::vertical</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Is this agent moving down&amp;up? False = right&amp;left. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="17" column="10" bodyfile="source/Agents/PacingAgent.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_pacing_agent_1a455cbdac659b075dec33e2da705aaa20" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool reverse</definition>
+        <argsstring></argsstring>
+        <name>reverse</name>
+        <qualifiedname>cse491::PacingAgent::reverse</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Is this agent on their way back? (up/left?) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="18" column="10" bodyfile="source/Agents/PacingAgent.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1a0f75fa3c9a68737fe6f08e0c429cb524" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PacingAgent</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>PacingAgent</name>
+        <qualifiedname>cse491::PacingAgent::PacingAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="21" column="5" bodyfile="source/Agents/PacingAgent.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1acf3cf9bee8dc234a2537ddf5f4c51d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~PacingAgent</definition>
+        <argsstring>()=default</argsstring>
+        <name>~PacingAgent</name>
+        <qualifiedname>cse491::PacingAgent::~PacingAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="22" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>cse491::PacingAgent::Initialize</qualifiedname>
+        <briefdescription>
+<para>This agent needs a specific set of actions to function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="26" column="10" bodyfile="source/Agents/PacingAgent.hpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1a90be70a690ed898876d866c1ae8979ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const WorldGrid &amp;, const type_options_t &amp;, const item_map_t &amp;, const agent_map_t &amp;) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>cse491::PacingAgent::SelectAction</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+        </param>
+        <briefdescription>
+<para>Choose the action to take a step in the appropriate direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="31" column="12" bodyfile="source/Agents/PacingAgent.hpp" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1ae87df9e18ed929644790d0601cc428c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcse491_1_1_pacing_agent" kindref="compound">PacingAgent</ref> &amp;</type>
+        <definition>PacingAgent &amp; SetVertical</definition>
+        <argsstring>(bool vert)</argsstring>
+        <name>SetVertical</name>
+        <qualifiedname>cse491::PacingAgent::SetVertical</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>vert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setter for vertical param <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>what vertical should be </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="55" column="17" bodyfile="source/Agents/PacingAgent.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_pacing_agent_1a0e0b55d0739be2f6c65477cbd71b27cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GetVertical</definition>
+        <argsstring>() const</argsstring>
+        <name>GetVertical</name>
+        <qualifiedname>cse491::PacingAgent::GetVertical</qualifiedname>
+        <briefdescription>
+<para>Returns the vertical member variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PacingAgent.hpp" line="61" column="10" bodyfile="source/Agents/PacingAgent.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+      <node id="1">
+        <label>PacingAgent</label>
+        <link refid="classcse491_1_1_pacing_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+      <node id="1">
+        <label>PacingAgent</label>
+        <link refid="classcse491_1_1_pacing_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/PacingAgent.hpp" line="15" column="1" bodyfile="source/Agents/PacingAgent.hpp" bodystart="15" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_pacing_agent_1a0e0b55d0739be2f6c65477cbd71b27cf" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>GetVertical</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>Initialize</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1a0f75fa3c9a68737fe6f08e0c429cb524" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>PacingAgent</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1a455cbdac659b075dec33e2da705aaa20" prot="protected" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>reverse</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1a90be70a690ed898876d866c1ae8979ad" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1ae87df9e18ed929644790d0601cc428c3" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>SetVertical</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1a0ef08fd776d2f8ef00eeaea1128aa89c" prot="protected" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>vertical</name></member>
+      <member refid="classcse491_1_1_pacing_agent_1acf3cf9bee8dc234a2537ddf5f4c51d49" prot="public" virt="non-virtual"><scope>cse491::PacingAgent</scope><name>~PacingAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

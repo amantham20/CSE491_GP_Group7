@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacegroup6" kind="namespace" language="C++">
+    <compoundname>group6</compoundname>
+    <innerclass refid="classgroup6_1_1_biome_generator" prot="public">group6::BiomeGenerator</innerclass>
+    <innerclass refid="classgroup6_1_1_generative_world" prot="public">group6::GenerativeWorld</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegroup6_1a7e8c750fd824563f4f26c47d525cc862" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>BiomeType</name>
+        <qualifiedname>group6::BiomeType</qualifiedname>
+        <enumvalue id="namespacegroup6_1a7e8c750fd824563f4f26c47d525cc862aef6cbecb758a180dfc17cb7807c26be5" prot="public">
+          <name>Maze</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegroup6_1a7e8c750fd824563f4f26c47d525cc862ac12ab5ab18aeea11c516761593370e9d" prot="public">
+          <name>Grasslands</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegroup6_1a7e8c750fd824563f4f26c47d525cc862af41054884f4a8c8cb596222e2a31f098" prot="public">
+          <name>Ocean</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/BiomeGenerator.hpp" line="23" column="5" bodyfile="source/Worlds/BiomeGenerator.hpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A World that consists only of walls and open cells. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Worlds/BiomeGenerator.hpp" line="19" column="1"/>
+  </compounddef>
+</doxygen>

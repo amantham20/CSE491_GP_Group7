@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacenet_worth" kind="namespace" language="C++">
+    <compoundname>netWorth</compoundname>
+    <innerclass refid="classnet_worth_1_1_client_interface" prot="public">netWorth::ClientInterface</innerclass>
+    <innerclass refid="classnet_worth_1_1_client_manager" prot="public">netWorth::ClientManager</innerclass>
+    <innerclass refid="classnet_worth_1_1_controlled_agent" prot="public">netWorth::ControlledAgent</innerclass>
+    <innerclass refid="classnet_worth_1_1_networking_interface" prot="public">netWorth::NetworkingInterface</innerclass>
+    <innerclass refid="classnet_worth_1_1_server_interface" prot="public">netWorth::ServerInterface</innerclass>
+    <innerclass refid="classnet_worth_1_1_server_manager" prot="public">netWorth::ServerManager</innerclass>
+    <briefdescription>
+<para>A networking interface that allows information to be sent across a network. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>An Agent that will walk back and forth along a row or column.</para>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROTOTYPE</para>
+</simplesect>
+This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

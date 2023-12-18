@@ -108,6 +108,7 @@ See [cse491::CoreObject](classcse491_1_1_core_object.md)
 |  std::string | [**GetTypeName**](#function-gettypename) () const<br>_Access the derived name for this type._  |
 |  void | [**Serialize**](#function-serialize-12) (std::ostream & os) const<br>_Store the current state of this object for later extraction._  |
 |  bool | [**Serialize**](#function-serialize-22) (std::string filename) const<br>_A version of Serialize that accepts a filename for saving just this object._  |
+|  auto | [**operator&lt;=&gt;**](#function-operator<>) (const [**CoreObject**](classcse491_1_1_core_object.md) &) const<br> |
 | virtual  | [**~CoreObject**](#function-coreobject) () <br> |
 
 

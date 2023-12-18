@@ -1,0 +1,560 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classwalle_1_1_path_agent" kind="class" language="C++" prot="public">
+    <compoundname>walle::PathAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <includes refid="_path_agent_8hpp" local="no">PathAgent.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classwalle_1_1_path_agent_1aaaee4583464757ace4d7e8ac6d5a690a" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; offsets_</definition>
+        <argsstring></argsstring>
+        <name>offsets_</name>
+        <qualifiedname>walle::PathAgent::offsets_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Collection of ways to offset the Agent&apos;s position <simplesect kind="attention"><para>This is a <emphasis>not</emphasis> a sequence of direct coordinates on the WorldGrid, but a series of offsets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="31" column="21" bodyfile="source/Agents/PathAgent.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classwalle_1_1_path_agent_1aaaf1ac02dfa554a3cdffc647d512a77b" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <qualifiedname>walle::PathAgent::index_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Current index into offsets_. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="34" column="13" bodyfile="source/Agents/PathAgent.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1aee1b96855f17e54a4b73eb1f388c88cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathAgent</definition>
+        <argsstring>()=delete</argsstring>
+        <name>PathAgent</name>
+        <qualifiedname>walle::PathAgent::PathAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="37" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a115cbfe0afaab21b1d4f2424c781256e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name)</argsstring>
+        <name>PathAgent</name>
+        <qualifiedname>walle::PathAgent::PathAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (agent default) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>When this constructor is called, the agent must still be assigned a path before a call to Initialize </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="38" column="9" bodyfile="source/Agents/PathAgent.cpp" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1af5f3ee0ef953a99964b8a9db58942544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name, std::vector&lt; cse491::GridPosition &gt; offsets)</argsstring>
+        <name>PathAgent</name>
+        <qualifiedname>walle::PathAgent::PathAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; cse491::GridPosition &gt;</type>
+          <declname>offsets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (vector) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection of offsets to move the agent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="attention"><para>The sequence of offsets must not be empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="39" column="9" bodyfile="source/Agents/PathAgent.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1acaaca120681dde0474bb2c71dd403c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PathAgent</definition>
+        <argsstring>(size_t id, std::string const &amp;name, std::string_view commands)</argsstring>
+        <name>PathAgent</name>
+        <qualifiedname>walle::PathAgent::PathAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::string_view</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (string) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unique agent id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of path agent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sequence of commands to be interpreted as offsets </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="attention"><para>The sequence of offsets must not be empty </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="41" column="9" bodyfile="source/Agents/PathAgent.cpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1ab5411bc95ecf64489eaef537e1df3e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~PathAgent</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~PathAgent</name>
+        <qualifiedname>walle::PathAgent::~PathAgent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="42" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>walle::PathAgent::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks that the agent is able to move arbitrarily Verifies that it can currently index into a valid offset <simplesect kind="return"><para>true if so; false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="44" column="14" bodyfile="source/Agents/PathAgent.cpp" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a5da5f0c0456f5971f45632d55be3e99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IncrementIndex</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementIndex</name>
+        <qualifiedname>walle::PathAgent::IncrementIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Increments the index into the offsets sequence </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="46" column="14" bodyfile="source/Agents/PathAgent.cpp" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1ab38189de25a1850ce6d34c207e75b890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DecrementIndex</definition>
+        <argsstring>()</argsstring>
+        <name>DecrementIndex</name>
+        <qualifiedname>walle::PathAgent::DecrementIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decrements the index into the offsets sequence </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="47" column="14" bodyfile="source/Agents/PathAgent.cpp" bodystart="87" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a1704376239708540ed1c8296f1ce323b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition CalcNextPos</definition>
+        <argsstring>() const</argsstring>
+        <name>CalcNextPos</name>
+        <qualifiedname>walle::PathAgent::CalcNextPos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the position of the agent after applying the current offset <simplesect kind="return"><para>next position of the agent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="49" column="31" bodyfile="source/Agents/PathAgent.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a5c7cd7e7cbe922a92a4bffe41ec1d0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition UpdateAndGetNextPos</definition>
+        <argsstring>(bool increment)</argsstring>
+        <name>UpdateAndGetNextPos</name>
+        <qualifiedname>walle::PathAgent::UpdateAndGetNextPos</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>increment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience method Applies the current offset to calculate the next position and then adjusts the index <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>increment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decides whether to move in the forward or backward direction to allow for complex pathing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="51" column="38" bodyfile="source/Agents/PathAgent.cpp" bodystart="112" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1af56d4c5c7e86c2504fe378dae5cd8c6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(cse491::WorldGrid const &amp;, cse491::type_options_t const &amp;, cse491::item_map_t const &amp;, cse491::agent_map_t const &amp;) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>walle::PathAgent::SelectAction</qualifiedname>
+        <param>
+          <type>cse491::WorldGrid const &amp;</type>
+        </param>
+        <param>
+          <type>cse491::type_options_t const &amp;</type>
+        </param>
+        <param>
+          <type>cse491::item_map_t const &amp;</type>
+        </param>
+        <param>
+          <type>cse491::agent_map_t const &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells world to <simplesect kind="return"><para>whether the update succeeded </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="53" column="16" bodyfile="source/Agents/PathAgent.cpp" bodystart="134" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition GetNextPosition</definition>
+        <argsstring>() override</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>walle::PathAgent::GetNextPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overrides AgentBase GetNextPosition to retrieve the calculated next position <simplesect kind="return"><para>next position to move the path agent in </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="56" column="31" bodyfile="source/Agents/PathAgent.cpp" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a2a93826a5b039385501af51d7e082d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> &amp;</type>
+        <definition>PathAgent &amp; SetPath</definition>
+        <argsstring>(std::vector&lt; cse491::GridPosition &gt; offsets, size_t start_index=0)</argsstring>
+        <name>SetPath</name>
+        <qualifiedname>walle::PathAgent::SetPath</qualifiedname>
+        <param>
+          <type>std::vector&lt; cse491::GridPosition &gt;</type>
+          <declname>offsets</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start_index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns the offsets_member to a new series of offsets <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offsets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>collection of grid positions used as the new offsets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which offset to start indexing into (beginning by default) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+<simplesect kind="attention"><para>throws an <computeroutput>std::invalid_argument</computeroutput> when an invalid start index is provided </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="58" column="19" bodyfile="source/Agents/PathAgent.cpp" bodystart="150" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1a154e840ceb90ff8e89eea88a91d59441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> &amp;</type>
+        <definition>PathAgent &amp; SetPath</definition>
+        <argsstring>(std::string_view commands, size_t start_index=0)</argsstring>
+        <name>SetPath</name>
+        <qualifiedname>walle::PathAgent::SetPath</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>commands</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>start_index</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns the offsets_ member to a new series of offsets, taking a command string <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>formatted string of commands used as offsets </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>which command to begin indexing into (first command by default) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>self </para>
+</simplesect>
+<simplesect kind="attention"><para>throws an <computeroutput>std::invalid_argument</computeroutput> when mis-formatted commands an invalid index is provided </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="60" column="19" bodyfile="source/Agents/PathAgent.cpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1aebec12e70dbcc0b88728173b13a6853f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GetIndex</definition>
+        <argsstring>() const</argsstring>
+        <name>GetIndex</name>
+        <qualifiedname>walle::PathAgent::GetIndex</qualifiedname>
+        <briefdescription>
+<para>Get the index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int index</para>
+</simplesect>
+Retrieves which step the agent is on <simplesect kind="return"><para>the current index into the offsets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="64" column="14" bodyfile="source/Agents/PathAgent.cpp" bodystart="181" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1afdc94fff9757a8f3a20f8f39443ebe4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; cse491::GridPosition &gt; const &amp;</type>
+        <definition>std::vector&lt; cse491::GridPosition &gt; const  &amp; GetPath</definition>
+        <argsstring>() const</argsstring>
+        <name>GetPath</name>
+        <qualifiedname>walle::PathAgent::GetPath</qualifiedname>
+        <briefdescription>
+<para>Get the Path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>vector of GridPositions</para>
+</simplesect>
+Returns an immutable reference to this agent&apos;s current path <simplesect kind="return"><para>sequence of offsets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="68" column="28" bodyfile="source/Agents/PathAgent.cpp" bodystart="187" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classwalle_1_1_path_agent_1aed50c40dab7717f24c541d6d93850af1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classwalle_1_1_path_agent" kindref="compound">PathAgent</ref> &amp;</type>
+        <definition>PathAgent &amp; ResetIndex</definition>
+        <argsstring>()</argsstring>
+        <name>ResetIndex</name>
+        <qualifiedname>walle::PathAgent::ResetIndex</qualifiedname>
+        <briefdescription>
+<para>Reset the index to 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>self </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/PathAgent.hpp" line="72" column="19" bodyfile="source/Agents/PathAgent.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Agent that has a user-defined custom movement pattern Passed a sequence of to be sequentially applied as the agent is updated </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PathAgent</label>
+        <link refid="classwalle_1_1_path_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PathAgent</label>
+        <link refid="classwalle_1_1_path_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/PathAgent.hpp" line="26" column="5" bodyfile="source/Agents/PathAgent.hpp" bodystart="26" bodyend="76"/>
+    <listofallmembers>
+      <member refid="classwalle_1_1_path_agent_1a1704376239708540ed1c8296f1ce323b" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>CalcNextPos</name></member>
+      <member refid="classwalle_1_1_path_agent_1ab38189de25a1850ce6d34c207e75b890" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>DecrementIndex</name></member>
+      <member refid="classwalle_1_1_path_agent_1aebec12e70dbcc0b88728173b13a6853f" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>GetIndex</name></member>
+      <member refid="classwalle_1_1_path_agent_1abfb5a706be0670ba77cf2deca7b6281d" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>GetNextPosition</name></member>
+      <member refid="classwalle_1_1_path_agent_1afdc94fff9757a8f3a20f8f39443ebe4d" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>GetPath</name></member>
+      <member refid="classwalle_1_1_path_agent_1a5da5f0c0456f5971f45632d55be3e99c" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>IncrementIndex</name></member>
+      <member refid="classwalle_1_1_path_agent_1aaaf1ac02dfa554a3cdffc647d512a77b" prot="protected" virt="non-virtual"><scope>walle::PathAgent</scope><name>index_</name></member>
+      <member refid="classwalle_1_1_path_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>Initialize</name></member>
+      <member refid="classwalle_1_1_path_agent_1aaaee4583464757ace4d7e8ac6d5a690a" prot="protected" virt="non-virtual"><scope>walle::PathAgent</scope><name>offsets_</name></member>
+      <member refid="classwalle_1_1_path_agent_1aee1b96855f17e54a4b73eb1f388c88cd" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>PathAgent</name></member>
+      <member refid="classwalle_1_1_path_agent_1a115cbfe0afaab21b1d4f2424c781256e" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>PathAgent</name></member>
+      <member refid="classwalle_1_1_path_agent_1af5f3ee0ef953a99964b8a9db58942544" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>PathAgent</name></member>
+      <member refid="classwalle_1_1_path_agent_1acaaca120681dde0474bb2c71dd403c4e" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>PathAgent</name></member>
+      <member refid="classwalle_1_1_path_agent_1aed50c40dab7717f24c541d6d93850af1" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>ResetIndex</name></member>
+      <member refid="classwalle_1_1_path_agent_1af56d4c5c7e86c2504fe378dae5cd8c6f" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>SelectAction</name></member>
+      <member refid="classwalle_1_1_path_agent_1a2a93826a5b039385501af51d7e082d17" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>SetPath</name></member>
+      <member refid="classwalle_1_1_path_agent_1a154e840ceb90ff8e89eea88a91d59441" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>SetPath</name></member>
+      <member refid="classwalle_1_1_path_agent_1a5c7cd7e7cbe922a92a4bffe41ec1d0bc" prot="public" virt="virtual"><scope>walle::PathAgent</scope><name>UpdateAndGetNextPos</name></member>
+      <member refid="classwalle_1_1_path_agent_1ab5411bc95ecf64489eaef537e1df3e4b" prot="public" virt="non-virtual"><scope>walle::PathAgent</scope><name>~PathAgent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

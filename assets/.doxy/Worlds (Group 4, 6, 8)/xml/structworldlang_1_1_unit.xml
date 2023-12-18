@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1_unit" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::Unit</compoundname>
+    <includes refid="_language_8hpp" local="no">Language.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <qualifiedname>worldlang::Unit::Type</qualifiedname>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7ab1bc248a7ff2b2e95569f56de68615df" prot="public">
+          <name>number</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7ab45cffe084dd3d20d928bee85e7b0f21" prot="public">
+          <name>string</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7af393f3f5e496869a15bc72cbfd56f541" prot="public">
+          <name>identifier</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7ac1c425268e68385d1ab5074c17a94f14" prot="public">
+          <name>function</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7af7235a61fdc3adc78d866fd8085d44db" prot="public">
+          <name>operation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7ac227c8aca721fa4f486074ec6111aa40" prot="public">
+          <name>function_decl</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Various types of code Units. <simplesect kind="note"><para>that most internal interpreter functions all fall under <computeroutput>operation</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="327" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="327" bodyend="334"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structworldlang_1_1_unit_1ab6f4e6d3fde00ce906e46494f60dfe7a" prot="public" static="no" mutable="no">
+        <type><ref refid="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7" kindref="member">Type</ref></type>
+        <definition>Type type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>worldlang::Unit::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This determines how this unit is used within the interpreter. The type of this code unit. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="337" column="6" bodyfile="source/Worlds/Language.hpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structworldlang_1_1_unit_1a5c33da5929c9f2f9ef8d006d2350e6ec" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>worldlang::Unit::value</qualifiedname>
+        <briefdescription>
+<para>The value of this code unit. What it means depends on the type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="340" column="13" bodyfile="source/Worlds/Language.hpp" bodystart="340" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A singular code unit. Will have some specific meaning within the interpreter itself. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Unit</label>
+        <link refid="structworldlang_1_1_unit"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="324" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="324" bodyend="341"/>
+    <listofallmembers>
+      <member refid="structworldlang_1_1_unit_1a1d1cfd8ffb84e947f82999c682b666a7" prot="public" virt="non-virtual"><scope>worldlang::Unit</scope><name>Type</name></member>
+      <member refid="structworldlang_1_1_unit_1ab6f4e6d3fde00ce906e46494f60dfe7a" prot="public" virt="non-virtual"><scope>worldlang::Unit</scope><name>type</name></member>
+      <member refid="structworldlang_1_1_unit_1a5c33da5929c9f2f9ef8d006d2350e6ec" prot="public" virt="non-virtual"><scope>worldlang::Unit</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

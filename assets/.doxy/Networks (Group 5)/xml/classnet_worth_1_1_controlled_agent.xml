@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_controlled_agent" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::ControlledAgent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_controlled_agent_1a90c01a3d9a29e24a7516c81763b30f7b" prot="private" static="no" mutable="no">
+        <type><ref refid="classnet_worth_1_1_client_manager" kindref="compound">ClientManager</ref> *</type>
+        <definition>ClientManager* m_manager</definition>
+        <argsstring></argsstring>
+        <name>m_manager</name>
+        <qualifiedname>netWorth::ControlledAgent::m_manager</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ControlledAgent.hpp" line="20" column="15" bodyfile="source/Interfaces/NetWorth/client/ControlledAgent.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_controlled_agent_1a69f80fbe94a8181389453ab50a5428fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ControlledAgent</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>ControlledAgent</name>
+        <qualifiedname>netWorth::ControlledAgent::ControlledAgent</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Client manager to access agent action map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ControlledAgent.hpp" line="25" column="1" bodyfile="source/Interfaces/NetWorth/client/ControlledAgent.hpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_controlled_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>netWorth::ControlledAgent::Initialize</qualifiedname>
+        <briefdescription>
+<para>This agent needs a specific set of actions to function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ControlledAgent.hpp" line="31" column="6" bodyfile="source/Interfaces/NetWorth/client/ControlledAgent.hpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_controlled_agent_1a464a813fdccf527181785e25e59586cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;, const cse491::type_options_t &amp;, const cse491::item_map_t &amp;, const cse491::agent_map_t &amp;) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>netWorth::ControlledAgent::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+        </param>
+        <briefdescription>
+<para>Choose the action to take a step in the appropriate direction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ControlledAgent.hpp" line="38" column="8" bodyfile="source/Interfaces/NetWorth/client/ControlledAgent.hpp" bodystart="38" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ControlledAgent</label>
+        <link refid="classnet_worth_1_1_controlled_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ControlledAgent</label>
+        <link refid="classnet_worth_1_1_controlled_agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AgentBase</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/NetWorth/client/ControlledAgent.hpp" line="17" column="1" bodyfile="source/Interfaces/NetWorth/client/ControlledAgent.hpp" bodystart="18" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_controlled_agent_1a69f80fbe94a8181389453ab50a5428fa" prot="public" virt="non-virtual"><scope>netWorth::ControlledAgent</scope><name>ControlledAgent</name></member>
+      <member refid="classnet_worth_1_1_controlled_agent_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>netWorth::ControlledAgent</scope><name>Initialize</name></member>
+      <member refid="classnet_worth_1_1_controlled_agent_1a90c01a3d9a29e24a7516c81763b30f7b" prot="private" virt="non-virtual"><scope>netWorth::ControlledAgent</scope><name>m_manager</name></member>
+      <member refid="classnet_worth_1_1_controlled_agent_1a464a813fdccf527181785e25e59586cb" prot="public" virt="non-virtual"><scope>netWorth::ControlledAgent</scope><name>SelectAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

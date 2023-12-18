@@ -3,6 +3,22 @@
   <compounddef id="classcse491_1_1_interface_base" kind="class" language="C++" prot="public">
     <compoundname>cse491::InterfaceBase</compoundname>
     <basecompoundref refid="classcse491_1_1_agent_base" prot="public" virt="non-virtual">AgentBase</basecompoundref>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classcse491_1_1_interface_base_1aa84d9c40ca143582a2748c09b118e85b" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void exitCleanup</definition>
+        <argsstring>()</argsstring>
+        <name>exitCleanup</name>
+        <qualifiedname>cse491::InterfaceBase::exitCleanup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/InterfaceBase.hpp" line="19" column="15" bodyfile="source/core/InterfaceBase.hpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classcse491_1_1_interface_base_1a2db78b99709e40487542768af715617e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -24,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/InterfaceBase.hpp" line="19" column="5" bodyfile="source/core/InterfaceBase.hpp" bodystart="19" bodyend="19"/>
+        <location file="source/core/InterfaceBase.hpp" line="25" column="3" bodyfile="source/core/InterfaceBase.hpp" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_interface_base_1ab9ee926e228d227ed72baf09fd5a11cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/InterfaceBase.hpp" line="20" column="5"/>
+        <location file="source/core/InterfaceBase.hpp" line="26" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_interface_base_1a4afb8c12fa7634510af645142be1ce16" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -48,13 +64,13 @@
         <qualifiedname>cse491::InterfaceBase::IsInterface</qualifiedname>
         <reimplements refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913">IsInterface</reimplements>
         <briefdescription>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an interface for a human? </para>
         </briefdescription>
         <detaileddescription>
-<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually a specialty Agent that&apos;s an Interface for a human player? (Overridden in <ref refid="classcse491_1_1_interface_base" kindref="compound">InterfaceBase</ref> to return true) </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/InterfaceBase.hpp" line="24" column="10" bodyfile="source/core/InterfaceBase.hpp" bodystart="24" bodyend="24"/>
+        <location file="source/core/InterfaceBase.hpp" line="30" column="8" bodyfile="source/core/InterfaceBase.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -74,9 +90,15 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="4">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
       <node id="3">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
@@ -92,56 +114,105 @@
         <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="4">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
       <node id="3">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
-        <childnode refid="4" relation="usage">
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
           <edgelabel>position</edgelabel>
         </childnode>
       </node>
-      <node id="4">
+      <node id="5">
         <label>GridPosition</label>
         <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="source/core/InterfaceBase.hpp" line="15" column="3" bodyfile="source/core/InterfaceBase.hpp" bodystart="15" bodyend="43"/>
+    <location file="source/core/InterfaceBase.hpp" line="17" column="1" bodyfile="source/core/InterfaceBase.hpp" bodystart="17" bodyend="47"/>
     <listofallmembers>
+      <member refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>action</name></member>
       <member refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>action_map</name></member>
       <member refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>action_result</name></member>
       <member refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>AddAction</name></member>
+      <member refid="classcse491_1_1_entity_1afe03b0eaf89eb7d96cc1da613e3542ee" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_entity_1a7c24de0b9b1425909e394badaedb242a" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_agent_base_1af41b89bb5fec11f12e51fa5802946f7d" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>agent_state</name></member>
       <member refid="classcse491_1_1_agent_base_1ad6fd3fc811fb54aaf89e6a10b6c5e4f5" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>AgentBase</name></member>
       <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>AsProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>EndSerialize</name></member>
       <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Entity</name></member>
+      <member refid="classcse491_1_1_interface_base_1aa84d9c40ca143582a2748c09b118e85b" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>exitCleanup</name></member>
       <member refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetActionID</name></member>
       <member refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetActionResult</name></member>
+      <member refid="classcse491_1_1_agent_base_1a337b591f4547fced359cc320f8daa31b" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetAgentState</name></member>
+      <member refid="classcse491_1_1_entity_1a4ffa22f4412fcf5311ce82f141ba0859" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetGridID</name></member>
       <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetID</name></member>
+      <member refid="classcse491_1_1_entity_1a2832506a8de210991390410bd86a2f72" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetInventory</name></member>
       <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetName</name></member>
+      <member refid="classcse491_1_1_agent_base_1a0f7e9013ead8b2719f230eca88bc2ee3" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>GetNextPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a7e57a528d2258936fccfd76ba5bb7ded" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetNumProperties</name></member>
       <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a58604fcd0bd186c26cfc8523ca18de2c" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetPropertyMap</name></member>
+      <member refid="classcse491_1_1_entity_1a6861d4f61a5ceb4211e0193d4423101e" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetPropertyType</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_entity_1a88f8198fa0b98315eaeb845ebb8c6dcf" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>GetWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a65d59a4da280ec1586bf960dd050f852" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>grid_id</name></member>
       <member refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>HasAction</name></member>
+      <member refid="classcse491_1_1_entity_1a4941a720636380ff1b2230c44e16236c" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>HasItem</name></member>
       <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>HasProperty</name></member>
-      <member refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1a24934eba69d59a45f2a534b190ad81f7" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>HasWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>id</name></member>
       <member refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>Initialize</name></member>
       <member refid="classcse491_1_1_interface_base_1a2db78b99709e40487542768af715617e" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>InterfaceBase</name></member>
+      <member refid="classcse491_1_1_entity_1ae98df8c658e54f8dad0ebe2b6c59eb51" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>inventory</name></member>
       <member refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>IsAgent</name></member>
       <member refid="classcse491_1_1_interface_base_1a4afb8c12fa7634510af645142be1ce16" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>IsInterface</name></member>
+      <member refid="classcse491_1_1_entity_1a91d327ae5ea52f9dc758f398253745f0" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>IsItem</name></member>
+      <member refid="classcse491_1_1_entity_1a4f2ce779a5091d928997ab65bdf62432" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>IsOnGrid</name></member>
       <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>name</name></member>
+      <member refid="classcse491_1_1_agent_base_1a7848dca4f05f13998b1dc87a1b4adf65" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>Notify</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>position</name></member>
-      <member refid="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1aaf95d2aca1711a816f70645c5ee76aaa" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>property_map_t</name></member>
+      <member refid="classcse491_1_1_entity_1a250dc20128eced2591bbf14ae4e27263" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>RemoveItem</name></member>
+      <member refid="classcse491_1_1_entity_1ae256acb3e6cfd455e274eb1c2b5bf762" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>RemoveItem</name></member>
       <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>RemoveProperty</name></member>
-      <member refid="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_agent_base_1a9d9dc83ae6351799db2bab03703bf597" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>Serialize_impl</name></member>
       <member refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetActionResult</name></member>
       <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetName</name></member>
-      <member refid="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1aec036a2f43c433afaa742192eef9d102" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetProperties</name></member>
-      <member refid="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1aec09f29c9b8611a97ede88aca9eda904" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetProperties</name></member>
       <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>SetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1af5cd6b1f10d96860e91dbdaf7f994e4c" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>SetWorld</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1ab62d39de95fa404497db6108babe7cce" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>storeActionMap</name></member>
+      <member refid="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>TakeDamage</name></member>
+      <member refid="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>UpdateAgentState</name></member>
       <member refid="classcse491_1_1_agent_base_1aa100ff07022da1ca78f2f31163f9790f" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>~AgentBase</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>~CoreObject</name></member>
       <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" virt="virtual"><scope>cse491::InterfaceBase</scope><name>~Entity</name></member>
       <member refid="classcse491_1_1_interface_base_1ab9ee926e228d227ed72baf09fd5a11cf" prot="public" virt="non-virtual"><scope>cse491::InterfaceBase</scope><name>~InterfaceBase</name></member>
     </listofallmembers>

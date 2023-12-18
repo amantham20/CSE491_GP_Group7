@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_base_agent_data" kind="struct" language="C++" prot="public">
+    <compoundname>walle::BaseAgentData</compoundname>
+    <derivedcompoundref refid="structwalle_1_1_a_star_agent_data" prot="public" virt="non-virtual">AStarAgentData</derivedcompoundref>
+    <derivedcompoundref refid="structwalle_1_1_pacing_agent_data" prot="public" virt="non-virtual">PacingAgentData</derivedcompoundref>
+    <derivedcompoundref refid="structwalle_1_1_path_agent_data" prot="public" virt="non-virtual">PathAgentData</derivedcompoundref>
+    <derivedcompoundref refid="structwalle_1_1_tracking_agent_data" prot="public" virt="non-virtual">TrackingAgentData</derivedcompoundref>
+    <includes refid="_agent_factory_8hpp" local="no">AgentFactory.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>walle::BaseAgentData::name</qualifiedname>
+        <briefdescription>
+<para>Name of the agent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="56" column="17" bodyfile="source/Agents/AgentFactory.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>walle::BaseAgentData::position</qualifiedname>
+        <briefdescription>
+<para>Agent&apos;s position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="59" column="26" bodyfile="source/Agents/AgentFactory.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <qualifiedname>walle::BaseAgentData::symbol</qualifiedname>
+        <initializer>= &apos;*&apos;</initializer>
+        <briefdescription>
+<para>Agent&apos;s representation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="62" column="10" bodyfile="source/Agents/AgentFactory.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores data for AgentBase </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+      <node id="2">
+        <label>AStarAgentData</label>
+        <link refid="structwalle_1_1_a_star_agent_data"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>PacingAgentData</label>
+        <link refid="structwalle_1_1_pacing_agent_data"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>PathAgentData</label>
+        <link refid="structwalle_1_1_path_agent_data"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TrackingAgentData</label>
+        <link refid="structwalle_1_1_tracking_agent_data"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="source/Agents/AgentFactory.hpp" line="54" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="54" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>walle::BaseAgentData</scope><name>name</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::BaseAgentData</scope><name>position</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>walle::BaseAgentData</scope><name>symbol</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_node" kind="struct" language="C++" prot="public">
+    <compoundname>walle::Node</compoundname>
+    <includes refid="_agent_libary_8hpp" local="no">AgentLibary.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_node_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <qualifiedname>walle::Node::position</qualifiedname>
+        <briefdescription>
+<para>Where node is located. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="27" column="30" bodyfile="source/Agents/AgentLibary.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_node_1ab30c765b9be1b7776c97c899a12a66bb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>walle::Node::g</qualifiedname>
+        <briefdescription>
+<para>Cost from start to current node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="28" column="16" bodyfile="source/Agents/AgentLibary.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_node_1a8ee9be1b5aa75abae556de3088cba6d9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <qualifiedname>walle::Node::h</qualifiedname>
+        <briefdescription>
+<para>Heuristic (estimated cost from current node to goal) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="29" column="16" bodyfile="source/Agents/AgentLibary.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_node_1ae205b53c55afcf831630e4b5e4947bee" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structwalle_1_1_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <qualifiedname>walle::Node::parent</qualifiedname>
+        <briefdescription>
+<para>How we got to this node (Used to construct final path) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="31" column="13" bodyfile="source/Agents/AgentLibary.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structwalle_1_1_node_1ae81180ce1cf2d48a976181acf654d12c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Node</definition>
+        <argsstring>(const cse491::GridPosition &amp;position, double g, double h, std::shared_ptr&lt; Node &gt; parent)</argsstring>
+        <name>Node</name>
+        <qualifiedname>walle::Node::Node</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="structwalle_1_1_node" kindref="compound">Node</ref> &gt;</type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor for a node <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>location on grid of this node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>actual distance to get from start to this node </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>heuristic guess for distance from this node to end location </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Used to construct path back at end </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="40" column="9" bodyfile="source/Agents/AgentLibary.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structwalle_1_1_node_1ae78e450bd09b290ffcf79fd8841d2128" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double f</definition>
+        <argsstring>() const</argsstring>
+        <name>f</name>
+        <qualifiedname>walle::Node::f</qualifiedname>
+        <briefdescription>
+<para>Calculate the total cost (f) of the node. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>sum of actual distance and heuristic distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="48" column="17" bodyfile="source/Agents/AgentLibary.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="structwalle_1_1_node" kindref="compound">Node</ref> class to hold information about positions for A* search. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/AgentLibary.hpp" line="26" column="5" bodyfile="source/Agents/AgentLibary.hpp" bodystart="26" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_node_1ae78e450bd09b290ffcf79fd8841d2128" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>f</name></member>
+      <member refid="structwalle_1_1_node_1ab30c765b9be1b7776c97c899a12a66bb" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>g</name></member>
+      <member refid="structwalle_1_1_node_1a8ee9be1b5aa75abae556de3088cba6d9" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>h</name></member>
+      <member refid="structwalle_1_1_node_1ae81180ce1cf2d48a976181acf654d12c" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>Node</name></member>
+      <member refid="structwalle_1_1_node_1ae205b53c55afcf831630e4b5e4947bee" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>parent</name></member>
+      <member refid="structwalle_1_1_node_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::Node</scope><name>position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_8adf75fe53ae17187785c216cf2633db" kind="dir">
+    <compoundname>source/DataCollection</compoundname>
+    <innerfile refid="_agent_data_8hpp">AgentData.hpp</innerfile>
+    <innerfile refid="_agent_interaction_collector_8hpp">AgentInteractionCollector.hpp</innerfile>
+    <innerfile refid="_agent_reciever_8hpp">AgentReciever.hpp</innerfile>
+    <innerfile refid="_damage_collector_8hpp">DamageCollector.hpp</innerfile>
+    <innerfile refid="_damage_data_8hpp">DamageData.hpp</innerfile>
+    <innerfile refid="_damage_receiver_8hpp">DamageReceiver.hpp</innerfile>
+    <innerfile refid="_data_manager_8hpp">DataManager.hpp</innerfile>
+    <innerfile refid="_data_receiver_8hpp">DataReceiver.hpp</innerfile>
+    <innerfile refid="_game_data_8hpp">GameData.hpp</innerfile>
+    <innerfile refid="_game_receiver_8hpp">GameReceiver.hpp</innerfile>
+    <innerfile refid="_item_use_collector_8hpp">ItemUseCollector.hpp</innerfile>
+    <innerfile refid="_json_builder_8hpp">JsonBuilder.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/DataCollection/"/>
+  </compounddef>
+</doxygen>

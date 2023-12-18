@@ -10,13 +10,23 @@
 
 
 
+* `#include <algorithm>`
 * `#include <cassert>`
 * `#include <memory>`
+* `#include <queue>`
+* `#include <random>`
+* `#include <sstream>`
 * `#include <string>`
 * `#include <vector>`
+* `#include "../DataCollection/AgentReciever.hpp"`
 * `#include "AgentBase.hpp"`
 * `#include "Data.hpp"`
-* `#include "Entity.hpp"`
+* `#include "DataCollection/DataManager.hpp"`
+* `#include "Interfaces/NetWorth/client/ClientInterface.hpp"`
+* `#include "Interfaces/NetWorth/client/ClientManager.hpp"`
+* `#include "Interfaces/NetWorth/client/ControlledAgent.hpp"`
+* `#include "Interfaces/NetWorth/server/ServerManager.hpp"`
+* `#include "ItemBase.hpp"`
 * `#include "WorldGrid.hpp"`
 
 
@@ -36,6 +46,7 @@
 | Type | Name |
 | ---: | :--- |
 | namespace | [**cse491**](namespacecse491.md) <br>_A base class interface for all agent types._  |
+| namespace | [**worldlang**](namespaceworldlang.md) <br>_A base class for all World modules._  |
 
 
 ## Classes

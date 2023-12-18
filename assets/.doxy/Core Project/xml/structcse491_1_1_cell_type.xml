@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="17" column="17" bodyfile="source/core/Data.hpp" bodystart="17" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="19" column="15" bodyfile="source/core/Data.hpp" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="18" column="17" bodyfile="source/core/Data.hpp" bodystart="18" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="20" column="15" bodyfile="source/core/Data.hpp" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -47,7 +47,114 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/Data.hpp" line="19" column="10" bodyfile="source/core/Data.hpp" bodystart="19" bodyend="-1"/>
+        <location file="source/core/Data.hpp" line="21" column="8" bodyfile="source/core/Data.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1a78c3efc00078c4c21975460b5ba59b49" prot="public" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; properties</definition>
+        <argsstring></argsstring>
+        <name>properties</name>
+        <qualifiedname>cse491::CellType::properties</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Set of properties for this cell type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="22" column="12" bodyfile="source/core/Data.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1a788dac64d410a8e6feb1594beea5b0fb" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char CELL_WALL[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CELL_WALL</name>
+        <qualifiedname>cse491::CellType::CELL_WALL</qualifiedname>
+        <initializer>= &quot;wall&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="39" column="25" bodyfile="source/core/Data.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcse491_1_1_cell_type_1a2fb278d16b367fb804f2b99cc198215e" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char CELL_WATER[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CELL_WATER</name>
+        <qualifiedname>cse491::CellType::CELL_WATER</qualifiedname>
+        <initializer>= &quot;water&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="40" column="25" bodyfile="source/core/Data.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcse491_1_1_cell_type_1a5acee1ad5d28ddfc4a4a85921ce3c63f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref> &amp;</type>
+        <definition>CellType &amp; SetProperty</definition>
+        <argsstring>(const std::string &amp;property)</argsstring>
+        <name>SetProperty</name>
+        <qualifiedname>cse491::CellType::SetProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Adds the specifed property to this <ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="25" column="12" bodyfile="source/core/Data.hpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_cell_type_1afb9599e639ad501614856a1a6f81a222" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref> &amp;</type>
+        <definition>CellType &amp; RemoveProperty</definition>
+        <argsstring>(const std::string &amp;property)</argsstring>
+        <name>RemoveProperty</name>
+        <qualifiedname>cse491::CellType::RemoveProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Removes the specifed property from this <ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="31" column="12" bodyfile="source/core/Data.hpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_cell_type_1a71ef7521b6f08960bcebd61234ad501f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HasProperty</definition>
+        <argsstring>(const std::string &amp;property) const</argsstring>
+        <name>HasProperty</name>
+        <qualifiedname>cse491::CellType::HasProperty</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the given property is set on this <ref refid="structcse491_1_1_cell_type" kindref="compound">CellType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Data.hpp" line="37" column="8" bodyfile="source/core/Data.hpp" bodystart="37" bodyend="37"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -55,10 +162,16 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="source/core/Data.hpp" line="16" column="3" bodyfile="source/core/Data.hpp" bodystart="16" bodyend="20"/>
+    <location file="source/core/Data.hpp" line="18" column="1" bodyfile="source/core/Data.hpp" bodystart="18" bodyend="41"/>
     <listofallmembers>
+      <member refid="structcse491_1_1_cell_type_1a788dac64d410a8e6feb1594beea5b0fb" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>CELL_WALL</name></member>
+      <member refid="structcse491_1_1_cell_type_1a2fb278d16b367fb804f2b99cc198215e" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>CELL_WATER</name></member>
       <member refid="structcse491_1_1_cell_type_1a378e4473b8cd1fccf534804887f2bc85" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>desc</name></member>
+      <member refid="structcse491_1_1_cell_type_1a71ef7521b6f08960bcebd61234ad501f" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>HasProperty</name></member>
       <member refid="structcse491_1_1_cell_type_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>name</name></member>
+      <member refid="structcse491_1_1_cell_type_1a78c3efc00078c4c21975460b5ba59b49" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>properties</name></member>
+      <member refid="structcse491_1_1_cell_type_1afb9599e639ad501614856a1a6f81a222" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>RemoveProperty</name></member>
+      <member refid="structcse491_1_1_cell_type_1a5acee1ad5d28ddfc4a4a85921ce3c63f" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>SetProperty</name></member>
       <member refid="structcse491_1_1_cell_type_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>cse491::CellType</scope><name>symbol</name></member>
     </listofallmembers>
   </compounddef>

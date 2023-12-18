@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="conceptcse491_1_1_can_stream_to" kind="concept">
+    <compoundname>cse491::CanStreamTo</compoundname>
+    <includes refid="_serialize_8hpp" local="no">Serialize.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename STREAM_T</type>
+      </param>
+      <param>
+        <type>typename OBJ_T</type>
+      </param>
+    </templateparamlist>
+    <initializer>template&lt;typename STREAM_T, typename OBJ_T&gt;
+concept <ref refid="conceptcse491_1_1_can_stream_to" kindref="compound">cse491::CanStreamTo</ref> =  requires(STREAM_T &amp; stream, OBJ_T value) {
+  { stream &lt;&lt; value } -&gt; std::convertible_to&lt;std::ostream&amp;&gt;;
+}    </initializer>
+    <briefdescription>
+<para>Concept to identify if a type can be sent into an ostream. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/core/Serialize.hpp" line="40" column="1"/>
+  </compounddef>
+</doxygen>

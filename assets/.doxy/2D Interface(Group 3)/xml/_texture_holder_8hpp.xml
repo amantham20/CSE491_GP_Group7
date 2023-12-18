@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_texture_holder_8hpp" kind="file" language="C++">
+    <compoundname>TextureHolder.hpp</compoundname>
+    <includes local="no">map</includes>
+    <includes local="yes">SFML/Graphics.hpp</includes>
+    <includes local="yes">../core/Data.hpp</includes>
+    <includes local="yes">../core/InterfaceBase.hpp</includes>
+    <includedby refid="_main_interface_8hpp" local="yes">source/Interfaces/MainInterface.hpp</includedby>
+    <includedby refid="_texture_holder_8cpp" local="yes">source/Interfaces/TextureHolder.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../core/Data.hpp</label>
+      </node>
+      <node id="5">
+        <label>../core/InterfaceBase.hpp</label>
+      </node>
+      <node id="1">
+        <label>source/Interfaces/TextureHolder.hpp</label>
+        <link refid="_texture_holder_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="2">
+        <label>map</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>source/Interfaces/MainInterface.cpp</label>
+        <link refid="_main_interface_8cpp"/>
+      </node>
+      <node id="2">
+        <label>source/Interfaces/MainInterface.hpp</label>
+        <link refid="_main_interface_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/Interfaces/TextureHolder.hpp</label>
+        <link refid="_texture_holder_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classi__2_d_1_1_texture_holder" prot="public">i_2D::TextureHolder</innerclass>
+    <innernamespace refid="namespacei__2_d">i_2D</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>Vincenzo<sp/>on<sp/>10/18/2023.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SFML/Graphics.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../core/Data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../core/InterfaceBase.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacei__2_d" kindref="compound">i_2D</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classi__2_d_1_1_texture_holder" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classi__2_d_1_1_texture_holder" kindref="compound">TextureHolder</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>std::unique_ptr&lt;sf::Texture&gt;&gt;<sp/>textures_;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classi__2_d_1_1_texture_holder" kindref="compound">TextureHolder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classi__2_d_1_1_texture_holder" kindref="compound">~TextureHolder</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classi__2_d_1_1_texture_holder_1a6637af444d9ac4bb891e079bf3ef4a7e" kindref="member">LoadTexture</ref>(std::string<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>std::string<sp/>file_name);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sf::Texture&amp;<sp/><ref refid="classi__2_d_1_1_texture_holder_1a8dffde0f8f6b8a290c139503a3f8364d" kindref="member">GetTexture</ref>(std::string<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;char,<sp/>sf::Texture&gt;<sp/><ref refid="classi__2_d_1_1_texture_holder_1a75dfaff19cda944a2d224da7ab4dc92d" kindref="member">MazeTexture</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;char,<sp/>sf::Texture&gt;<sp/><ref refid="classi__2_d_1_1_texture_holder_1a48f25c88d87a2f964296421596cc28e8" kindref="member">SecondWorldTexture</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;char,<sp/>sf::Texture&gt;<sp/><ref refid="classi__2_d_1_1_texture_holder_1a5fded348c163abda85dfea9961de77a1" kindref="member">ManualWorldTexture</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;char,<sp/>sf::Texture&gt;<sp/><ref refid="classi__2_d_1_1_texture_holder_1a753b244df5a47e90de2852cfcaacab92" kindref="member">GenerativeWorldTexture</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/Interfaces/TextureHolder.hpp"/>
+  </compounddef>
+</doxygen>

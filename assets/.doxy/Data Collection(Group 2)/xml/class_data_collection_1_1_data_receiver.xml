@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_data_receiver" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::DataReceiver</compoundname>
+    <includes refid="_data_receiver_8hpp" local="no">DataReceiver.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; storage</definition>
+        <argsstring></argsstring>
+        <name>storage</name>
+        <qualifiedname>DataCollection::DataReceiver::storage</qualifiedname>
+        <briefdescription>
+<para>Vector to store shared_ptr data objects of type T. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="50" column="21" bodyfile="source/DataCollection/DataReceiver.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataReceiver</definition>
+        <argsstring>()=default</argsstring>
+        <name>DataReceiver</name>
+        <qualifiedname>DataCollection::DataReceiver::DataReceiver</qualifiedname>
+        <briefdescription>
+<para>Default constructor for <ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="18" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~DataReceiver</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DataReceiver</name>
+        <qualifiedname>DataCollection::DataReceiver::~DataReceiver</qualifiedname>
+        <briefdescription>
+<para>Virtual destructor for <ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="23" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; T &gt; &amp;</type>
+        <definition>std::vector&lt; T &gt; &amp; getStorage</definition>
+        <argsstring>()</argsstring>
+        <name>getStorage</name>
+        <qualifiedname>DataCollection::DataReceiver::getStorage</qualifiedname>
+        <briefdescription>
+<para>Retrieves the stored data objects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reference to the vector containing stored data objects. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="29" column="21" bodyfile="source/DataCollection/DataReceiver.hpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StoreIntoStorage</definition>
+        <argsstring>(T obj)</argsstring>
+        <name>StoreIntoStorage</name>
+        <qualifiedname>DataCollection::DataReceiver::StoreIntoStorage</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Store a data object into the storage. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data object to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="37" column="14" bodyfile="source/DataCollection/DataReceiver.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>IsEmpty</name>
+        <qualifiedname>DataCollection::DataReceiver::IsEmpty</qualifiedname>
+        <briefdescription>
+<para>Checks if the storage is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the storage is empty, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataReceiver.hpp" line="45" column="14" bodyfile="source/DataCollection/DataReceiver.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Generic data receiver template class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides a template for storing and retrieving data objects of a specified type. <parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of data to be stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="source/DataCollection/DataReceiver.hpp" line="13" column="5" bodyfile="source/DataCollection/DataReceiver.hpp" bodystart="13" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" prot="public" virt="non-virtual"><scope>DataCollection::DataReceiver</scope><name>DataReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" prot="public" virt="non-virtual"><scope>DataCollection::DataReceiver</scope><name>getStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" prot="public" virt="non-virtual"><scope>DataCollection::DataReceiver</scope><name>IsEmpty</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" prot="protected" virt="non-virtual"><scope>DataCollection::DataReceiver</scope><name>storage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" prot="public" virt="non-virtual"><scope>DataCollection::DataReceiver</scope><name>StoreIntoStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" prot="public" virt="virtual"><scope>DataCollection::DataReceiver</scope><name>~DataReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

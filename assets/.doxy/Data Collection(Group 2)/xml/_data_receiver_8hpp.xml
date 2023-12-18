@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_data_receiver_8hpp" kind="file" language="C++">
+    <compoundname>DataReceiver.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includedby refid="_agent_reciever_8hpp" local="yes">source/DataCollection/AgentReciever.hpp</includedby>
+    <includedby refid="_damage_receiver_8hpp" local="yes">source/DataCollection/DamageReceiver.hpp</includedby>
+    <includedby refid="_game_receiver_8hpp" local="yes">source/DataCollection/GameReceiver.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/DataCollection/DataReceiver.hpp</label>
+        <link refid="_data_receiver_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/DataCollection/AgentReciever.hpp</label>
+        <link refid="_agent_reciever_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>source/DataCollection/DamageReceiver.hpp</label>
+        <link refid="_damage_receiver_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>source/DataCollection/DataManager.hpp</label>
+        <link refid="_data_manager_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>source/DataCollection/DataReceiver.hpp</label>
+        <link refid="_data_receiver_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>source/DataCollection/GameReceiver.hpp</label>
+        <link refid="_game_receiver_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_data_collection_1_1_data_receiver" prot="public">DataCollection::DataReceiver</innerclass>
+    <innernamespace refid="namespace_data_collection">DataCollection</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DataCollection<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="13" refid="class_data_collection_1_1_data_receiver" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" kindref="member">DataReceiver</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" kindref="member">~DataReceiver</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;T&gt;&amp;<sp/><ref refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" kindref="member">getStorage</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" kindref="member">storage</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" kindref="member">StoreIntoStorage</ref>(T<sp/>obj){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" kindref="member">storage</ref>.push_back(obj);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" kindref="member">IsEmpty</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" kindref="member">storage</ref>.empty();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;T&gt;<sp/><ref refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" kindref="member">storage</ref>;<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>DataCollection</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/DataCollection/DataReceiver.hpp"/>
+  </compounddef>
+</doxygen>

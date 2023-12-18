@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_damage_receiver" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::DamageReceiver</compoundname>
+    <basecompoundref refid="class_data_collection_1_1_data_receiver" prot="public" virt="non-virtual">DataReceiver&lt; DamageData &gt;</basecompoundref>
+    <includes refid="_damage_receiver_8hpp" local="no">DamageReceiver.hpp</includes>
+    <briefdescription>
+<para>Data receiver class specialized for storing <ref refid="class_data_collection_1_1_damage_data" kindref="compound">DamageData</ref> objects. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class extends <ref refid="class_data_collection_1_1_data_receiver" kindref="compound">DataReceiver</ref> class and provides specific functionality for storing <ref refid="class_data_collection_1_1_damage_data" kindref="compound">DamageData</ref> objects along with damage sources and amounts. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DamageReceiver</label>
+        <link refid="class_data_collection_1_1_damage_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataReceiver&lt; DamageData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DamageReceiver</label>
+        <link refid="class_data_collection_1_1_damage_receiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DataReceiver&lt; DamageData &gt;</label>
+        <link refid="class_data_collection_1_1_data_receiver"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/DataCollection/DamageReceiver.hpp" line="14" column="5" bodyfile="source/DataCollection/DamageReceiver.hpp" bodystart="14" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" prot="public" virt="non-virtual"><scope>DataCollection::DamageReceiver</scope><name>DataReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" prot="public" virt="non-virtual"><scope>DataCollection::DamageReceiver</scope><name>getStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" prot="public" virt="non-virtual"><scope>DataCollection::DamageReceiver</scope><name>IsEmpty</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" prot="protected" virt="non-virtual"><scope>DataCollection::DamageReceiver</scope><name>storage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" prot="public" virt="non-virtual"><scope>DataCollection::DamageReceiver</scope><name>StoreIntoStorage</name></member>
+      <member refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" prot="public" virt="virtual"><scope>DataCollection::DamageReceiver</scope><name>~DataReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -2,6 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classcse491_1_1_core_object" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>cse491::CoreObject</compoundname>
+    <derivedcompoundref refid="classcse491_1_1_entity" prot="public" virt="non-virtual">Entity</derivedcompoundref>
+    <derivedcompoundref refid="classcse491_1_1_grid_position" prot="public" virt="non-virtual">GridPosition</derivedcompoundref>
+    <derivedcompoundref refid="structcse491_1_1_property_base" prot="public" virt="non-virtual">PropertyBase</derivedcompoundref>
     <derivedcompoundref refid="classcse491_1_1_world_grid" prot="public" virt="non-virtual">WorldGrid</derivedcompoundref>
     <sectiondef kind="protected-func">
       <memberdef kind="function" id="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
@@ -10,6 +13,10 @@
         <argsstring>() const =0</argsstring>
         <name>GetTypeName_impl</name>
         <qualifiedname>cse491::CoreObject::GetTypeName_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_grid_position_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_item_base_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
+        <reimplementedby refid="structcse491_1_1_property_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
         <reimplementedby refid="classcse491_1_1_world_grid_1ae5033ebd6f42bc517c552903fcb54d0f">GetTypeName_impl</reimplementedby>
         <briefdescription>
 <para>Override to allow access the derived name for this type. </para>
@@ -21,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="37" column="25"/>
+        <location file="source/core/CoreObject.hpp" line="62" column="23"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -29,6 +36,11 @@
         <argsstring>(std::ostream &amp;) const =0</argsstring>
         <name>Serialize_impl</name>
         <qualifiedname>cse491::CoreObject::Serialize_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_entity_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_grid_position_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_item_base_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
+        <reimplementedby refid="structcse491_1_1_property_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
         <reimplementedby refid="classcse491_1_1_world_grid_1acd04f7953f588c434de0fa2ebd03cedf">Serialize_impl</reimplementedby>
         <param>
           <type>std::ostream &amp;</type>
@@ -50,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="41" column="18"/>
+        <location file="source/core/CoreObject.hpp" line="66" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -58,6 +70,11 @@
         <argsstring>(std::istream &amp;)=0</argsstring>
         <name>Deserialize_impl</name>
         <qualifiedname>cse491::CoreObject::Deserialize_impl</qualifiedname>
+        <reimplementedby refid="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_entity_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_grid_position_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <reimplementedby refid="classcse491_1_1_item_base_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
+        <reimplementedby refid="structcse491_1_1_property_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
         <reimplementedby refid="classcse491_1_1_world_grid_1aa912efd8fc53715bdadc51234115d82b">Deserialize_impl</reimplementedby>
         <param>
           <type>std::istream &amp;</type>
@@ -79,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="45" column="18"/>
+        <location file="source/core/CoreObject.hpp" line="70" column="16"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -100,7 +117,7 @@
 <parametername>os</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Output stream to serialize into. </para>
+<para>Output stream to Serialize into. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -108,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="53" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="53" bodyend="55"/>
+        <location file="source/core/CoreObject.hpp" line="77" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="77" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -129,7 +146,7 @@
 <parametername>os</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Output stream to serialize into. </para>
+<para>Output stream to Serialize into. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -137,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="59" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="59" bodyend="61"/>
+        <location file="source/core/CoreObject.hpp" line="81" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="81" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -168,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="66" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="66" bodyend="76"/>
+        <location file="source/core/CoreObject.hpp" line="86" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="86" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -199,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="81" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="81" bodyend="91"/>
+        <location file="source/core/CoreObject.hpp" line="100" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="100" bodyend="109"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -215,7 +232,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="94" column="13" bodyfile="source/core/CoreObject.hpp" bodystart="94" bodyend="94"/>
+        <location file="source/core/CoreObject.hpp" line="113" column="11" bodyfile="source/core/CoreObject.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto operator&lt;=&gt;</definition>
+        <argsstring>(const CoreObject &amp;) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>cse491::CoreObject::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classcse491_1_1_core_object" kindref="compound">CoreObject</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/CoreObject.hpp" line="115" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -233,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="100" column="17" bodyfile="source/core/CoreObject.hpp" bodystart="100" bodyend="100"/>
+        <location file="source/core/CoreObject.hpp" line="121" column="15" bodyfile="source/core/CoreObject.hpp" bodystart="121" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -262,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="108" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="108" bodyend="112"/>
+        <location file="source/core/CoreObject.hpp" line="129" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="129" bodyend="133"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -291,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="120" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="120" bodyend="124"/>
+        <location file="source/core/CoreObject.hpp" line="141" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="141" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -322,7 +356,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="129" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="129" bodyend="137"/>
+        <location file="source/core/CoreObject.hpp" line="150" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="150" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -353,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/CoreObject.hpp" line="142" column="10" bodyfile="source/core/CoreObject.hpp" bodystart="142" bodyend="150"/>
+        <location file="source/core/CoreObject.hpp" line="163" column="8" bodyfile="source/core/CoreObject.hpp" bodystart="163" bodyend="171"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -365,14 +399,56 @@
         <label>CoreObject</label>
         <link refid="classcse491_1_1_core_object"/>
       </node>
+      <node id="3">
+        <label>AgentBase</label>
+        <link refid="classcse491_1_1_agent_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
       <node id="2">
+        <label>Entity</label>
+        <link refid="classcse491_1_1_entity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GridPosition</label>
+        <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>InterfaceBase</label>
+        <link refid="classcse491_1_1_interface_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ItemBase</label>
+        <link refid="classcse491_1_1_item_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_property"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_property_base"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
         <label>WorldGrid</label>
         <link refid="classcse491_1_1_world_grid"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="source/core/CoreObject.hpp" line="27" column="3" bodyfile="source/core/CoreObject.hpp" bodystart="27" bodyend="152"/>
+    <location file="source/core/CoreObject.hpp" line="52" column="1" bodyfile="source/core/CoreObject.hpp" bodystart="52" bodyend="172"/>
     <listofallmembers>
       <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Deserialize</name></member>
       <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Deserialize</name></member>
@@ -381,6 +457,7 @@
       <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::CoreObject</scope><name>EndSerialize</name></member>
       <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>GetTypeName</name></member>
       <member refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" virt="pure-virtual"><scope>cse491::CoreObject</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Serialize</name></member>
       <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::CoreObject</scope><name>Serialize</name></member>
       <member refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" prot="protected" virt="pure-virtual"><scope>cse491::CoreObject</scope><name>Serialize_impl</name></member>

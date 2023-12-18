@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_damage_data" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::DamageData</compoundname>
+    <includes refid="_damage_data_8hpp" local="no">DamageData.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_damage_data_1a87f59b701a1554e5670058f8342a556e" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; cse491::AgentBase &gt;</type>
+        <definition>std::shared_ptr&lt;cse491::AgentBase&gt; agent</definition>
+        <argsstring></argsstring>
+        <name>agent</name>
+        <qualifiedname>DataCollection::DamageData::agent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageData.hpp" line="15" column="25" bodyfile="source/DataCollection/DamageData.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_damage_data_1a4eeddf4b63950caa9e0c8cd5a44d391b" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; cse491::Entity &gt;</type>
+        <definition>std::shared_ptr&lt;cse491::Entity&gt; source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>DataCollection::DamageData::source</qualifiedname>
+        <briefdescription>
+<para>The agent that took damage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageData.hpp" line="16" column="25" bodyfile="source/DataCollection/DamageData.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_damage_data_1a14236de313193a14b4dbdf442bcf2bb9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <qualifiedname>DataCollection::DamageData::amount</qualifiedname>
+        <briefdescription>
+<para>The source entity that inflicted the damage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageData.hpp" line="17" column="13" bodyfile="source/DataCollection/DamageData.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_damage_data_1abf3fe164d42e8cb09f5afb0eddf65ba4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DamageData</definition>
+        <argsstring>(std::shared_ptr&lt; cse491::AgentBase &gt; agnt, std::shared_ptr&lt; cse491::Entity &gt; src, int amt)</argsstring>
+        <name>DamageData</name>
+        <qualifiedname>DataCollection::DamageData::DamageData</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; cse491::AgentBase &gt;</type>
+          <declname>agnt</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; cse491::Entity &gt;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>amt</declname>
+        </param>
+        <briefdescription>
+<para>The amount of damage taken from this source. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor for a <ref refid="class_data_collection_1_1_damage_data" kindref="compound">DamageData</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Damage source entity </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of damage taken </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageData.hpp" line="25" column="9" bodyfile="source/DataCollection/DamageData.hpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_damage_data_1a93378c56d2badfd8f0d57c26f79390b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~DamageData</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DamageData</name>
+        <qualifiedname>DataCollection::DamageData::~DamageData</qualifiedname>
+        <briefdescription>
+<para>Destructor for <ref refid="class_data_collection_1_1_damage_data" kindref="compound">DamageData</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DamageData.hpp" line="32" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents damage related data between an agent and other entities (agents, items, grids, etc) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/DataCollection/DamageData.hpp" line="13" column="5" bodyfile="source/DataCollection/DamageData.hpp" bodystart="13" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_damage_data_1a87f59b701a1554e5670058f8342a556e" prot="private" virt="non-virtual"><scope>DataCollection::DamageData</scope><name>agent</name></member>
+      <member refid="class_data_collection_1_1_damage_data_1a14236de313193a14b4dbdf442bcf2bb9" prot="private" virt="non-virtual"><scope>DataCollection::DamageData</scope><name>amount</name></member>
+      <member refid="class_data_collection_1_1_damage_data_1abf3fe164d42e8cb09f5afb0eddf65ba4" prot="public" virt="non-virtual"><scope>DataCollection::DamageData</scope><name>DamageData</name></member>
+      <member refid="class_data_collection_1_1_damage_data_1a4eeddf4b63950caa9e0c8cd5a44d391b" prot="private" virt="non-virtual"><scope>DataCollection::DamageData</scope><name>source</name></member>
+      <member refid="class_data_collection_1_1_damage_data_1a93378c56d2badfd8f0d57c26f79390b8" prot="public" virt="non-virtual"><scope>DataCollection::DamageData</scope><name>~DamageData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

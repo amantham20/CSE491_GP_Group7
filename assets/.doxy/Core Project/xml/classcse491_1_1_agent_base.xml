@@ -12,13 +12,28 @@
         <name>action_map</name>
         <qualifiedname>cse491::AgentBase::action_map</qualifiedname>
         <briefdescription>
-<para>A map of names to IDs for each available action. </para>
+<para>Map of names to action ids. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="23" column="24" bodyfile="source/core/AgentBase.hpp" bodystart="23" bodyend="-1"/>
+        <location file="source/core/AgentBase.hpp" line="32" column="22" bodyfile="source/core/AgentBase.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <qualifiedname>cse491::AgentBase::action</qualifiedname>
+        <briefdescription>
+<para>Action that agent is currently performing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="33" column="7" bodyfile="source/core/AgentBase.hpp" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -26,7 +41,7 @@
         <argsstring></argsstring>
         <name>action_result</name>
         <qualifiedname>cse491::AgentBase::action_result</qualifiedname>
-        <initializer>=1</initializer>
+        <initializer>= 0</initializer>
         <briefdescription>
 <para>Usually a one (success) or zero (failure). </para>
         </briefdescription>
@@ -34,7 +49,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="25" column="9" bodyfile="source/core/AgentBase.hpp" bodystart="25" bodyend="-1"/>
+        <location file="source/core/AgentBase.hpp" line="34" column="7" bodyfile="source/core/AgentBase.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcse491_1_1_agent_base_1af41b89bb5fec11f12e51fa5802946f7d" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" kindref="member">State</ref></type>
+        <definition>State agent_state</definition>
+        <argsstring></argsstring>
+        <name>agent_state</name>
+        <qualifiedname>cse491::AgentBase::agent_state</qualifiedname>
+        <initializer>= Healthy</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="36" column="9" bodyfile="source/core/AgentBase.hpp" bodystart="36" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -53,12 +83,13 @@
           <declname>name</declname>
         </param>
         <briefdescription>
+<para>Default value upon initialization. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="28" column="5" bodyfile="source/core/AgentBase.hpp" bodystart="28" bodyend="28"/>
+        <location file="source/core/AgentBase.hpp" line="39" column="3" bodyfile="source/core/AgentBase.hpp" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1aa100ff07022da1ca78f2f31163f9790f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -72,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="29" column="5"/>
+        <location file="source/core/AgentBase.hpp" line="40" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -90,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="35" column="18" bodyfile="source/core/AgentBase.hpp" bodystart="35" bodyend="35"/>
+        <location file="source/core/AgentBase.hpp" line="46" column="16" bodyfile="source/core/AgentBase.hpp" bodystart="46" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
         <type>bool</type>
@@ -100,13 +131,83 @@
         <qualifiedname>cse491::AgentBase::IsAgent</qualifiedname>
         <reimplements refid="classcse491_1_1_entity_1a620bdcb901e9ca7f7989fd5c226467c3">IsAgent</reimplements>
         <briefdescription>
-<para>Is this <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> actually an autonomous agent? (Overridden in <ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> to return true) </para>
+<para>Is <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref> an autonomous agent? </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="39" column="10" bodyfile="source/core/AgentBase.hpp" bodystart="39" bodyend="39"/>
+        <location file="source/core/AgentBase.hpp" line="50" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1a337b591f4547fced359cc320f8daa31b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" kindref="member">State</ref></type>
+        <definition>State GetAgentState</definition>
+        <argsstring>()</argsstring>
+        <name>GetAgentState</name>
+        <qualifiedname>cse491::AgentBase::GetAgentState</qualifiedname>
+        <briefdescription>
+<para>Get the current state of the Agent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>State enum of agent_state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="56" column="9" bodyfile="source/core/AgentBase.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateAgentState</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>UpdateAgentState</name>
+        <qualifiedname>cse491::AgentBase::UpdateAgentState</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_agent_base" kindref="compound">cse491::AgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Updates an Agent&apos;s state depending on health. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent whose state to update If the agent&apos;s health is between Max_health and 3 -&gt; Healthy If the agent&apos;s health is between 0 and 3 -&gt; Dying If the agent is Taking_Damage -&gt; Taking_Damage If the agent is at 0 or below -&gt; Dead </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" kindref="member">TakeDamage</ref> </para>
+</simplesect>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="66" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="66" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TakeDamage</definition>
+        <argsstring>(cse491::AgentBase &amp;agent)</argsstring>
+        <name>TakeDamage</name>
+        <qualifiedname>cse491::AgentBase::TakeDamage</qualifiedname>
+        <param>
+          <type><ref refid="classcse491_1_1_agent_base" kindref="compound">cse491::AgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>If the agent is in State::Taking_Damage, decrease the health by the damage factor once per timestep. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="86" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="86" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -125,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="45" column="11" bodyfile="source/core/AgentBase.hpp" bodystart="45" bodyend="47"/>
+        <location file="source/core/AgentBase.hpp" line="95" column="9" bodyfile="source/core/AgentBase.hpp" bodystart="95" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -144,7 +245,40 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="50" column="13" bodyfile="source/core/AgentBase.hpp" bodystart="50" bodyend="54"/>
+        <location file="source/core/AgentBase.hpp" line="100" column="11" bodyfile="source/core/AgentBase.hpp" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1ab62d39de95fa404497db6108babe7cce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void storeActionMap</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>storeActionMap</name>
+        <qualifiedname>cse491::AgentBase::storeActionMap</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="106" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1a0f7e9013ead8b2719f230eca88bc2ee3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+        <definition>virtual GridPosition GetNextPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextPosition</name>
+        <qualifiedname>cse491::AgentBase::GetNextPosition</qualifiedname>
+        <briefdescription>
+<para>Allow derived agents to provide an arbitrary next position for the world to move the agent to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="112" column="25" bodyfile="source/core/AgentBase.hpp" bodystart="112" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref> &amp;</type>
@@ -167,12 +301,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="57" column="24" bodyfile="source/core/AgentBase.hpp" bodystart="57" bodyend="61"/>
+        <location file="source/core/AgentBase.hpp" line="115" column="21" bodyfile="source/core/AgentBase.hpp" bodystart="115" bodyend="119"/>
       </memberdef>
-      <memberdef kind="function" id="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1a9d9dc83ae6351799db2bab03703bf597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>size_t</type>
         <definition>virtual size_t SelectAction</definition>
-        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_set_t &amp;item_set, const agent_set_t &amp;agent_set)</argsstring>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map)</argsstring>
         <name>SelectAction</name>
         <qualifiedname>cse491::AgentBase::SelectAction</qualifiedname>
         <param>
@@ -184,12 +318,12 @@
           <declname>type_options</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kindref="member">item_set_t</ref> &amp;</type>
-          <declname>item_set</declname>
+          <type>const <ref refid="namespacecse491_1a275795f59edd15aeb303e92d7488ebfa" kindref="member">item_map_t</ref> &amp;</type>
+          <declname>item_map</declname>
         </param>
         <param>
-          <type>const <ref refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kindref="member">agent_set_t</ref> &amp;</type>
-          <declname>agent_set</declname>
+          <type>const <ref refid="namespacecse491_1a4d00708c07d0a0de86796a44dd8bfa6a" kindref="member">agent_map_t</ref> &amp;</type>
+          <declname>agent_map</declname>
         </param>
         <briefdescription>
 <para>Decide the next action for this agent to perform; should be overridden! </para>
@@ -210,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="66" column="21" bodyfile="source/core/AgentBase.hpp" bodystart="66" bodyend="72"/>
+        <location file="source/core/AgentBase.hpp" line="124" column="19" bodyfile="source/core/AgentBase.hpp" bodystart="124" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -225,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="75" column="10" bodyfile="source/core/AgentBase.hpp" bodystart="75" bodyend="75"/>
+        <location file="source/core/AgentBase.hpp" line="132" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="132" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -244,7 +378,126 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="source/core/AgentBase.hpp" line="78" column="10" bodyfile="source/core/AgentBase.hpp" bodystart="78" bodyend="78"/>
+        <location file="source/core/AgentBase.hpp" line="135" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1a7848dca4f05f13998b1dc87a1b4adf65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Notify</definition>
+        <argsstring>(const std::string &amp;, const std::string &amp;=&quot;none&quot;)</argsstring>
+        <name>Notify</name>
+        <qualifiedname>cse491::AgentBase::Notify</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval>&quot;none&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send a notification to this agent, typically from the world. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contents of the notification </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Category of message, such as &quot;item_alert&quot;, &quot;damage&quot;, or &quot;enemy&quot; This function is useful to notify users of events in the world, such as them taking damage, finding an item, etc. The message type can potentially also provide information to an autonomous agent assuming we come up with a standard list of types. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="143" column="16" bodyfile="source/core/AgentBase.hpp" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName_impl</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::AgentBase::GetTypeName_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2">GetTypeName_impl</reimplements>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="145" column="15" bodyfile="source/core/AgentBase.hpp" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::AgentBase::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73">Serialize_impl</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Serialize item-specific values and call <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>&apos;s Serialize_impl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ostream to write contents to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="149" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="149" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::AgentBase::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31">Deserialize_impl</reimplements>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>is</declname>
+        </param>
+        <briefdescription>
+<para>Deserialize item-specific values and call <ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>&apos;s Deserialize_impl. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>istream to read contents from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/AgentBase.hpp" line="159" column="8" bodyfile="source/core/AgentBase.hpp" bodystart="159" bodyend="165"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -258,11 +511,17 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
       <node id="2">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>InterfaceBase</label>
         <link refid="classcse491_1_1_interface_base"/>
         <childnode refid="1" relation="public-inheritance">
@@ -276,55 +535,103 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
       <node id="2">
         <label>Entity</label>
         <link refid="classcse491_1_1_entity"/>
-        <childnode refid="3" relation="usage">
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
           <edgelabel>position</edgelabel>
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>GridPosition</label>
         <link refid="classcse491_1_1_grid_position"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="source/core/AgentBase.hpp" line="20" column="3" bodyfile="source/core/AgentBase.hpp" bodystart="20" bodyend="80"/>
+    <location file="source/core/AgentBase.hpp" line="30" column="1" bodyfile="source/core/AgentBase.hpp" bodystart="30" bodyend="166"/>
     <listofallmembers>
+      <member refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>action</name></member>
       <member refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>action_map</name></member>
       <member refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>action_result</name></member>
       <member refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>AddAction</name></member>
+      <member refid="classcse491_1_1_entity_1afe03b0eaf89eb7d96cc1da613e3542ee" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_entity_1a7c24de0b9b1425909e394badaedb242a" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>AddItem</name></member>
+      <member refid="classcse491_1_1_agent_base_1af41b89bb5fec11f12e51fa5802946f7d" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>agent_state</name></member>
       <member refid="classcse491_1_1_agent_base_1ad6fd3fc811fb54aaf89e6a10b6c5e4f5" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>AgentBase</name></member>
       <member refid="classcse491_1_1_entity_1a45d82057563203ef7929cae6e4b23b40" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>AsProperty</name></member>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>EndSerialize</name></member>
       <member refid="classcse491_1_1_entity_1a747784c80aaa95be187c7f263e7d7624" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a0faf8e9721fd9b58b33ff06210a314f1" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_entity_1a2a810f7d154510261e3e1fa988821e84" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Entity</name></member>
       <member refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetActionID</name></member>
       <member refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetActionResult</name></member>
+      <member refid="classcse491_1_1_agent_base_1a337b591f4547fced359cc320f8daa31b" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetAgentState</name></member>
+      <member refid="classcse491_1_1_entity_1a4ffa22f4412fcf5311ce82f141ba0859" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetGridID</name></member>
       <member refid="classcse491_1_1_entity_1a5fcf0c4ea40681748c7427e74967396a" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetID</name></member>
+      <member refid="classcse491_1_1_entity_1a2832506a8de210991390410bd86a2f72" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetInventory</name></member>
       <member refid="classcse491_1_1_entity_1a55466a39638bb671b24a82941aa37d77" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetName</name></member>
+      <member refid="classcse491_1_1_agent_base_1a0f7e9013ead8b2719f230eca88bc2ee3" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>GetNextPosition</name></member>
+      <member refid="classcse491_1_1_entity_1a7e57a528d2258936fccfd76ba5bb7ded" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetNumProperties</name></member>
       <member refid="classcse491_1_1_entity_1a4dd52e5084115cb1586ca4b5e4eea84d" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1a58604fcd0bd186c26cfc8523ca18de2c" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetPropertyMap</name></member>
+      <member refid="classcse491_1_1_entity_1a6861d4f61a5ceb4211e0193d4423101e" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetPropertyType</name></member>
+      <member refid="classcse491_1_1_core_object_1a498980b0dbb7b12ee8508689af5a2145" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_entity_1a88f8198fa0b98315eaeb845ebb8c6dcf" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>GetWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a65d59a4da280ec1586bf960dd050f852" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>grid_id</name></member>
       <member refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>HasAction</name></member>
+      <member refid="classcse491_1_1_entity_1a4941a720636380ff1b2230c44e16236c" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>HasItem</name></member>
       <member refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>HasProperty</name></member>
-      <member refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>id</name></member>
+      <member refid="classcse491_1_1_entity_1a24934eba69d59a45f2a534b190ad81f7" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>HasWorld</name></member>
+      <member refid="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>id</name></member>
       <member refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>Initialize</name></member>
+      <member refid="classcse491_1_1_entity_1ae98df8c658e54f8dad0ebe2b6c59eb51" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>inventory</name></member>
       <member refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>IsAgent</name></member>
       <member refid="classcse491_1_1_entity_1a5f441a8e3d2187ebf603322166d82913" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>IsInterface</name></member>
+      <member refid="classcse491_1_1_entity_1a91d327ae5ea52f9dc758f398253745f0" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>IsItem</name></member>
+      <member refid="classcse491_1_1_entity_1a4f2ce779a5091d928997ab65bdf62432" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>IsOnGrid</name></member>
       <member refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>name</name></member>
+      <member refid="classcse491_1_1_agent_base_1a7848dca4f05f13998b1dc87a1b4adf65" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>Notify</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>operator&lt;=&gt;</name></member>
       <member refid="classcse491_1_1_entity_1a6b99be13cc29462246d36859b10ea386" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a175a38c03e8f2c0665c3519c7deb646b" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>operator=</name></member>
       <member refid="classcse491_1_1_entity_1a8f69b2e43ff0b9604263cdd2c0ae14f1" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>position</name></member>
-      <member refid="classcse491_1_1_entity_1ae451707558e3239c7c30fed203b421d5" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1aaf95d2aca1711a816f70645c5ee76aaa" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>property_map</name></member>
+      <member refid="classcse491_1_1_entity_1ac16b1beb81f736187c7edfc259d5130b" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>property_map_t</name></member>
+      <member refid="classcse491_1_1_entity_1a250dc20128eced2591bbf14ae4e27263" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>RemoveItem</name></member>
+      <member refid="classcse491_1_1_entity_1ae256acb3e6cfd455e274eb1c2b5bf762" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>RemoveItem</name></member>
       <member refid="classcse491_1_1_entity_1a6add0a2ce1d4875de3bfa5a1ea0b703a" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>RemoveProperty</name></member>
-      <member refid="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_agent_base_1a9d9dc83ae6351799db2bab03703bf597" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>SelectAction</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>Serialize_impl</name></member>
       <member refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetActionResult</name></member>
       <member refid="classcse491_1_1_entity_1a9c25eb5648cc4eb1bd8c8a751e18e87f" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetName</name></member>
-      <member refid="classcse491_1_1_entity_1a31784c36899600ec2727624f6253226b" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetPosition</name></member>
+      <member refid="classcse491_1_1_entity_1aec036a2f43c433afaa742192eef9d102" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a461b8d1a036c28fcd335c0f80569e3d4" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetPosition</name></member>
       <member refid="classcse491_1_1_entity_1a128c699f3bb3610e0ba6cacf91610e59" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetProperties</name></member>
-      <member refid="classcse491_1_1_entity_1a21905ca8aa67fa8242586bb141e03b35" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetProperties</name></member>
+      <member refid="classcse491_1_1_entity_1aec09f29c9b8611a97ede88aca9eda904" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetProperties</name></member>
       <member refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>SetProperty</name></member>
+      <member refid="classcse491_1_1_entity_1af5cd6b1f10d96860e91dbdaf7f994e4c" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>SetWorld</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::AgentBase</scope><name>StartSerialize</name></member>
+      <member refid="classcse491_1_1_agent_base_1ab62d39de95fa404497db6108babe7cce" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>storeActionMap</name></member>
+      <member refid="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>TakeDamage</name></member>
+      <member refid="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>UpdateAgentState</name></member>
       <member refid="classcse491_1_1_agent_base_1aa100ff07022da1ca78f2f31163f9790f" prot="public" virt="non-virtual"><scope>cse491::AgentBase</scope><name>~AgentBase</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>~CoreObject</name></member>
       <member refid="classcse491_1_1_entity_1a07d18d40fa0c4b4f1341cfddc0b600dd" prot="public" virt="virtual"><scope>cse491::AgentBase</scope><name>~Entity</name></member>
     </listofallmembers>
   </compounddef>

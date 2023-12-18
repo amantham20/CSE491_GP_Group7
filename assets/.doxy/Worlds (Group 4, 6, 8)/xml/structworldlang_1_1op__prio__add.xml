@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1op__prio__add" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::op_prio_add</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::one&lt; &apos;+&apos;, &apos;-&apos; &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>op_prio_add</label>
+        <link refid="structworldlang_1_1op__prio__add"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>one&lt; &apos;+&apos;, &apos;-&apos; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>op_prio_add</label>
+        <link refid="structworldlang_1_1op__prio__add"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>one&lt; &apos;+&apos;, &apos;-&apos; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="87" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="88" bodyend="88"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

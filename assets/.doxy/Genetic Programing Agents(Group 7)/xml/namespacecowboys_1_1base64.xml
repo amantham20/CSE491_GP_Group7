@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecowboys_1_1base64" kind="namespace" language="C++">
+    <compoundname>cowboys::base64</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecowboys_1_1base64_1aefb731f972610068a8c5eb4c37fe93cf" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr char</type>
+        <definition>constexpr char CHARS[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CHARS</name>
+        <qualifiedname>cowboys::base64::CHARS</qualifiedname>
+        <initializer>= &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ+/&quot;</initializer>
+        <briefdescription>
+<para>The characters used to represent digits in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="34" column="27" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1_1base64_1a48b2b4586dd81a0495887d7eabf9af0a" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr size_t</type>
+        <definition>constexpr size_t MAX_CHAR</definition>
+        <argsstring></argsstring>
+        <name>MAX_CHAR</name>
+        <qualifiedname>cowboys::base64::MAX_CHAR</qualifiedname>
+        <initializer>= *std::max_element(CHARS, CHARS + 64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="35" column="29" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecowboys_1_1base64_1a4117ae57a888c9b0fcb9a00f57b139ea" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::array&lt; size_t, MAX_CHAR+1 &gt;</type>
+        <definition>constexpr std::array&lt;size_t, MAX_CHAR + 1&gt; CHAR_TO_IDX</definition>
+        <argsstring></argsstring>
+        <name>CHAR_TO_IDX</name>
+        <qualifiedname>cowboys::base64::CHAR_TO_IDX</qualifiedname>
+        <initializer>= []() {
+      std::array&lt;size_t, MAX_CHAR + 1&gt; indices{};
+      for (size_t i = 0; i &lt; 64; ++i) {
+        indices[CHARS[i]] = i;
+      }
+      return indices;
+    }()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="36" column="33" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="36" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1a657cddb5addc09f583de1b986c115136" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string ULLToB64</definition>
+        <argsstring>(size_t ull)</argsstring>
+        <name>ULLToB64</name>
+        <qualifiedname>cowboys::base64::ULLToB64</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>ull</declname>
+        </param>
+        <briefdescription>
+<para>Converts a number in base10 to <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ull</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> as a string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="47" column="24" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="47" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1aa94aa977b16513d0e4bae5e565afc124" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t B64ToULL</definition>
+        <argsstring>(std::string num_base64)</argsstring>
+        <name>B64ToULL</name>
+        <qualifiedname>cowboys::base64::B64ToULL</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>num_base64</declname>
+        </param>
+        <briefdescription>
+<para>Converts a number in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> to base10. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_base64</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> as a string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number in base10. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="66" column="19" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="66" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1a3f6e6482e74a32e213f273d7a2e669b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string B2ToB64</definition>
+        <argsstring>(const std::string &amp;binary)</argsstring>
+        <name>B2ToB64</name>
+        <qualifiedname>cowboys::base64::B2ToB64</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>binary</declname>
+        </param>
+        <briefdescription>
+<para>Converts a binary string to a <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>binary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string of 1s and 0s representing binary. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The binary string in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="79" column="24" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="79" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1aa6826724247e69c15380cdf4225fba48" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string B64ToB2</definition>
+        <argsstring>(std::string base64)</argsstring>
+        <name>B64ToB2</name>
+        <qualifiedname>cowboys::base64::B64ToB2</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>base64</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string to a binary string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string of <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> characters. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string in binary. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="106" column="24" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="106" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1a5c55f63f0569e3bd4b91ffcb8339afc5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string DoubleToB64</definition>
+        <argsstring>(double value)</argsstring>
+        <name>DoubleToB64</name>
+        <qualifiedname>cowboys::base64::DoubleToB64</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts a double to a <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string. Assumes that the stoull(to_string(value)) is possible. Only guarantees that x ~= b64_inv(b64(x)) due to precision errors. Empirically accurate up to 3 decimal places, e.g. round(x, 3) = round(b64_inv(b64(x)), 3). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The double to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The double in <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="122" column="24" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="122" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecowboys_1_1base64_1aeefd01b8c3becd16df24abcea1cdf221" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double B64ToDouble</definition>
+        <argsstring>(const std::string &amp;value)</argsstring>
+        <name>B64ToDouble</name>
+        <qualifiedname>cowboys::base64::B64ToDouble</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string to a double. See DoubleToB64 for precision issues. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string to convert. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> string as a double. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="155" column="19" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="155" bodyend="169"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A namespace for <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> encoding and decoding. Does not convert to and from <ref refid="namespacecowboys_1_1base64" kindref="compound">base64</ref> in the typical way. Only guarantees that x == b64_inv(b64(x)), aside from doubles which have problems with precision, so x ~= b64_inv(b64(x)). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/CGPGenotype.hpp" line="32" column="3"/>
+  </compounddef>
+</doxygen>

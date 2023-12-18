@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classclogged_1_1_logger" kind="class" language="C++" prot="public">
+    <compoundname>clogged::Logger</compoundname>
+    <includes refid="_easy_logging_8hpp" local="no">EasyLogging.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classclogged_1_1_logger_1a6c32bca4a76bcfc2e620dd531adb1ac9" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598" kindref="member">Team</ref></type>
+        <definition>Team currentTeam</definition>
+        <argsstring></argsstring>
+        <name>currentTeam</name>
+        <qualifiedname>clogged::Logger::currentTeam</qualifiedname>
+        <initializer>= Team::NA</initializer>
+        <briefdescription>
+<para>Current team for that is going to log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="224" column="8" bodyfile="source/core/EasyLogging.hpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classclogged_1_1_logger_1a16cca5b581e7f50a9cc5e838510ae6f5" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9" kindref="member">LogLevel</ref></type>
+        <definition>LogLevel currentLogLevel</definition>
+        <argsstring></argsstring>
+        <name>currentLogLevel</name>
+        <qualifiedname>clogged::Logger::currentLogLevel</qualifiedname>
+        <initializer>= LogLevel::DEBUG</initializer>
+        <briefdescription>
+<para>Current log level for the log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="227" column="12" bodyfile="source/core/EasyLogging.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classclogged_1_1_logger_1a8052ae650a6353af3cfce1a702a31325" prot="private" static="no" mutable="no">
+        <type><ref refid="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+        <definition>Color currentColor</definition>
+        <argsstring></argsstring>
+        <name>currentColor</name>
+        <qualifiedname>clogged::Logger::currentColor</qualifiedname>
+        <initializer>= Color::RESET</initializer>
+        <briefdescription>
+<para>Current color for the log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="230" column="9" bodyfile="source/core/EasyLogging.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classclogged_1_1_logger_1a513726474ee708353c1e1cb2bffc0f39" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool metaPrinted</definition>
+        <argsstring></argsstring>
+        <name>metaPrinted</name>
+        <qualifiedname>clogged::Logger::metaPrinted</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="232" column="8" bodyfile="source/core/EasyLogging.hpp" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classclogged_1_1_logger_1a12254eff914a9a36a61bdd16729196d8" prot="private" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598" kindref="member">Team</ref>, std::string &gt;</type>
+        <definition>std::map&lt;Team, std::string&gt; teamToStringMap</definition>
+        <argsstring></argsstring>
+        <name>teamToStringMap</name>
+        <qualifiedname>clogged::Logger::teamToStringMap</qualifiedname>
+        <initializer>= {
+      {Team::TEAM_1, &quot;Team 1&quot;},  {Team::TEAM_2, &quot;Team 2&quot;}, {Team::TEAM_3, &quot;Team 3&quot;},
+      {Team::TEAM_4, &quot;Team 4&quot;},  {Team::TEAM_5, &quot;Team 5&quot;}, {Team::TEAM_6, &quot;Team 6&quot;},
+      {Team::TEAM_7, &quot;Team 7&quot;},  {Team::TEAM_8, &quot;Team 8&quot;}, {Team::TEAM_9, &quot;Team 9&quot;},
+      {Team::GENERAL, &quot;General&quot;}}</initializer>
+        <briefdescription>
+<para>Map to convert Team enum to string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="238" column="12" bodyfile="source/core/EasyLogging.hpp" bodystart="238" bodyend="242"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classclogged_1_1_logger_1aa0a4a8cf7be9e0836f862cf8f762e643" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger &amp; operator&lt;&lt;</definition>
+        <argsstring>(Team team)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>clogged::Logger::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type><ref refid="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598" kindref="member">Team</ref></type>
+          <declname>team</declname>
+        </param>
+        <briefdescription>
+<para>Sets the Team name for the current log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>team</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of the team </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="83" column="3" bodyfile="source/core/EasyLogging.hpp" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1ab07dee0cc3b329175130e51bb6725848" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger &amp; operator&lt;&lt;</definition>
+        <argsstring>(LogLevel logLevel)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>clogged::Logger::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type><ref refid="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9" kindref="member">LogLevel</ref></type>
+          <declname>logLevel</declname>
+        </param>
+        <briefdescription>
+<para>sets the log level for the current log </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Level/Type of the log </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="97" column="3" bodyfile="source/core/EasyLogging.hpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1a25e30019aee7797dfc1c178281c1c895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger &amp; operator&lt;&lt;</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>clogged::Logger::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type><ref refid="namespaceclogged_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>colors of the log </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="109" column="3" bodyfile="source/core/EasyLogging.hpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1a4f96fb9466837ed96a013e2448f4d661" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;(*manipulator)(std::ostream &amp;))</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>clogged::Logger::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;(*)(std::ostream &amp;)</type>
+          <declname>manipulator</declname>
+        </param>
+        <briefdescription>
+<para>Manipulator for endl so that we can reset the values when a team is done logging. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>manipulator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="121" column="3" bodyfile="source/core/EasyLogging.hpp" bodystart="121" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1a59bb7d54a054474c11e08365d6c6f0df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>Logger &amp; operator&lt;&lt;</definition>
+        <argsstring>(const T &amp;value)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>clogged::Logger::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Aye I used a template. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to log the value</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref>&amp;</para>
+</simplesect>
+@TODO: Might have to change this so that we only break a team log when a new team is set. aka ensure that logger &lt;&lt; Team::TEAM_1 &lt;&lt; &quot;Hello&quot; &lt;&lt; &quot;World&quot; &lt;&lt; endl; works in one line with one team print </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="152" column="3" bodyfile="source/core/EasyLogging.hpp" bodystart="152" bodyend="179"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classclogged_1_1_logger_1ad932a82622b1afa81c601a51527b7eca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>static Logger &amp; Log</definition>
+        <argsstring>()</argsstring>
+        <name>Log</name>
+        <qualifiedname>clogged::Logger::Log</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Only instance of the logger once Changes requested from Dr.@ofria</para>
+<para><simplesect kind="authors"><para>@mercere99 </para>
+</simplesect>
+<simplesect kind="return"><para>a unique <ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="188" column="17" bodyfile="source/core/EasyLogging.hpp" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1a3e21a0ae73b2e6441da6b74560de41d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>EXTRA_Ts</declname>
+            <defname>EXTRA_Ts</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> &amp;</type>
+        <definition>static Logger &amp; Log</definition>
+        <argsstring>(T &amp;&amp;arg1, EXTRA_Ts &amp;&amp;...extra_args)</argsstring>
+        <name>Log</name>
+        <qualifiedname>clogged::Logger::Log</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>EXTRA_Ts &amp;&amp;...</type>
+          <declname>extra_args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Only instance of the logger once Changes requested from Dr.@ofria</para>
+<para><simplesect kind="authors"><para>@mercere99 </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arg1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set of values that you want to have logged. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Unique <ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="202" column="17" bodyfile="source/core/EasyLogging.hpp" bodystart="202" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1a010403b238c0b73135785ec11d9dda53" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>static std::ostream &amp; endl</definition>
+        <argsstring>(std::ostream &amp;os)</argsstring>
+        <name>endl</name>
+        <qualifiedname>clogged::Logger::endl</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Custom endl to reset the values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::ostream&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="217" column="23" bodyfile="source/core/EasyLogging.hpp" bodystart="217" bodyend="220"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classclogged_1_1_logger_1af3f0f288f5cc420f97f2ff03ae8f0c0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string teamToString</definition>
+        <argsstring>(Team team)</argsstring>
+        <name>teamToString</name>
+        <qualifiedname>clogged::Logger::teamToString</qualifiedname>
+        <param>
+          <type><ref refid="namespaceclogged_1a9c13bb5b1d69698f9b47900990eaa598" kindref="member">Team</ref></type>
+          <declname>team</declname>
+        </param>
+        <briefdescription>
+<para>Converts Team enum to string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>team</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="250" column="15" bodyfile="source/core/EasyLogging.hpp" bodystart="250" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classclogged_1_1_logger_1af1aa201ba8a5e57b25d536ea9aec54b4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string logToString</definition>
+        <argsstring>(LogLevel logLevel)</argsstring>
+        <name>logToString</name>
+        <qualifiedname>clogged::Logger::logToString</qualifiedname>
+        <param>
+          <type><ref refid="namespaceclogged_1aca1fd1d8935433e6ba2e3918214e07f9" kindref="member">LogLevel</ref></type>
+          <declname>logLevel</declname>
+        </param>
+        <briefdescription>
+<para>Converts LogLevel enum to string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/EasyLogging.hpp" line="265" column="15" bodyfile="source/core/EasyLogging.hpp" bodystart="265" bodyend="277"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classclogged_1_1_logger" kindref="compound">Logger</ref> class with colors and team names. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Not a fan of this practice But would prefer not to use parenthesis <simplesect kind="author"><para>@amantham20 @chatGPT</para>
+</simplesect>
+I was about to name this clogged.</para>
+<para>This is a custom logger class that can be used to log messages to the console. </para>
+    </detaileddescription>
+    <location file="source/core/EasyLogging.hpp" line="75" column="1" bodyfile="source/core/EasyLogging.hpp" bodystart="75" bodyend="278"/>
+    <listofallmembers>
+      <member refid="classclogged_1_1_logger_1a8052ae650a6353af3cfce1a702a31325" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>currentColor</name></member>
+      <member refid="classclogged_1_1_logger_1a16cca5b581e7f50a9cc5e838510ae6f5" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>currentLogLevel</name></member>
+      <member refid="classclogged_1_1_logger_1a6c32bca4a76bcfc2e620dd531adb1ac9" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>currentTeam</name></member>
+      <member refid="classclogged_1_1_logger_1a010403b238c0b73135785ec11d9dda53" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>endl</name></member>
+      <member refid="classclogged_1_1_logger_1ad932a82622b1afa81c601a51527b7eca" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>Log</name></member>
+      <member refid="classclogged_1_1_logger_1a3e21a0ae73b2e6441da6b74560de41d3" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>Log</name></member>
+      <member refid="classclogged_1_1_logger_1af1aa201ba8a5e57b25d536ea9aec54b4" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>logToString</name></member>
+      <member refid="classclogged_1_1_logger_1a513726474ee708353c1e1cb2bffc0f39" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>metaPrinted</name></member>
+      <member refid="classclogged_1_1_logger_1aa0a4a8cf7be9e0836f862cf8f762e643" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classclogged_1_1_logger_1ab07dee0cc3b329175130e51bb6725848" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classclogged_1_1_logger_1a25e30019aee7797dfc1c178281c1c895" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classclogged_1_1_logger_1a4f96fb9466837ed96a013e2448f4d661" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classclogged_1_1_logger_1a59bb7d54a054474c11e08365d6c6f0df" prot="public" virt="non-virtual"><scope>clogged::Logger</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classclogged_1_1_logger_1af3f0f288f5cc420f97f2ff03ae8f0c0d" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>teamToString</name></member>
+      <member refid="classclogged_1_1_logger_1a12254eff914a9a36a61bdd16729196d8" prot="private" virt="non-virtual"><scope>clogged::Logger</scope><name>teamToStringMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

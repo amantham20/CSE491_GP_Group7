@@ -5,6 +5,8 @@
     <includes local="no">cassert</includes>
     <includes local="no">string</includes>
     <includes local="no">unordered_map</includes>
+    <includes local="no">utility</includes>
+    <includes local="yes">../DataCollection/AgentData.hpp</includes>
     <includes refid="_data_8hpp" local="yes">Data.hpp</includes>
     <includes refid="_entity_8hpp" local="yes">Entity.hpp</includes>
     <includes refid="_grid_position_8hpp" local="yes">GridPosition.hpp</includes>
@@ -12,6 +14,9 @@
     <includedby refid="_interface_base_8hpp" local="yes">source/core/InterfaceBase.hpp</includedby>
     <includedby refid="_world_base_8hpp" local="yes">source/core/WorldBase.hpp</includedby>
     <incdepgraph>
+      <node id="6">
+        <label>../DataCollection/AgentData.hpp</label>
+      </node>
       <node id="1">
         <label>source/core/AgentBase.hpp</label>
         <link refid="_agent_base_8hpp"/>
@@ -23,92 +28,184 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="15">
-        <label>CoreObject.hpp</label>
-        <link refid="_core_object_8hpp_source"/>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>Data.hpp</label>
-        <link refid="_data_8hpp_source"/>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
       </node>
-      <node id="8">
-        <label>Entity.hpp</label>
-        <link refid="_entity_8hpp_source"/>
-        <childnode refid="2" relation="include">
+      <node id="16">
+        <label>CoreObject.hpp</label>
+        <link refid="_core_object_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="21" relation="include">
         </childnode>
       </node>
-      <node id="9">
-        <label>GridPosition.hpp</label>
-        <link refid="_grid_position_8hpp_source"/>
-        <childnode refid="2" relation="include">
+      <node id="7">
+        <label>Data.hpp</label>
+        <link refid="_data_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="12">
+        <label>Entity.hpp</label>
+        <link refid="_entity_8hpp_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>GridPosition.hpp</label>
+        <link refid="_grid_position_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Property.hpp</label>
+        <link refid="_property_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Serialize.hpp</label>
+        <link refid="_serialize_8hpp_source"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
         <label>WorldGrid.hpp</label>
         <link refid="_world_grid_8hpp_source"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="15" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
       </node>
       <node id="2">
         <label>cassert</label>
       </node>
-      <node id="10">
+      <node id="23">
+        <label>cmath</label>
+      </node>
+      <node id="24">
         <label>compare</label>
       </node>
-      <node id="11">
+      <node id="25">
         <label>cstddef</label>
       </node>
-      <node id="13">
+      <node id="17">
         <label>fstream</label>
       </node>
-      <node id="14">
+      <node id="18">
+        <label>functional</label>
+      </node>
+      <node id="19">
         <label>iostream</label>
       </node>
-      <node id="6">
+      <node id="14">
+        <label>istream</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="9">
         <label>memory</label>
+      </node>
+      <node id="15">
+        <label>ostream</label>
+      </node>
+      <node id="10">
+        <label>set</label>
+      </node>
+      <node id="20">
+        <label>sstream</label>
       </node>
       <node id="3">
         <label>string</label>
@@ -116,7 +213,10 @@
       <node id="4">
         <label>unordered_map</label>
       </node>
-      <node id="7">
+      <node id="5">
+        <label>utility</label>
+      </node>
+      <node id="11">
         <label>vector</label>
       </node>
     </incdepgraph>
@@ -151,66 +251,130 @@
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GridPosition.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WorldGrid.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="namespacecse491" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../DataCollection/AgentData.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Entity.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GridPosition.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WorldGrid.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="classcse491_1_1_agent_base" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref><sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="23" refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>size_t&gt;<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25" refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref>=1;<sp/><sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/><ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>)<sp/>:<sp/><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>(<ref refid="classcse491_1_1_entity_1a384fdee7496119640304d56233f2250b" kindref="member">id</ref>,<sp/><ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>)<sp/>{<sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">~AgentBase</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Already<sp/>virtual<sp/>from<sp/>Entity</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>World<sp/>Interactions<sp/>--</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" kindref="member">Initialize</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Entity<sp/>Overrides<sp/>--</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39" refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" kindref="member">IsAgent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespacecse491" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecse491" kindref="compound">cse491</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" kindref="member">State</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>Healthy,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>Taking_Damage,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>Dying,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>Deceased</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classcse491_1_1_agent_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" refkind="member"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;std::string,<sp/>size_t&gt;<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" kindref="member">action</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" kindref="member">State</ref><sp/>agent_state<sp/>=<sp/>Healthy;<sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classcse491_1_1_agent_base_1ad6fd3fc811fb54aaf89e6a10b6c5e4f5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classcse491_1_1_agent_base_1ad6fd3fc811fb54aaf89e6a10b6c5e4f5" kindref="member">AgentBase</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>)<sp/>:<sp/><ref refid="classcse491_1_1_entity" kindref="compound">Entity</ref>(<ref refid="classcse491_1_1_entity_1a3670f4bed50c88882ceba330ffeb095c" kindref="member">id</ref>,<sp/><ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">~AgentBase</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Already<sp/>virtual<sp/>from<sp/>Entity</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Action<sp/>management<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>World<sp/>Interactions<sp/>--</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" kindref="member">HasAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>action_name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.count(action_name);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" kindref="member">GetActionID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>action_name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.find(action_name);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.end())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it-&gt;second;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57" refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<sp/><ref refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" kindref="member">AddAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>action_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>action_id)<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>assert(!<ref refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" kindref="member">HasAction</ref>(action_name));<sp/></highlight><highlight class="comment">//<sp/>Cannot<sp/>add<sp/>existing<sp/>action<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>[action_name]<sp/>=<sp/>action_id;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66" refid="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ac0dd1049c3a70320eff5b7d69fed3d00" kindref="member">SelectAction</ref>(</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref><sp/>&amp;<sp/>grid,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref><sp/>&amp;<sp/>type_options,</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a2f0b9246afd3b28478462cf50e92434a" kindref="member">item_set_t</ref><sp/>&amp;<sp/>item_set,</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a2df031ca2df686d6c395f68b4a150bd3" kindref="member">agent_set_t</ref><sp/>&amp;<sp/>agent_set</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75" refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" kindref="member">GetActionResult</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" kindref="member">SetActionResult</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result)<sp/>{<sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref><sp/>=<sp/>result;<sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>cse491</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a369e14ae777334d42d8b468101358497" kindref="member">Initialize</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Entity<sp/>Overrides<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad5f02a03645c3a88c1692da59ac3f5a2" kindref="member">IsAgent</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Agent<sp/>Interaction<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classcse491_1_1_agent_base_1a337b591f4547fced359cc320f8daa31b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="namespacecse491_1a5d74787dedbc4e11c1ab15bf487e61f8" kindref="member">State</ref><sp/><ref refid="classcse491_1_1_agent_base_1a337b591f4547fced359cc320f8daa31b" kindref="member">GetAgentState</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>agent_state;<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" kindref="member">UpdateAgentState</ref>(<ref refid="classcse491_1_1_agent_base" kindref="compound">cse491::AgentBase</ref><sp/>&amp;agent)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" kindref="member">HasProperty</ref>(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&lt;=<sp/>agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Max_Health&quot;</highlight><highlight class="normal">)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&gt;<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent.agent_state<sp/>=<sp/>Healthy;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&lt;=<sp/>3<sp/>&amp;&amp;<sp/>agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent.agent_state<sp/>=<sp/>Dying;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent.agent_state<sp/>=<sp/>Deceased;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a868aa257165d705681b3dfc8d1e514b0" kindref="member">HasProperty</ref>(</highlight><highlight class="stringliteral">&quot;Taking_Damage&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Taking_Damage&quot;</highlight><highlight class="normal">)<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent.agent_state<sp/>=<sp/>Taking_Damage;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1aa46c10a33248de0be3ef6ac827cb8827" kindref="member">TakeDamage</ref>(<ref refid="classcse491_1_1_agent_base" kindref="compound">cse491::AgentBase</ref><sp/>&amp;agent)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>agent.<ref refid="classcse491_1_1_entity_1ab67a48f5f08a45ebd9a6f558ba385d68" kindref="member">SetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">,<sp/>agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>-<sp/>agent.<ref refid="classcse491_1_1_entity_1a2ff77b1ce6bb1a01409a967f143ef191" kindref="member">GetProperty</ref>&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;Taking_Damage&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base_1ac9a3ef29f2d4c1eb58f7cb1e679456ef" kindref="member">UpdateAgentState</ref>(agent);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>--<sp/>Action<sp/>management<sp/>--</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" kindref="member">HasAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;action_name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.count(action_name);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a15fe89b70e037e7a17affbe6a50381b6" kindref="member">GetActionID</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;action_name)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.find(action_name);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>.end())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it-&gt;second;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>storeActionMap(std::string<sp/><ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>DataCollection::AgentData<sp/>data(<ref refid="classcse491_1_1_entity_1a9b45b3e13bd9167aab02e17e08916231" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>data.StoreAction(<ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classcse491_1_1_agent_base_1a0f7e9013ead8b2719f230eca88bc2ee3" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref><sp/><ref refid="classcse491_1_1_agent_base_1a0f7e9013ead8b2719f230eca88bc2ee3" kindref="member">GetNextPosition</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Entity::GetPosition();<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base" kindref="compound">AgentBase</ref><sp/>&amp;<ref refid="classcse491_1_1_agent_base_1a636d9b78c512b85f692372e00b4aa7aa" kindref="member">AddAction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;action_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>action_id)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(!<ref refid="classcse491_1_1_agent_base_1aab9d35ea26718adaec6d8b89f9313a2d" kindref="member">HasAction</ref>(action_name));<sp/><sp/></highlight><highlight class="comment">//<sp/>Cannot<sp/>add<sp/>existing<sp/>action<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>[action_name]<sp/>=<sp/>action_id;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classcse491_1_1_agent_base_1a9d9dc83ae6351799db2bab03703bf597" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a9d9dc83ae6351799db2bab03703bf597" kindref="member">SelectAction</ref>([[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_world_grid" kindref="compound">WorldGrid</ref><sp/>&amp;grid,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a1fe0ebd63f5648a7598fcc0c89544ccc" kindref="member">type_options_t</ref><sp/>&amp;type_options,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a275795f59edd15aeb303e92d7488ebfa" kindref="member">item_map_t</ref><sp/>&amp;item_map,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[[maybe_unused]]<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacecse491_1a4d00708c07d0a0de86796a44dd8bfa6a" kindref="member">agent_map_t</ref><sp/>&amp;agent_map)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" refkind="member"><highlight class="normal"><sp/><sp/>[[nodiscard]]<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a7f3a3f4edf7904f5e7816d6712142070" kindref="member">GetActionResult</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a7868652c73a635d288cfb897f9d6c756" kindref="member">SetActionResult</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result)<sp/>{<sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref><sp/>=<sp/>result;<sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classcse491_1_1_agent_base_1a7848dca4f05f13998b1dc87a1b4adf65" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1a7848dca4f05f13998b1dc87a1b4adf65" kindref="member">Notify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/></highlight><highlight class="comment">/*message*/</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/></highlight><highlight class="comment">/*msg_type*/</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classcse491_1_1_agent_base_1ae5033ebd6f42bc517c552903fcb54d0f" kindref="member">GetTypeName_impl</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;cse491::AgentBase&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1acd04f7953f588c434de0fa2ebd03cedf" kindref="member">Serialize_impl</ref>(std::ostream<sp/>&amp;os)</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_entity_1acd04f7953f588c434de0fa2ebd03cedf" kindref="member">Entity::Serialize_impl</ref>(os);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializeValue(os,<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializeValue(os,<sp/><ref refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" kindref="member">action</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializeValue(os,<sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>SerializeValue(os,<sp/>agent_state);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcse491_1_1_agent_base_1aa912efd8fc53715bdadc51234115d82b" kindref="member">Deserialize_impl</ref>(std::istream<sp/>&amp;is)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcse491_1_1_entity_1aa912efd8fc53715bdadc51234115d82b" kindref="member">Entity::Deserialize_impl</ref>(is);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>DeserializeValue(is,<sp/><ref refid="classcse491_1_1_agent_base_1a4ded6ca77b98493fabf429395e605f98" kindref="member">action_map</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>DeserializeValue(is,<sp/><ref refid="classcse491_1_1_agent_base_1a9ba0f2f280a2a2e49c17508af48aad91" kindref="member">action</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>DeserializeValue(is,<sp/><ref refid="classcse491_1_1_agent_base_1ad0f6240659fc1ed9223182e375655d15" kindref="member">action_result</ref>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>DeserializeValue(is,<sp/>agent_state);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>namespace<sp/>cse491</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="source/core/AgentBase.hpp"/>
   </compounddef>

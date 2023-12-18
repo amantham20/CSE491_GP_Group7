@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcowboys_1_1_node_function" kind="struct" language="C++" prot="public">
+    <compoundname>cowboys::NodeFunction</compoundname>
+    <includes refid="_graph_node_8hpp" local="no">GraphNode.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcowboys_1_1_node_function_1aa58765d7eb91ca69f0c57044f80cab78" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacecowboys_1a7c2647bb83ef986475c089941e49bb66" kindref="member">InnerFunction</ref></type>
+        <definition>InnerFunction function</definition>
+        <argsstring></argsstring>
+        <name>function</name>
+        <qualifiedname>cowboys::NodeFunction::function</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="36" column="19" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcowboys_1_1_node_function_1a9f275d854a10431a3a95fa63c6e0da80" prot="public" static="no" mutable="no">
+        <type>const cse491::AgentBase *</type>
+        <definition>const cse491::AgentBase* agent</definition>
+        <argsstring></argsstring>
+        <name>agent</name>
+        <qualifiedname>cowboys::NodeFunction::agent</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="37" column="29" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcowboys_1_1_node_function_1a2ad51c0a8621f2eb393da0bd83dcbf31" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double operator()</definition>
+        <argsstring>(const GraphNode &amp;node) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>cowboys::NodeFunction::operator()</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &amp;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="38" column="12" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="structcowboys_1_1_node_function_1ac4d637a0dec45d546495c1660c9f6047" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsNull</definition>
+        <argsstring>() const</argsstring>
+        <name>IsNull</name>
+        <qualifiedname>cowboys::NodeFunction::IsNull</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GraphNode.hpp" line="39" column="10" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A function pointer wrapper that holds extra arguments for the function pointer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>NodeFunction</label>
+        <link refid="structcowboys_1_1_node_function"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GraphNode</label>
+        <link refid="classcowboys_1_1_graph_node"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>function_pointer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>NodeFunction</label>
+        <link refid="structcowboys_1_1_node_function"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>function</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>enable_shared_from_this&lt; GraphNode &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/GP/GraphNode.hpp" line="35" column="3" bodyfile="source/Agents/GP/GraphNode.hpp" bodystart="35" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structcowboys_1_1_node_function_1a9f275d854a10431a3a95fa63c6e0da80" prot="public" virt="non-virtual"><scope>cowboys::NodeFunction</scope><name>agent</name></member>
+      <member refid="structcowboys_1_1_node_function_1aa58765d7eb91ca69f0c57044f80cab78" prot="public" virt="non-virtual"><scope>cowboys::NodeFunction</scope><name>function</name></member>
+      <member refid="structcowboys_1_1_node_function_1ac4d637a0dec45d546495c1660c9f6047" prot="public" virt="non-virtual"><scope>cowboys::NodeFunction</scope><name>IsNull</name></member>
+      <member refid="structcowboys_1_1_node_function_1a2ad51c0a8621f2eb393da0bd83dcbf31" prot="public" virt="non-virtual"><scope>cowboys::NodeFunction</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

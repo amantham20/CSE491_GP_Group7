@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classnet_worth_1_1_client_interface" kind="class" language="C++" prot="public">
+    <compoundname>netWorth::ClientInterface</compoundname>
+    <basecompoundref refid="classnet_worth_1_1_networking_interface" prot="public" virt="non-virtual">NetworkingInterface</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">MainInterface</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnet_worth_1_1_client_interface_1a6003a7e2b662facc667a881b1494aebb" prot="private" static="no" mutable="no">
+        <type><ref refid="classnet_worth_1_1_client_manager" kindref="compound">netWorth::ClientManager</ref> *</type>
+        <definition>netWorth::ClientManager* m_manager</definition>
+        <argsstring></argsstring>
+        <name>m_manager</name>
+        <qualifiedname>netWorth::ClientInterface::m_manager</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="22" column="37" bodyfile="source/Interfaces/NetWorth/client/ClientInterface.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnet_worth_1_1_client_interface_1a6e150715999c4a2c283792f608612d90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ClientInterface</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>ClientInterface</name>
+        <qualifiedname>netWorth::ClientInterface::ClientInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor (AgentBase) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent ID </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="32" column="13" bodyfile="source/Interfaces/NetWorth/client/ClientInterface.hpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>netWorth::ClientInterface::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Establish connection with server, initializing interface <simplesect kind="return"><para>True if successful, false if error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="40" column="18" bodyfile="source/Interfaces/NetWorth/client/ClientInterface.hpp" bodystart="40" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classnet_worth_1_1_client_interface_1a44d67cc0df9952f910f9c434dcd21723" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::type_options_t &amp;typeOptions, const cse491::item_map_t &amp;itemMap, const cse491::agent_map_t &amp;agentMap) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>netWorth::ClientInterface::SelectAction</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::type_options_t &amp;</type>
+          <declname>typeOptions</declname>
+        </param>
+        <param>
+          <type>const cse491::item_map_t &amp;</type>
+          <declname>itemMap</declname>
+        </param>
+        <param>
+          <type>const cse491::agent_map_t &amp;</type>
+          <declname>agentMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Choose action for player agent <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the client-side grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>typeOptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>different cell types of the world </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the items that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the agents that may be apart of the grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>action ID of the interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="84" column="20" bodyfile="source/Interfaces/NetWorth/client/ClientInterface.hpp" bodystart="84" bodyend="109"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ClientInterface</label>
+        <link refid="classnet_worth_1_1_client_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="4">
+        <label>MainInterface</label>
+      </node>
+      <node id="2">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ClientInterface</label>
+        <link refid="classnet_worth_1_1_client_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="4">
+        <label>MainInterface</label>
+      </node>
+      <node id="2">
+        <label>NetworkingInterface</label>
+        <link refid="classnet_worth_1_1_networking_interface"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/NetWorth/client/ClientInterface.hpp" line="20" column="5" bodyfile="source/Interfaces/NetWorth/client/ClientInterface.hpp" bodystart="20" bodyend="111"/>
+    <listofallmembers>
+      <member refid="classnet_worth_1_1_networking_interface_1a651d5aa55d8137a944b74085193ba1d0" prot="public" virt="virtual"><scope>netWorth::ClientInterface</scope><name>bindSocket</name></member>
+      <member refid="classnet_worth_1_1_client_interface_1a6e150715999c4a2c283792f608612d90" prot="public" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>ClientInterface</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ab3defdc7328b1893f4577b3be3af4028" prot="public" virt="virtual"><scope>netWorth::ClientInterface</scope><name>getSocket</name></member>
+      <member refid="classnet_worth_1_1_client_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>Initialize</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a8ddcf13c8084c8b94c8edb2a541bed43" prot="protected" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>m_ip</name></member>
+      <member refid="classnet_worth_1_1_client_interface_1a6003a7e2b662facc667a881b1494aebb" prot="private" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>m_manager</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1ac8f5c2dcfe32cf7f600e04fe61164361" prot="protected" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>m_port</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a0a5f384fbbd590c8e871ba72f52e5ed0" prot="protected" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>m_socket</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1aaaa81235fdcd360c7d4ae52d7bfe5f37" prot="public" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>NetworkingInterface</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a4f5d19c23bc2ec20d0f9e315f4829ef1" prot="public" virt="virtual"><scope>netWorth::ClientInterface</scope><name>receivePacket</name></member>
+      <member refid="classnet_worth_1_1_client_interface_1a44d67cc0df9952f910f9c434dcd21723" prot="public" virt="non-virtual"><scope>netWorth::ClientInterface</scope><name>SelectAction</name></member>
+      <member refid="classnet_worth_1_1_networking_interface_1a04d60c5124ab56b1dfc7140491bfe84e" prot="public" virt="virtual"><scope>netWorth::ClientInterface</scope><name>sendPacket</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

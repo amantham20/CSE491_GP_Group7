@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_game_data" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::GameData</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_game_data_1a072919d1f4d917a70bcc3e13f8ca6b26" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int numOfCol</definition>
+        <argsstring></argsstring>
+        <name>numOfCol</name>
+        <qualifiedname>DataCollection::GameData::numOfCol</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="9" column="13" bodyfile="source/DataCollection/GameData.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_game_data_1a8f676ff4e0dcb79f87b8e801d851c72c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; collisions</definition>
+        <argsstring></argsstring>
+        <name>collisions</name>
+        <qualifiedname>DataCollection::GameData::collisions</qualifiedname>
+        <briefdescription>
+<para>A vector of Collision Data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="11" column="20" bodyfile="source/DataCollection/GameData.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_game_data_1add22e6719fb7eeca99a3d21b3f474e78" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; shortestPathAction</definition>
+        <argsstring></argsstring>
+        <name>shortestPathAction</name>
+        <qualifiedname>DataCollection::GameData::shortestPathAction</qualifiedname>
+        <briefdescription>
+<para>A vector of the shortest path action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="12" column="20" bodyfile="source/DataCollection/GameData.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_game_data_1a822e3dd968261e4f7c8ee89c89b4fc80" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt;cse491::GridPosition&gt; shortestPathPos</definition>
+        <argsstring></argsstring>
+        <name>shortestPathPos</name>
+        <qualifiedname>DataCollection::GameData::shortestPathPos</qualifiedname>
+        <briefdescription>
+<para>A vector of the shortest Position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="13" column="20" bodyfile="source/DataCollection/GameData.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a357aa024d938818ea8f7c0a1c63256b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameData</definition>
+        <argsstring>()=default</argsstring>
+        <name>GameData</name>
+        <qualifiedname>DataCollection::GameData::GameData</qualifiedname>
+        <briefdescription>
+<para>Default constructor for <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="18" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a9e46832d05fda360a6b6710ac3b61eba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GameData</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GameData</name>
+        <qualifiedname>DataCollection::GameData::~GameData</qualifiedname>
+        <briefdescription>
+<para>Destructor for <ref refid="class_data_collection_1_1_agent_data" kindref="compound">AgentData</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="23" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a221e231a9214f808a3a5bbceb6ae2971" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int getNumOfCol</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumOfCol</name>
+        <qualifiedname>DataCollection::GameData::getNumOfCol</qualifiedname>
+        <briefdescription>
+<para>Get the number of collisions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of collisions. -----------<mdash/>These member functions are generated by Chatgpt </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="29" column="13" bodyfile="source/DataCollection/GameData.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a888cc9358b5eed4f57ef5678029a07db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setNumOfCol</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setNumOfCol</name>
+        <qualifiedname>DataCollection::GameData::setNumOfCol</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the number of collisions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="37" column="14" bodyfile="source/DataCollection/GameData.hpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1afa60d9d0ca13a954fcc4bb6ecdf724be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StoreCollision</definition>
+        <argsstring>(int collision)</argsstring>
+        <name>StoreCollision</name>
+        <qualifiedname>DataCollection::GameData::StoreCollision</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>collision</declname>
+        </param>
+        <briefdescription>
+<para>Store collision data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>collision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collision data to store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="45" column="14" bodyfile="source/DataCollection/GameData.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a5ea240f7c4f7349ebb6037b8fea5cf87" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; int &gt; &amp;</type>
+        <definition>const std::vector&lt; int &gt; &amp; GetCollisions</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCollisions</name>
+        <qualifiedname>DataCollection::GameData::GetCollisions</qualifiedname>
+        <briefdescription>
+<para>Retrieve the stored collisions data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the vector of collisions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="53" column="27" bodyfile="source/DataCollection/GameData.hpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1ae2179848b37b0cd7f8326052836ab38e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StoreShortestPathAction</definition>
+        <argsstring>(size_t action)</argsstring>
+        <name>StoreShortestPathAction</name>
+        <qualifiedname>DataCollection::GameData::StoreShortestPathAction</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Store a shortest path action. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shortest path action to store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="61" column="14" bodyfile="source/DataCollection/GameData.hpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a734873edb87d9b248e7df3cceade91b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; size_t &gt; &amp;</type>
+        <definition>const std::vector&lt; size_t &gt; &amp; GetShortestPathActions</definition>
+        <argsstring>() const</argsstring>
+        <name>GetShortestPathActions</name>
+        <qualifiedname>DataCollection::GameData::GetShortestPathActions</qualifiedname>
+        <briefdescription>
+<para>Retrieve the stored shortest path actions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the vector of shortest path actions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="69" column="27" bodyfile="source/DataCollection/GameData.hpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a6caff671aaa173386c2680d4617ee55d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StoreShortestPathPos</definition>
+        <argsstring>(const cse491::GridPosition pos)</argsstring>
+        <name>StoreShortestPathPos</name>
+        <qualifiedname>DataCollection::GameData::StoreShortestPathPos</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Store a shortest path position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shortest path position to store. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="77" column="14" bodyfile="source/DataCollection/GameData.hpp" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_game_data_1a8ad3cba6ab8ceb9997e4f620330a404c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>const std::vector&lt; cse491::GridPosition &gt; GetShortestPathPos</definition>
+        <argsstring>() const</argsstring>
+        <name>GetShortestPathPos</name>
+        <qualifiedname>DataCollection::GameData::GetShortestPathPos</qualifiedname>
+        <briefdescription>
+<para>Retrieve the stored shortest path positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A constant reference to the vector of shortest path positions. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/GameData.hpp" line="85" column="27" bodyfile="source/DataCollection/GameData.hpp" bodystart="85" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/DataCollection/GameData.hpp" line="6" column="5" bodyfile="source/DataCollection/GameData.hpp" bodystart="6" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_game_data_1a8f676ff4e0dcb79f87b8e801d851c72c" prot="private" virt="non-virtual"><scope>DataCollection::GameData</scope><name>collisions</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a357aa024d938818ea8f7c0a1c63256b5" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>GameData</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a5ea240f7c4f7349ebb6037b8fea5cf87" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>GetCollisions</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a221e231a9214f808a3a5bbceb6ae2971" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>getNumOfCol</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a734873edb87d9b248e7df3cceade91b6" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>GetShortestPathActions</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a8ad3cba6ab8ceb9997e4f620330a404c" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>GetShortestPathPos</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a072919d1f4d917a70bcc3e13f8ca6b26" prot="private" virt="non-virtual"><scope>DataCollection::GameData</scope><name>numOfCol</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a888cc9358b5eed4f57ef5678029a07db" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>setNumOfCol</name></member>
+      <member refid="class_data_collection_1_1_game_data_1add22e6719fb7eeca99a3d21b3f474e78" prot="private" virt="non-virtual"><scope>DataCollection::GameData</scope><name>shortestPathAction</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a822e3dd968261e4f7c8ee89c89b4fc80" prot="private" virt="non-virtual"><scope>DataCollection::GameData</scope><name>shortestPathPos</name></member>
+      <member refid="class_data_collection_1_1_game_data_1afa60d9d0ca13a954fcc4bb6ecdf724be" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>StoreCollision</name></member>
+      <member refid="class_data_collection_1_1_game_data_1ae2179848b37b0cd7f8326052836ab38e" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>StoreShortestPathAction</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a6caff671aaa173386c2680d4617ee55d" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>StoreShortestPathPos</name></member>
+      <member refid="class_data_collection_1_1_game_data_1a9e46832d05fda360a6b6710ac3b61eba" prot="public" virt="non-virtual"><scope>DataCollection::GameData</scope><name>~GameData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

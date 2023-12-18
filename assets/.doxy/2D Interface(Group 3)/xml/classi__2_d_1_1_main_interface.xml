@@ -1,0 +1,1247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_main_interface" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::MainInterface</compoundname>
+    <basecompoundref prot="public" virt="virtual">InterfaceBase</basecompoundref>
+    <includes refid="_main_interface_8hpp" local="no">MainInterface.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1ae992adfbdaacc61505dc7888431fe756" prot="private" static="no" mutable="no">
+        <type>sf::RenderWindow</type>
+        <definition>sf::RenderWindow mWindow</definition>
+        <argsstring></argsstring>
+        <name>mWindow</name>
+        <qualifiedname>i_2D::MainInterface::mWindow</qualifiedname>
+        <briefdescription>
+<para>render window </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="46" column="26" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1ada43f273eb1fa41c8db6a220cec206c5" prot="private" static="no" mutable="no">
+        <type>float const</type>
+        <definition>float const MIN_SIZE_CELL</definition>
+        <argsstring></argsstring>
+        <name>MIN_SIZE_CELL</name>
+        <qualifiedname>i_2D::MainInterface::MIN_SIZE_CELL</qualifiedname>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>Pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="47" column="21" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1ab4c4704a869fa5d3e2668e80842d68c0" prot="private" static="no" mutable="no">
+        <type><ref refid="classi__2_d_1_1_menu" kindref="compound">Menu</ref></type>
+        <definition>Menu mMenu</definition>
+        <argsstring></argsstring>
+        <name>mMenu</name>
+        <qualifiedname>i_2D::MainInterface::mMenu</qualifiedname>
+        <briefdescription>
+<para>for menu class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="50" column="14" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1ac8dd3406c102c4e26126bb8939a98356" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font mFont</definition>
+        <argsstring></argsstring>
+        <name>mFont</name>
+        <qualifiedname>i_2D::MainInterface::mFont</qualifiedname>
+        <briefdescription>
+<para>one font for all objects using font </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="51" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1afae612b3c566261d45c0b48107bc7889" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classi__2_d_1_1_text_box" kindref="compound">TextBox</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;TextBox&gt; mTextBox</definition>
+        <argsstring></argsstring>
+        <name>mTextBox</name>
+        <qualifiedname>i_2D::MainInterface::mTextBox</qualifiedname>
+        <briefdescription>
+<para>for chatting and possible event handling by text </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="52" column="25" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1ab58061c2d36073edb42a185261b78e1e" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="classi__2_d_1_1_message_board" kindref="compound">MessageBoard</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;MessageBoard&gt; mMessageBoard</definition>
+        <argsstring></argsstring>
+        <name>mMessageBoard</name>
+        <qualifiedname>i_2D::MainInterface::mMessageBoard</qualifiedname>
+        <briefdescription>
+<para>message box object </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="53" column="25" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1af5d7acde5df047cf3038aa993565ff31" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; mAgentInventory</definition>
+        <argsstring></argsstring>
+        <name>mAgentInventory</name>
+        <qualifiedname>i_2D::MainInterface::mAgentInventory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="54" column="21" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a3b81675679fe713e05be448b973d8508" prot="private" static="no" mutable="no">
+        <type><ref refid="classi__2_d_1_1_texture_holder" kindref="compound">TextureHolder</ref></type>
+        <definition>TextureHolder mTextureHolder</definition>
+        <argsstring></argsstring>
+        <name>mTextureHolder</name>
+        <qualifiedname>i_2D::MainInterface::mTextureHolder</qualifiedname>
+        <briefdescription>
+<para>for the texture holder </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="57" column="23" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a36f7c24600f374f03e5ba3e0cf30cdfb" prot="private" static="no" mutable="no">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt;char, sf::Texture&gt; mTexturesDefault</definition>
+        <argsstring></argsstring>
+        <name>mTexturesDefault</name>
+        <qualifiedname>i_2D::MainInterface::mTexturesDefault</qualifiedname>
+        <briefdescription>
+<para>for the texture holder default grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="58" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a8e16b3daf503d9d90826384b117c244b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt;char, sf::Texture&gt; mTexturesSecondWorld</definition>
+        <argsstring></argsstring>
+        <name>mTexturesSecondWorld</name>
+        <qualifiedname>i_2D::MainInterface::mTexturesSecondWorld</qualifiedname>
+        <briefdescription>
+<para>for the texture holder SecondWorld grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="59" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a47000842cb9f73080cfe6f9c9a6f0b34" prot="private" static="no" mutable="no">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt;char, sf::Texture&gt; mTexturesManualWorld</definition>
+        <argsstring></argsstring>
+        <name>mTexturesManualWorld</name>
+        <qualifiedname>i_2D::MainInterface::mTexturesManualWorld</qualifiedname>
+        <briefdescription>
+<para>for the texture holder Manualworld grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="60" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a4dfe5636f14732ba1e8385a596eef564" prot="private" static="no" mutable="no">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt;char, sf::Texture&gt; mTexturesGenerativeWorld</definition>
+        <argsstring></argsstring>
+        <name>mTexturesGenerativeWorld</name>
+        <qualifiedname>i_2D::MainInterface::mTexturesGenerativeWorld</qualifiedname>
+        <briefdescription>
+<para>for the texture holder GenerativeWorld grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="61" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a28bf33babfcff57a3b625712f260dea0" prot="private" static="no" mutable="no">
+        <type>std::map&lt; char, sf::Texture &gt;</type>
+        <definition>std::map&lt;char, sf::Texture&gt; mTexturesCurrent</definition>
+        <argsstring></argsstring>
+        <name>mTexturesCurrent</name>
+        <qualifiedname>i_2D::MainInterface::mTexturesCurrent</qualifiedname>
+        <briefdescription>
+<para>for the texture holder current world grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="62" column="18" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1abfd59bd0d78848c6d6f0955250e714a4" prot="private" static="no" mutable="no">
+        <type>sf::Vector2i</type>
+        <definition>sf::Vector2i mPlayerPosition</definition>
+        <argsstring></argsstring>
+        <name>mPlayerPosition</name>
+        <qualifiedname>i_2D::MainInterface::mPlayerPosition</qualifiedname>
+        <initializer>= sf::Vector2i(0, 0)</initializer>
+        <briefdescription>
+<para>xy world grid location of the player </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="65" column="22" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a5330c18555f898eed93df20e235271e7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mGridSizeLarge</definition>
+        <argsstring></argsstring>
+        <name>mGridSizeLarge</name>
+        <qualifiedname>i_2D::MainInterface::mGridSizeLarge</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>flag for the largegrid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="66" column="14" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a4f03afb8e020e7b5badaba2c0ec569bc" prot="private" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const ROW</definition>
+        <argsstring></argsstring>
+        <name>ROW</name>
+        <qualifiedname>i_2D::MainInterface::ROW</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+<para>row to enlarge te grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="67" column="19" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a76cfac0b75419b66dbbccfa7365a7ada" prot="private" static="no" mutable="no">
+        <type>int const</type>
+        <definition>int const COL</definition>
+        <argsstring></argsstring>
+        <name>COL</name>
+        <qualifiedname>i_2D::MainInterface::COL</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+<para>column to enlarge the grid </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="68" column="19" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a15501850972c0ca66c2a1c58155832a7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mGridWidth</definition>
+        <argsstring></argsstring>
+        <name>mGridWidth</name>
+        <qualifiedname>i_2D::MainInterface::mGridWidth</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>for the gridwidth </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="70" column="13" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a9bcef382b9f50eac2199f5cd3eebe069" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mGridHeight</definition>
+        <argsstring></argsstring>
+        <name>mGridHeight</name>
+        <qualifiedname>i_2D::MainInterface::mGridHeight</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>for the gridheight </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="71" column="13" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_main_interface_1a0eaeb7a766bcffd82bf785cb5dc7d293" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mInputWaitTime</definition>
+        <argsstring></argsstring>
+        <name>mInputWaitTime</name>
+        <qualifiedname>i_2D::MainInterface::mInputWaitTime</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+<para>for the waittime of the player </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="73" column="16" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ae6bc4c1602f16f65f9c91103e0cd1cba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t HandleKeyEvent</definition>
+        <argsstring>(const sf::Event &amp;event)</argsstring>
+        <name>HandleKeyEvent</name>
+        <qualifiedname>i_2D::MainInterface::HandleKeyEvent</qualifiedname>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Handles key events and returns the corresponding action ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function takes an SFML event as input and processes the key events. It checks for specific key presses such as W, A, S, D, and Q, and returns the action ID associated with the respective key. If the key is not recognized, it notifies the user with a message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SFML event object containing the key event information. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size_t The action ID corresponding to the key event. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: make this more robust (AJF)</para>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="75" column="16" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="352" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ae93529a8f139eedb7cc32713f1d045c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CalculateDrawSpace</definition>
+        <argsstring>(const WorldGrid &amp;grid, float cellSize, float &amp;drawSpaceWidth, float &amp;drawSpaceHeight, float &amp;drawCenterX, float &amp;drawCenterY)</argsstring>
+        <name>CalculateDrawSpace</name>
+        <qualifiedname>i_2D::MainInterface::CalculateDrawSpace</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cellSize</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>drawSpaceWidth</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>drawSpaceHeight</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>drawCenterX</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>drawCenterY</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the total drawing space based on the grid dimensions and cell size and also the center position of the drawing space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid representing the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of each cell in pixels. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drawSpaceWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to store the total width of the drawing space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drawSpaceHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to store the total height of the drawing space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drawCenterX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to store the x-coordinate of the center of the drawing space. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>drawCenterY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the variable to store the y-coordinate of the center of the drawing space. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="77" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="265" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a89abca37bc2726c8485495be0adc7fe4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f CalculateCellSize</definition>
+        <argsstring>(const WorldGrid &amp;grid)</argsstring>
+        <name>CalculateCellSize</name>
+        <qualifiedname>i_2D::MainInterface::CalculateCellSize</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the size of each cell based on the window size and grid dimensions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid representing the maze. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sf::Vector2f The size of each cell as a 2D vector. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="80" column="22" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="102" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ae0a114e6f9b1ffe41ac5b4ae704a0c94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HandleResize</definition>
+        <argsstring>(const sf::Event &amp;event, const WorldGrid &amp;grid)</argsstring>
+        <name>HandleResize</name>
+        <qualifiedname>i_2D::MainInterface::HandleResize</qualifiedname>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+<para>Handles the window resize event Restricts window resizing if below a minimum size. Matches the window&apos;s view to the new size of the window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SFML event object containing the resize event information. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid containing information on the world structure. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="82" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="450" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a873f01a0c21db50c19f99750d66a75be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChooseTexture</definition>
+        <argsstring>()</argsstring>
+        <name>ChooseTexture</name>
+        <qualifiedname>i_2D::MainInterface::ChooseTexture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="84" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="501" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1af8bd141bfb67b6dfeb03bbcfeb188763" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; LargeDisplayGrid</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;symbol_grid)</argsstring>
+        <name>LargeDisplayGrid</name>
+        <qualifiedname>i_2D::MainInterface::LargeDisplayGrid</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>symbol_grid</declname>
+        </param>
+        <briefdescription>
+<para>Creates a 9x23 window of the symbol grid centered around the player&apos;s position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>symbol_grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The original symbol grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::string&gt; A new symbol grid representing the 9x23 window. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="86" column="21" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="232" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a40d0412d1e1fd89a4dc4893ba9bbdf4c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MouseClickEvent</definition>
+        <argsstring>(const sf::Event &amp;event, const size_t entity_id, const item_map_t &amp;item_map)</argsstring>
+        <name>MouseClickEvent</name>
+        <qualifiedname>i_2D::MainInterface::MouseClickEvent</qualifiedname>
+        <param>
+          <type>const sf::Event &amp;</type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>entity_id</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this function handles mouseclick event <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>for mouse click </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="88" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="522" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a7b71d4c203f6b89a2643500cca8a26bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawAgentCell</definition>
+        <argsstring>(sf::RenderTexture &amp;renderTexture, sf::RectangleShape &amp;cellRect, sf::RectangleShape &amp;cell, sf::Texture &amp;agent)</argsstring>
+        <name>DrawAgentCell</name>
+        <qualifiedname>i_2D::MainInterface::DrawAgentCell</qualifiedname>
+        <param>
+          <type>sf::RenderTexture &amp;</type>
+          <declname>renderTexture</declname>
+        </param>
+        <param>
+          <type>sf::RectangleShape &amp;</type>
+          <declname>cellRect</declname>
+        </param>
+        <param>
+          <type>sf::RectangleShape &amp;</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>sf::Texture &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Draw the cell with Agent texture and specified color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellRect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle shape of the cell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle shape for the cell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent texture. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>renderTexture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Texture for the whole grid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="90" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="581" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a2de5d05f698ea1ce5ae0d8b562a4408e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SwitchCellSelect</definition>
+        <argsstring>(sf::RenderTexture &amp;renderTexture, sf::RectangleShape &amp;cellRect, sf::RectangleShape &amp;cell, char symbol)</argsstring>
+        <name>SwitchCellSelect</name>
+        <qualifiedname>i_2D::MainInterface::SwitchCellSelect</qualifiedname>
+        <param>
+          <type>sf::RenderTexture &amp;</type>
+          <declname>renderTexture</declname>
+        </param>
+        <param>
+          <type>sf::RectangleShape &amp;</type>
+          <declname>cellRect</declname>
+        </param>
+        <param>
+          <type>sf::RectangleShape &amp;</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a helper function for DrawGrid. jsut using the switch statement to draw the grids <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellRect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cell for texture </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cell</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- cell for the solid </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- symbol of the cell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>renderTexture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Texture for teh whole grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="94" column="9" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="562" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ace7f950f59eb68d511ae0420078b8044" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawWall</definition>
+        <argsstring>(sf::RenderTexture &amp;renderTexture, sf::RectangleShape &amp;cellRect, sf::Texture &amp;wallTexture)</argsstring>
+        <name>DrawWall</name>
+        <qualifiedname>i_2D::MainInterface::DrawWall</qualifiedname>
+        <param>
+          <type>sf::RenderTexture &amp;</type>
+          <declname>renderTexture</declname>
+        </param>
+        <param>
+          <type>sf::RectangleShape &amp;</type>
+          <declname>cellRect</declname>
+        </param>
+        <param>
+          <type>sf::Texture &amp;</type>
+          <declname>wallTexture</declname>
+        </param>
+        <briefdescription>
+<para>Draw the wall texture based on the provided parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cellRect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle shape of the cell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wallTexture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture for the wall. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>renderTexture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Texture for the whole grid </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="97" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="599" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a321308ac4607c034a6fce5fe4c21755e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTimer</definition>
+        <argsstring>()</argsstring>
+        <name>DrawTimer</name>
+        <qualifiedname>i_2D::MainInterface::DrawTimer</qualifiedname>
+        <briefdescription>
+<para>this function draws timer and checks the elapsed time if the timer exceed above 0.5 seconds, it returns 0 to the netwrok interface and restart the timer every move player makes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="99" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="192" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a62ad16af97c9b8d8fe313908e056f469" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawHealthInfo</definition>
+        <argsstring>()</argsstring>
+        <name>DrawHealthInfo</name>
+        <qualifiedname>i_2D::MainInterface::DrawHealthInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="101" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="212" bodyend="224"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a4de328227871c1488a2aefcd2f1fd320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainInterface</definition>
+        <argsstring>(size_t id, const std::string &amp;name)</argsstring>
+        <name>MainInterface</name>
+        <qualifiedname>i_2D::MainInterface::MainInterface</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <computeroutput><ref refid="classi__2_d_1_1_main_interface" kindref="compound">MainInterface</ref></computeroutput> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The identifier for this interface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of this interface. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Font for all objects</para>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="104" column="9" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="26" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a5e568612677ec9ea056adbf2864ed6e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~MainInterface</definition>
+        <argsstring>()=default</argsstring>
+        <name>~MainInterface</name>
+        <qualifiedname>i_2D::MainInterface::~MainInterface</qualifiedname>
+        <briefdescription>
+<para>Destructor for the <computeroutput><ref refid="classi__2_d_1_1_main_interface" kindref="compound">MainInterface</ref></computeroutput> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="109" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a01a910f5689d39b1da3e490c4bb2777a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CreateVectorMaze</definition>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map)</argsstring>
+        <name>CreateVectorMaze</name>
+        <qualifiedname>i_2D::MainInterface::CreateVectorMaze</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+          <declname>agent_map</declname>
+        </param>
+        <briefdescription>
+<para>Creates a vector representation of the maze grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid representing the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type options for symbols. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to items in the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to agents in the maze.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of strings representing the maze grid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="112" column="21" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="51" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ade751c86590f6f0d8d22eb80204dd39f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawGrid</definition>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map)</argsstring>
+        <name>DrawGrid</name>
+        <qualifiedname>i_2D::MainInterface::DrawGrid</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+          <declname>agent_map</declname>
+        </param>
+        <briefdescription>
+<para>Draws the maze grid and entities on the SFML window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid representing the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type options for symbols. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to items in the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to agents in t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="118" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="125" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a0f11a94e169345477a934948cf3b6a5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setMInputWaitTime</definition>
+        <argsstring>(double mInputWaitTime)</argsstring>
+        <name>setMInputWaitTime</name>
+        <qualifiedname>i_2D::MainInterface::setMInputWaitTime</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mInputWaitTime</declname>
+          <defname>waitTime</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the inputwait time for netwrok interface</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>waitTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="121" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="610" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1aaec1cef5048a3e14fe4815f5e9de6e3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetLargeGrid</definition>
+        <argsstring>(bool b)</argsstring>
+        <name>SetLargeGrid</name>
+        <qualifiedname>i_2D::MainInterface::SetLargeGrid</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="122" column="14" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>i_2D::MainInterface::Initialize</qualifiedname>
+        <briefdescription>
+<para>Initializes the main interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if initialization is successful; otherwise, false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="129" column="14" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1a940f13c3ddc63876641097fe6bf42b46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SelectAction</definition>
+        <argsstring>(const WorldGrid &amp;grid, const type_options_t &amp;type_options, const item_map_t &amp;item_map, const agent_map_t &amp;agent_map) override</argsstring>
+        <name>SelectAction</name>
+        <qualifiedname>i_2D::MainInterface::SelectAction</qualifiedname>
+        <param>
+          <type>const WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const type_options_t &amp;</type>
+          <declname>type_options</declname>
+        </param>
+        <param>
+          <type>const item_map_t &amp;</type>
+          <declname>item_map</declname>
+        </param>
+        <param>
+          <type>const agent_map_t &amp;</type>
+          <declname>agent_map</declname>
+        </param>
+        <briefdescription>
+<para>Handles user input for selecting actions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The WorldGrid representing the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type options for symbols. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to items in the maze. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent_map</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The map of ids to agents in the maze. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="133" column="16" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="287" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1aa763849c1f33d5d3c824a8500550a848" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Notify</definition>
+        <argsstring>(const std::string &amp;message, const std::string &amp;=&quot;none&quot;) override</argsstring>
+        <name>Notify</name>
+        <qualifiedname>i_2D::MainInterface::Notify</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval>&quot;none&quot;</defval>
+        </param>
+        <briefdescription>
+<para>notifies the world if the player have any progress message </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>that notifies the world </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="143" column="14" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_main_interface_1ae6bae235e86c0986bf31a4dc90ab82aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckLargerGrid</definition>
+        <argsstring>()</argsstring>
+        <name>CheckLargerGrid</name>
+        <qualifiedname>i_2D::MainInterface::CheckLargerGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.hpp" line="149" column="14" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="614" bodyend="620"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the main interface for a 2D maze game. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class inherits from <computeroutput>InterfaceBase</computeroutput> and provides functionality for creating and displaying a 2D maze game world, handling user input, and updating the graphical representation of the game. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="1">
+        <label>MainInterface</label>
+        <link refid="classi__2_d_1_1_main_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>InterfaceBase</label>
+      </node>
+      <node id="1">
+        <label>MainInterface</label>
+        <link refid="classi__2_d_1_1_main_interface"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Interfaces/MainInterface.hpp" line="43" column="5" bodyfile="source/Interfaces/MainInterface.hpp" bodystart="43" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_main_interface_1a89abca37bc2726c8485495be0adc7fe4" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>CalculateCellSize</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ae93529a8f139eedb7cc32713f1d045c0" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>CalculateDrawSpace</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ae6bae235e86c0986bf31a4dc90ab82aa" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>CheckLargerGrid</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a873f01a0c21db50c19f99750d66a75be" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>ChooseTexture</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a76cfac0b75419b66dbbccfa7365a7ada" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>COL</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a01a910f5689d39b1da3e490c4bb2777a" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>CreateVectorMaze</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a7b71d4c203f6b89a2643500cca8a26bf" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>DrawAgentCell</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ade751c86590f6f0d8d22eb80204dd39f" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>DrawGrid</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a62ad16af97c9b8d8fe313908e056f469" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>DrawHealthInfo</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a321308ac4607c034a6fce5fe4c21755e" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>DrawTimer</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ace7f950f59eb68d511ae0420078b8044" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>DrawWall</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ae6bc4c1602f16f65f9c91103e0cd1cba" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>HandleKeyEvent</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ae0a114e6f9b1ffe41ac5b4ae704a0c94" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>HandleResize</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a54aa3db4e29fbab38a726bd91930b950" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>Initialize</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1af8bd141bfb67b6dfeb03bbcfeb188763" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>LargeDisplayGrid</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1af5d7acde5df047cf3038aa993565ff31" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mAgentInventory</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a4de328227871c1488a2aefcd2f1fd320" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>MainInterface</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ac8dd3406c102c4e26126bb8939a98356" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mFont</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a9bcef382b9f50eac2199f5cd3eebe069" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mGridHeight</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a5330c18555f898eed93df20e235271e7" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mGridSizeLarge</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a15501850972c0ca66c2a1c58155832a7" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mGridWidth</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ada43f273eb1fa41c8db6a220cec206c5" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>MIN_SIZE_CELL</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a0eaeb7a766bcffd82bf785cb5dc7d293" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mInputWaitTime</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ab4c4704a869fa5d3e2668e80842d68c0" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mMenu</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ab58061c2d36073edb42a185261b78e1e" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mMessageBoard</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a40d0412d1e1fd89a4dc4893ba9bbdf4c" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>MouseClickEvent</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1abfd59bd0d78848c6d6f0955250e714a4" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mPlayerPosition</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1afae612b3c566261d45c0b48107bc7889" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTextBox</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a3b81675679fe713e05be448b973d8508" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTextureHolder</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a28bf33babfcff57a3b625712f260dea0" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTexturesCurrent</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a36f7c24600f374f03e5ba3e0cf30cdfb" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTexturesDefault</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a4dfe5636f14732ba1e8385a596eef564" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTexturesGenerativeWorld</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a47000842cb9f73080cfe6f9c9a6f0b34" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTexturesManualWorld</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a8e16b3daf503d9d90826384b117c244b" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mTexturesSecondWorld</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1ae992adfbdaacc61505dc7888431fe756" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>mWindow</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1aa763849c1f33d5d3c824a8500550a848" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>Notify</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a4f03afb8e020e7b5badaba2c0ec569bc" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>ROW</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a940f13c3ddc63876641097fe6bf42b46" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>SelectAction</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1aaec1cef5048a3e14fe4815f5e9de6e3b" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>SetLargeGrid</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a0f11a94e169345477a934948cf3b6a5d" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>setMInputWaitTime</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a2de5d05f698ea1ce5ae0d8b562a4408e" prot="private" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>SwitchCellSelect</name></member>
+      <member refid="classi__2_d_1_1_main_interface_1a5e568612677ec9ea056adbf2864ed6e8" prot="public" virt="non-virtual"><scope>i_2D::MainInterface</scope><name>~MainInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

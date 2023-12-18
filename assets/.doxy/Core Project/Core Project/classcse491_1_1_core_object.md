@@ -15,7 +15,7 @@
 
 
 
-Inherited by the following classes: [cse491::WorldGrid](classcse491_1_1_world_grid.md)
+Inherited by the following classes: [cse491::Entity](classcse491_1_1_entity.md),  [cse491::GridPosition](classcse491_1_1_grid_position.md),  [cse491::PropertyBase](structcse491_1_1_property_base.md),  [cse491::WorldGrid](classcse491_1_1_world_grid.md)
 
 
 
@@ -57,6 +57,7 @@ Inherited by the following classes: [cse491::WorldGrid](classcse491_1_1_world_gr
 |  std::string | [**GetTypeName**](#function-gettypename) () const<br>_Access the derived name for this type._  |
 |  void | [**Serialize**](#function-serialize-12) (std::ostream & os) const<br>_Store the current state of this object for later extraction._  |
 |  bool | [**Serialize**](#function-serialize-22) (std::string filename) const<br>_A version of Serialize that accepts a filename for saving just this object._  |
+|  auto | [**operator&lt;=&gt;**](#function-operator<>) (const [**CoreObject**](classcse491_1_1_core_object.md) &) const<br> |
 | virtual  | [**~CoreObject**](#function-coreobject) () <br> |
 
 
@@ -239,6 +240,19 @@ Success (true/false)
 
 
 
+### function operator&lt;=&gt; 
+
+```C++
+auto cse491::CoreObject::operator<=> (
+    const CoreObject &
+) const
+```
+
+
+
+
+
+
 ### function ~CoreObject 
 
 ```C++
@@ -325,7 +339,7 @@ inline void cse491::CoreObject::EndSerialize (
 **Parameters:**
 
 
-* `os` Output stream to serialize into. 
+* `os` Output stream to Serialize into. 
 
 
 
@@ -430,7 +444,7 @@ inline void cse491::CoreObject::StartSerialize (
 **Parameters:**
 
 
-* `os` Output stream to serialize into. 
+* `os` Output stream to Serialize into. 
 
 
 

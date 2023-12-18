@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_data_collection_1_1_agent_data" kind="class"><name>DataCollection::AgentData</name>
+    <member refid="class_data_collection_1_1_agent_data_1a9b45b3e13bd9167aab02e17e08916231" kind="variable"><name>name</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1ae3abc996a0efcbc04d20bbb0eca84f24" kind="variable"><name>actionIds</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a891d24d3e733c2198323cdc39754eddd" kind="variable"><name>position</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a9aa42cf9d1fc92a1025ab3d9e7a4c78d" kind="variable"><name>actions</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a7987d99b983f1a8ca0d98076064b7bb5" kind="function"><name>AgentData</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a228bc66e3add04285248f6fd0ef35328" kind="function"><name>~AgentData</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a32cd70e130fbfc4716a3511b394041d4" kind="function"><name>StorePositions</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a76aeae2fd4bbc0a4886741028fa7a1c7" kind="function"><name>StoreAction</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1af2edb8b068df144f64daea273a2f7e66" kind="function"><name>StoreAgentId</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a994973ca629a6d1187ad66c4371347b8" kind="function"><name>GetActions</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a70729ea7dcffe5b67453dd23bc806f74" kind="function"><name>GetActionSize</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a7ee9bcc398c06465185779396fee4a26" kind="function"><name>SetActions</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a5d286076daef6dfdcb4dd426e7b96ef4" kind="function"><name>GetPositionSize</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a81963ca0f6e0160644a5e5c0eace2f0c" kind="function"><name>GetAgentIds</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a9a98946a64f3893b085f650932c9dfee" kind="function"><name>GetName</name></member>
+    <member refid="class_data_collection_1_1_agent_data_1a56818bfebbd18290d0941f28435747ff" kind="function"><name>GetPositions</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_agent_interaction_collector" kind="class"><name>DataCollection::AgentInteractionCollector</name>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1ae608a6997f8a3fb000860cdb52d46905" kind="variable"><name>interactionData</name></member>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1a807ee9bef7e43cba49b446931e38355d" kind="function"><name>AgentInteractionCollector</name></member>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1a14c7a49e10ed024038c53df1c0b1a335" kind="function"><name>GetInteractionData</name></member>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1a9c001f8ae5d15b1e5bd0994538d576ce" kind="function"><name>GetUniqueInteractions</name></member>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1ac2945e5fcdc6af74acde41c11a6416d8" kind="function"><name>RecordInteraction</name></member>
+    <member refid="class_data_collection_1_1_agent_interaction_collector_1a6c3b1c25f6673dee791f2ed900b0ebc5" kind="function"><name>WriteToInteractionFile</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_agent_receiver" kind="class"><name>DataCollection::AgentReceiver</name>
+    <member refid="class_data_collection_1_1_agent_receiver_1ac53e09b8c8bafa17a4bd0d488426b24f" kind="variable"><name>agent_map</name></member>
+    <member refid="class_data_collection_1_1_agent_receiver_1a37208227946eac70c04f17f806632db2" kind="function"><name>StoreData</name></member>
+    <member refid="class_data_collection_1_1_agent_receiver_1abf8d8eaa437180266386d555c31582af" kind="function"><name>AddAgent</name></member>
+    <member refid="class_data_collection_1_1_agent_receiver_1a442d74740031e1155cc6018315c70022" kind="function"><name>GetAgent</name></member>
+    <member refid="class_data_collection_1_1_agent_receiver_1ab87ae6baf7d7626114acc26d2d8ab69a" kind="function"><name>GetAgentData</name></member>
+    <member refid="class_data_collection_1_1_agent_receiver_1a1fd8ee6d7952d9599d746c78f1bb1e3e" kind="function"><name>WriteToPositionFile</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_damage_collector" kind="class"><name>DataCollection::DamageCollector</name>
+    <member refid="class_data_collection_1_1_damage_collector_1a73e80ec1aca5edfc7e3e69705c992e4b" kind="variable"><name>damageData</name></member>
+    <member refid="class_data_collection_1_1_damage_collector_1a2072a1bcf2ccb999327c53e427853541" kind="function"><name>DamageCollector</name></member>
+    <member refid="class_data_collection_1_1_damage_collector_1a4e545a975a67491ef9bf1847b3344cb1" kind="function"><name>RecordDamageResult</name></member>
+    <member refid="class_data_collection_1_1_damage_collector_1ab5cbc627b49a379a80237a0676b8a3b6" kind="function"><name>GetDamageAmounts</name></member>
+    <member refid="class_data_collection_1_1_damage_collector_1aa7d9f5c531bdcf7ec96c614eddaa3af5" kind="function"><name>CalculateAverageDamage</name></member>
+    <member refid="class_data_collection_1_1_damage_collector_1a13662e11ad88e46077fa0e5fd7b8b871" kind="function"><name>WriteToDamageFile</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_damage_data" kind="class"><name>DataCollection::DamageData</name>
+    <member refid="class_data_collection_1_1_damage_data_1a87f59b701a1554e5670058f8342a556e" kind="variable"><name>agent</name></member>
+    <member refid="class_data_collection_1_1_damage_data_1a4eeddf4b63950caa9e0c8cd5a44d391b" kind="variable"><name>source</name></member>
+    <member refid="class_data_collection_1_1_damage_data_1a14236de313193a14b4dbdf442bcf2bb9" kind="variable"><name>amount</name></member>
+    <member refid="class_data_collection_1_1_damage_data_1abf3fe164d42e8cb09f5afb0eddf65ba4" kind="function"><name>DamageData</name></member>
+    <member refid="class_data_collection_1_1_damage_data_1a93378c56d2badfd8f0d57c26f79390b8" kind="function"><name>~DamageData</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_damage_receiver" kind="class"><name>DataCollection::DamageReceiver</name>
+  </compound>
+  <compound refid="class_data_collection_1_1_data_manager" kind="class"><name>DataCollection::DataManager</name>
+    <member refid="class_data_collection_1_1_data_manager_1a5d8fb4669afd1d48dba3829109f8f95d" kind="variable"><name>agentReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a2b2fdbd5e0e9f7abb360802f7d591999" kind="variable"><name>gameReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1ab23306e337b14830da430229cb59f4ab" kind="variable"><name>damageCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a27c22a9b1d8d538e2e442f84aada8ead" kind="variable"><name>itemUseCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a2669ce5b9287c78d8c86b85a7da0dc38" kind="variable"><name>agentInteractionCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1ada57704a51118f40bf404050c829931d" kind="function"><name>DataManager</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a8f600cb9d58d97caf910405cf913a8b4" kind="function"><name>DataManager</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a136f3f24f44fbd2e420e9f8e725bccfa" kind="function"><name>operator=</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a454610a17213ae3019c65602e7aae84b" kind="function"><name>~DataManager</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a3cbe9d36093aebfade5351b25a4da306" kind="function"><name>GetAgentReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a5bc1d985fc38b6f6c472f5b81e64b425" kind="function"><name>GetAgentInteractionCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1af2244ce0ace8b48c186901f0cdb754b7" kind="function"><name>GetItemUseCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1acc9415a1f4f48ecf9e40d668e36a9ab3" kind="function"><name>GetGameReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1ab4facc3e7d2bc2084fd34a44fa4fc020" kind="function"><name>GetDamageCollector</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a2ec8e87a8fa76e60f1d4de1ffbd6352e" kind="function"><name>WriteToJson</name></member>
+    <member refid="class_data_collection_1_1_data_manager_1a20486678d55d96dec7ae6534ba54e390" kind="function"><name>GetInstance</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_data_receiver" kind="class"><name>DataCollection::DataReceiver</name>
+    <member refid="class_data_collection_1_1_data_receiver_1a503624fac6da2c1ca7a187e0410055bb" kind="variable"><name>storage</name></member>
+    <member refid="class_data_collection_1_1_data_receiver_1a2487ef71852519e6c7fa4f4998277066" kind="function"><name>DataReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_receiver_1ab68b37f2b0c5cfe17b28962d06a0a01c" kind="function"><name>~DataReceiver</name></member>
+    <member refid="class_data_collection_1_1_data_receiver_1a79c2270cac1b2011eaea11848f4560e3" kind="function"><name>getStorage</name></member>
+    <member refid="class_data_collection_1_1_data_receiver_1a900bc021974fb995bbeca0376998086b" kind="function"><name>StoreIntoStorage</name></member>
+    <member refid="class_data_collection_1_1_data_receiver_1a357657ded604ecb97b76251146f7ac75" kind="function"><name>IsEmpty</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_game_data" kind="class"><name>DataCollection::GameData</name>
+    <member refid="class_data_collection_1_1_game_data_1a072919d1f4d917a70bcc3e13f8ca6b26" kind="variable"><name>numOfCol</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a8f676ff4e0dcb79f87b8e801d851c72c" kind="variable"><name>collisions</name></member>
+    <member refid="class_data_collection_1_1_game_data_1add22e6719fb7eeca99a3d21b3f474e78" kind="variable"><name>shortestPathAction</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a822e3dd968261e4f7c8ee89c89b4fc80" kind="variable"><name>shortestPathPos</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a357aa024d938818ea8f7c0a1c63256b5" kind="function"><name>GameData</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a9e46832d05fda360a6b6710ac3b61eba" kind="function"><name>~GameData</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a221e231a9214f808a3a5bbceb6ae2971" kind="function"><name>getNumOfCol</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a888cc9358b5eed4f57ef5678029a07db" kind="function"><name>setNumOfCol</name></member>
+    <member refid="class_data_collection_1_1_game_data_1afa60d9d0ca13a954fcc4bb6ecdf724be" kind="function"><name>StoreCollision</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a5ea240f7c4f7349ebb6037b8fea5cf87" kind="function"><name>GetCollisions</name></member>
+    <member refid="class_data_collection_1_1_game_data_1ae2179848b37b0cd7f8326052836ab38e" kind="function"><name>StoreShortestPathAction</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a734873edb87d9b248e7df3cceade91b6" kind="function"><name>GetShortestPathActions</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a6caff671aaa173386c2680d4617ee55d" kind="function"><name>StoreShortestPathPos</name></member>
+    <member refid="class_data_collection_1_1_game_data_1a8ad3cba6ab8ceb9997e4f620330a404c" kind="function"><name>GetShortestPathPos</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_game_receiver" kind="class"><name>DataCollection::GameReceiver</name>
+    <member refid="class_data_collection_1_1_game_receiver_1a0ab4ee90d0ca7e0cd74960c52acbc209" kind="function"><name>GameReceiver</name></member>
+    <member refid="class_data_collection_1_1_game_receiver_1a9629b62a7488e1ecb3d07239974af37d" kind="function"><name>~GameReceiver</name></member>
+    <member refid="class_data_collection_1_1_game_receiver_1a01f95c959f2f46f8f686cc7908300f9b" kind="function"><name>store_GameData</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_item_use_collector" kind="class"><name>DataCollection::ItemUseCollector</name>
+    <member refid="class_data_collection_1_1_item_use_collector_1a3069c51d43116e1fc8354a3ecc35ab1a" kind="variable"><name>usageData</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1acc6b2a9137803237f9ef8e90bcb5ad85" kind="function"><name>ItemUseCollector</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1ad0ce7ee3af9abe9ff9494f3ab44aa4e2" kind="function"><name>GetUsageData</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1aac41089a82b1a29d432c9e1e8206eca3" kind="function"><name>GetNumberOfItems</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1a03ab5a68fb5d19a62aaf88260d479ff1" kind="function"><name>IncrementItemUsage</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1a731fbd0a502d555779d1cbceac76e929" kind="function"><name>GetMostFrequent</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1a2a95b4352487d3a932bd64e332570b8e" kind="function"><name>GetLeastFrequent</name></member>
+    <member refid="class_data_collection_1_1_item_use_collector_1a0b059689d77b5517e091d07267541e80" kind="function"><name>WriteToItemUseFile</name></member>
+  </compound>
+  <compound refid="class_data_collection_1_1_json_builder" kind="class"><name>DataCollection::JsonBuilder</name>
+    <member refid="class_data_collection_1_1_json_builder_1af7bce8a54df5735f43f9a3f3f8b67c33" kind="variable"><name>json</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1afa2c888c1c5c03fd4d0d7cb47b398f4b" kind="variable"><name>json_array</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1aa90ebc2851ca4ea6b1b1ec4aef276536" kind="function"><name>JsonBuilder</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1af4e79798f6515bb4ac8cc1c1f089b63a" kind="function"><name>~JsonBuilder</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a0e819fa0a59da341347c2baec3d51ae2" kind="function"><name>StartArray</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1abb6738e522a269b4da98ed5d5c3aaf9c" kind="function"><name>InputToArray</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a3fa0825357d91f859abfbc599f2e4708" kind="function"><name>AddName</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a387bc11fad195b81bf23b1399c85b306" kind="function"><name>Addagentname</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a127e7365cc2ae65deb3502bada866f80" kind="function"><name>AddPosition</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a585641d0f3f128484b28d44076ccd946" kind="function"><name>AddDamage</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1ae084225d5f985a972b446aa2b130e58c" kind="function"><name>GetJSON</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a0d13097bad8455063c5babf2fd77784c" kind="function"><name>ClearJSON</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a722604bdd6184519466ea3d2175a1480" kind="function"><name>GetJSONArray</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a54cf0c7f84d1b5646613cb011e24d6f9" kind="function"><name>AddInt</name></member>
+    <member refid="class_data_collection_1_1_json_builder_1a5e415f034962d3f5c1682c9396dbbd4b" kind="function"><name>WriteToFile</name></member>
+  </compound>
+  <compound refid="namespace_data_collection" kind="namespace"><name>DataCollection</name>
+  </compound>
+  <compound refid="_agent_data_8hpp" kind="file"><name>AgentData.hpp</name>
+  </compound>
+  <compound refid="_agent_interaction_collector_8hpp" kind="file"><name>AgentInteractionCollector.hpp</name>
+  </compound>
+  <compound refid="_agent_reciever_8hpp" kind="file"><name>AgentReciever.hpp</name>
+  </compound>
+  <compound refid="_damage_collector_8hpp" kind="file"><name>DamageCollector.hpp</name>
+  </compound>
+  <compound refid="_damage_data_8hpp" kind="file"><name>DamageData.hpp</name>
+  </compound>
+  <compound refid="_damage_receiver_8hpp" kind="file"><name>DamageReceiver.hpp</name>
+  </compound>
+  <compound refid="_data_manager_8hpp" kind="file"><name>DataManager.hpp</name>
+  </compound>
+  <compound refid="_data_receiver_8hpp" kind="file"><name>DataReceiver.hpp</name>
+  </compound>
+  <compound refid="_game_data_8hpp" kind="file"><name>GameData.hpp</name>
+  </compound>
+  <compound refid="_game_receiver_8hpp" kind="file"><name>GameReceiver.hpp</name>
+  </compound>
+  <compound refid="_item_use_collector_8hpp" kind="file"><name>ItemUseCollector.hpp</name>
+  </compound>
+  <compound refid="_json_builder_8hpp" kind="file"><name>JsonBuilder.hpp</name>
+  </compound>
+  <compound refid="dir_8adf75fe53ae17187785c216cf2633db" kind="dir"><name>source/DataCollection</name>
+  </compound>
+  <compound refid="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir"><name>source</name>
+  </compound>
+</doxygenindex>

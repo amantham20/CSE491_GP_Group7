@@ -14,7 +14,9 @@
 #include <cassert>
 #include <string>
 #include <unordered_map>
+#include <utility>
 
+#include "../DataCollection/AgentData.hpp"
 #include "Data.hpp"
 #include "Entity.hpp"
 #include "GridPosition.hpp"
@@ -22,58 +24,120 @@
 
 namespace cse491 {
 
-  class AgentBase : public Entity {
-  protected:
-    std::unordered_map<std::string, size_t> action_map;
+enum State  
+{
+  Healthy,
+  Taking_Damage,
+  Dying,
+  Deceased
+};
 
-    int action_result=1;  
+class AgentBase : public Entity {
+protected:
+  std::unordered_map<std::string, size_t> action_map;  
+  int action;             
+  int action_result = 0;  
 
-  public:
-    AgentBase(size_t id, const std::string & name) : Entity(id, name) { }
-    ~AgentBase() = default; // Already virtual from Entity
+  State agent_state = Healthy;  
 
-    // -- World Interactions --
+public:
+  AgentBase(size_t id, const std::string &name) : Entity(id, name) {}
+  ~AgentBase() = default;  // Already virtual from Entity
 
-    virtual bool Initialize() { return true; }
+  // -- World Interactions --
 
-    // -- Entity Overrides --
+  virtual bool Initialize() { return true; }
 
-    bool IsAgent() const override { return true; }
+  // -- Entity Overrides --
 
+  bool IsAgent() const override { return true; }
 
-    // -- Action management --
+  // -- Agent Interaction --
 
-    [[nodiscard]] bool HasAction(const std::string & action_name) const {
-      return action_map.count(action_name);
+  State GetAgentState() { return agent_state; }
+
+  void UpdateAgentState(cse491::AgentBase &agent) {
+    if (agent.HasProperty("Health")) {
+      if (agent.GetProperty<int>("Health") <= agent.GetProperty<int>("Max_Health") &&
+          agent.GetProperty<int>("Health") > 3) {
+        agent.agent_state = Healthy;
+      } else if (agent.GetProperty<int>("Health") <= 3 && agent.GetProperty<int>("Health") > 0) {
+        agent.agent_state = Dying;
+      } else if (agent.GetProperty<int>("Health") <= 0) {
+        agent.agent_state = Deceased;
+      }
     }
-
-    [[nodiscard]] size_t GetActionID(const std::string & action_name) const {
-      auto it = action_map.find(action_name);
-      if (it == action_map.end()) return 0;
-      return it->second;
+    if (agent.HasProperty("Taking_Damage")) {
+      if (agent.GetProperty<bool>("Taking_Damage") == true) {
+        agent.agent_state = Taking_Damage;
+      }
     }
+  }
 
-    virtual AgentBase & AddAction(const std::string & action_name, size_t action_id) {
-      assert(!HasAction(action_name)); // Cannot add existing action name.
-      action_map[action_name] = action_id;
-      return *this;
-    }
+  void TakeDamage(cse491::AgentBase &agent) {
+    agent.SetProperty<int>(
+        "Health", agent.GetProperty<int>("Health") - agent.GetProperty<int>("Taking_Damage"));
+    UpdateAgentState(agent);
+  }
 
-    [[nodiscard]] virtual size_t SelectAction(
-        [[maybe_unused]] const WorldGrid & grid,
-        [[maybe_unused]] const type_options_t & type_options,
-        [[maybe_unused]] const item_set_t & item_set,
-        [[maybe_unused]] const agent_set_t & agent_set
-      )
-    { return 0; }
+  // -- Action management --
 
-    [[nodiscard]] int GetActionResult() const { return action_result; }
+  [[nodiscard]] bool HasAction(const std::string &action_name) const {
+    return action_map.count(action_name);
+  }
 
-    void SetActionResult(int result) { action_result = result; }
+  [[nodiscard]] size_t GetActionID(const std::string &action_name) const {
+    auto it = action_map.find(action_name);
+    if (it == action_map.end()) return 0;
+    return it->second;
+  }
 
-  };
+  void storeActionMap(std::string name) {
+    DataCollection::AgentData data(name);
+    data.StoreAction(action_map);
+  }
 
-} // End of namespace cse491
+  [[nodiscard]] virtual GridPosition GetNextPosition() { return Entity::GetPosition(); }
+
+  virtual AgentBase &AddAction(const std::string &action_name, size_t action_id) {
+    assert(!HasAction(action_name));  // Cannot add existing action name.
+    action_map[action_name] = action_id;
+    return *this;
+  }
+
+  [[nodiscard]] virtual size_t SelectAction([[maybe_unused]] const WorldGrid &grid,
+                                            [[maybe_unused]] const type_options_t &type_options,
+                                            [[maybe_unused]] const item_map_t &item_map,
+                                            [[maybe_unused]] const agent_map_t &agent_map) {
+    return 0;
+  }
+
+  [[nodiscard]] int GetActionResult() const { return action_result; }
+
+  void SetActionResult(int result) { action_result = result; }
+
+  virtual void Notify(const std::string & /*message*/, const std::string & /*msg_type*/ = "none") {}
+
+  std::string GetTypeName_impl() const override { return "cse491::AgentBase"; }
+
+  void Serialize_impl(std::ostream &os) const override {
+    Entity::Serialize_impl(os);
+    SerializeValue(os, action_map);
+    SerializeValue(os, action);
+    SerializeValue(os, action_result);
+    SerializeValue(os, agent_state);
+  }
+
+  void Deserialize_impl(std::istream &is) override {
+    Entity::Deserialize_impl(is);
+    DeserializeValue(is, action_map);
+    DeserializeValue(is, action);
+    DeserializeValue(is, action_result);
+    DeserializeValue(is, agent_state);
+  }
+};
+
+}  // End of namespace cse491
 
 ```
 

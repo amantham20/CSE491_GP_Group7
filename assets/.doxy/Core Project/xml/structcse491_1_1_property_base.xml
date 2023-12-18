@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcse491_1_1_property_base" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>cse491::PropertyBase</compoundname>
+    <basecompoundref refid="classcse491_1_1_core_object" prot="public" virt="non-virtual">CoreObject</basecompoundref>
+    <derivedcompoundref refid="structcse491_1_1_property" prot="public" virt="non-virtual">Property&lt; T &gt;</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a84ef0cd74a52ca2be38035fab4897ded" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ~PropertyBase</definition>
+        <argsstring>()</argsstring>
+        <name>~PropertyBase</name>
+        <qualifiedname>cse491::PropertyBase::~PropertyBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="19" column="11" bodyfile="source/core/Property.hpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a5a5b3ed5eddf709d646ddb0cd3ffa0f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87" kindref="member">PropertyType</ref></type>
+        <definition>virtual PropertyType GetType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetType</name>
+        <qualifiedname>cse491::PropertyBase::GetType</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1ac5208c92bb7f848ee7868c9adc156d2c">GetType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="20" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a4925e350b3e3211f46bac19995b93873" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string GetTypeName</definition>
+        <argsstring>() const =0</argsstring>
+        <name>GetTypeName</name>
+        <qualifiedname>cse491::PropertyBase::GetTypeName</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1ab5815c3ca33f4d06252518ca64218025">GetTypeName</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="21" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a7797ce7c715f383c3538fc93bab9ddf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string ToString</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToString</name>
+        <qualifiedname>cse491::PropertyBase::ToString</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1af53fee5578e13417cfb5db348bad3b49">ToString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="22" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a08cfaa4ebdf80d8d0b7afd354fbe0f9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>char</type>
+        <definition>virtual char ToChar</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToChar</name>
+        <qualifiedname>cse491::PropertyBase::ToChar</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1a46ae8cf09cfdd6dfc50be6b74806578e">ToChar</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="23" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a00543ea4f639596ba455072712183aa6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ToDouble</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToDouble</name>
+        <qualifiedname>cse491::PropertyBase::ToDouble</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1acbfac08049849f998ad13110c9bbbf89">ToDouble</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="24" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1ab590075bcd468aaed3b64fcebffc6924" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int ToInt</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToInt</name>
+        <qualifiedname>cse491::PropertyBase::ToInt</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1a4f8eb4cb52e7d9cf17b10f2af9334d70">ToInt</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="25" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_base_1a0887c36cec7d2564e7a64bb46c659359" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+        <definition>virtual GridPosition ToGridPosition</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ToGridPosition</name>
+        <qualifiedname>cse491::PropertyBase::ToGridPosition</qualifiedname>
+        <reimplementedby refid="structcse491_1_1_property_1a61bc077fd02c1db38813e32e4a2cc95e">ToGridPosition</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="26" column="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_property_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="3">
+        <label>Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_property"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_property_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/Property.hpp" line="18" column="1" bodyfile="source/core/Property.hpp" bodystart="18" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31" prot="protected" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>EndSerialize</name></member>
+      <member refid="structcse491_1_1_property_base_1a5a5b3ed5eddf709d646ddb0cd3ffa0f5" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>GetType</name></member>
+      <member refid="structcse491_1_1_property_base_1a4925e350b3e3211f46bac19995b93873" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>GetTypeName</name></member>
+      <member refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2" prot="protected" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73" prot="protected" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>Serialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::PropertyBase</scope><name>StartSerialize</name></member>
+      <member refid="structcse491_1_1_property_base_1a08cfaa4ebdf80d8d0b7afd354fbe0f9a" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>ToChar</name></member>
+      <member refid="structcse491_1_1_property_base_1a00543ea4f639596ba455072712183aa6" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>ToDouble</name></member>
+      <member refid="structcse491_1_1_property_base_1a0887c36cec7d2564e7a64bb46c659359" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>ToGridPosition</name></member>
+      <member refid="structcse491_1_1_property_base_1ab590075bcd468aaed3b64fcebffc6924" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>ToInt</name></member>
+      <member refid="structcse491_1_1_property_base_1a7797ce7c715f383c3538fc93bab9ddf1" prot="public" virt="pure-virtual"><scope>cse491::PropertyBase</scope><name>ToString</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::PropertyBase</scope><name>~CoreObject</name></member>
+      <member refid="structcse491_1_1_property_base_1a84ef0cd74a52ca2be38035fab4897ded" prot="public" virt="virtual"><scope>cse491::PropertyBase</scope><name>~PropertyBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

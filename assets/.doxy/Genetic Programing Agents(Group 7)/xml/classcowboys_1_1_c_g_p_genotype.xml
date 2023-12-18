@@ -1,0 +1,1133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_c_g_p_genotype" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::CGPGenotype</compoundname>
+    <includes refid="_c_g_p_genotype_8hpp" local="no">CGPGenotype.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_c_g_p_genotype_1a56c9461f93209b3d5163cc376c555db5" prot="protected" static="no" mutable="no">
+        <type><ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref></type>
+        <definition>CGPParameters params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <qualifiedname>cowboys::CGPGenotype::params</qualifiedname>
+        <briefdescription>
+<para>The parameters of the cartesian graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="230" column="19" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_c_g_p_genotype_1a4744ee8d9a3994fcc5a54a27f1037eb2" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;</type>
+        <definition>std::vector&lt;CGPNodeGene&gt; nodes</definition>
+        <argsstring></argsstring>
+        <name>nodes</name>
+        <qualifiedname>cowboys::CGPGenotype::nodes</qualifiedname>
+        <briefdescription>
+<para>The node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="233" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="233" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a9b6072807a7e493f5fb560192cf48a17" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EncodeHeader</definition>
+        <argsstring>() const</argsstring>
+        <name>EncodeHeader</name>
+        <qualifiedname>cowboys::CGPGenotype::EncodeHeader</qualifiedname>
+        <briefdescription>
+<para>Encodes the header into a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The encoded header. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="239" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="239" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a03eeeb1a81eda1c50cf08652a7196cdf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DecodeHeader</definition>
+        <argsstring>(const std::string &amp;header)</argsstring>
+        <name>DecodeHeader</name>
+        <qualifiedname>cowboys::CGPGenotype::DecodeHeader</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>header</declname>
+        </param>
+        <briefdescription>
+<para>Decodes the header of the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="254" column="10" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="254" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a45fe0c26bd145ca1f47a317f9fe52717" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EncodeGenotype</definition>
+        <argsstring>() const</argsstring>
+        <name>EncodeGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::EncodeGenotype</qualifiedname>
+        <briefdescription>
+<para>Encodes the genotype into a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The encoded genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="282" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="282" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1af9465e6fa209b624cceead99bf4c3739" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string EncodeGenotypeRaw</definition>
+        <argsstring>() const</argsstring>
+        <name>EncodeGenotypeRaw</name>
+        <qualifiedname>cowboys::CGPGenotype::EncodeGenotypeRaw</qualifiedname>
+        <briefdescription>
+<para>Encodes the genotype into a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The encoded genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="301" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="301" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a9269785484c18b0da2cabbb85b560f80" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DecodeGenotype</definition>
+        <argsstring>(const std::string &amp;genotype)</argsstring>
+        <name>DecodeGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::DecodeGenotype</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>genotype</declname>
+        </param>
+        <briefdescription>
+<para>Decodes the genotype string and configures the node genes. Node gene vector should be initialized before calling this. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="320" column="10" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="320" bodyend="370"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a5df9f2e75d2f7ce770fcbad8db181ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CGPGenotype</definition>
+        <argsstring>()=default</argsstring>
+        <name>CGPGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::CGPGenotype</qualifiedname>
+        <briefdescription>
+<para>Default constructor for the cartesian graph genotype. Will have 0 functional nodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="374" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1ac574555fb0b7df397ff1ba37472929ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CGPGenotype</definition>
+        <argsstring>(const CGPParameters &amp;parameters)</argsstring>
+        <name>CGPGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::CGPGenotype</qualifiedname>
+        <param>
+          <type>const <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the cartesian graph genotype. Initializes the genotype with the given parameters and leaves everything default (nodes will be unconnected). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters of the cartesian graph. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="378" column="5" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="378" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a5c3d7b74d78fc474c858c5d3ce10b2b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~CGPGenotype</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CGPGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::~CGPGenotype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="381" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a9a1d550ceb8b56cce0ba719a17a9c604" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CGPGenotype</definition>
+        <argsstring>(const CGPGenotype &amp;other)</argsstring>
+        <name>CGPGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::CGPGenotype</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor for the cartesian graph genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other cartesian graph genotype to copy from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="384" column="5" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="384" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a5bde6c649e5cc3ad2746913effc9fe86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; operator=</definition>
+        <argsstring>(const CGPGenotype &amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cowboys::CGPGenotype::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copy assignment operator for the cartesian graph genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other cartesian graph genotype to copy from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This cartesian graph genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="388" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="388" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a0394f31cfaf19e9f00e7fb787b8ec42b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>CGPGenotype</definition>
+        <argsstring>(CGPGenotype &amp;&amp;other) noexcept</argsstring>
+        <name>CGPGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::CGPGenotype</qualifiedname>
+        <param>
+          <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Move constructor for the cartesian graph genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other cartesian graph genotype to move from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="394" column="5" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="394" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a4adaf752b0e7aaebcd11ab06064a4277" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; operator=</definition>
+        <argsstring>(CGPGenotype &amp;&amp;other) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>cowboys::CGPGenotype::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Move assignment operator for the cartesian graph genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other cartesian graph genotype to move from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This cartesian graph genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="401" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="401" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1af9dbed2d1811d07cf56b99852a54f2ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; Configure</definition>
+        <argsstring>(const std::string &amp;encoded_genotype)</argsstring>
+        <name>Configure</name>
+        <qualifiedname>cowboys::CGPGenotype::Configure</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>encoded_genotype</declname>
+        </param>
+        <briefdescription>
+<para>Configures this genotype from an encoded string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>encoded_genotype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The encoded genotype. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="410" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="410" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a3d1aa5f490b8c4913b79c78f6ca59213" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::iterator begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>cowboys::CGPGenotype::begin</qualifiedname>
+        <briefdescription>
+<para>Returns the iterator to the beginning of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The iterator to the beginning of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="435" column="28" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="435" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1ad56e93e790afb1b76e790186640bb9b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::iterator end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>cowboys::CGPGenotype::end</qualifiedname>
+        <briefdescription>
+<para>Returns the iterator to the end of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The iterator to the end of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="439" column="28" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="439" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a9c50d5bf20b767f5c1913b148041b0d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::const_iterator begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>cowboys::CGPGenotype::begin</qualifiedname>
+        <briefdescription>
+<para>Returns the const iterator to the beginning of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The const iterator to the beginning of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="443" column="34" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="443" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1abf6dd69142b486bbcc9456cc6e713d5e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::const_iterator end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>cowboys::CGPGenotype::end</qualifiedname>
+        <briefdescription>
+<para>Returns the const iterator to the end of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The const iterator to the end of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="447" column="34" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="447" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1abd09b1758395af0e0f89f8eec79d287e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::const_iterator cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <qualifiedname>cowboys::CGPGenotype::cbegin</qualifiedname>
+        <briefdescription>
+<para>Returns the const iterator to the beginning of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The const iterator to the beginning of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="451" column="34" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="451" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a839c84fbbed3d6f8fea3acdcd47ef33f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &gt;::const_iterator</type>
+        <definition>std::vector&lt; CGPNodeGene &gt;::const_iterator cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <qualifiedname>cowboys::CGPGenotype::cend</qualifiedname>
+        <briefdescription>
+<para>Returns the const iterator to the end of the node configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The const iterator to the end of the node configurations. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="455" column="34" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="455" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a65ca684573a0cd2c2e456f68d908ef9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumPossibleConnections</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumPossibleConnections</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumPossibleConnections</qualifiedname>
+        <briefdescription>
+<para>Returns the number of possible connections in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of possible connections in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="459" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="459" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a0d7a363fa9936c7a0547716f5327fd12" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumConnections</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumConnections</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumConnections</qualifiedname>
+        <briefdescription>
+<para>Returns the number of connected connections in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of connected connections in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="469" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="469" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1ac6e717d6ed85f7619841c7dcf033a9bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetParameters</definition>
+        <argsstring>(const CGPParameters &amp;params)</argsstring>
+        <name>SetParameters</name>
+        <qualifiedname>cowboys::CGPGenotype::SetParameters</qualifiedname>
+        <param>
+          <type>const <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Set the parameters of the cartesian graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The parameters of the cartesian graph. Basically a 5-tuple. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="482" column="10" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="482" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a8d8179a4a0703602a5d7dbb6e92eaf69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumInputs</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumInputs</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumInputs</qualifiedname>
+        <briefdescription>
+<para>Returns the number of inputs to the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of inputs to the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="486" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="486" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a604654b453ec291a503d62a0beb849d3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumOutputs</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumOutputs</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumOutputs</qualifiedname>
+        <briefdescription>
+<para>Returns the number of outputs from the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of outputs from the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="490" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="490" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1afdf8eb85585a798ad0e936bde884d87b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumLayers</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumLayers</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumLayers</qualifiedname>
+        <briefdescription>
+<para>Returns the number of middle layers in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of middle layers in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="494" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="494" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a0b3a441e91f5f16b4a118d49dddcd9b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumNodesPerLayer</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumNodesPerLayer</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumNodesPerLayer</qualifiedname>
+        <briefdescription>
+<para>Returns the number of nodes per middle layer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of nodes per middle layer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="498" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="498" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a11a75865ba04a8164e1d90d62959b00e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetLayersBack</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLayersBack</name>
+        <qualifiedname>cowboys::CGPGenotype::GetLayersBack</qualifiedname>
+        <briefdescription>
+<para>Returns the number of layers backward that a node can connect to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of layers backward that a node can connect to. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="502" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="502" bodyend="502"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a8806fe37f66cd0f9d45e2ca424aa5d62" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNumFunctionalNodes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNumFunctionalNodes</name>
+        <qualifiedname>cowboys::CGPGenotype::GetNumFunctionalNodes</qualifiedname>
+        <briefdescription>
+<para>Returns the number of functional (non-input) nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of functional (non-input) nodes in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="506" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="506" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a1d01b170dca42b9dae0493289eafe34a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HasInputConnections</definition>
+        <argsstring>() const</argsstring>
+        <name>HasInputConnections</name>
+        <qualifiedname>cowboys::CGPGenotype::HasInputConnections</qualifiedname>
+        <briefdescription>
+<para>Identify if the genome has any non-zero input connections in it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bool value to indicate if any input connections non-zero. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="510" column="10" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="510" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a18df903b704d1afaaf45d7fdbd47d81e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitGenotype</definition>
+        <argsstring>()</argsstring>
+        <name>InitGenotype</name>
+        <qualifiedname>cowboys::CGPGenotype::InitGenotype</qualifiedname>
+        <briefdescription>
+<para>Initializes an empty genotype with the cartesian graph parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="519" column="10" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="519" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a1024751577eb89f4b010ce39069d8a47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Export</definition>
+        <argsstring>() const</argsstring>
+        <name>Export</name>
+        <qualifiedname>cowboys::CGPGenotype::Export</qualifiedname>
+        <briefdescription>
+<para>Exports this genotype into a string representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of this genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="546" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="546" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a161263fcb0471ad6c5113cf83d74cde9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ExportRaw</definition>
+        <argsstring>() const</argsstring>
+        <name>ExportRaw</name>
+        <qualifiedname>cowboys::CGPGenotype::ExportRaw</qualifiedname>
+        <briefdescription>
+<para>Exports this genotype into a string representation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The string representation of this genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="554" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="554" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1aba8c829d7540530029c818fa6612db1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; Mutate</definition>
+        <argsstring>(double mutation_rate, GPAgentBase &amp;agent, std::function&lt; void(CGPNodeGene &amp;)&gt; mutation)</argsstring>
+        <name>Mutate</name>
+        <qualifiedname>cowboys::CGPGenotype::Mutate</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(<ref refid="structcowboys_1_1_c_g_p_node_gene" kindref="compound">CGPNodeGene</ref> &amp;)&gt;</type>
+          <declname>mutation</declname>
+        </param>
+        <briefdescription>
+<para>Mutates the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value between 0 and 1 representing the probability of mutating a value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to use for mutating the output. The function will receive the node gene as a parameter. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="565" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="565" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a8ef3ada80681bad5a75f3368585ec109" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; MutateConnections</definition>
+        <argsstring>(double mutation_rate, GPAgentBase &amp;agent)</argsstring>
+        <name>MutateConnections</name>
+        <qualifiedname>cowboys::CGPGenotype::MutateConnections</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Mutates the input connections of the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The probability of mutating a connection. For a given connection, if it is chosen to be mutated, there is a 50% chance it will stay the same. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent to use for random number generation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="578" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="578" bodyend="586"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a8ccc2678ecaf5ce044fa731f6e870c21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; MutateFunctions</definition>
+        <argsstring>(double mutation_rate, size_t num_functions, GPAgentBase &amp;agent)</argsstring>
+        <name>MutateFunctions</name>
+        <qualifiedname>cowboys::CGPGenotype::MutateFunctions</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_functions</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Mutates the genotype by changing the function of each node with a given probability between 0 and 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The probability of changing the function of a node. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_functions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of functions available to the nodes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="592" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="592" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a0aac9acb63860dce69c10a25fda8bf65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; MutateOutputs</definition>
+        <argsstring>(double mutation_rate, double mean, double std, GPAgentBase &amp;agent, bool additive=true)</argsstring>
+        <name>MutateOutputs</name>
+        <qualifiedname>cowboys::CGPGenotype::MutateOutputs</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mean</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>std</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>additive</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Mutates the genotype, changing the default output of nodes with probability between 0 and 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value between 0 and 1 representing the probability of mutating each value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum value to generate for mutation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum value to generate for mutation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="603" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="603" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1ace626429909480f220a88ea4978db4e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; MutateHeader</definition>
+        <argsstring>(double mutation_rate, GPAgentBase &amp;agent)</argsstring>
+        <name>MutateHeader</name>
+        <qualifiedname>cowboys::CGPGenotype::MutateHeader</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Mutates the header of the genotype. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value between 0 and 1 representing the probability of mutating each value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent to use for random number generation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="625" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="625" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a556c8153ba820c50ea17d09d09c651b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+        <definition>CGPGenotype &amp; MutateDefault</definition>
+        <argsstring>(double mutation_rate, GPAgentBase &amp;agent, size_t num_functions=FUNCTION_SET.size())</argsstring>
+        <name>MutateDefault</name>
+        <qualifiedname>cowboys::CGPGenotype::MutateDefault</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>mutation_rate</declname>
+        </param>
+        <param>
+          <type><ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">GPAgentBase</ref> &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>num_functions</declname>
+          <defval>FUNCTION_SET.size()</defval>
+        </param>
+        <briefdescription>
+<para>Performs a mutation on the genotype with default parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutation_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value between 0 and 1 representing the probability of mutating each value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent to use for random number generation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_functions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of functions available to the nodes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This genotype. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="741" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="741" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_c_g_p_genotype_1a8fc4ce597d3085ffd417f4f04759e722" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const CGPGenotype &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>cowboys::CGPGenotype::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Check if two CGPGenotypes are equal. <ref refid="structcowboys_1_1_c_g_p_parameters" kindref="compound">CGPParameters</ref> and CGPNodeGenes should be equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> to compare to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the two CGPGenotypes are equal, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="752" column="17" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="752" bodyend="762"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="classcowboys_1_1_c_g_p_genotype_1ab3447e6218a2aca50a5760c9db89a264" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const CGPGenotype &amp;genotype)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>cowboys::CGPGenotype::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcowboys_1_1_c_g_p_genotype" kindref="compound">CGPGenotype</ref> &amp;</type>
+          <declname>genotype</declname>
+        </param>
+        <briefdescription>
+<para>Write the genotype representation to an output stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>genotype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The genotype to write. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The output stream. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/CGPGenotype.hpp" line="768" column="12" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="768" bodyend="771"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Holds all the information that uniquely defines a cartesian graph. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CGPGenotype</label>
+        <link refid="classcowboys_1_1_c_g_p_genotype"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>params</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CGPParameters</label>
+        <link refid="structcowboys_1_1_c_g_p_parameters"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/GP/CGPGenotype.hpp" line="227" column="3" bodyfile="source/Agents/GP/CGPGenotype.hpp" bodystart="227" bodyend="772"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a3d1aa5f490b8c4913b79c78f6ca59213" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>begin</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a9c50d5bf20b767f5c1913b148041b0d3" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>begin</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1abd09b1758395af0e0f89f8eec79d287e" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>cbegin</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a839c84fbbed3d6f8fea3acdcd47ef33f" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>cend</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a5df9f2e75d2f7ce770fcbad8db181ca0" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>CGPGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1ac574555fb0b7df397ff1ba37472929ef" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>CGPGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a9a1d550ceb8b56cce0ba719a17a9c604" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>CGPGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a0394f31cfaf19e9f00e7fb787b8ec42b" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>CGPGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1af9dbed2d1811d07cf56b99852a54f2ce" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>Configure</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a9269785484c18b0da2cabbb85b560f80" prot="private" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>DecodeGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a03eeeb1a81eda1c50cf08652a7196cdf" prot="private" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>DecodeHeader</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a45fe0c26bd145ca1f47a317f9fe52717" prot="private" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>EncodeGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1af9465e6fa209b624cceead99bf4c3739" prot="private" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>EncodeGenotypeRaw</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a9b6072807a7e493f5fb560192cf48a17" prot="private" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>EncodeHeader</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1ad56e93e790afb1b76e790186640bb9b6" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>end</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1abf6dd69142b486bbcc9456cc6e713d5e" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>end</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a1024751577eb89f4b010ce39069d8a47" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>Export</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a161263fcb0471ad6c5113cf83d74cde9" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>ExportRaw</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a11a75865ba04a8164e1d90d62959b00e" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetLayersBack</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a0d7a363fa9936c7a0547716f5327fd12" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumConnections</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a8806fe37f66cd0f9d45e2ca424aa5d62" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumFunctionalNodes</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a8d8179a4a0703602a5d7dbb6e92eaf69" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumInputs</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1afdf8eb85585a798ad0e936bde884d87b" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumLayers</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a0b3a441e91f5f16b4a118d49dddcd9b3" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumNodesPerLayer</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a604654b453ec291a503d62a0beb849d3" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumOutputs</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a65ca684573a0cd2c2e456f68d908ef9e" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>GetNumPossibleConnections</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a1d01b170dca42b9dae0493289eafe34a" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>HasInputConnections</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a18df903b704d1afaaf45d7fdbd47d81e" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>InitGenotype</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1aba8c829d7540530029c818fa6612db1a" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>Mutate</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a8ef3ada80681bad5a75f3368585ec109" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>MutateConnections</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a556c8153ba820c50ea17d09d09c651b2" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>MutateDefault</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a8ccc2678ecaf5ce044fa731f6e870c21" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>MutateFunctions</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1ace626429909480f220a88ea4978db4e0" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>MutateHeader</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a0aac9acb63860dce69c10a25fda8bf65" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>MutateOutputs</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a4744ee8d9a3994fcc5a54a27f1037eb2" prot="protected" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>nodes</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1ab3447e6218a2aca50a5760c9db89a264" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a5bde6c649e5cc3ad2746913effc9fe86" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>operator=</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a4adaf752b0e7aaebcd11ab06064a4277" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>operator=</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a8fc4ce597d3085ffd417f4f04759e722" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>operator==</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a56c9461f93209b3d5163cc376c555db5" prot="protected" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>params</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1ac6e717d6ed85f7619841c7dcf033a9bf" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>SetParameters</name></member>
+      <member refid="classcowboys_1_1_c_g_p_genotype_1a5c3d7b74d78fc474c858c5d3ce10b2b8" prot="public" virt="non-virtual"><scope>cowboys::CGPGenotype</scope><name>~CGPGenotype</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classworldlang_1_1_program_executor" kind="class" language="C++" prot="public">
+    <compoundname>worldlang::ProgramExecutor</compoundname>
+    <includes refid="_program_executor_8hpp" local="no">ProgramExecutor.hpp</includes>
+    <innerclass refid="structworldlang_1_1_program_executor_1_1_identifier" prot="public">worldlang::ProgramExecutor::Identifier</innerclass>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classworldlang_1_1_program_executor_1ae645e8a22265e5c007a2dc167e3a704e" prot="public" static="no">
+        <type>std::function&lt; void(<ref refid="classworldlang_1_1_program_executor" kindref="compound">ProgramExecutor</ref> &amp;)&gt;</type>
+        <definition>using Callable =  std::function&lt;void(ProgramExecutor&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Callable</name>
+        <qualifiedname>worldlang::ProgramExecutor::Callable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is the signature interpreter functions should have.</para>
+<para>To read the arguments passed to the function, use <ref refid="classworldlang_1_1_program_executor_1acbbf6c040ebd24ce889076b235d4d0ea" kindref="member">ProgramExecutor::popArgs()</ref>. To return values from a function, use <ref refid="classworldlang_1_1_program_executor_1a8d734de7b0101e0635e6c99dd3555aca" kindref="member">ProgramExecutor::pushStack()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="44" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" prot="public" static="no">
+        <type>std::variant&lt; size_t, double, std::string, <ref refid="classworldlang_1_1_program_executor_1ae645e8a22265e5c007a2dc167e3a704e" kindref="member">Callable</ref>, <ref refid="structworldlang_1_1_program_executor_1_1_identifier" kindref="compound">Identifier</ref> &gt;</type>
+        <definition>using Value =  std::variant &lt; size_t, double, std::string, Callable, Identifier &gt;</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>worldlang::ProgramExecutor::Value</qualifiedname>
+        <briefdescription>
+<para>Variant type containing all possible values types for variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="49" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1a73d41ef28862e4689b3a499b149f7dd6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::vector&lt; <ref refid="structworldlang_1_1_unit" kindref="compound">Unit</ref> &gt; &gt;</type>
+        <definition>std::map&lt;std::string, std::vector&lt;Unit&gt; &gt; scripts</definition>
+        <argsstring></argsstring>
+        <name>scripts</name>
+        <qualifiedname>worldlang::ProgramExecutor::scripts</qualifiedname>
+        <briefdescription>
+<para>A map of loaded files to parsed programs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="54" column="10" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1a1c30ff6593a14fe14ffa51fb6771493d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structworldlang_1_1_unit" kindref="compound">Unit</ref> &gt; *</type>
+        <definition>std::vector&lt;Unit&gt;* code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <qualifiedname>worldlang::ProgramExecutor::code</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Executable code units (set by run(), etc.) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="57" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1a3f42f10d93f6edb91d7d3f6edad25921" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>worldlang::ProgramExecutor::index</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Program counter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="60" column="8" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1ad5cffa976b44f17120823d42ffe0f19d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &gt;</type>
+        <definition>std::map&lt; std::string, Value &gt; variables</definition>
+        <argsstring></argsstring>
+        <name>variables</name>
+        <qualifiedname>worldlang::ProgramExecutor::variables</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="63" column="11" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1a55112a855ea338623dc394735483a759" prot="private" static="no" mutable="no">
+        <type>std::stack&lt; <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &gt;</type>
+        <definition>std::stack&lt; Value &gt; stack</definition>
+        <argsstring></argsstring>
+        <name>stack</name>
+        <qualifiedname>worldlang::ProgramExecutor::stack</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Execution arguments stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="66" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1aef86874cdb5f525cf669521407fb913d" prot="private" static="no" mutable="no">
+        <type>std::stack&lt; std::vector&lt; <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &gt; &gt;</type>
+        <definition>std::stack&lt; std::vector&lt; Value &gt; &gt; call_stack</definition>
+        <argsstring></argsstring>
+        <name>call_stack</name>
+        <qualifiedname>worldlang::ProgramExecutor::call_stack</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Call/scope stack. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="69" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworldlang_1_1_program_executor_1aa623ecc9262a4cb482b06564eafa7616" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string error_message</definition>
+        <argsstring></argsstring>
+        <name>error_message</name>
+        <qualifiedname>worldlang::ProgramExecutor::error_message</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="72" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1add52e0e444236cca5cac0021359f3992" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProgramExecutor</definition>
+        <argsstring>()</argsstring>
+        <name>ProgramExecutor</name>
+        <qualifiedname>worldlang::ProgramExecutor::ProgramExecutor</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="77" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="77" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a268798bc8cf3f4d82f90aa06bd3e8bc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProgramExecutor</definition>
+        <argsstring>(cse491::WorldBase &amp;world)</argsstring>
+        <name>ProgramExecutor</name>
+        <qualifiedname>worldlang::ProgramExecutor::ProgramExecutor</qualifiedname>
+        <param>
+          <type>cse491::WorldBase &amp;</type>
+          <declname>world</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with function registration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="135" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="135" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a60a7386080a54da19bbad12bb76e4be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ~ProgramExecutor</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ProgramExecutor</name>
+        <qualifiedname>worldlang::ProgramExecutor::~ProgramExecutor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="413" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a25584f00a9e54b6e35e00029b4dbcd5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void skipBlock</definition>
+        <argsstring>(int nest=0)</argsstring>
+        <name>skipBlock</name>
+        <qualifiedname>worldlang::ProgramExecutor::skipBlock</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nest</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the interpreter&apos;s program counter to the end of the current block.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional starting nest value (defaults to zero) Begins as if it was nested within this many <computeroutput>start_block</computeroutput> operations. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="419" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="419" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1af5bfa73a26e4fb2628a20497ec6517b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void registerFunction</definition>
+        <argsstring>(std::string name, Callable callable)</argsstring>
+        <name>registerFunction</name>
+        <qualifiedname>worldlang::ProgramExecutor::registerFunction</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classworldlang_1_1_program_executor_1ae645e8a22265e5c007a2dc167e3a704e" kindref="member">Callable</ref></type>
+          <declname>callable</declname>
+        </param>
+        <briefdescription>
+<para>Registers a function on this <ref refid="classworldlang_1_1_program_executor" kindref="compound">ProgramExecutor</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This allows the given function to be called from the interpreter via a function called <computeroutput>name</computeroutput>.</para>
+<para><simplesect kind="note"><para>Names can be overridden by the user&apos;s program if they overwrite <computeroutput>name</computeroutput>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function accepting a <ref refid="classworldlang_1_1_program_executor" kindref="compound">ProgramExecutor</ref>&amp; with no return. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="439" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="439" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a6643fab16c774ce3b14d267a69322f10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref></type>
+        <definition>Value popStack</definition>
+        <argsstring>()</argsstring>
+        <name>popStack</name>
+        <qualifiedname>worldlang::ProgramExecutor::popStack</qualifiedname>
+        <briefdescription>
+<para>Retrieves a single value from the interpreter value stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Value object from stack. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="446" column="7" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="446" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1acbbf6c040ebd24ce889076b235d4d0ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &gt;</type>
+        <definition>std::vector&lt; Value &gt; popArgs</definition>
+        <argsstring>()</argsstring>
+        <name>popArgs</name>
+        <qualifiedname>worldlang::ProgramExecutor::popArgs</qualifiedname>
+        <briefdescription>
+<para>Returns all arguments passed to an interpreter function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function retrieves the arguments of the function in the same order as in the source code. The end of the argument list is determined by an internal special <ref refid="structworldlang_1_1_program_executor_1_1_identifier" kindref="compound">Identifier</ref></para>
+<para>This function should be called once for any Callable to get the arguments passed.</para>
+<para><simplesect kind="return"><para>Vector of Values provided to an interpreter function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="461" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="461" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a8d734de7b0101e0635e6c99dd3555aca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void pushStack</definition>
+        <argsstring>(Value value)</argsstring>
+        <name>pushStack</name>
+        <qualifiedname>worldlang::ProgramExecutor::pushStack</qualifiedname>
+        <param>
+          <type><ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Pushes a single Value onto the interpreter value stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to push to interpreter stack </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="475" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="475" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1ac8bf9b97cf5d6584f1bfecf88694380b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool has</definition>
+        <argsstring>(const Value &amp;a)</argsstring>
+        <name>has</name>
+        <qualifiedname>worldlang::ProgramExecutor::has</qualifiedname>
+        <param>
+          <type>const <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Check whether or not this Value contains the expected type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the type of the given Value. If the type does not match and cannot be obtained, sets the interpreter error message and returns false. Otherwise, returns true.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to validate type of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if type is usable </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="488" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="488" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1ae652d5667d499861791da1f7a091c7f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T as</definition>
+        <argsstring>(const Value &amp;a)</argsstring>
+        <name>as</name>
+        <qualifiedname>worldlang::ProgramExecutor::as</qualifiedname>
+        <param>
+          <type>const <ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Get a value of type T from provided Value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the value of type T from given Value whether it contains a value or an identifier storing that value.</para>
+<para>If the value cannot be accessed, sets the error message and returns a default-constructed value.</para>
+<para>For example, if your program consists of <computeroutput>a=5</computeroutput> and <computeroutput>b=a</computeroutput> then as&lt;double&gt; will handle both 5 and a correctly as arguments std::get&lt;double&gt; is longer and only handles 5.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to retrieve value from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of type T </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="517" column="3" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="517" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a30a79b2765811c4c4325eb20b8499101" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T var</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>var</name>
+        <qualifiedname>worldlang::ProgramExecutor::var</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of a variable as type T. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if it is not defined </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::bad_variant_access</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if variable is wrong type </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable name to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value of variable as type T </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="538" column="3" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="538" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a47adeb3cc2ea5238c0a7d5d537bcb6de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void setVariable</definition>
+        <argsstring>(const std::string &amp;name, Value value)</argsstring>
+        <name>setVariable</name>
+        <qualifiedname>worldlang::ProgramExecutor::setVariable</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" kindref="member">Value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="543" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="543" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a4306858b395c3042f95729db8f5e8bd1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void error</definition>
+        <argsstring>(const std::string &amp;error)</argsstring>
+        <name>error</name>
+        <qualifiedname>worldlang::ProgramExecutor::error</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Sets the error message and end interpreter execution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the stored error message for the interpreter. Only the first error set is saved.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="553" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="553" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a71f995a0569463bcefee0aba16444fc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string getErrorMessage</definition>
+        <argsstring>()</argsstring>
+        <name>getErrorMessage</name>
+        <qualifiedname>worldlang::ProgramExecutor::getErrorMessage</qualifiedname>
+        <briefdescription>
+<para>Gets the error message stored. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the error message from the interpreter. If no error was set, this will be the empty string.</para>
+<para><simplesect kind="return"><para>Error message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="565" column="13" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="565" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a80cd222451a459baca2a5a0b22e90e73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool runFile</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>runFile</name>
+        <qualifiedname>worldlang::ProgramExecutor::runFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Executes a program from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File to load </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if program ran successfully, false if an error occured </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="573" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="573" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a54a2221c50643f5dd8ab45954497d34b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool run</definition>
+        <argsstring>(const std::string &amp;program)</argsstring>
+        <name>run</name>
+        <qualifiedname>worldlang::ProgramExecutor::run</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>program</declname>
+        </param>
+        <briefdescription>
+<para>Executes a program from a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes a program from a string. This is the main interpreter function. See <ref refid="_language_8hpp_source" kindref="compound">Language.hpp</ref> for most interesting syntax and parsing details.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>program</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Program to run. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if program ran successfully, false if an error occured </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="600" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="600" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="classworldlang_1_1_program_executor_1a149ad6701e3e2414cb566bb414029841" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>worldlang::ProgramExecutor::run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/ProgramExecutor.hpp" line="610" column="6" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="610" bodyend="910"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class that manages program execution. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Handles run-time state of program and contains the interpreter function.</para>
+<para>Native C++ functions can be registered on this object to extend the functionality. </para>
+    </detaileddescription>
+    <location file="source/Worlds/ProgramExecutor.hpp" line="37" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="37" bodyend="911"/>
+    <listofallmembers>
+      <member refid="classworldlang_1_1_program_executor_1ae652d5667d499861791da1f7a091c7f4" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>as</name></member>
+      <member refid="classworldlang_1_1_program_executor_1aef86874cdb5f525cf669521407fb913d" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>call_stack</name></member>
+      <member refid="classworldlang_1_1_program_executor_1ae645e8a22265e5c007a2dc167e3a704e" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>Callable</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a1c30ff6593a14fe14ffa51fb6771493d" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>code</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a4306858b395c3042f95729db8f5e8bd1" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>error</name></member>
+      <member refid="classworldlang_1_1_program_executor_1aa623ecc9262a4cb482b06564eafa7616" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>error_message</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a71f995a0569463bcefee0aba16444fc6" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>getErrorMessage</name></member>
+      <member refid="classworldlang_1_1_program_executor_1ac8bf9b97cf5d6584f1bfecf88694380b" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>has</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a3f42f10d93f6edb91d7d3f6edad25921" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>index</name></member>
+      <member refid="classworldlang_1_1_program_executor_1acbbf6c040ebd24ce889076b235d4d0ea" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>popArgs</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a6643fab16c774ce3b14d267a69322f10" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>popStack</name></member>
+      <member refid="classworldlang_1_1_program_executor_1add52e0e444236cca5cac0021359f3992" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>ProgramExecutor</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a268798bc8cf3f4d82f90aa06bd3e8bc1" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>ProgramExecutor</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a8d734de7b0101e0635e6c99dd3555aca" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>pushStack</name></member>
+      <member refid="classworldlang_1_1_program_executor_1af5bfa73a26e4fb2628a20497ec6517b9" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>registerFunction</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a54a2221c50643f5dd8ab45954497d34b" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>run</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a149ad6701e3e2414cb566bb414029841" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>run</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a80cd222451a459baca2a5a0b22e90e73" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>runFile</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a73d41ef28862e4689b3a499b149f7dd6" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>scripts</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a47adeb3cc2ea5238c0a7d5d537bcb6de" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>setVariable</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a25584f00a9e54b6e35e00029b4dbcd5c" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>skipBlock</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a55112a855ea338623dc394735483a759" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>stack</name></member>
+      <member refid="classworldlang_1_1_program_executor_1ac32ff44ab9ed0321b113ec0cbe043d92" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>Value</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a30a79b2765811c4c4325eb20b8499101" prot="public" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>var</name></member>
+      <member refid="classworldlang_1_1_program_executor_1ad5cffa976b44f17120823d42ffe0f19d" prot="private" virt="non-virtual"><scope>worldlang::ProgramExecutor</scope><name>variables</name></member>
+      <member refid="classworldlang_1_1_program_executor_1a60a7386080a54da19bbad12bb76e4be8" prot="public" virt="virtual"><scope>worldlang::ProgramExecutor</scope><name>~ProgramExecutor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

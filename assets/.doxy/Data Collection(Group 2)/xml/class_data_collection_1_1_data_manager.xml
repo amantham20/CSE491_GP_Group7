@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_data_manager" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::DataManager</compoundname>
+    <includes refid="_data_manager_8hpp" local="no">DataManager.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_data_manager_1a5d8fb4669afd1d48dba3829109f8f95d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_collection_1_1_agent_receiver" kindref="compound">AgentReceiver</ref></type>
+        <definition>AgentReceiver agentReceiver</definition>
+        <argsstring></argsstring>
+        <name>agentReceiver</name>
+        <qualifiedname>DataCollection::DataManager::agentReceiver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="19" column="23" bodyfile="source/DataCollection/DataManager.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_data_manager_1a2b2fdbd5e0e9f7abb360802f7d591999" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_collection_1_1_game_receiver" kindref="compound">GameReceiver</ref></type>
+        <definition>GameReceiver gameReceiver</definition>
+        <argsstring></argsstring>
+        <name>gameReceiver</name>
+        <qualifiedname>DataCollection::DataManager::gameReceiver</qualifiedname>
+        <briefdescription>
+<para>Receiver for agent based data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="20" column="22" bodyfile="source/DataCollection/DataManager.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_data_manager_1ab23306e337b14830da430229cb59f4ab" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_collection_1_1_damage_collector" kindref="compound">DamageCollector</ref></type>
+        <definition>DamageCollector damageCollector</definition>
+        <argsstring></argsstring>
+        <name>damageCollector</name>
+        <qualifiedname>DataCollection::DataManager::damageCollector</qualifiedname>
+        <briefdescription>
+<para>Receiver for game based data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="21" column="25" bodyfile="source/DataCollection/DataManager.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_data_manager_1a27c22a9b1d8d538e2e442f84aada8ead" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_collection_1_1_item_use_collector" kindref="compound">ItemUseCollector</ref></type>
+        <definition>ItemUseCollector itemUseCollector</definition>
+        <argsstring></argsstring>
+        <name>itemUseCollector</name>
+        <qualifiedname>DataCollection::DataManager::itemUseCollector</qualifiedname>
+        <briefdescription>
+<para>Collector for item damage data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="22" column="26" bodyfile="source/DataCollection/DataManager.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_data_manager_1a2669ce5b9287c78d8c86b85a7da0dc38" prot="private" static="no" mutable="no">
+        <type><ref refid="class_data_collection_1_1_agent_interaction_collector" kindref="compound">AgentInteractionCollector</ref></type>
+        <definition>AgentInteractionCollector agentInteractionCollector</definition>
+        <argsstring></argsstring>
+        <name>agentInteractionCollector</name>
+        <qualifiedname>DataCollection::DataManager::agentInteractionCollector</qualifiedname>
+        <briefdescription>
+<para>Collector for item usage data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="23" column="35" bodyfile="source/DataCollection/DataManager.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1ada57704a51118f40bf404050c829931d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DataManager</definition>
+        <argsstring>()</argsstring>
+        <name>DataManager</name>
+        <qualifiedname>DataCollection::DataManager::DataManager</qualifiedname>
+        <briefdescription>
+<para>Collector for agent interaction data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="24" column="9" bodyfile="source/DataCollection/DataManager.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a8f600cb9d58d97caf910405cf913a8b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DataManager</definition>
+        <argsstring>(const DataManager &amp;)=delete</argsstring>
+        <name>DataManager</name>
+        <qualifiedname>DataCollection::DataManager::DataManager</qualifiedname>
+        <param>
+          <type>const <ref refid="class_data_collection_1_1_data_manager" kindref="compound">DataManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="26" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a136f3f24f44fbd2e420e9f8e725bccfa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_data_manager" kindref="compound">DataManager</ref> &amp;</type>
+        <definition>DataManager &amp; operator=</definition>
+        <argsstring>(const DataManager &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>DataCollection::DataManager::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_data_collection_1_1_data_manager" kindref="compound">DataManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="27" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a454610a17213ae3019c65602e7aae84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~DataManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DataManager</name>
+        <qualifiedname>DataCollection::DataManager::~DataManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="32" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a3cbe9d36093aebfade5351b25a4da306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_agent_receiver" kindref="compound">AgentReceiver</ref> &amp;</type>
+        <definition>AgentReceiver &amp; GetAgentReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>GetAgentReceiver</name>
+        <qualifiedname>DataCollection::DataManager::GetAgentReceiver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the agent receiver <simplesect kind="return"><para>Reference to the agent receiver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="43" column="24" bodyfile="source/DataCollection/DataManager.hpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a5bc1d985fc38b6f6c472f5b81e64b425" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_agent_interaction_collector" kindref="compound">AgentInteractionCollector</ref> &amp;</type>
+        <definition>AgentInteractionCollector &amp; GetAgentInteractionCollector</definition>
+        <argsstring>()</argsstring>
+        <name>GetAgentInteractionCollector</name>
+        <qualifiedname>DataCollection::DataManager::GetAgentInteractionCollector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the agent interaction collector <simplesect kind="return"><para>Reference to the agent interaction collector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="51" column="35" bodyfile="source/DataCollection/DataManager.hpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1af2244ce0ace8b48c186901f0cdb754b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_item_use_collector" kindref="compound">ItemUseCollector</ref> &amp;</type>
+        <definition>ItemUseCollector &amp; GetItemUseCollector</definition>
+        <argsstring>()</argsstring>
+        <name>GetItemUseCollector</name>
+        <qualifiedname>DataCollection::DataManager::GetItemUseCollector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the item use collector <simplesect kind="return"><para>Reference to the item use collector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="59" column="27" bodyfile="source/DataCollection/DataManager.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1acc9415a1f4f48ecf9e40d668e36a9ab3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_data_collection_1_1_game_receiver" kindref="compound">GameReceiver</ref> &amp;</type>
+        <definition>const GameReceiver &amp; GetGameReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>GetGameReceiver</name>
+        <qualifiedname>DataCollection::DataManager::GetGameReceiver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the game receiver <simplesect kind="return"><para>Const reference to the game receiver </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="67" column="28" bodyfile="source/DataCollection/DataManager.hpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1ab4facc3e7d2bc2084fd34a44fa4fc020" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_data_collection_1_1_damage_collector" kindref="compound">DamageCollector</ref> &amp;</type>
+        <definition>const DamageCollector &amp; GetDamageCollector</definition>
+        <argsstring>()</argsstring>
+        <name>GetDamageCollector</name>
+        <qualifiedname>DataCollection::DataManager::GetDamageCollector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the damage collector <simplesect kind="return"><para>Const reference to the damage collector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="75" column="31" bodyfile="source/DataCollection/DataManager.hpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a2ec8e87a8fa76e60f1d4de1ffbd6352e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToJson</definition>
+        <argsstring>()</argsstring>
+        <name>WriteToJson</name>
+        <qualifiedname>DataCollection::DataManager::WriteToJson</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="79" column="14" bodyfile="source/DataCollection/DataManager.hpp" bodystart="79" bodyend="91"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_data_collection_1_1_data_manager_1a20486678d55d96dec7ae6534ba54e390" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_data_collection_1_1_data_manager" kindref="compound">DataManager</ref> &amp;</type>
+        <definition>static DataManager &amp; GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>DataCollection::DataManager::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/DataManager.hpp" line="34" column="29" bodyfile="source/DataCollection/DataManager.hpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a data control system to hold all related receivers and collectors. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>World should report back relevant data here and it will be stored appropriately. Also manages graphing utilities. </para>
+    </detaileddescription>
+    <location file="source/DataCollection/DataManager.hpp" line="17" column="5" bodyfile="source/DataCollection/DataManager.hpp" bodystart="17" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_data_manager_1a2669ce5b9287c78d8c86b85a7da0dc38" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>agentInteractionCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a5d8fb4669afd1d48dba3829109f8f95d" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>agentReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1ab23306e337b14830da430229cb59f4ab" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>damageCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1ada57704a51118f40bf404050c829931d" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>DataManager</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a8f600cb9d58d97caf910405cf913a8b4" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>DataManager</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a2b2fdbd5e0e9f7abb360802f7d591999" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>gameReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a5bc1d985fc38b6f6c472f5b81e64b425" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetAgentInteractionCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a3cbe9d36093aebfade5351b25a4da306" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetAgentReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1ab4facc3e7d2bc2084fd34a44fa4fc020" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetDamageCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1acc9415a1f4f48ecf9e40d668e36a9ab3" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetGameReceiver</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a20486678d55d96dec7ae6534ba54e390" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetInstance</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1af2244ce0ace8b48c186901f0cdb754b7" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>GetItemUseCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a27c22a9b1d8d538e2e442f84aada8ead" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>itemUseCollector</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a136f3f24f44fbd2e420e9f8e725bccfa" prot="private" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>operator=</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a2ec8e87a8fa76e60f1d4de1ffbd6352e" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>WriteToJson</name></member>
+      <member refid="class_data_collection_1_1_data_manager_1a454610a17213ae3019c65602e7aae84b" prot="public" virt="non-virtual"><scope>DataCollection::DataManager</scope><name>~DataManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structcse491_1_1_property" kind="struct" language="C++" prot="public">
+    <compoundname>cse491::Property</compoundname>
+    <basecompoundref refid="structcse491_1_1_property_base" prot="public" virt="non-virtual">PropertyBase</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcse491_1_1_property_1a4fc7f59e3113e19697159919a5aad095" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>cse491::Property::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="32" column="5" bodyfile="source/core/Property.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structcse491_1_1_property_1a5fe7cccc2796041da1630e545bb9719e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Property</definition>
+        <argsstring>(const T &amp;in)</argsstring>
+        <name>Property</name>
+        <qualifiedname>cse491::Property::Property</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="33" column="3" bodyfile="source/core/Property.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1a399bdf060fe19b56d85eba444cfe4a5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Property</definition>
+        <argsstring>(T &amp;&amp;in)</argsstring>
+        <name>Property</name>
+        <qualifiedname>cse491::Property::Property</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="34" column="3" bodyfile="source/core/Property.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1ac5208c92bb7f848ee7868c9adc156d2c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacecse491_1a7ff5a5c54f182b86d1cd993cf4512c87" kindref="member">PropertyType</ref></type>
+        <definition>PropertyType GetType</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetType</name>
+        <qualifiedname>cse491::Property::GetType</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a5a5b3ed5eddf709d646ddb0cd3ffa0f5">GetType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="36" column="16" bodyfile="source/core/Property.hpp" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1ab5815c3ca33f4d06252518ca64218025" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName</name>
+        <qualifiedname>cse491::Property::GetTypeName</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a4925e350b3e3211f46bac19995b93873">GetTypeName</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="46" column="15" bodyfile="source/core/Property.hpp" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1af53fee5578e13417cfb5db348bad3b49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string ToString</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToString</name>
+        <qualifiedname>cse491::Property::ToString</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a7797ce7c715f383c3538fc93bab9ddf1">ToString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="56" column="15" bodyfile="source/core/Property.hpp" bodystart="56" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1a46ae8cf09cfdd6dfc50be6b74806578e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>char</type>
+        <definition>char ToChar</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToChar</name>
+        <qualifiedname>cse491::Property::ToChar</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a08cfaa4ebdf80d8d0b7afd354fbe0f9a">ToChar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="65" column="8" bodyfile="source/core/Property.hpp" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1acbfac08049849f998ad13110c9bbbf89" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double ToDouble</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToDouble</name>
+        <qualifiedname>cse491::Property::ToDouble</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a00543ea4f639596ba455072712183aa6">ToDouble</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="74" column="10" bodyfile="source/core/Property.hpp" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1a4f8eb4cb52e7d9cf17b10f2af9334d70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>int</type>
+        <definition>int ToInt</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToInt</name>
+        <qualifiedname>cse491::Property::ToInt</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1ab590075bcd468aaed3b64fcebffc6924">ToInt</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="83" column="7" bodyfile="source/core/Property.hpp" bodystart="83" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1a61bc077fd02c1db38813e32e4a2cc95e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcse491_1_1_grid_position" kindref="compound">GridPosition</ref></type>
+        <definition>GridPosition ToGridPosition</definition>
+        <argsstring>() const override</argsstring>
+        <name>ToGridPosition</name>
+        <qualifiedname>cse491::Property::ToGridPosition</qualifiedname>
+        <reimplements refid="structcse491_1_1_property_base_1a0887c36cec7d2564e7a64bb46c659359">ToGridPosition</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="92" column="16" bodyfile="source/core/Property.hpp" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string GetTypeName_impl</definition>
+        <argsstring>() const override</argsstring>
+        <name>GetTypeName_impl</name>
+        <qualifiedname>cse491::Property::GetTypeName_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a3af2123177a984e460cb9615c947e8c2">GetTypeName_impl</reimplements>
+        <briefdescription>
+<para>Override to allow access the derived name for this type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A unique typename, ideally the exact name for this class (with scope) This member function will be helpful for serialization and debugging. It should return a fully scoped typename, such as &quot;cse491::WorldGrid&quot;. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="102" column="15" bodyfile="source/core/Property.hpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Serialize_impl</definition>
+        <argsstring>(std::ostream &amp;os) const override</argsstring>
+        <name>Serialize_impl</name>
+        <qualifiedname>cse491::Property::Serialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1a959ffcc9f08fa822fded96ae10a29b73">Serialize_impl</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to store the current state of this object for later extraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">output_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An ostream that the required information should be stored in. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="106" column="8" bodyfile="source/core/Property.hpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structcse491_1_1_property_1aa912efd8fc53715bdadc51234115d82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Deserialize_impl</definition>
+        <argsstring>(std::istream &amp;is) override</argsstring>
+        <name>Deserialize_impl</name>
+        <qualifiedname>cse491::Property::Deserialize_impl</qualifiedname>
+        <reimplements refid="classcse491_1_1_core_object_1aeb0b35dfb6d18f08f4c7018f6f14ec31">Deserialize_impl</reimplements>
+        <param>
+          <type>std::istream &amp;</type>
+        </param>
+        <briefdescription>
+<para>Override to restore the state of this object from the provided stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">input_stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The istream with full details about this object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/core/Property.hpp" line="110" column="8" bodyfile="source/core/Property.hpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_property_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Property&lt; T &gt;</label>
+        <link refid="structcse491_1_1_property"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CoreObject</label>
+        <link refid="classcse491_1_1_core_object"/>
+      </node>
+      <node id="2">
+        <label>PropertyBase</label>
+        <link refid="structcse491_1_1_property_base"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/core/Property.hpp" line="31" column="1" bodyfile="source/core/Property.hpp" bodystart="31" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classcse491_1_1_core_object_1a8cf9c00434993fbe4c5ef7d542fd857c" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Deserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa4e8eef2cdfca47d7e339752b36d97c3" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Deserialize</name></member>
+      <member refid="structcse491_1_1_property_1aa912efd8fc53715bdadc51234115d82b" prot="public" virt="virtual"><scope>cse491::Property</scope><name>Deserialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ad9ad54ff9b5724fab3b2cac17046cc87" prot="protected" virt="non-virtual"><scope>cse491::Property</scope><name>EndDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1ac8bbcc82023077474e5b022c2c128e20" prot="protected" virt="non-virtual"><scope>cse491::Property</scope><name>EndSerialize</name></member>
+      <member refid="structcse491_1_1_property_1ac5208c92bb7f848ee7868c9adc156d2c" prot="public" virt="virtual"><scope>cse491::Property</scope><name>GetType</name></member>
+      <member refid="structcse491_1_1_property_1ab5815c3ca33f4d06252518ca64218025" prot="public" virt="virtual"><scope>cse491::Property</scope><name>GetTypeName</name></member>
+      <member refid="structcse491_1_1_property_1ae5033ebd6f42bc517c552903fcb54d0f" prot="public" virt="virtual"><scope>cse491::Property</scope><name>GetTypeName_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1abff4cf030f9b933d251601cc47cfe522" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>operator&lt;=&gt;</name></member>
+      <member refid="structcse491_1_1_property_1a5fe7cccc2796041da1630e545bb9719e" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Property</name></member>
+      <member refid="structcse491_1_1_property_1a399bdf060fe19b56d85eba444cfe4a5a" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Property</name></member>
+      <member refid="classcse491_1_1_core_object_1aa982c181e7930dea73f17d60b9b3626d" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Serialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aa1460b2dc1a8642853475eb375f3577c" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>Serialize</name></member>
+      <member refid="structcse491_1_1_property_1acd04f7953f588c434de0fa2ebd03cedf" prot="public" virt="virtual"><scope>cse491::Property</scope><name>Serialize_impl</name></member>
+      <member refid="classcse491_1_1_core_object_1ae13b3ac35fb142e921e41e0fb29cac4e" prot="protected" virt="non-virtual"><scope>cse491::Property</scope><name>StartDeserialize</name></member>
+      <member refid="classcse491_1_1_core_object_1aec744898f285d70fd277c40a021fdccf" prot="protected" virt="non-virtual"><scope>cse491::Property</scope><name>StartSerialize</name></member>
+      <member refid="structcse491_1_1_property_1a46ae8cf09cfdd6dfc50be6b74806578e" prot="public" virt="virtual"><scope>cse491::Property</scope><name>ToChar</name></member>
+      <member refid="structcse491_1_1_property_1acbfac08049849f998ad13110c9bbbf89" prot="public" virt="virtual"><scope>cse491::Property</scope><name>ToDouble</name></member>
+      <member refid="structcse491_1_1_property_1a61bc077fd02c1db38813e32e4a2cc95e" prot="public" virt="virtual"><scope>cse491::Property</scope><name>ToGridPosition</name></member>
+      <member refid="structcse491_1_1_property_1a4f8eb4cb52e7d9cf17b10f2af9334d70" prot="public" virt="virtual"><scope>cse491::Property</scope><name>ToInt</name></member>
+      <member refid="structcse491_1_1_property_1af53fee5578e13417cfb5db348bad3b49" prot="public" virt="virtual"><scope>cse491::Property</scope><name>ToString</name></member>
+      <member refid="structcse491_1_1_property_1a4fc7f59e3113e19697159919a5aad095" prot="public" virt="non-virtual"><scope>cse491::Property</scope><name>value</name></member>
+      <member refid="classcse491_1_1_core_object_1afd043eda19b30fb69acf08e4828f2c0f" prot="public" virt="virtual"><scope>cse491::Property</scope><name>~CoreObject</name></member>
+      <member refid="structcse491_1_1_property_base_1a84ef0cd74a52ca2be38035fab4897ded" prot="public" virt="virtual"><scope>cse491::Property</scope><name>~PropertyBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

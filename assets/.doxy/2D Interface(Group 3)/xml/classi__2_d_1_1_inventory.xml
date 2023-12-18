@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classi__2_d_1_1_inventory" kind="class" language="C++" prot="public">
+    <compoundname>i_2D::Inventory</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1aa9f1305daf035cbc8f991685f3c25df3" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::RectangleShape &gt;</type>
+        <definition>std::unique_ptr&lt;sf::RectangleShape&gt; mCanvas</definition>
+        <argsstring></argsstring>
+        <name>mCanvas</name>
+        <qualifiedname>i_2D::Inventory::mCanvas</qualifiedname>
+        <briefdescription>
+<para>Projected inventory screen. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="25" column="25" bodyfile="source/Interfaces/Inventory.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1ae5cb4204a4a649f7d5fb819aad7975fb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::unique_ptr&lt; <ref refid="classi__2_d_1_1_button" kindref="compound">Button</ref> &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;std::unique_ptr&lt;Button&gt; &gt; &gt; mListOfButtons</definition>
+        <argsstring></argsstring>
+        <name>mListOfButtons</name>
+        <qualifiedname>i_2D::Inventory::mListOfButtons</qualifiedname>
+        <briefdescription>
+<para>2D array of buttons representing items </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="27" column="21" bodyfile="source/Interfaces/Inventory.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1a4ae4af1eb8fcbdeedc083a1299ab172e" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f mWorldSize</definition>
+        <argsstring></argsstring>
+        <name>mWorldSize</name>
+        <qualifiedname>i_2D::Inventory::mWorldSize</qualifiedname>
+        <briefdescription>
+<para>Size of the world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="28" column="22" bodyfile="source/Interfaces/Inventory.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1acd7c019ac37bae528ed20e97db5b8185" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mCol</definition>
+        <argsstring></argsstring>
+        <name>mCol</name>
+        <qualifiedname>i_2D::Inventory::mCol</qualifiedname>
+        <initializer>=0</initializer>
+        <briefdescription>
+<para>Number of columns enumerating the inventory list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="29" column="13" bodyfile="source/Interfaces/Inventory.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1a6ad7bc0c54b9f73814e507588826a559" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mRow</definition>
+        <argsstring></argsstring>
+        <name>mRow</name>
+        <qualifiedname>i_2D::Inventory::mRow</qualifiedname>
+        <initializer>=0</initializer>
+        <briefdescription>
+<para>Number of rows enumerating the inventory list. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="30" column="13" bodyfile="source/Interfaces/Inventory.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1aeedd4a333aa371a7cd3d32b652090e79" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; mItems</definition>
+        <argsstring></argsstring>
+        <name>mItems</name>
+        <qualifiedname>i_2D::Inventory::mItems</qualifiedname>
+        <briefdescription>
+<para>List of items in an inventory. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="32" column="21" bodyfile="source/Interfaces/Inventory.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classi__2_d_1_1_inventory_1a30c45c2c258b61450b264dd0b8344202" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; sf::Texture &gt;</type>
+        <definition>std::unique_ptr&lt;sf::Texture&gt; mItemDisplay</definition>
+        <argsstring></argsstring>
+        <name>mItemDisplay</name>
+        <qualifiedname>i_2D::Inventory::mItemDisplay</qualifiedname>
+        <briefdescription>
+<para>The image of the items currently on display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="33" column="25" bodyfile="source/Interfaces/Inventory.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1ad21533cf76dba3bfd378bb8564304e62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetItemDisplay</definition>
+        <argsstring>(sf::Texture &amp;texture)</argsstring>
+        <name>SetItemDisplay</name>
+        <qualifiedname>i_2D::Inventory::SetItemDisplay</qualifiedname>
+        <param>
+          <type>sf::Texture &amp;</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Set the Displayed item&apos;s texture. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="37" column="14" bodyfile="source/Interfaces/Inventory.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1a64fa757d13876bd4349e8f4eac2b5c3f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Inventory</definition>
+        <argsstring>(const sf::Vector2f size)</argsstring>
+        <name>Inventory</name>
+        <qualifiedname>i_2D::Inventory::Inventory</qualifiedname>
+        <param>
+          <type>const sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Constructor - save the value of the world&apos;s dimension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="42" column="18" bodyfile="source/Interfaces/Inventory.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1aa9ead1fb701ca57c23d6dd93e2dc95f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetSize</definition>
+        <argsstring>(const sf::Vector2f size)</argsstring>
+        <name>SetSize</name>
+        <qualifiedname>i_2D::Inventory::SetSize</qualifiedname>
+        <param>
+          <type>const sf::Vector2f</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Set the value saved as the world&apos;s dimension. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="44" column="14" bodyfile="source/Interfaces/Inventory.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1a6cb938c4fa6be83651f0ca534641275e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConstructInventory</definition>
+        <argsstring>(sf::Font &amp;font, const std::vector&lt; std::string &gt; &amp;interfaceAgentInventory)</argsstring>
+        <name>ConstructInventory</name>
+        <qualifiedname>i_2D::Inventory::ConstructInventory</qualifiedname>
+        <param>
+          <type>sf::Font &amp;</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>interfaceAgentInventory</declname>
+        </param>
+        <briefdescription>
+<para>Build an inventory window and an inventory list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>font</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font used by the inventory list </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="47" column="14" bodyfile="source/Interfaces/Inventory.cpp" bodystart="15" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DrawTo</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>DrawTo</name>
+        <qualifiedname>i_2D::Inventory::DrawTo</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Draws the inventory onto the render window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The render window of the world </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="48" column="14" bodyfile="source/Interfaces/Inventory.cpp" bodystart="59" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classi__2_d_1_1_inventory_1a574f90c6e3ac00ddb76445003bb23287" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string HandleMouseMove</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>HandleMouseMove</name>
+        <qualifiedname>i_2D::Inventory::HandleMouseMove</qualifiedname>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Handle the mouse move event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The render window of the world </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Inventory.hpp" line="49" column="21" bodyfile="source/Interfaces/Inventory.cpp" bodystart="79" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/Inventory.hpp" line="22" column="5" bodyfile="source/Interfaces/Inventory.hpp" bodystart="22" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classi__2_d_1_1_inventory_1a6cb938c4fa6be83651f0ca534641275e" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>ConstructInventory</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a5554edc9127e8682fcf5bdb9bfa4d8be" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>DrawTo</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a574f90c6e3ac00ddb76445003bb23287" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>HandleMouseMove</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a64fa757d13876bd4349e8f4eac2b5c3f" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>Inventory</name></member>
+      <member refid="classi__2_d_1_1_inventory_1aa9f1305daf035cbc8f991685f3c25df3" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mCanvas</name></member>
+      <member refid="classi__2_d_1_1_inventory_1acd7c019ac37bae528ed20e97db5b8185" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mCol</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a30c45c2c258b61450b264dd0b8344202" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mItemDisplay</name></member>
+      <member refid="classi__2_d_1_1_inventory_1aeedd4a333aa371a7cd3d32b652090e79" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mItems</name></member>
+      <member refid="classi__2_d_1_1_inventory_1ae5cb4204a4a649f7d5fb819aad7975fb" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mListOfButtons</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a6ad7bc0c54b9f73814e507588826a559" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mRow</name></member>
+      <member refid="classi__2_d_1_1_inventory_1a4ae4af1eb8fcbdeedc083a1299ab172e" prot="private" virt="non-virtual"><scope>i_2D::Inventory</scope><name>mWorldSize</name></member>
+      <member refid="classi__2_d_1_1_inventory_1ad21533cf76dba3bfd378bb8564304e62" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>SetItemDisplay</name></member>
+      <member refid="classi__2_d_1_1_inventory_1aa9ead1fb701ca57c23d6dd93e2dc95f7" prot="public" virt="non-virtual"><scope>i_2D::Inventory</scope><name>SetSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

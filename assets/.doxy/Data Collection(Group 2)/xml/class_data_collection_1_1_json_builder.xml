@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_data_collection_1_1_json_builder" kind="class" language="C++" prot="public">
+    <compoundname>DataCollection::JsonBuilder</compoundname>
+    <includes refid="_json_builder_8hpp" local="no">JsonBuilder.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_collection_1_1_json_builder_1af7bce8a54df5735f43f9a3f3f8b67c33" prot="private" static="no" mutable="no">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json json</definition>
+        <argsstring></argsstring>
+        <name>json</name>
+        <qualifiedname>DataCollection::JsonBuilder::json</qualifiedname>
+        <briefdescription>
+<para>The JSON object to be built. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="15" column="24" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_collection_1_1_json_builder_1afa2c888c1c5c03fd4d0d7cb47b398f4b" prot="private" static="no" mutable="no">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json json_array</definition>
+        <argsstring></argsstring>
+        <name>json_array</name>
+        <qualifiedname>DataCollection::JsonBuilder::json_array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="16" column="24" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1aa90ebc2851ca4ea6b1b1ec4aef276536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>JsonBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>JsonBuilder</name>
+        <qualifiedname>DataCollection::JsonBuilder::JsonBuilder</qualifiedname>
+        <briefdescription>
+<para>Default constructor for JSONBuilder class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="21" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1af4e79798f6515bb4ac8cc1c1f089b63a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~JsonBuilder</definition>
+        <argsstring>()=default</argsstring>
+        <name>~JsonBuilder</name>
+        <qualifiedname>DataCollection::JsonBuilder::~JsonBuilder</qualifiedname>
+        <briefdescription>
+<para>Destructor for JSONBuilder class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="26" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a0e819fa0a59da341347c2baec3d51ae2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StartArray</definition>
+        <argsstring>(std::string title)</argsstring>
+        <name>StartArray</name>
+        <qualifiedname>DataCollection::JsonBuilder::StartArray</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="28" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1abb6738e522a269b4da98ed5d5c3aaf9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputToArray</definition>
+        <argsstring>(std::string title, nlohmann::json input)</argsstring>
+        <name>InputToArray</name>
+        <qualifiedname>DataCollection::JsonBuilder::InputToArray</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>nlohmann::json</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="32" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a3fa0825357d91f859abfbc599f2e4708" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddName</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>AddName</name>
+        <qualifiedname>DataCollection::JsonBuilder::AddName</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Adds the agent&apos;s name to the JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The agent&apos;s name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="40" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a387bc11fad195b81bf23b1399c85b306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Addagentname</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>Addagentname</name>
+        <qualifiedname>DataCollection::JsonBuilder::Addagentname</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="44" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a127e7365cc2ae65deb3502bada866f80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddPosition</definition>
+        <argsstring>(cse491::GridPosition pos)</argsstring>
+        <name>AddPosition</name>
+        <qualifiedname>DataCollection::JsonBuilder::AddPosition</qualifiedname>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Adds a grid position to the JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The grid position to be added. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="52" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a585641d0f3f128484b28d44076ccd946" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddDamage</definition>
+        <argsstring>(double damage)</argsstring>
+        <name>AddDamage</name>
+        <qualifiedname>DataCollection::JsonBuilder::AddDamage</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>damage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="56" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1ae084225d5f985a972b446aa2b130e58c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json GetJSON</definition>
+        <argsstring>()</argsstring>
+        <name>GetJSON</name>
+        <qualifiedname>DataCollection::JsonBuilder::GetJSON</qualifiedname>
+        <briefdescription>
+<para>Retrieves the JSON object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The JSON object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="64" column="24" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a0d13097bad8455063c5babf2fd77784c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClearJSON</definition>
+        <argsstring>()</argsstring>
+        <name>ClearJSON</name>
+        <qualifiedname>DataCollection::JsonBuilder::ClearJSON</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="68" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a722604bdd6184519466ea3d2175a1480" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json GetJSONArray</definition>
+        <argsstring>()</argsstring>
+        <name>GetJSONArray</name>
+        <qualifiedname>DataCollection::JsonBuilder::GetJSONArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="72" column="24" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a54cf0c7f84d1b5646613cb011e24d6f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddInt</definition>
+        <argsstring>(std::string title, int usage)</argsstring>
+        <name>AddInt</name>
+        <qualifiedname>DataCollection::JsonBuilder::AddInt</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="76" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_collection_1_1_json_builder_1a5e415f034962d3f5c1682c9396dbbd4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteToFile</definition>
+        <argsstring>(std::ofstream &amp;jsonfilestream, nlohmann::json Json)</argsstring>
+        <name>WriteToFile</name>
+        <qualifiedname>DataCollection::JsonBuilder::WriteToFile</qualifiedname>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>jsonfilestream</declname>
+        </param>
+        <param>
+          <type>nlohmann::json</type>
+          <declname>Json</declname>
+        </param>
+        <briefdescription>
+<para>Writes the JSON object to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/DataCollection/JsonBuilder.hpp" line="83" column="14" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Builds a JSON object from the data collected for an agent. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/DataCollection/JsonBuilder.hpp" line="13" column="5" bodyfile="source/DataCollection/JsonBuilder.hpp" bodystart="13" bodyend="87"/>
+    <listofallmembers>
+      <member refid="class_data_collection_1_1_json_builder_1a387bc11fad195b81bf23b1399c85b306" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>Addagentname</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a585641d0f3f128484b28d44076ccd946" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>AddDamage</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a54cf0c7f84d1b5646613cb011e24d6f9" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>AddInt</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a3fa0825357d91f859abfbc599f2e4708" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>AddName</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a127e7365cc2ae65deb3502bada866f80" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>AddPosition</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a0d13097bad8455063c5babf2fd77784c" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>ClearJSON</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1ae084225d5f985a972b446aa2b130e58c" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>GetJSON</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a722604bdd6184519466ea3d2175a1480" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>GetJSONArray</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1abb6738e522a269b4da98ed5d5c3aaf9c" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>InputToArray</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1af7bce8a54df5735f43f9a3f3f8b67c33" prot="private" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>json</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1afa2c888c1c5c03fd4d0d7cb47b398f4b" prot="private" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>json_array</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1aa90ebc2851ca4ea6b1b1ec4aef276536" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>JsonBuilder</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a0e819fa0a59da341347c2baec3d51ae2" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>StartArray</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1a5e415f034962d3f5c1682c9396dbbd4b" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>WriteToFile</name></member>
+      <member refid="class_data_collection_1_1_json_builder_1af4e79798f6515bb4ac8cc1c1f089b63a" prot="public" virt="non-virtual"><scope>DataCollection::JsonBuilder</scope><name>~JsonBuilder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_sensors" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::Sensors</compoundname>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcowboys_1_1_sensors_1acf63b9f48cd4db00bb0b19e3b86abe29" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void debugPosition</definition>
+        <argsstring>(const std::string &amp;)</argsstring>
+        <name>debugPosition</name>
+        <qualifiedname>cowboys::Sensors::debugPosition</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+        </param>
+        <briefdescription>
+<para>print the positions of the agent only during debug mode </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>printstring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="33" column="16" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_sensors_1ac6a5cda2b81e8d2a7f3616049c02b24c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sensors</definition>
+        <argsstring>()=default</argsstring>
+        <name>Sensors</name>
+        <qualifiedname>cowboys::Sensors::Sensors</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="41" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_sensors_1ae64e6b5a27ebed92af6548ad38b7c0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Sensors</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Sensors</name>
+        <qualifiedname>cowboys::Sensors::~Sensors</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="44" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcowboys_1_1_sensors_1acb5090493d7dc03d96428f5afbb8f90e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int wallDistance</definition>
+        <argsstring>(const cse491::WorldGrid &amp;grid, const cse491::AgentBase &amp;agent, SensorDirection direction)</argsstring>
+        <name>wallDistance</name>
+        <qualifiedname>cowboys::Sensors::wallDistance</qualifiedname>
+        <param>
+          <type>const cse491::WorldGrid &amp;</type>
+          <declname>grid</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>SensorDirection</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>returns the distance to the wall in a given direction from the agent </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>grid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>grid maze of the world </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>agent to find the distance from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction to find the distance (LEFT, RIGHT, ABOVE, BELOW) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>distance to the wall </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="54" column="14" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="54" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_sensors_1aa650525b3ae27f6a5ca99cbfa77a3136" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SensorDirection</type>
+        <definition>static SensorDirection getSensorDirectionEnum</definition>
+        <argsstring>(const std::string &amp;direction)</argsstring>
+        <name>getSensorDirectionEnum</name>
+        <qualifiedname>cowboys::Sensors::getSensorDirectionEnum</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPAgentSensors.hpp" line="91" column="26" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="91" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/GPAgentSensors.hpp" line="27" column="1" bodyfile="source/Agents/GP/GPAgentSensors.hpp" bodystart="27" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_sensors_1acf63b9f48cd4db00bb0b19e3b86abe29" prot="private" virt="non-virtual"><scope>cowboys::Sensors</scope><name>debugPosition</name></member>
+      <member refid="classcowboys_1_1_sensors_1aa650525b3ae27f6a5ca99cbfa77a3136" prot="public" virt="non-virtual"><scope>cowboys::Sensors</scope><name>getSensorDirectionEnum</name></member>
+      <member refid="classcowboys_1_1_sensors_1ac6a5cda2b81e8d2a7f3616049c02b24c" prot="public" virt="non-virtual"><scope>cowboys::Sensors</scope><name>Sensors</name></member>
+      <member refid="classcowboys_1_1_sensors_1acb5090493d7dc03d96428f5afbb8f90e" prot="public" virt="non-virtual"><scope>cowboys::Sensors</scope><name>wallDistance</name></member>
+      <member refid="classcowboys_1_1_sensors_1ae64e6b5a27ebed92af6548ad38b7c0ed" prot="public" virt="non-virtual"><scope>cowboys::Sensors</scope><name>~Sensors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

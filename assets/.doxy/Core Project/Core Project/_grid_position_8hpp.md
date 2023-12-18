@@ -11,8 +11,12 @@
 
 
 * `#include <cassert>`
+* `#include <cmath>`
 * `#include <compare>`
 * `#include <cstddef>`
+* `#include <sstream>`
+* `#include <string>`
+* `#include "CoreObject.hpp"`
 
 
 

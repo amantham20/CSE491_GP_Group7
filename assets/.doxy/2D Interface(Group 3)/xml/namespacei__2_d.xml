@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacei__2_d" kind="namespace" language="C++">
+    <compoundname>i_2D</compoundname>
+    <innerclass refid="classi__2_d_1_1_button" prot="public">i_2D::Button</innerclass>
+    <innerclass refid="classi__2_d_1_1_inventory" prot="public">i_2D::Inventory</innerclass>
+    <innerclass refid="classi__2_d_1_1_main_interface" prot="public">i_2D::MainInterface</innerclass>
+    <innerclass refid="classi__2_d_1_1_menu" prot="public">i_2D::Menu</innerclass>
+    <innerclass refid="classi__2_d_1_1_message_board" prot="public">i_2D::MessageBoard</innerclass>
+    <innerclass refid="classi__2_d_1_1_text_box" prot="public">i_2D::TextBox</innerclass>
+    <innerclass refid="classi__2_d_1_1_texture_holder" prot="public">i_2D::TextureHolder</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacei__2_d_1ab105e62bb50794909d1a163cae4af596" prot="public" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>i_2D::timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.cpp" line="17" column="15" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacei__2_d_1aaba702c2758cd9db9bbb19493d74e879" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float elapsedTime</definition>
+        <argsstring></argsstring>
+        <name>elapsedTime</name>
+        <qualifiedname>i_2D::elapsedTime</qualifiedname>
+        <initializer>= 0.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/MainInterface.cpp" line="18" column="11" bodyfile="source/Interfaces/MainInterface.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacei__2_d_1aa1fb3afe8aedebad512620748326f7e5" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int MAX_NUMBER_OF_ITEMS_MENU_ITEMS</definition>
+        <argsstring></argsstring>
+        <name>MAX_NUMBER_OF_ITEMS_MENU_ITEMS</name>
+        <qualifiedname>i_2D::MAX_NUMBER_OF_ITEMS_MENU_ITEMS</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Interfaces/Menu.hpp" line="16" column="15" bodyfile="source/Interfaces/Menu.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>: Team - 3 </para>
+</simplesect>
+<simplesect kind="date"><para>: 11/02/2023 <ref refid="classi__2_d_1_1_button" kindref="compound">Button</ref> class creates a SF::Rectangle and SF::Text on top</para>
+</simplesect>
+<simplesect kind="author"><para>: Team - 3 </para>
+</simplesect>
+<simplesect kind="date"><para>: 11/15/2023 <ref refid="classi__2_d_1_1_inventory" kindref="compound">Inventory</ref> class creates an array of buttons and uses it as inventory</para>
+</simplesect>
+<simplesect kind="author"><para>: Team - 3 </para>
+</simplesect>
+<simplesect kind="date"><para>: 10/3/2023 <ref refid="classi__2_d_1_1_menu" kindref="compound">Menu</ref> class creates a menu and displays it in the render window </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Interfaces/Button.cpp" line="8" column="1"/>
+  </compounddef>
+</doxygen>

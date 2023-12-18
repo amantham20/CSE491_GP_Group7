@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacewalle" kind="namespace" language="C++">
+    <compoundname>walle</compoundname>
+    <innerclass refid="classwalle_1_1_agent_factory" prot="public">walle::AgentFactory</innerclass>
+    <innerclass refid="classwalle_1_1_alerter" prot="public">walle::Alerter</innerclass>
+    <innerclass refid="classwalle_1_1_a_star_agent" prot="public">walle::AStarAgent</innerclass>
+    <innerclass refid="structwalle_1_1_a_star_agent_data" prot="public">walle::AStarAgentData</innerclass>
+    <innerclass refid="structwalle_1_1_base_agent_data" prot="public">walle::BaseAgentData</innerclass>
+    <innerclass refid="structwalle_1_1_compare_nodes" prot="public">walle::CompareNodes</innerclass>
+    <innerclass refid="structwalle_1_1_node" prot="public">walle::Node</innerclass>
+    <innerclass refid="structwalle_1_1_pacing_agent_data" prot="public">walle::PacingAgentData</innerclass>
+    <innerclass refid="classwalle_1_1_path_agent" prot="public">walle::PathAgent</innerclass>
+    <innerclass refid="structwalle_1_1_path_agent_data" prot="public">walle::PathAgentData</innerclass>
+    <innerclass refid="classwalle_1_1_random_agent" prot="public">walle::RandomAgent</innerclass>
+    <innerclass refid="classwalle_1_1_tracking_agent" prot="public">walle::TrackingAgent</innerclass>
+    <innerclass refid="structwalle_1_1_tracking_agent_data" prot="public">walle::TrackingAgentData</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TrackingState</name>
+        <qualifiedname>walle::TrackingState</qualifiedname>
+        <enumvalue id="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8a8434808bc121ce0456676b347e984ef7" prot="public">
+          <name>RETURNING_TO_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8a8728801b2a11ad95c8ecf855bfd484e4" prot="public">
+          <name>TRACKING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_tracking_agent_8hpp_1a7d119ca9eb259bf767146f9bdb02c6c8a14d86039725fa693e9407993665daae3" prot="public">
+          <name>PATROLLING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to keep track of what action we are currently taking </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/TrackingAgent.hpp" line="59" column="1" bodyfile="source/Agents/TrackingAgent.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_agent_libary_8hpp_1a3ecf1fa9b8bc31b60e4e510f76148829" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt; cse491::GridPosition &gt; GetShortestPath</definition>
+        <argsstring>(const cse491::GridPosition &amp;start, const cse491::GridPosition &amp;end, const cse491::WorldBase &amp;world, const cse491::AgentBase &amp;agent)</argsstring>
+        <name>GetShortestPath</name>
+        <qualifiedname>walle::GetShortestPath</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const cse491::WorldBase &amp;</type>
+          <declname>world</declname>
+        </param>
+        <param>
+          <type>const cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <briefdescription>
+<para>Uses A* to return a list of grid positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>@mdkdoc15 </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starting position for search </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ending position for the search </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector of A* path from start to end, empty vector if no path exists </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="68" column="5" bodyfile="source/Agents/AgentLibary.hpp" bodystart="68" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="_agent_libary_8hpp_1a2e1ea40e38fd6d28ceefe2270967ae30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>std::vector&lt; cse491::GridPosition &gt; StrToOffsets</definition>
+        <argsstring>(std::string_view commands)</argsstring>
+        <name>StrToOffsets</name>
+        <qualifiedname>walle::StrToOffsets</qualifiedname>
+        <param>
+          <type>std::string_view</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a string to a sequence of offsets</para>
+<para>This convenience method takes a string with a special formatting that allows one to specify a sequence of whitespace-separated inputs in linear directions. The format is [steps[*]]&lt;direction&gt; where <computeroutput>steps</computeroutput> is a positive integer and optional (assumed to be 1 by default) star <computeroutput>*</computeroutput> represents scaling the movement by <computeroutput>steps</computeroutput>. Optional, but cannot be used if <computeroutput>steps</computeroutput> is not provided if the star is not present, then <computeroutput>steps</computeroutput> individual offsets are created in the direction <computeroutput>direction</computeroutput> <computeroutput>direction</computeroutput> is a cardinal direction with the following logical mapping: n: north s: south e: east w: west x: stay put Example: &quot;n w 3e 10*s 5*w x&quot; should create the sequence of offsets {0, -1}, {-1, 0}, {1, 0}, {1, 0}, {1, 0}, {0, 10}, {-5, 0}, {0, 0} <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string in a format of sequential directions </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>throws an <computeroutput>std::invalid_argument</computeroutput> when input string is poorly formatted </para>
+</simplesect>
+<simplesect kind="note"><para>this includes when a negative integer is passed as <computeroutput>steps</computeroutput>. If a zero is used, treated as the default (one) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="158" column="5" bodyfile="source/Agents/AgentLibary.hpp" bodystart="158" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="_agent_libary_8hpp_1aa60d43669ace21836caa8fdf7a9169be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; DownCastAgent</definition>
+        <argsstring>(cse491::Entity &amp;entity)</argsstring>
+        <name>DownCastAgent</name>
+        <qualifiedname>walle::DownCastAgent</qualifiedname>
+        <param>
+          <type>cse491::Entity &amp;</type>
+          <declname>entity</declname>
+        </param>
+    <requiresclause>(Agent_Type&lt;T&gt;)    </requiresclause>
+        <briefdescription>
+<para>Helper function for simplifying downcasting entities that have been added to the world. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="266" column="7" bodyfile="source/Agents/AgentLibary.hpp" bodystart="266" bodyend="269"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/AgentFactory.hpp" line="22" column="1"/>
+  </compounddef>
+</doxygen>

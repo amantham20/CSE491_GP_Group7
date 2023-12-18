@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1program" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::program</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tao::pegtl::seq&lt; statement_list, pegtl::eolf &gt;</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>program</label>
+        <link refid="structworldlang_1_1program"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seq&lt; statement_list, pegtl::eolf &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>program</label>
+        <link refid="structworldlang_1_1program"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seq&lt; statement_list, pegtl::eolf &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/Language.hpp" line="287" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="291" bodyend="291"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

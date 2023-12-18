@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecse491" kind="namespace" language="C++">
+    <compoundname>cse491</compoundname>
+    <innerclass refid="classcse491_1_1_maze_world" prot="public">cse491::MazeWorld</innerclass>
+    <briefdescription>
+<para>A World that consists only of walls and open cells. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the Fall 2023, CSE 491 course project. <simplesect kind="note"><para>Status: PROPOSAL </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Worlds/MazeWorld.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

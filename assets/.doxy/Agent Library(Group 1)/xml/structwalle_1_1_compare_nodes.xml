@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_compare_nodes" kind="struct" language="C++" prot="public">
+    <compoundname>walle::CompareNodes</compoundname>
+    <includes refid="_agent_libary_8hpp" local="no">AgentLibary.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structwalle_1_1_compare_nodes_1a639a3d5c32880f374551ba6dbaa9260b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator()</definition>
+        <argsstring>(const std::shared_ptr&lt; walle::Node &gt; &amp;a, const std::shared_ptr&lt; walle::Node &gt; &amp;b) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>walle::CompareNodes::operator()</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structwalle_1_1_node" kindref="compound">walle::Node</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; <ref refid="structwalle_1_1_node" kindref="compound">walle::Node</ref> &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentLibary.hpp" line="56" column="14" bodyfile="source/Agents/AgentLibary.hpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Custom comparison function for priority queue. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="return"><para>if a has a greater total cost than b </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="source/Agents/AgentLibary.hpp" line="55" column="5" bodyfile="source/Agents/AgentLibary.hpp" bodystart="55" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_compare_nodes_1a639a3d5c32880f374551ba6dbaa9260b" prot="public" virt="non-virtual"><scope>walle::CompareNodes</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

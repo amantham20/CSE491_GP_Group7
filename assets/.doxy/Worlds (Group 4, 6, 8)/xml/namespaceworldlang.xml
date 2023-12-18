@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceworldlang" kind="namespace" language="C++">
+    <compoundname>worldlang</compoundname>
+    <innerclass refid="structworldlang_1_1add" prot="public">worldlang::add</innerclass>
+    <innerclass refid="structworldlang_1_1add__a" prot="public">worldlang::add_a</innerclass>
+    <innerclass refid="structworldlang_1_1assignment" prot="public">worldlang::assignment</innerclass>
+    <innerclass refid="structworldlang_1_1code__block" prot="public">worldlang::code_block</innerclass>
+    <innerclass refid="structworldlang_1_1comment" prot="public">worldlang::comment</innerclass>
+    <innerclass refid="structworldlang_1_1comp" prot="public">worldlang::comp</innerclass>
+    <innerclass refid="structworldlang_1_1comp__a" prot="public">worldlang::comp_a</innerclass>
+    <innerclass refid="structworldlang_1_1element" prot="public">worldlang::element</innerclass>
+    <innerclass refid="structworldlang_1_1expression" prot="public">worldlang::expression</innerclass>
+    <innerclass refid="structworldlang_1_1expression__list" prot="public">worldlang::expression_list</innerclass>
+    <innerclass refid="structworldlang_1_1function" prot="public">worldlang::function</innerclass>
+    <innerclass refid="structworldlang_1_1identifier" prot="public">worldlang::identifier</innerclass>
+    <innerclass refid="structworldlang_1_1identifier__list" prot="public">worldlang::identifier_list</innerclass>
+    <innerclass refid="structworldlang_1_1mul" prot="public">worldlang::mul</innerclass>
+    <innerclass refid="structworldlang_1_1mul__a" prot="public">worldlang::mul_a</innerclass>
+    <innerclass refid="structworldlang_1_1number" prot="public">worldlang::number</innerclass>
+    <innerclass refid="structworldlang_1_1op__prio__add" prot="public">worldlang::op_prio_add</innerclass>
+    <innerclass refid="structworldlang_1_1op__prio__comp" prot="public">worldlang::op_prio_comp</innerclass>
+    <innerclass refid="structworldlang_1_1op__prio__mul" prot="public">worldlang::op_prio_mul</innerclass>
+    <innerclass refid="structworldlang_1_1program" prot="public">worldlang::program</innerclass>
+    <innerclass refid="classworldlang_1_1_program_executor" prot="public">worldlang::ProgramExecutor</innerclass>
+    <innerclass refid="structworldlang_1_1statement" prot="public">worldlang::statement</innerclass>
+    <innerclass refid="structworldlang_1_1statement__list" prot="public">worldlang::statement_list</innerclass>
+    <innerclass refid="structworldlang_1_1string" prot="public">worldlang::string</innerclass>
+    <innerclass refid="structworldlang_1_1_unit" prot="public">worldlang::Unit</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceworldlang_1ab4de698b47faad2f51e961c74b41c48a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename Rule</type>
+          </param>
+        </templateparamlist>
+        <type>tao::pegtl::parse_tree::selector&lt; Rule, tao::pegtl::parse_tree::store_content::on&lt; <ref refid="structworldlang_1_1number" kindref="compound">number</ref>, <ref refid="structworldlang_1_1string" kindref="compound">string</ref>, <ref refid="structworldlang_1_1function" kindref="compound">function</ref>, <ref refid="structworldlang_1_1identifier" kindref="compound">identifier</ref>, <ref refid="structworldlang_1_1identifier__list" kindref="compound">identifier_list</ref>, <ref refid="structworldlang_1_1expression" kindref="compound">expression</ref>, <ref refid="structworldlang_1_1expression__list" kindref="compound">expression_list</ref>, <ref refid="structworldlang_1_1statement" kindref="compound">statement</ref>, <ref refid="structworldlang_1_1statement__list" kindref="compound">statement_list</ref>, <ref refid="structworldlang_1_1code__block" kindref="compound">code_block</ref>, <ref refid="structworldlang_1_1program" kindref="compound">program</ref>, <ref refid="structworldlang_1_1assignment" kindref="compound">assignment</ref>, <ref refid="structworldlang_1_1op__prio__add" kindref="compound">op_prio_add</ref>, <ref refid="structworldlang_1_1op__prio__mul" kindref="compound">op_prio_mul</ref>, <ref refid="structworldlang_1_1op__prio__comp" kindref="compound">op_prio_comp</ref> &gt;, tao::pegtl::parse_tree::fold_one::on&lt; <ref refid="structworldlang_1_1add__a" kindref="compound">add_a</ref>, <ref refid="structworldlang_1_1mul__a" kindref="compound">mul_a</ref> &gt; &gt;</type>
+        <definition>using selector =  tao::pegtl::parse_tree::selector&lt; Rule, tao::pegtl::parse_tree::store_content::on&lt; number, string, function, identifier, identifier_list, expression, expression_list, statement, statement_list, code_block, program, assignment, op_prio_add, op_prio_mul, op_prio_comp &gt;, tao::pegtl::parse_tree::fold_one::on&lt; add_a, mul_a &gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>selector</name>
+        <qualifiedname>worldlang::selector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selector for tree generation This is used by PEGTL&apos;s parse_tree function to determine which nodes are kept, which are folded into their parent when possible, and which are ignored (these are not listed here). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="298" column="1" bodyfile="source/Worlds/Language.hpp" bodystart="320" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceworldlang_1a89c52b191b80e89a33aa90647a495268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string stripWhitespace</definition>
+        <argsstring>(const std::string &amp;input)</argsstring>
+        <name>stripWhitespace</name>
+        <qualifiedname>worldlang::stripWhitespace</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>function to strip whitespace </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="25" column="13" bodyfile="source/Worlds/Language.hpp" bodystart="25" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceworldlang_1ac0a09577e3d6b1521a50912ce39ad7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structworldlang_1_1_unit" kindref="compound">Unit</ref> &gt;</type>
+        <definition>std::vector&lt; Unit &gt; parse_to_code</definition>
+        <argsstring>(std::string program)</argsstring>
+        <name>parse_to_code</name>
+        <qualifiedname>worldlang::parse_to_code</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>program</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a program string into code units using PEGTL </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Worlds/Language.hpp" line="347" column="13" bodyfile="source/Worlds/Language.hpp" bodystart="347" bodyend="452"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Namespace for scripting language stuff. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Worlds/Language.hpp" line="21" column="1"/>
+  </compounddef>
+</doxygen>

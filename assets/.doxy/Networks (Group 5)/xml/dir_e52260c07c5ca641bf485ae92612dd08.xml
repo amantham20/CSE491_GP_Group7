@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_e52260c07c5ca641bf485ae92612dd08" kind="dir">
+    <compoundname>source/Interfaces</compoundname>
+    <innerdir refid="dir_0121daa1f68cbca759acb74b3e906cff">source/Interfaces/NetWorth</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Interfaces/"/>
+  </compounddef>
+</doxygen>

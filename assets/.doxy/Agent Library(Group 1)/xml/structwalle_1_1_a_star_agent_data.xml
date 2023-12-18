@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structwalle_1_1_a_star_agent_data" kind="struct" language="C++" prot="public">
+    <compoundname>walle::AStarAgentData</compoundname>
+    <basecompoundref refid="structwalle_1_1_base_agent_data" prot="public" virt="non-virtual">BaseAgentData</basecompoundref>
+    <includes refid="_agent_factory_8hpp" local="no">AgentFactory.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structwalle_1_1_a_star_agent_data_1aacfec9d59167392968f85408a86c890a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int recalculate_after_x_turns</definition>
+        <argsstring></argsstring>
+        <name>recalculate_after_x_turns</name>
+        <qualifiedname>walle::AStarAgentData::recalculate_after_x_turns</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Number of steps after which the shortest path is recalculated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="126" column="9" bodyfile="source/Agents/AgentFactory.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structwalle_1_1_a_star_agent_data_1aecfb9c0867c2c976193203b0e5388bbb" prot="public" static="no" mutable="no">
+        <type>cse491::GridPosition</type>
+        <definition>cse491::GridPosition goal_pos</definition>
+        <argsstring></argsstring>
+        <name>goal_pos</name>
+        <qualifiedname>walle::AStarAgentData::goal_pos</qualifiedname>
+        <briefdescription>
+<para>The final position in the world that the <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> is travelling to. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/AgentFactory.hpp" line="129" column="26" bodyfile="source/Agents/AgentFactory.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores data for an <ref refid="classwalle_1_1_a_star_agent" kindref="compound">AStarAgent</ref> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AStarAgentData</label>
+        <link refid="structwalle_1_1_a_star_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AStarAgentData</label>
+        <link refid="structwalle_1_1_a_star_agent_data"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseAgentData</label>
+        <link refid="structwalle_1_1_base_agent_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="source/Agents/AgentFactory.hpp" line="124" column="1" bodyfile="source/Agents/AgentFactory.hpp" bodystart="124" bodyend="130"/>
+    <listofallmembers>
+      <member refid="structwalle_1_1_a_star_agent_data_1aecfb9c0867c2c976193203b0e5388bbb" prot="public" virt="non-virtual"><scope>walle::AStarAgentData</scope><name>goal_pos</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1a9b45b3e13bd9167aab02e17e08916231" prot="public" virt="non-virtual"><scope>walle::AStarAgentData</scope><name>name</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1ac5e1eef279d9416fdc36d9de9886f00d" prot="public" virt="non-virtual"><scope>walle::AStarAgentData</scope><name>position</name></member>
+      <member refid="structwalle_1_1_a_star_agent_data_1aacfec9d59167392968f85408a86c890a" prot="public" virt="non-virtual"><scope>walle::AStarAgentData</scope><name>recalculate_after_x_turns</name></member>
+      <member refid="structwalle_1_1_base_agent_data_1af7565614b2ea8e3f98b39303ae09ebca" prot="public" virt="non-virtual"><scope>walle::AStarAgentData</scope><name>symbol</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

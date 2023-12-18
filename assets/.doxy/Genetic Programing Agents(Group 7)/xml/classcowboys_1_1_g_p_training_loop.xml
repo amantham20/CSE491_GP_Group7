@@ -1,0 +1,1242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_g_p_training_loop" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::GPTrainingLoop</compoundname>
+    <innerclass refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params" prot="public">cowboys::GPTrainingLoop::SaveDataParams</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class AgentType</type>
+      </param>
+      <param>
+        <type>class EnvironmentType</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a6edf3ea8de1f8ddb90382eda51116975" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; cse491::WorldBase &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;cse491::WorldBase&gt; &gt; environments</definition>
+        <argsstring></argsstring>
+        <name>environments</name>
+        <qualifiedname>cowboys::GPTrainingLoop::environments</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="36" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a6adb84b96a18fc1af707d81a819bccbb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; <ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">cowboys::GPAgentBase</ref> * &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;cowboys::GPAgentBase *&gt; &gt; agents</definition>
+        <argsstring></argsstring>
+        <name>agents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::agents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="37" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a0744a50fac5157004f6400709563429b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; TEMPAgentFitness</definition>
+        <argsstring></argsstring>
+        <name>TEMPAgentFitness</name>
+        <qualifiedname>cowboys::GPTrainingLoop::TEMPAgentFitness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="38" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1ae7d13fe4b27d89df3b2bbf3550f8160f" prot="private" static="no" mutable="no">
+        <type><ref refid="classcowboys_1_1_g_p_agent_analyzer" kindref="compound">GPAgentAnalyzer</ref></type>
+        <definition>GPAgentAnalyzer analyzer</definition>
+        <argsstring></argsstring>
+        <name>analyzer</name>
+        <qualifiedname>cowboys::GPTrainingLoop::analyzer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="40" column="25" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1ae9141790aebf3bac4863195aebba831f" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLDocument</type>
+        <definition>tinyxml2::XMLDocument topAgentsDoc</definition>
+        <argsstring></argsstring>
+        <name>topAgentsDoc</name>
+        <qualifiedname>cowboys::GPTrainingLoop::topAgentsDoc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="42" column="31" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1ac7091b70c2cff26f981c941144597d6e" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLDocument</type>
+        <definition>tinyxml2::XMLDocument lastGenerationsTopAgentsDoc</definition>
+        <argsstring></argsstring>
+        <name>lastGenerationsTopAgentsDoc</name>
+        <qualifiedname>cowboys::GPTrainingLoop::lastGenerationsTopAgentsDoc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="43" column="31" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1ad5abc65490d25baca31b3addaae0e070" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLDocument</type>
+        <definition>tinyxml2::XMLDocument allOfLastGeneration</definition>
+        <argsstring></argsstring>
+        <name>allOfLastGeneration</name>
+        <qualifiedname>cowboys::GPTrainingLoop::allOfLastGeneration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="44" column="31" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a8837a8af0f7900be97cae1a1265841f6" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLDocument</type>
+        <definition>tinyxml2::XMLDocument metaData</definition>
+        <argsstring></argsstring>
+        <name>metaData</name>
+        <qualifiedname>cowboys::GPTrainingLoop::metaData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="45" column="31" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a00f01e4cc3795d10be97701d156dd43f" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLElement *</type>
+        <definition>tinyxml2::XMLElement* rootTopAllGenerations</definition>
+        <argsstring></argsstring>
+        <name>rootTopAllGenerations</name>
+        <qualifiedname>cowboys::GPTrainingLoop::rootTopAllGenerations</qualifiedname>
+        <initializer>= topAgentsDoc.NewElement(&quot;GPLoopTopOfAllGeneration&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="48" column="30" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a7325d73e7abf3a6d4f117f960d1db787" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLElement *</type>
+        <definition>tinyxml2::XMLElement* rootTopLastGenerations</definition>
+        <argsstring></argsstring>
+        <name>rootTopLastGenerations</name>
+        <qualifiedname>cowboys::GPTrainingLoop::rootTopLastGenerations</qualifiedname>
+        <initializer>= lastGenerationsTopAgentsDoc.NewElement(&quot;GPLoopLastNGeneration&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="49" column="30" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a3904fca4e6cf04fa617d791437a8e6cb" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLElement *</type>
+        <definition>tinyxml2::XMLElement* rootAllOfLastGeneration</definition>
+        <argsstring></argsstring>
+        <name>rootAllOfLastGeneration</name>
+        <qualifiedname>cowboys::GPTrainingLoop::rootAllOfLastGeneration</qualifiedname>
+        <initializer>= allOfLastGeneration.NewElement(&quot;GPLoopAllOfLastGeneration&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="50" column="30" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a31ef8331679ecc7347fff371b22f7271" prot="private" static="no" mutable="no">
+        <type>tinyxml2::XMLElement *</type>
+        <definition>tinyxml2::XMLElement* rootMetaData</definition>
+        <argsstring></argsstring>
+        <name>rootMetaData</name>
+        <qualifiedname>cowboys::GPTrainingLoop::rootMetaData</qualifiedname>
+        <initializer>= metaData.NewElement(&quot;GPLoopMetaData&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="51" column="30" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a60feb09ec50ac97b25e3e81a4781b89e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;int, int&gt; &gt; sortedAgents</definition>
+        <argsstring></argsstring>
+        <name>sortedAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::sortedAgents</qualifiedname>
+        <initializer>= std::vector&lt;std::pair&lt;int, int&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="54" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a8f8332994c4496fb57c69d490a67bc77" prot="private" static="no" mutable="no">
+        <type>const std::vector&lt; cse491::GridPosition &gt;</type>
+        <definition>const std::vector&lt;cse491::GridPosition&gt; STARTPOSITIONS</definition>
+        <argsstring></argsstring>
+        <name>STARTPOSITIONS</name>
+        <qualifiedname>cowboys::GPTrainingLoop::STARTPOSITIONS</qualifiedname>
+        <initializer>= {cse491::GridPosition(0,0), cse491::GridPosition(22,5) , cse491::GridPosition(22,1) , cse491::GridPosition(0,8), cse491::GridPosition(22,8)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Grid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="59" column="27" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a418592329eade87e5705d1d1569b3677" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; cse491::GridPosition &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;std::vector&lt;cse491::GridPosition&gt; &gt; &gt; endPositions</definition>
+        <argsstring></argsstring>
+        <name>endPositions</name>
+        <qualifiedname>cowboys::GPTrainingLoop::endPositions</qualifiedname>
+        <initializer>= std::vector&lt;std::vector&lt;std::vector&lt;cse491::GridPosition&gt;&gt;&gt;()</initializer>
+        <briefdescription>
+<para>ArenaIDX, AgentIDX, EndPosition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Group 8 Grid Default Grid 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="77" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1ad0cce435412264fb787b871eb22754d2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; std::vector&lt; double &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;std::vector&lt;double&gt; &gt; &gt; independentAgentFitness</definition>
+        <argsstring></argsstring>
+        <name>independentAgentFitness</name>
+        <qualifiedname>cowboys::GPTrainingLoop::independentAgentFitness</qualifiedname>
+        <initializer>= std::vector&lt;std::vector&lt;std::vector&lt;double&gt;&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="78" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1adb21e866c08de518be2c390e6a34e0d6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int global_max_threads</definition>
+        <argsstring></argsstring>
+        <name>global_max_threads</name>
+        <qualifiedname>cowboys::GPTrainingLoop::global_max_threads</qualifiedname>
+        <initializer>= std::thread::hardware_concurrency()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="80" column="13" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a46a68f796ada00c3e55ae5653ac43f20" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rollingRandomSeed</definition>
+        <argsstring></argsstring>
+        <name>rollingRandomSeed</name>
+        <qualifiedname>cowboys::GPTrainingLoop::rollingRandomSeed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="81" column="13" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a9d31ca5b0f8ceb23a5e558008920f474" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ELITE_POPULATION_PERCENT</definition>
+        <argsstring></argsstring>
+        <name>ELITE_POPULATION_PERCENT</name>
+        <qualifiedname>cowboys::GPTrainingLoop::ELITE_POPULATION_PERCENT</qualifiedname>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="83" column="16" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a1bde178dbd373e6fc31579b26fbe55d9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double UNFIT_POPULATION_PERCENT</definition>
+        <argsstring></argsstring>
+        <name>UNFIT_POPULATION_PERCENT</name>
+        <qualifiedname>cowboys::GPTrainingLoop::UNFIT_POPULATION_PERCENT</qualifiedname>
+        <initializer>= 0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="84" column="16" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_g_p_training_loop_1a97564af3744c0a10f92c239ff8552a10" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ScavengerQueuing</definition>
+        <argsstring></argsstring>
+        <name>ScavengerQueuing</name>
+        <qualifiedname>cowboys::GPTrainingLoop::ScavengerQueuing</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="87" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a605961533de098b64e16cd49f0b00036" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GPTrainingLoop</definition>
+        <argsstring>(const bool scavengerQueuing=false)</argsstring>
+        <name>GPTrainingLoop</name>
+        <qualifiedname>cowboys::GPTrainingLoop::GPTrainingLoop</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <declname>scavengerQueuing</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>: constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="92" column="9" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="92" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a2c9c84c5218e81a012e98d80b8eb25b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResetMainTagLastGenerations</definition>
+        <argsstring>()</argsstring>
+        <name>ResetMainTagLastGenerations</name>
+        <qualifiedname>cowboys::GPTrainingLoop::ResetMainTagLastGenerations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the xml for data that needs to be overwritten </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="105" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="105" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a717cd8628563acdc138f1eb7657c694e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Initialize</definition>
+        <argsstring>(size_t numArenas=5, size_t NumAgentsForArena=100)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>cowboys::GPTrainingLoop::Initialize</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>numArenas</declname>
+          <defval>5</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>NumAgentsForArena</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the training loop with a number of environments and agents per environment. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numArenas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NumAgentsForArena</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="118" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="118" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a5f80e5a0d43772a3d91ccd3c33aea14e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadLastGeneration</definition>
+        <argsstring>()</argsstring>
+        <name>loadLastGeneration</name>
+        <qualifiedname>cowboys::GPTrainingLoop::loadLastGeneration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="174" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="174" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a1fa465eba258cc2b5ab18450cf228e12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>std::filesystem::path FullLoadGrabLatestGeneration</definition>
+        <argsstring>()</argsstring>
+        <name>FullLoadGrabLatestGeneration</name>
+        <qualifiedname>cowboys::GPTrainingLoop::FullLoadGrabLatestGeneration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="238" column="31" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="238" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a2db75ff6a428cb6e2685237634bbb279" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double SimpleFitnessFunction</definition>
+        <argsstring>(cse491::AgentBase &amp;agent, cse491::GridPosition startPosition)</argsstring>
+        <name>SimpleFitnessFunction</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SimpleFitnessFunction</qualifiedname>
+        <param>
+          <type>cse491::AgentBase &amp;</type>
+          <declname>agent</declname>
+        </param>
+        <param>
+          <type>cse491::GridPosition</type>
+          <declname>startPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Simple and temporary fitness function <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>agent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="273" column="16" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="273" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1af8b0a5256107dab0cc20844db6df11d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double AStarFitnessFunction</definition>
+        <argsstring>(const cse491::GridPosition &amp;startpos, const cse491::GridPosition &amp;endpos, int arena, int a)</argsstring>
+        <name>AStarFitnessFunction</name>
+        <qualifiedname>cowboys::GPTrainingLoop::AStarFitnessFunction</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>startpos</declname>
+        </param>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>endpos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arena</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="294" column="16" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="294" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1ab269cf9a25b918c2a2be4453fbf9b022" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ThreadTrainLoop</definition>
+        <argsstring>(size_t maxThreads=1, int numberOfTurns=100)</argsstring>
+        <name>ThreadTrainLoop</name>
+        <qualifiedname>cowboys::GPTrainingLoop::ThreadTrainLoop</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>maxThreads</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numberOfTurns</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxThreads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numberOfTurns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="352" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="352" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a50a04314f17f0ddff06cf8fb36c972b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Run</definition>
+        <argsstring>(size_t numGenerations, size_t numberOfTurns=100, size_t maxThreads=0, bool saveData=false)</argsstring>
+        <name>Run</name>
+        <qualifiedname>cowboys::GPTrainingLoop::Run</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>numGenerations</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numberOfTurns</declname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maxThreads</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>saveData</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>: runs the Genetic Programming training loop for a number of generations to evolve the agents </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numGenerations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numberOfTurns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxThreads</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="409" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="409" bodyend="498"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a64425190b5cc0a0db81b5adc50455eac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SaveDataCheckPoint</definition>
+        <argsstring>(const SaveDataParams &amp;params)</argsstring>
+        <name>SaveDataCheckPoint</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SaveDataCheckPoint</qualifiedname>
+        <param>
+          <type>const <ref refid="structcowboys_1_1_g_p_training_loop_1_1_save_data_params" kindref="compound">SaveDataParams</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Saves checkpoint data to XML files everyso often <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="528" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="528" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a853580117458d2104deff42c9d2b2b51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string FormatPosition</definition>
+        <argsstring>(const cse491::GridPosition &amp;pos, int precision=0)</argsstring>
+        <name>FormatPosition</name>
+        <qualifiedname>cowboys::GPTrainingLoop::FormatPosition</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>precision</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to format the data analysis <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="600" column="21" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="600" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1aeeefdbd4daab5ede6779ac9509fa230b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Get_A_StarDistance</definition>
+        <argsstring>(const cse491::GridPosition &amp;startpos, const cse491::GridPosition &amp;endpos, int arenaIDX, int agentIDX)</argsstring>
+        <name>Get_A_StarDistance</name>
+        <qualifiedname>cowboys::GPTrainingLoop::Get_A_StarDistance</qualifiedname>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>startpos</declname>
+        </param>
+        <param>
+          <type>const cse491::GridPosition &amp;</type>
+          <declname>endpos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arenaIDX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>agentIDX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="606" column="16" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="606" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a6add93d2e6e77bd25a3096691f66b442" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int AgentsAnalysisComputationsAndPrint</definition>
+        <argsstring>(int generation, double deltaForMaxFitness=0.1)</argsstring>
+        <name>AgentsAnalysisComputationsAndPrint</name>
+        <qualifiedname>cowboys::GPTrainingLoop::AgentsAnalysisComputationsAndPrint</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>generation</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>deltaForMaxFitness</declname>
+          <defval>0.1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes agents analysis metrics</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="623" column="13" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="623" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1ad8da62f794eb9b4b63643d81c708b6a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SortThemAgents</definition>
+        <argsstring>()</argsstring>
+        <name>SortThemAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SortThemAgents</qualifiedname>
+        <briefdescription>
+<para>: sort the agents based on their fitness </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="732" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="732" bodyend="743"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a31b5f47063360cd63efa59d4f1a022dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void saveXMLDoc</definition>
+        <argsstring>(tinyxml2::XMLDocument &amp;paramdoc, std::string fullPath)</argsstring>
+        <name>saveXMLDoc</name>
+        <qualifiedname>cowboys::GPTrainingLoop::saveXMLDoc</qualifiedname>
+        <param>
+          <type>tinyxml2::XMLDocument &amp;</type>
+          <declname>paramdoc</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>fullPath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="746" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="746" bodyend="755"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1acf0db245f1da47c6e482a540e5f890cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SerializeAgents</definition>
+        <argsstring>(int generation, tinyxml2::XMLElement *rootElement, tinyxml2::XMLDocument &amp;paramDocument, size_t topN=5)</argsstring>
+        <name>SerializeAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::SerializeAgents</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>generation</declname>
+        </param>
+        <param>
+          <type>tinyxml2::XMLElement *</type>
+          <declname>rootElement</declname>
+        </param>
+        <param>
+          <type>tinyxml2::XMLDocument &amp;</type>
+          <declname>paramDocument</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>topN</declname>
+          <defval>5</defval>
+        </param>
+        <briefdescription>
+<para>: Serializes the agents to an XML file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countMaxAgents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topN</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="765" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="765" bodyend="780"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a546158725246436cffe8533e1aa4481f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitTEMPAgentFitness</definition>
+        <argsstring>()</argsstring>
+        <name>InitTEMPAgentFitness</name>
+        <qualifiedname>cowboys::GPTrainingLoop::InitTEMPAgentFitness</qualifiedname>
+        <briefdescription>
+<para>: initialize the TEMP agent fitness vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="785" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="785" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1aedd1fe4da7e348dfeaf1932c61faa1b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MutateAgents</definition>
+        <argsstring>(int start, int end, const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;sortedAgents, std::vector&lt; std::vector&lt; cowboys::GPAgentBase * &gt; &gt; &amp;agents, double mutationRate)</argsstring>
+        <name>MutateAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::MutateAgents</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</type>
+          <declname>sortedAgents</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; <ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">cowboys::GPAgentBase</ref> * &gt; &gt; &amp;</type>
+          <declname>agents</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mutationRate</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for the GP loop mutate function. This function mutates the agents. This function is called in a thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The start index of the agents to mutate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The end index of the agents to mutate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sortedAgents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The sorted agents&apos; index vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The agents vector. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutationRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutation rate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="803" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="803" bodyend="813"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1acff1947b2f89fb9b7749215fc0a3140a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MutateAndCopyAgents</definition>
+        <argsstring>(int start, int end, const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;sortedAgents, std::vector&lt; std::vector&lt; cowboys::GPAgentBase * &gt; &gt; &amp;agents, int elitePopulationSize)</argsstring>
+        <name>MutateAndCopyAgents</name>
+        <qualifiedname>cowboys::GPTrainingLoop::MutateAndCopyAgents</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</type>
+          <declname>sortedAgents</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::vector&lt; <ref refid="classcowboys_1_1_g_p_agent_base" kindref="compound">cowboys::GPAgentBase</ref> * &gt; &gt; &amp;</type>
+          <declname>agents</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>elitePopulationSize</declname>
+        </param>
+        <briefdescription>
+<para>Helper function for the GP loop mutate function. This function copies the elite agents and mutates them. This function is called in a thread. for th. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sortedAgents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>agents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elitePopulationSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="826" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="826" bodyend="840"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a47c1737cace0f3034344847abe2b7943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GpLoopMutateHelper</definition>
+        <argsstring>()</argsstring>
+        <name>GpLoopMutateHelper</name>
+        <qualifiedname>cowboys::GPTrainingLoop::GpLoopMutateHelper</qualifiedname>
+        <briefdescription>
+<para>Helper function for the GP loop mutate function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="846" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="846" bodyend="910"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1afb236b6543b2f0e3605fb9fbec1f78e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Printgrid</definition>
+        <argsstring>(const std::vector&lt; cse491::GridPosition &gt; &amp;positions, char symbol=&apos;S&apos;)</argsstring>
+        <name>Printgrid</name>
+        <qualifiedname>cowboys::GPTrainingLoop::Printgrid</qualifiedname>
+        <param>
+          <type>const std::vector&lt; cse491::GridPosition &gt; &amp;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>symbol</declname>
+          <defval>&apos;S&apos;</defval>
+        </param>
+        <briefdescription>
+<para>Prints the grid for a single arena. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arenaId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>: @amantham20 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="917" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="917" bodyend="995"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1af5dd656d812d8c497fc6632c73002f98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetEnvironments</definition>
+        <argsstring>()</argsstring>
+        <name>resetEnvironments</name>
+        <qualifiedname>cowboys::GPTrainingLoop::resetEnvironments</qualifiedname>
+        <briefdescription>
+<para>Resets the environments to their initial state. This function is called after each generation. This function currently only soft resets the environments. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="1004" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="1004" bodyend="1013"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a1e3aa6863678031d1012d170ab048411" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RunArena</definition>
+        <argsstring>(size_t arena, size_t numberOfTurns)</argsstring>
+        <name>RunArena</name>
+        <qualifiedname>cowboys::GPTrainingLoop::RunArena</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>arena</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>numberOfTurns</declname>
+        </param>
+        <briefdescription>
+<para>Runs the training loop for a single arena. This function is called in a thread. Each arena is run in a separate thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>: @amantham20 </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arena</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The arena to run. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numberOfTurns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The number of turns to run the arena for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="1024" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="1024" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1ac9bd4eff87e705c5b964f4a0a5996b49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MemGOBYE</definition>
+        <argsstring>()</argsstring>
+        <name>MemGOBYE</name>
+        <qualifiedname>cowboys::GPTrainingLoop::MemGOBYE</qualifiedname>
+        <briefdescription>
+<para>Clears the memory of the training loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="1074" column="14" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="1074" bodyend="1081"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a994ed3c70475bd1bab5d0efa73d9eead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~GPTrainingLoop</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GPTrainingLoop</name>
+        <qualifiedname>cowboys::GPTrainingLoop::~GPTrainingLoop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="1083" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1ae3f725086e5f76be47cd823126b6d44a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::filesystem::path</type>
+        <definition>static std::filesystem::path getSystemPath</definition>
+        <argsstring>()</argsstring>
+        <name>getSystemPath</name>
+        <qualifiedname>cowboys::GPTrainingLoop::getSystemPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the path of the save location <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>XML save filename data</para>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="322" column="38" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="322" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_g_p_training_loop_1a1a5642b2af6599ae0b8a2f07ccce71af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string getDateStr</definition>
+        <argsstring>()</argsstring>
+        <name>getDateStr</name>
+        <qualifiedname>cowboys::GPTrainingLoop::getDateStr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the date and time as a string <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/GPTrainingLoop.hpp" line="334" column="28" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="334" bodyend="345"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/GPTrainingLoop.hpp" line="33" column="5" bodyfile="source/Agents/GP/GPTrainingLoop.hpp" bodystart="33" bodyend="1084"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a6adb84b96a18fc1af707d81a819bccbb" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>agents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a6add93d2e6e77bd25a3096691f66b442" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>AgentsAnalysisComputationsAndPrint</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ad5abc65490d25baca31b3addaae0e070" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>allOfLastGeneration</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ae7d13fe4b27d89df3b2bbf3550f8160f" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>analyzer</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1af8b0a5256107dab0cc20844db6df11d7" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>AStarFitnessFunction</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a9d31ca5b0f8ceb23a5e558008920f474" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>ELITE_POPULATION_PERCENT</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a418592329eade87e5705d1d1569b3677" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>endPositions</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a6edf3ea8de1f8ddb90382eda51116975" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>environments</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a853580117458d2104deff42c9d2b2b51" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>FormatPosition</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a1fa465eba258cc2b5ab18450cf228e12" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>FullLoadGrabLatestGeneration</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1aeeefdbd4daab5ede6779ac9509fa230b" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>Get_A_StarDistance</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a1a5642b2af6599ae0b8a2f07ccce71af" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>getDateStr</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ae3f725086e5f76be47cd823126b6d44a" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>getSystemPath</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1adb21e866c08de518be2c390e6a34e0d6" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>global_max_threads</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a47c1737cace0f3034344847abe2b7943" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>GpLoopMutateHelper</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a605961533de098b64e16cd49f0b00036" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>GPTrainingLoop</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ad0cce435412264fb787b871eb22754d2" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>independentAgentFitness</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a717cd8628563acdc138f1eb7657c694e" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>Initialize</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a546158725246436cffe8533e1aa4481f" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>InitTEMPAgentFitness</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ac7091b70c2cff26f981c941144597d6e" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>lastGenerationsTopAgentsDoc</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a5f80e5a0d43772a3d91ccd3c33aea14e" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>loadLastGeneration</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ac9bd4eff87e705c5b964f4a0a5996b49" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>MemGOBYE</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a8837a8af0f7900be97cae1a1265841f6" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>metaData</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1aedd1fe4da7e348dfeaf1932c61faa1b3" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>MutateAgents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1acff1947b2f89fb9b7749215fc0a3140a" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>MutateAndCopyAgents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1afb236b6543b2f0e3605fb9fbec1f78e5" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>Printgrid</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1af5dd656d812d8c497fc6632c73002f98" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>resetEnvironments</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a2c9c84c5218e81a012e98d80b8eb25b7" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>ResetMainTagLastGenerations</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a46a68f796ada00c3e55ae5653ac43f20" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>rollingRandomSeed</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a3904fca4e6cf04fa617d791437a8e6cb" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>rootAllOfLastGeneration</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a31ef8331679ecc7347fff371b22f7271" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>rootMetaData</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a00f01e4cc3795d10be97701d156dd43f" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>rootTopAllGenerations</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a7325d73e7abf3a6d4f117f960d1db787" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>rootTopLastGenerations</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a50a04314f17f0ddff06cf8fb36c972b7" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>Run</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a1e3aa6863678031d1012d170ab048411" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>RunArena</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a64425190b5cc0a0db81b5adc50455eac" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>SaveDataCheckPoint</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a31b5f47063360cd63efa59d4f1a022dc" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>saveXMLDoc</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a97564af3744c0a10f92c239ff8552a10" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>ScavengerQueuing</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1acf0db245f1da47c6e482a540e5f890cd" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>SerializeAgents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a2db75ff6a428cb6e2685237634bbb279" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>SimpleFitnessFunction</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a60feb09ec50ac97b25e3e81a4781b89e" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>sortedAgents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ad8da62f794eb9b4b63643d81c708b6a8" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>SortThemAgents</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a8f8332994c4496fb57c69d490a67bc77" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>STARTPOSITIONS</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a0744a50fac5157004f6400709563429b" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>TEMPAgentFitness</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ab269cf9a25b918c2a2be4453fbf9b022" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>ThreadTrainLoop</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1ae9141790aebf3bac4863195aebba831f" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>topAgentsDoc</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a1bde178dbd373e6fc31579b26fbe55d9" prot="private" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>UNFIT_POPULATION_PERCENT</name></member>
+      <member refid="classcowboys_1_1_g_p_training_loop_1a994ed3c70475bd1bab5d0efa73d9eead" prot="public" virt="non-virtual"><scope>cowboys::GPTrainingLoop</scope><name>~GPTrainingLoop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

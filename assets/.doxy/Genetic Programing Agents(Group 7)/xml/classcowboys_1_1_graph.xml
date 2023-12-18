@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcowboys_1_1_graph" kind="class" language="C++" prot="public">
+    <compoundname>cowboys::Graph</compoundname>
+    <includes refid="_graph_8hpp" local="no">Graph.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcowboys_1_1_graph_1aa0254678dcf5fc4d16fd0a90615df17d" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; GraphLayer &gt;</type>
+        <definition>std::vector&lt;GraphLayer&gt; layers</definition>
+        <argsstring></argsstring>
+        <name>layers</name>
+        <qualifiedname>cowboys::Graph::layers</qualifiedname>
+        <briefdescription>
+<para>Layers of nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="21" column="17" bodyfile="source/Agents/GP/Graph.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a0c40af42cad207665228815f0359bbd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Graph</definition>
+        <argsstring>()=default</argsstring>
+        <name>Graph</name>
+        <qualifiedname>cowboys::Graph::Graph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1ab01ea272224a6dd59cb39a2c7d46e4f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>~Graph</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Graph</name>
+        <qualifiedname>cowboys::Graph::~Graph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a37288c4e59e9f920186f1cc651cd33c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetNodeCount</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNodeCount</name>
+        <qualifiedname>cowboys::Graph::GetNodeCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of nodes in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="29" column="12" bodyfile="source/Agents/GP/Graph.hpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a24c83996fb180870397f8e4cfea604fd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t GetLayerCount</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLayerCount</name>
+        <qualifiedname>cowboys::Graph::GetLayerCount</qualifiedname>
+        <briefdescription>
+<para>Get the number of layers in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of layers in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="36" column="12" bodyfile="source/Agents/GP/Graph.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a9b2a9e9277f175c92f2c0e21e4aca049" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t MakeDecision</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;inputs, const std::vector&lt; size_t &gt; &amp;actions)</argsstring>
+        <name>MakeDecision</name>
+        <qualifiedname>cowboys::Graph::MakeDecision</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; size_t &gt; &amp;</type>
+          <declname>actions</declname>
+        </param>
+        <briefdescription>
+<para>Makes a decision based on the inputs and the action vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The inputs to the graph. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The action vector. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The action to take. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="42" column="12" bodyfile="source/Agents/GP/Graph.hpp" bodystart="42" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a8a88ad39cd7ec00beaeb80ee37843dfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddLayer</definition>
+        <argsstring>(const GraphLayer &amp;layer)</argsstring>
+        <name>AddLayer</name>
+        <qualifiedname>cowboys::Graph::AddLayer</qualifiedname>
+        <param>
+          <type>const GraphLayer &amp;</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+<para>Add a layer to the graph. Purely organizational, but important for CGP for determining the &quot;layers back&quot; parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The layer of nodes to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="78" column="10" bodyfile="source/Agents/GP/Graph.hpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a8f89cb49374bd0852c25b7f185273ef1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; GraphNode &gt; &gt; GetFunctionalNodes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetFunctionalNodes</name>
+        <qualifiedname>cowboys::Graph::GetFunctionalNodes</qualifiedname>
+        <briefdescription>
+<para>Returns a vector of functional (non-input) nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector of functional nodes in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="82" column="17" bodyfile="source/Agents/GP/Graph.hpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classcowboys_1_1_graph_1a362e2c822bde8929a7da90114cccf151" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="classcowboys_1_1_graph_node" kindref="compound">GraphNode</ref> &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; GraphNode &gt; &gt; GetNodes</definition>
+        <argsstring>() const</argsstring>
+        <name>GetNodes</name>
+        <qualifiedname>cowboys::Graph::GetNodes</qualifiedname>
+        <briefdescription>
+<para>Returns a vector of all nodes in the graph. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A vector of all nodes in the graph. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Agents/GP/Graph.hpp" line="92" column="17" bodyfile="source/Agents/GP/Graph.hpp" bodystart="92" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A graph of nodes that can be used to make decisions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Agents/GP/Graph.hpp" line="18" column="3" bodyfile="source/Agents/GP/Graph.hpp" bodystart="18" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classcowboys_1_1_graph_1a8a88ad39cd7ec00beaeb80ee37843dfc" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>AddLayer</name></member>
+      <member refid="classcowboys_1_1_graph_1a8f89cb49374bd0852c25b7f185273ef1" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>GetFunctionalNodes</name></member>
+      <member refid="classcowboys_1_1_graph_1a24c83996fb180870397f8e4cfea604fd" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>GetLayerCount</name></member>
+      <member refid="classcowboys_1_1_graph_1a37288c4e59e9f920186f1cc651cd33c2" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>GetNodeCount</name></member>
+      <member refid="classcowboys_1_1_graph_1a362e2c822bde8929a7da90114cccf151" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>GetNodes</name></member>
+      <member refid="classcowboys_1_1_graph_1a0c40af42cad207665228815f0359bbd3" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>Graph</name></member>
+      <member refid="classcowboys_1_1_graph_1aa0254678dcf5fc4d16fd0a90615df17d" prot="protected" virt="non-virtual"><scope>cowboys::Graph</scope><name>layers</name></member>
+      <member refid="classcowboys_1_1_graph_1a9b2a9e9277f175c92f2c0e21e4aca049" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>MakeDecision</name></member>
+      <member refid="classcowboys_1_1_graph_1ab01ea272224a6dd59cb39a2c7d46e4f9" prot="public" virt="non-virtual"><scope>cowboys::Graph</scope><name>~Graph</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

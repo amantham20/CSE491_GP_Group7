@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structworldlang_1_1_program_executor_1_1_identifier" kind="struct" language="C++" prot="public">
+    <compoundname>worldlang::ProgramExecutor::Identifier</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">string</basecompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ProgramExecutor::Identifier</label>
+        <link refid="structworldlang_1_1_program_executor_1_1_identifier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ProgramExecutor::Identifier</label>
+        <link refid="structworldlang_1_1_program_executor_1_1_identifier"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="source/Worlds/ProgramExecutor.hpp" line="46" column="1" bodyfile="source/Worlds/ProgramExecutor.hpp" bodystart="46" bodyend="46"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

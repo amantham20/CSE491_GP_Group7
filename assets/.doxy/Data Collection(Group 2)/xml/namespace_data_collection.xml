@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_data_collection" kind="namespace" language="C++">
+    <compoundname>DataCollection</compoundname>
+    <innerclass refid="class_data_collection_1_1_agent_data" prot="public">DataCollection::AgentData</innerclass>
+    <innerclass refid="class_data_collection_1_1_agent_interaction_collector" prot="public">DataCollection::AgentInteractionCollector</innerclass>
+    <innerclass refid="class_data_collection_1_1_agent_receiver" prot="public">DataCollection::AgentReceiver</innerclass>
+    <innerclass refid="class_data_collection_1_1_damage_collector" prot="public">DataCollection::DamageCollector</innerclass>
+    <innerclass refid="class_data_collection_1_1_damage_data" prot="public">DataCollection::DamageData</innerclass>
+    <innerclass refid="class_data_collection_1_1_damage_receiver" prot="public">DataCollection::DamageReceiver</innerclass>
+    <innerclass refid="class_data_collection_1_1_data_manager" prot="public">DataCollection::DataManager</innerclass>
+    <innerclass refid="class_data_collection_1_1_data_receiver" prot="public">DataCollection::DataReceiver</innerclass>
+    <innerclass refid="class_data_collection_1_1_game_data" prot="public">DataCollection::GameData</innerclass>
+    <innerclass refid="class_data_collection_1_1_game_receiver" prot="public">DataCollection::GameReceiver</innerclass>
+    <innerclass refid="class_data_collection_1_1_item_use_collector" prot="public">DataCollection::ItemUseCollector</innerclass>
+    <innerclass refid="class_data_collection_1_1_json_builder" prot="public">DataCollection::JsonBuilder</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/DataCollection/AgentData.hpp" line="10" column="1"/>
+  </compounddef>
+</doxygen>
